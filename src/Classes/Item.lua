@@ -48,29 +48,14 @@ local function getCatalystScalar(catalystId, tags, quality)
 	return 1
 end
 
-local influenceInfo = itemLib.influenceInfo
-
 local ItemClass = newClass("Item", function(self, raw, rarity, highQuality)
 	if raw then
 		self:ParseRaw(sanitiseText(raw), rarity, highQuality)
 	end	
 end)
 
--- Reset all influence keys to false
-function ItemClass:ResetInfluence()
-	for _, curInfluenceInfo in ipairs(influenceInfo) do
-		self[curInfluenceInfo.key] = false
-	end
-end
-
-local influenceItemMap = { }
-for _, curInfluenceInfo in ipairs(influenceInfo) do
-	influenceItemMap[curInfluenceInfo.display.." Item"] = curInfluenceInfo.key
-end
-
 local lineFlags = {
-	["crafted"] = true, ["crucible"] = true, ["custom"] = true, ["eater"] = true, ["enchant"] = true,
-	["exarch"] = true, ["fractured"] = true, ["implicit"] = true, ["scourge"] = true, ["synthesis"] = true,
+	["crafted"] = true, ["custom"] = true, ["enchant"] = true, ["implicit"] = true,
 }
 
 -- Special function to store unique instances of modifier on specific item slots
@@ -238,9 +223,7 @@ function ItemClass:FindModifierSubstring(substring, itemSlotName)
 	for _,v in pairs(self.explicitModLines) do t_insert(modLines, v) end
 	if explicit < 1 then
 		for _,v in pairs(self.enchantModLines) do t_insert(modLines, v) end
-		for _,v in pairs(self.scourgeModLines) do t_insert(modLines, v) end
 		for _,v in pairs(self.implicitModLines) do t_insert(modLines, v) end
-		for _,v in pairs(self.crucibleModLines) do t_insert(modLines, v) end
 	end
 
 	for _,v in pairs(modLines) do
@@ -348,10 +331,8 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	self.classRequirementModLines = { }
 	self.buffModLines = { }
 	self.enchantModLines = { }
-	self.scourgeModLines = { }
 	self.implicitModLines = { }
 	self.explicitModLines = { }
-	self.crucibleModLines = { }
 	local implicitLines = 0
 	self.variantList = nil
 	self.prefixes = { }
@@ -379,18 +360,10 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			tinctureBuffLines[line] = nil
 		elseif line == "--------" then
 			self.checkSection = true
-		elseif line == "Split" then
-			self.split = true
 		elseif line == "Mirrored" then
 			self.mirrored = true
 		elseif line == "Corrupted" then
 			self.corrupted = true
-		elseif line == "Fractured Item" then
-			self.fractured = true
-		elseif line == "Synthesised Item" then
-			self.synthesised = true
-		elseif influenceItemMap[line] then
-			self[influenceItemMap[line]] = true
 		elseif line == "Requirements:" then
 			-- nothing to do
 		else
@@ -526,10 +499,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					self.league = specVal
 				elseif specName == "Crafted" then
 					self.crafted = true
-				elseif specName == "Scourge" then
-					self.scourge = true
-				elseif specName == "Crucible" then
-					self.crucible = true
 				elseif specName == "Implicit" then
 					self.implicit = true
 				elseif specName == "Prefix" then
@@ -665,7 +634,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					self.name = self.name:gsub(" %(.+%)","")
 				end
 				if not baseName then
-					baseName = line:gsub("^Superior ", ""):gsub("^Synthesised ","")
+					baseName = line:gsub("^Superior ", "")
 				end
 				if baseName == "Two-Toned Boots" then
 					baseName = "Two-Toned Boots (Armour/Energy Shield)"
@@ -695,9 +664,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 						else
 							self.enchantments = data.enchantments[self.base.type]
 						end
-						self.corruptible = self.base.type ~= "Flask"
 						self.corruptible = self.base.type ~= "Flask" and self.base.type ~= "Charm" and self.base.type ~= "Rune" and self.base.type ~= "SoulCore"
-						self.canBeInfluenced = self.base.influenceTags ~= nil
 						self.clusterJewel = data.clusterJewels and data.clusterJewels.jewels[self.baseName]
 						self.requirements.str = self.base.req.str or 0
 						self.requirements.dex = self.base.req.dex or 0
@@ -773,25 +740,15 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					self.canHaveTwoEnchants = true
 					self.canHaveThreeEnchants = true
 					self.canHaveFourEnchants = true
-				elseif lineLower == "has a crucible passive skill tree with only support passive skills" then
-					self.canHaveOnlySupportSkillsCrucibleTree = true
-				elseif lineLower == "has a crucible passive skill tree" then
-					self.canHaveShieldCrucibleTree = true
-				elseif lineLower == "has a two handed sword crucible passive skill tree" then
-					self.canHaveTwoHandedSwordCrucibleTree = true
 				end
 
 				local modLines
-				if modLine.enchant or (modLine.crafted and #self.enchantModLines + #self.implicitModLines < implicitLines) then
+				if modLine.enchant or (modLine.crafted and #self.enchantModLines + #self.implicitModLines < implicitLines) then -- check later
 					modLines = self.enchantModLines
-				elseif modLine.scourge then
-					modLines = self.scourgeModLines
 				elseif line:find("Requires Class") then
 					modLines = self.classRequirementModLines
-				elseif modLine.implicit or (not modLine.crafted and #self.enchantModLines + #self.scourgeModLines + #self.implicitModLines < implicitLines) then
+				elseif modLine.implicit or (not modLine.crafted and #self.enchantModLines + #self.implicitModLines < implicitLines) then -- check later
 					modLines = self.implicitModLines
-				elseif modLine.crucible then
-					modLines = self.crucibleModLines
 				else
 					modLines = self.explicitModLines
 				end
@@ -932,7 +889,7 @@ function ItemClass:NormaliseQuality()
 	if self.base and (self.base.armour or self.base.weapon or self.base.flask or self.base.tincture) then
 		if not self.quality then
 			self.quality = 0
-		elseif not self.uniqueID and not self.corrupted and not self.split and not self.mirrored and self.quality < 20 then
+		elseif not self.uniqueID and not self.corrupted and not self.mirrored and self.quality < 20 then
 			self.quality = 20
 		end
 	end	
@@ -941,29 +898,14 @@ end
 function ItemClass:GetModSpawnWeight(mod, includeTags, excludeTags)
 	local weight = 0
 	if self.base then
-		local function HasInfluenceTag(key)
-			if self.base.influenceTags then
-				for _, curInfluenceInfo in ipairs(influenceInfo) do
-					if self[curInfluenceInfo.key] and self.base.influenceTags[curInfluenceInfo.key] == key then
-						return true
-					end
-				end
-			end
-			return false
-		end
-
-		local function HasMavenInfluence(modAffix)
-			return modAffix:match("Elevated")
-		end
-
 		for i, key in ipairs(mod.weightKey) do
-			if (self.base.tags[key] or (includeTags and includeTags[key]) or HasInfluenceTag(key)) and not (excludeTags and excludeTags[key]) then
-				weight = (HasInfluenceTag(key) and HasMavenInfluence(mod.affix)) and 1000 or mod.weightVal[i]
+			if (self.base.tags[key] or (includeTags and includeTags[key]) and not (excludeTags and excludeTags[key])) then
+				weight = mod.weightVal[i]
 				break
 			end
 		end
 		for i, key in ipairs(mod.weightMultiplierKey or {}) do
-			if (self.base.tags[key] or (includeTags and includeTags[key]) or HasInfluenceTag(key)) and not (excludeTags and excludeTags[key]) then
+			if (self.base.tags[key] or (includeTags and includeTags[key])) and not (excludeTags and excludeTags[key]) then
 				weight = weight * mod.weightMultiplierVal[i] / 100
 				break
 			end
@@ -971,24 +913,6 @@ function ItemClass:GetModSpawnWeight(mod, includeTags, excludeTags)
 	end
 	return weight
 end
-
-function ItemClass:GetNecropolisModSpawnWeight(mod)
-	local weight = 0
-	if self.base then
-		for i, key in ipairs(mod.weightKey) do
-			if self.base.tags[key:gsub("necropolis_", "")] then
-				weight = mod.weightVal[i]
-				break
-			end
-		end
-	end
-	return weight
-end
-
-function ItemClass:CheckIfModIsDelve(mod)
-	return mod.affix == "Subterranean" or mod.affix == "of the Underground"
-end
-
 
 function ItemClass:BuildRaw()
 	local rawLines = { }
@@ -1020,11 +944,6 @@ function ItemClass:BuildRaw()
 	end
 	if self.unreleased then
 		t_insert(rawLines, "Unreleased: true")
-	end
-	for i, curInfluenceInfo in ipairs(influenceInfo) do
-		if self[curInfluenceInfo.key] then
-			t_insert(rawLines, curInfluenceInfo.display .. " Item")
-		end
 	end
 	if self.crafted then
 		t_insert(rawLines, "Crafted: true")
@@ -1060,29 +979,11 @@ function ItemClass:BuildRaw()
 		if modLine.range and line:match("%(%-?[%d%.]+%-%-?[%d%.]+%)") then
 			line = "{range:" .. round(modLine.range, 3) .. "}" .. line
 		end
-		if modLine.crafted then
+		if modLine.crafted then -- check later
 			line = "{crafted}" .. line
 		end
 		if modLine.custom then
 			line = "{custom}" .. line
-		end
-		if modLine.scourge then
-			line = "{scourge}" .. line
-		end
-		if modLine.crucible then
-			line = "{crucible}" .. line
-		end
-		if modLine.fractured then
-			line = "{fractured}" .. line
-		end
-		if modLine.exarch then
-			line = "{exarch}" .. line
-		end
-		if modLine.eater then
-			line = "{eater}" .. line
-		end
-		if modLine.synthesis then
-			line = "{synthesis}" .. line
 		end
 		if modLine.variantList then
 			local varSpec
@@ -1146,11 +1047,8 @@ function ItemClass:BuildRaw()
 	if self.classRestriction then
 		t_insert(rawLines, "Requires Class " .. self.classRestriction)
 	end
-	t_insert(rawLines, "Implicits: " .. (#self.enchantModLines + #self.implicitModLines + #self.scourgeModLines))
+	t_insert(rawLines, "Implicits: " .. (#self.enchantModLines + #self.implicitModLines))
 	for _, modLine in ipairs(self.enchantModLines) do
-		writeModLine(modLine)
-	end
-	for _, modLine in ipairs(self.scourgeModLines) do
 		writeModLine(modLine)
 	end
 	for _, modLine in ipairs(self.classRequirementModLines) do
@@ -1162,16 +1060,10 @@ function ItemClass:BuildRaw()
 	for _, modLine in ipairs(self.explicitModLines) do
 		writeModLine(modLine)
 	end
-	for _, modLine in ipairs(self.crucibleModLines) do
-		writeModLine(modLine)
-	end
-	if self.split then
-		t_insert(rawLines, "Split")
-	end
 	if self.mirrored then
 		t_insert(rawLines, "Mirrored")
 	end
-	if self.corrupted or self.scourge then
+	if self.corrupted then
 		t_insert(rawLines, "Corrupted")
 	end
 	return table.concat(rawLines, "\n")
@@ -1655,9 +1547,6 @@ function ItemClass:BuildModList()
 	for _, modLine in ipairs(self.enchantModLines) do
 		processModLine(modLine)
 	end
-	for _, modLine in ipairs(self.scourgeModLines) do
-		processModLine(modLine)
-	end
 	for _, modLine in ipairs(self.classRequirementModLines) do
 		processModLine(modLine)
 	end
@@ -1665,9 +1554,6 @@ function ItemClass:BuildModList()
 		processModLine(modLine)
 	end
 	for _, modLine in ipairs(self.explicitModLines) do
-		processModLine(modLine)
-	end
-	for _, modLine in ipairs(self.crucibleModLines) do
 		processModLine(modLine)
 	end
 	if self.name == "Tabula Rasa, Simple Robe" or self.name == "Skin of the Loyal, Simple Robe" or self.name == "Skin of the Lords, Simple Robe" or self.name == "The Apostate, Cabalist Regalia" then

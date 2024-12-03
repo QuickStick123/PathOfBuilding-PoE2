@@ -575,7 +575,6 @@ do
 		end
 	end					
 end
-data.essences = LoadModule("Data/Essence")
 data.costs = LoadModule("Data/Costs")
 do
 	local map = { }
