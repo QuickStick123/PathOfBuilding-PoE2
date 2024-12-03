@@ -1497,14 +1497,14 @@ end
 function ItemsTabClass:CraftClusterJewel()
 	local item = self.displayItem
 	wipeTable(item.enchantModLines)
-	t_insert(item.enchantModLines, { line = "Adds "..(item.clusterJewelNodeCount or item.clusterJewel.maxNodes).." Passive Skills", crafted = true })
+	t_insert(item.enchantModLines, { line = "Adds "..(item.clusterJewelNodeCount or item.clusterJewel.maxNodes).." Passive Skills", enchant = true })
 	if item.clusterJewel.size == "Large" then
-		t_insert(item.enchantModLines, { line = "2 Added Passive Skills are Jewel Sockets", crafted = true })
+		t_insert(item.enchantModLines, { line = "2 Added Passive Skills are Jewel Sockets", enchant = true })
 	elseif item.clusterJewel.size == "Medium" then
-		t_insert(item.enchantModLines, { line = "1 Added Passive Skill is a Jewel Socket", crafted = true })
+		t_insert(item.enchantModLines, { line = "1 Added Passive Skill is a Jewel Socket", enchant = true })
 	end
 	local skill = item.clusterJewel.skills[item.clusterJewelSkill]
-	t_insert(item.enchantModLines, { line = table.concat(skill.enchant, "\n"), crafted = true })
+	t_insert(item.enchantModLines, { line = table.concat(skill.enchant, "\n"), enchant = true })
 	item:BuildAndParseRaw()
 
 	-- Update affixes manually to force out affixes that may now be invalid
@@ -1643,7 +1643,7 @@ function ItemsTabClass:UpdateCustomControls()
 	local modLines = copyTable(item.explicitModLines)
 	if item.rarity == "MAGIC" or item.rarity == "RARE" then
 		for index, modLine in ipairs(modLines) do
-			if modLine.custom or modLine.crafted then
+			if modLine.custom then
 				local line = itemLib.formatModLine(modLine)
 				if line then
 					if not self.controls["displayItemCustomModifierRemove"..i] then
@@ -1657,7 +1657,7 @@ function ItemsTabClass:UpdateCustomControls()
 						label = label:sub(1, DrawStringCursorIndex(16, "VAR", label, 310, 10)) .. "..."
 					end
 					self.controls["displayItemCustomModifier"..i].label = label
-					self.controls["displayItemCustomModifierLabel"..i].label = modLine.crafted and " ^7Crafted:" or " ^7Custom:"
+					self.controls["displayItemCustomModifierLabel"..i].label = " ^7Custom:"
 					self.controls["displayItemCustomModifierRemove"..i].onClick = function()
 						if index <= #item.explicitModLines then
 							t_remove(item.explicitModLines, index)
@@ -2020,7 +2020,7 @@ function ItemsTabClass:EnchantDisplayItem(enchantSlot)
 		if remove then
 			t_remove(item.enchantModLines, self.enchantSlot)
 		elseif first then
-			item.enchantModLines = { { crafted = true, line = first }, { crafted = true, line = second } }
+			item.enchantModLines = { { enchant = true, line = first }, { enchant = true, line = second } }
 		else
 			if not item.canHaveTwoEnchants and #item.enchantModLines > 1 then
 				item.enchantModLines = { item.enchantModLines[1] }
@@ -2028,7 +2028,7 @@ function ItemsTabClass:EnchantDisplayItem(enchantSlot)
 			if #item.enchantModLines >= self.enchantSlot then
 				t_remove(item.enchantModLines, self.enchantSlot)
 			end
-			t_insert(item.enchantModLines, self.enchantSlot, { crafted = true, line = line})
+			t_insert(item.enchantModLines, self.enchantSlot, { enchant = true, line = line})
 		end
 		item:BuildAndParseRaw()
 		return item
@@ -2109,7 +2109,7 @@ function ItemsTabClass:anointItem(node)
 		t_remove(item.enchantModLines, self.anointEnchantSlot)
 	end
 	if node then
-		t_insert(item.enchantModLines, self.anointEnchantSlot, { crafted = true, line = "Allocates " .. node.dn })
+		t_insert(item.enchantModLines, self.anointEnchantSlot, { enchant = true, line = "Allocates " .. node.dn })
 	end
 	item:BuildAndParseRaw()
 	return item

@@ -55,7 +55,7 @@ local ItemClass = newClass("Item", function(self, raw, rarity, highQuality)
 end)
 
 local lineFlags = {
-	["crafted"] = true, ["custom"] = true, ["enchant"] = true, ["implicit"] = true,
+	["custom"] = true, ["enchant"] = true, ["implicit"] = true,
 }
 
 -- Special function to store unique instances of modifier on specific item slots
@@ -592,7 +592,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 				end)
 
 				if modLine.enchant then
-					modLine.crafted = true
 					modLine.implicit = true
 				end
 
@@ -979,8 +978,8 @@ function ItemClass:BuildRaw()
 		if modLine.range and line:match("%(%-?[%d%.]+%-%-?[%d%.]+%)") then
 			line = "{range:" .. round(modLine.range, 3) .. "}" .. line
 		end
-		if modLine.crafted then -- check later
-			line = "{crafted}" .. line
+		if modLine.enchant then -- check later
+			line = "{enchant}" .. line
 		end
 		if modLine.custom then
 			line = "{custom}" .. line
@@ -1076,10 +1075,10 @@ end
 
 -- Rebuild explicit modifiers using the item's affixes
 function ItemClass:Craft()
-	-- Save off any crafted or custom mods so they can be re-added at the end
+	-- Save off any custom mods so they can be re-added at the end
 	local savedMods = {}
 	for _, mod in ipairs(self.explicitModLines) do
-		if mod.crafted or mod.custom then
+		if mod.custom then
 			t_insert(savedMods, mod)
 		end
 	end
@@ -1130,7 +1129,7 @@ function ItemClass:Craft()
 		end
 	end
 
-	-- Restore the crafted and custom mods
+	-- Restore the custom mods
 	for _, mod in ipairs(savedMods) do
 		t_insert(self.explicitModLines, mod)
 	end

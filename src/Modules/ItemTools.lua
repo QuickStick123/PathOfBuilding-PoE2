@@ -108,7 +108,7 @@ function itemLib.formatModLine(modLine, dbMode)
 			line = line .. "   ^1'" .. modLine.extra .. "'"
 		end
 	else
-		colorCode = (modLine.crafted and colorCodes.CRAFTED) or (modLine.custom and colorCodes.CUSTOM) or colorCodes.MAGIC -- check later enchants might need modLine.crafted
+		colorCode = (modLine.enchant and colorCodes.CRAFTED) or (modLine.custom and colorCodes.CUSTOM) or colorCodes.MAGIC
 	end
 	return colorCode..line
 end

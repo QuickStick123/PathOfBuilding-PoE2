@@ -929,7 +929,7 @@ function ImportTabClass:ImportItem(itemData, slotName)
 		for _, line in ipairs(itemData.enchantMods) do
 			for line in line:gmatch("[^\n]+") do
 				local modList, extra = modLib.parseMod(line)
-				t_insert(item.enchantModLines, { line = line, extra = extra, mods = modList or { }, crafted = true })
+				t_insert(item.enchantModLines, { line = line, extra = extra, mods = modList or { }, enchant = true })
 			end
 		end
 	end
