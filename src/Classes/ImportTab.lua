@@ -856,6 +856,8 @@ function ImportTabClass:ImportItem(itemData, slotName)
 		return
 	end
 
+	-- Importitem data
+	item.uniqueID = itemData.id
 	if itemData.ilvl > 0 then
 		item.itemLevel = itemData.ilvl
 	end

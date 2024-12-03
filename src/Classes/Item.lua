@@ -742,11 +742,11 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 				end
 
 				local modLines
-				if modLine.enchant or (modLine.crafted and #self.enchantModLines + #self.implicitModLines < implicitLines) then -- check later
+				if modLine.enchant then
 					modLines = self.enchantModLines
 				elseif line:find("Requires Class") then
 					modLines = self.classRequirementModLines
-				elseif modLine.implicit or (not modLine.crafted and #self.enchantModLines + #self.implicitModLines < implicitLines) then -- check later
+				elseif modLine.implicit or #self.enchantModLines + #self.implicitModLines < implicitLines then
 					modLines = self.implicitModLines
 				else
 					modLines = self.explicitModLines
@@ -978,7 +978,7 @@ function ItemClass:BuildRaw()
 		if modLine.range and line:match("%(%-?[%d%.]+%-%-?[%d%.]+%)") then
 			line = "{range:" .. round(modLine.range, 3) .. "}" .. line
 		end
-		if modLine.enchant then -- check later
+		if modLine.enchant then
 			line = "{enchant}" .. line
 		end
 		if modLine.custom then
