@@ -314,8 +314,8 @@ describe("TestItemParse", function()
 	it("enchant", function()
 		local item = new("Item", raw("+8 to Strength (enchant)"))
 		assert.are.equals(1, #item.enchantModLines)
-		-- enchant also sets crafted and implicit
-		assert.truthy(item.enchantModLines[1].crafted)
+		-- enchant also sets enchant and implicit
+		assert.truthy(item.enchantModLines[1].enchant)
 		assert.truthy(item.enchantModLines[1].implicit)
 	end)
 
