@@ -11,7 +11,7 @@ local s_format = string.format
 local t_insert = table.insert
 
 -- TODO generate these from data files
-local itemCategoryTags = {
+local tradeCategoryTags = {
 	["Ring"] = { ["ring"] = true, ["ring_can_roll_minion_modifiers"] = true },
 	["Amulet"] = { ["amulet"] = true },
 	["Belt"] = { ["belt"] = true },
@@ -50,12 +50,48 @@ local itemCategoryTags = {
 
 }
 
+local tradeCategoryNames = {
+	["Ring"] = { "Ring" },
+	["Amulet"] = { "Amulet" },
+	["Belt"] = { "Belt" },
+	["Chest"] = { "Body Armour" },
+	["Helmet"] = { "Helmet" },
+	["Gloves"] = { "Gloves" },
+	["Boots"] = { "Boots" },
+	["Quiver"] = { "Quiver" },
+	["Shield"] = { "Shield" },
+	["Focus"] = { "Focus" },
+	["1HWeapon"] = { "One Handed Sword", "Thrusting One Handed Sword", "One Handed Axe", "One Handed Mace", "Dagger", "Wand", "Claw", "Sceptre" },
+	["2HWeapon"] = { "Fishing Rod", "Two Handed Sword", "Staff", "Two Handed Mace", "Two Handed Axe", "Crossbow" },
+	["1HAxe"] = { "One Handed Axe" },
+	["1HSword"] = { "One Handed Sword", "Thrusting One Handed Sword" },
+	["1HMace"] = { "One Handed Mace", "Sceptre" },
+	["Dagger"] = { "Dagger" },
+	["Wand"] = { "Wand" },
+	["Claw"] = { "Claw" },
+	["Staff"] = { "Staff" },
+	["Bow"] = { "Bow" },
+	["2HAxe"] = { "Two Handed Axe" },
+	["2HSword"] = { "Two Handed Sword" },
+	["2HMace"] = { "Two Handed Mace" },
+	["FishingRod"] = { "Fishing Rod" },
+	["RadiusJewel"] = { "Time-Lost"},
+	["BaseJewel"] = { "Jewel" },
+	["AnyJewel"] = { "Jewel", "Time-Lost Jewel" },
+	["Flask"] = { "Life Flask", "Mana Flask" },
+	["Charm"] = { "Charm" },
+	-- not in the game yet.
+	-- ["TrapTool"] = { "Trap Tool"}, Unsure if correct
+	-- ["Flail"] = { "Flail" },
+	-- ["Spear"] = { "Spear" }
+}
+
 
 local tradeStatCategoryIndices = {
-	["Explicit"] = 0,
-	["Implicit"] = 1,
-	["Enchant"] = 2,
-	["Rune"] = 3,
+	["Explicit"] = 1,
+	["Implicit"] = 2,
+	["Enchant"] = 3,
+	["Rune"] = 4,
 }
 
 local MAX_FILTERS = 35
@@ -87,7 +123,7 @@ local function fetchStats()
 end
 
 local function canModSpawnForItemCategory(mod, category)
-	local tags = itemCategoryTags[category]
+	local tags = tradeCategoryTags[category]
 	for i, key in ipairs(mod.weightKey) do
 		if mod.weightVal[i] > 0 and tags[key] == true then
 			return true
@@ -122,21 +158,18 @@ function TradeQueryGeneratorClass.WeightedRatioOutputs(baseOutput, newOutput, st
 	return meanStatDiff
 end
 
-function TradeQueryGeneratorClass:ProcessMod(modId, mod, tradeQueryStatsParsed, itemCategoriesMask, itemCategoriesOverride)
+function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCategoriesMask, itemCategoriesOverride)
+	ConPrintTable(mod)
 	for index, modLine in ipairs(mod) do
 		if modLine:find("Grants Level") or modLine:find("inflict Decay") then -- skip mods that grant skills / decay, as they will often be overwhelmingly powerful but don't actually fit into the build
 			goto nextModLine
 		end
 
-		local statOrder = modLine:find("Nearby Enemies have %-") ~= nil and mod.statOrder[index + 1] or mod.statOrder[index] -- hack to get minus res mods associated with the correct statOrder
-		local modType = (mod.type == "Prefix" or mod.type == "Suffix") and (type(modId) == "string" and modId:find("AfflictionNotable") and "PassiveNode" or "Explicit") or mod.type
+		local modType = (mod.type == "Prefix" or mod.type == "Suffix") and "Explicit" or mod.type
 
 		-- Special cases
 		local specialCaseData = { }
-		if mod.group and (mod.group:find("Local") or mod.group:find("Shield")) and modLine:find("Chance to Block$") then
-			specialCaseData.overrideModLine = "+#% Chance to Block"
-			modLine = modLine .. " (Shields)"
-		elseif modLine == "You can apply an additional Curse" then
+		if modLine == "You can apply an additional Curse" then
 			specialCaseData.overrideModLineSingular = "You can apply an additional Curse"
 			modLine = "You can apply 1 additional Curses"
 		elseif modLine == "Bow Attacks fire an additional Arrow" then
@@ -154,63 +187,69 @@ function TradeQueryGeneratorClass:ProcessMod(modId, mod, tradeQueryStatsParsed, 
 		end
 
 		local function swapInverse(modLine)
-			local priorStr = modLine
-			local inverseKey
 			if modLine:match("increased") then
 				modLine = modLine:gsub("([^ ]+) increased", "-%1 reduced")
-				if modLine ~= priorStr then inverseKey = "increased" end
 			elseif modLine:match("reduced") then
 				modLine = modLine:gsub("([^ ]+) reduced", "-%1 increased")
-				if modLine ~= priorStr then inverseKey = "reduced" end
 			elseif modLine:match("more") then
 				modLine = modLine:gsub("([^ ]+) more", "-%1 less")
-				if modLine ~= priorStr then inverseKey = "more" end
 			elseif modLine:match("less") then
 				modLine = modLine:gsub("([^ ]+) less", "-%1 more")
-				if modLine ~= priorStr then inverseKey = "less" end
 			elseif modLine:match("expires ([^ ]+) slower") then
 				modLine = modLine:gsub("([^ ]+) slower", "-%1 faster")
-				if modLine ~= priorStr then inverseKey = "slower" end
 			elseif modLine:match("expires ([^ ]+) faster") then
 				modLine = modLine:gsub("([^ ]+) faster", "-%1 slower")
-				if modLine ~= priorStr then inverseKey = "faster" end
 			end
-			return modLine, inverseKey
+			return modLine
 		end
 
-		local uniqueIndex = tostring(statOrder).."_"..mod.group
-		local inverse = false
-		local inverseKey
-		::reparseMod::
-		if self.modData[modType][uniqueIndex] == nil then
-			local tradeMod = nil
-			if tradeMod == nil then
-				local matchStr = modLine:gsub("[#()0-9%-%+%.]","")
-				for _, entry in ipairs(tradeQueryStatsParsed.result[tradeStatCategoryIndices[modType]].entries) do
-					if entry.text:gsub("[#()0-9%-%+%.]","") == matchStr then
-						tradeMod = entry
-						break
-					end
+		-- iterate trade mod category to find mod with matching text.
+		local function getTradeMod(line, type)
+			-- try finding string
+			local matchStr = line:gsub("[#()0-9%-%+%.]","")
+			for _, entry in ipairs(tradeQueryStatsParsed.result[tradeStatCategoryIndices[type]].entries) do
+				if entry.text:gsub("[#()0-9%-%+%.]","") == matchStr then
+					return entry
 				end
 			end
-			if tradeMod == nil then
-				if inverse then
-					logToFile("Unable to match %s mod: %s", modType, modLine)
-					goto nextModLine
-				else -- try swapping increased / decreased and signed and other similar mods.
-					modLine, inverseKey = swapInverse(modLine)
-					inverse = true
-					if inverseKey then
-						goto reparseMod
-					else
-						logToFile("Unable to match %s mod: %s", modType, modLine)
-						goto nextModLine
-					end
+			-- check reverse
+			local matchStr = swapInverse(line):gsub("[#()0-9%-%+%.]","")
+			for _, entry in ipairs(tradeQueryStatsParsed.result[tradeStatCategoryIndices[type]].entries) do
+				if entry.text:gsub("[#()0-9%-%+%.]","") == matchStr then
+					return entry, true
 				end
 			end
 
-			self.modData[modType][uniqueIndex] = { tradeMod = tradeMod, specialCaseData = specialCaseData, inverseKey = inverseKey }
-		elseif self.modData[modType][uniqueIndex].inverseKey and modLine:match(self.modData[modType][uniqueIndex].inverseKey) then
+			return nil
+		end
+
+		local tradeMod = nil
+		local inverse
+
+		if mod.statOrder == nil then -- if there isn't a mod order we have to use the trade id instead e.g. implciits.
+			tradeMod, inverse = getTradeMod(modLine, modType)
+			if tradeMod == nil then
+				logToFile("Unable to match %s mod: %s", modType, modLine)
+				goto nextModLine
+			end
+
+			mod.statOrder = { tradeMod.id }
+			mod.group = ""
+		end
+
+		local statOrder = modLine:find("Nearby Enemies have %-") ~= nil and mod.statOrder[index + 1] or mod.statOrder[index] -- hack to get minus res mods associated with the correct statOrder
+		local uniqueIndex = tostring(statOrder).."_"..mod.group
+
+		if self.modData[modType][uniqueIndex] == nil then
+			if tradeMod == nil then
+				tradeMod, inverse = getTradeMod(modLine, modType)
+			end
+			if tradeMod == nil then
+				logToFile("Unable to match %s mod: %s", modType, modLine)
+				goto nextModLine
+			end
+			self.modData[modType][uniqueIndex] = { tradeMod = tradeMod, specialCaseData = specialCaseData, inverse = inverse }
+		elseif self.modData[modType][uniqueIndex].inverse then
 			inverse = true
 			modLine = swapInverse(modLine)
 		end
@@ -259,7 +298,7 @@ function TradeQueryGeneratorClass:ProcessMod(modId, mod, tradeQueryStatsParsed, 
 		end
 
 		-- Update the min and max values available for each item category
-		for category, _ in pairs(itemCategoriesOverride or itemCategoriesMask or itemCategoryTags) do
+		for category, _ in pairs(itemCategoriesOverride or itemCategoriesMask or tradeCategoryTags) do
 			if itemCategoriesOverride or canModSpawnForItemCategory(mod, category) then
 				if self.modData[modType][uniqueIndex][category] == nil then
 					self.modData[modType][uniqueIndex][category] = { min = 999999, max = -999999 }
@@ -284,8 +323,8 @@ function TradeQueryGeneratorClass:ProcessMod(modId, mod, tradeQueryStatsParsed, 
 end
 
 function TradeQueryGeneratorClass:GenerateModData(mods, tradeQueryStatsParsed, itemCategoriesMask, itemCategoriesOverride)
-	for modId, mod in pairs(mods) do
-		self:ProcessMod(modId, mod, tradeQueryStatsParsed, itemCategoriesMask, itemCategoriesOverride)
+	for _, mod in pairs(mods) do
+		self:ProcessMod( mod, tradeQueryStatsParsed, itemCategoriesMask, itemCategoriesOverride)
 	end
 end
 
@@ -311,122 +350,48 @@ function TradeQueryGeneratorClass:InitMods()
 	tradeStats:gsub("\n", " ")
 	local tradeQueryStatsParsed = dkjson.decode(tradeStats)
 
-	-- explicit, and jewel mods
+	-- create mask for regular mods (excl flasks. charms and jewels)
 	local regularItemMask = { }
-	for category, _ in pairs(itemCategoryTags) do
-		if category ~= "Flask" and category ~= "BaseJewel" and category ~= "AnyJewel" then
-			regularItemMask[category] = true
-		end
+	for category, _ in pairs(tradeCategoryTags) do
+		regularItemMask[category] = true
 	end
+
 	self:GenerateModData(data.itemMods.Item, tradeQueryStatsParsed, regularItemMask)
 	self:GenerateModData(data.itemMods.Jewel, tradeQueryStatsParsed, { ["BaseJewel"] = true, ["RadiusJewel"] = true, ["AnyJewel"] = true })
 	self:GenerateModData(data.itemMods.Flask, tradeQueryStatsParsed, { ["Flask"] = true, ["Charm"] = true })
 
+	-- megalomaniac tbd
+	-- local clusterNotableMods = {}
+	-- for k, v in pairs(data.itemMods.JewelCluster) do
+	-- 	if k:find("AfflictionNotable") then
+	-- 		clusterNotableMods[k] = v
+	-- 	end
+	-- end
+	-- self:GenerateModData(clusterNotableMods, tradeQueryStatsParsed)
 
-	regularItemMask.Flask = true -- Update mask as flasks can have crafted mods.
-	self:GenerateModData(data.masterMods, tradeQueryStatsParsed, regularItemMask)
-	self:GenerateModData(data.veiledMods, tradeQueryStatsParsed, regularItemMask)
-
-	-- megalomaniac
-	local clusterNotableMods = {}
-	for k, v in pairs(data.itemMods.JewelCluster) do
-		if k:find("AfflictionNotable") then
-			clusterNotableMods[k] = v
-		end
-	end
-	self:GenerateModData(clusterNotableMods, tradeQueryStatsParsed)
-
-	-- Base item implicit mods. A lot of this code is duplicated from generateModData(), but with important small logical flow changes to handle the format differences
+	-- implicit mods
 	for baseName, entry in pairs(data.itemBases) do
 		if entry.implicit ~= nil then
-			local stats = { }
+			local type = (entry.subType and entry.subType .. " " or "") .. entry.type
+
+			local mod = { type = "Implicit" }
 			for modLine in string.gmatch(entry.implicit, "([^".."\n".."]+)") do
-				if modLine:find("Grants Level") then -- skip mods that grant skills, as they will often be overwhelmingly powerful but don't actually fit into the build
-					goto continue
-				end
-
-				local modType = "Implicit"
-
-				local tradeMod = nil
-				local matchStr = modLine:gsub("[#()0-9%-%+%.]","")
-				for _, entry in ipairs(tradeQueryStatsParsed.result[tradeStatCategoryIndices[modType]].entries) do
-					if entry.text:gsub("[#()0-9%-%+%.]","") == matchStr then
-						tradeMod = entry
-						break
-					end
-				end
-
-				if tradeMod == nil then
-					goto continue
-					logToFile("Unable to match %s mod: %s", modType, modLine)
-				end
-				-- base item implicits don't have stat orders, so use the trade mod id instead
-				local statOrder = tradeMod.id
-
-				-- If this is the first tier for this mod, init the entry
-				local uniqueIndex = tostring(statOrder)
-				if self.modData[modType][uniqueIndex] == nil then
-					self.modData[modType][uniqueIndex] = { tradeMod = tradeMod, specialCaseData = { } }
-				end
-
-				-- tokenize the numerical variables for this mod and store the sign if there is one
-				local tokens = { }
-				local poundPos, tokenizeOffset = 0, 0
-				while true do
-					poundPos = self.modData[modType][uniqueIndex].tradeMod.text:find("#", poundPos + 1)
-					if poundPos == nil then
-						break
-					end
-					startPos, endPos, sign, min, max = modLine:find("([%+%-]?)%(?(%d+%.?%d*)%-?(%d*%.?%d*)%)?", poundPos + tokenizeOffset)
-
-					if endPos == nil then
-						logToFile("[Init] Error extracting tokens from '%s' for tradeMod '%s'", modLine, self.modData[modType][uniqueIndex].tradeMod.text)
-						goto continue
-					end
-
-					tokenizeOffset = tokenizeOffset + (endPos - startPos)
-					t_insert(tokens, min)
-					t_insert(tokens, #max > 0 and tonumber(max) or tonumber(min))
-					if sign ~= nil then
-						self.modData[modType][uniqueIndex].sign = sign
-					end
-				end
-
-				if #tokens ~= 0 and #tokens ~= 2 and #tokens ~= 4 then
-					logToFile("Unexpected # of tokens found for mod: %s", modLine)
-					goto continue
-				end
-
-				-- Update the min and max values available for each item category
-				for category, categoryTags in pairs(itemCategoryTags) do
-					local tagMatch = false
-					for tag, value in pairs(entry.tags) do
-						if tag ~= "default" and categoryTags[tag] == true then
-							tagMatch = true
-							break
-						end
-					end
-
-					if tagMatch then
-						if self.modData[modType][uniqueIndex][category] == nil then
-							self.modData[modType][uniqueIndex][category] = { min = 999999, max = -999999, subType = entry.subType }
-						end
-
-						local modRange = self.modData[modType][uniqueIndex][category]
-						if #tokens == 0 then
-							modRange.min = 1
-							modRange.max = 1
-						elseif #tokens == 2 then
-							modRange.min = math.min(modRange.min, tokens[1])
-							modRange.max = math.max(modRange.max, tokens[2])
-						elseif #tokens == 4 then
-							modRange.min = math.min(modRange.min, (tokens[1] + tokens[3]) / 2)
-							modRange.max = math.max(modRange.max, (tokens[2] + tokens[4]) / 2)
-						end
-					end
-				end
-				::continue::
+				t_insert(mod, modLine)
 			end
+
+			-- create trade type mask for base type
+			local maskOverride = {}
+			for tradeName, typeNames in pairs(tradeCategoryNames) do
+				for _, typeName in ipairs(typeNames) do
+					if typeName == type then
+						maskOverride[tradeName] = true;
+						break
+					end
+				end
+			end
+
+			-- process implicit mod
+			self:ProcessMod(mod, tradeQueryStatsParsed, regularItemMask, maskOverride)
 		end
 	end
 
@@ -441,8 +406,6 @@ function TradeQueryGeneratorClass:GenerateModWeights(modsToTest)
 	for _, entry in pairs(modsToTest) do
 		if entry[self.calcContext.itemCategory] ~= nil then
 			if self.alreadyWeightedMods[entry.tradeMod.id] ~= nil then -- Don't calculate the same thing twice (can happen with corrupted vs implicit)
-				goto continue
-			elseif self.calcContext.options.includeTalisman == false and entry[self.calcContext.itemCategory].subType == "Talisman" then -- Talisman implicits take up a lot of query slots, so we have an option to skip them
 				goto continue
 			end
 
@@ -535,7 +498,7 @@ end
 function TradeQueryGeneratorClass:StartQuery(slot, options)
 	-- Figure out what type of item we're searching for
 	local existingItem = slot and self.itemsTab.items[slot.selItemId]
-	local testItemType = existingItem and existingItem.baseName or "Unset Amulet"
+	local testItemType = existingItem and existingItem.baseName or "Ring"
 	local itemCategoryQueryStr
 	local itemCategory
 	local special = { }
@@ -669,14 +632,6 @@ function TradeQueryGeneratorClass:StartQuery(slot, options)
 	local itemRawStr = "Rarity: RARE\nStat Tester\n" .. testItemType
 	local testItem = new("Item", itemRawStr)
 
-	-- Apply any requests influences
-	if options.influence1 > 1 then
-		testItem[itemLib.influenceInfo[options.influence1 - 1].key] = true
-	end
-	if options.influence2 > 1 then
-		testItem[itemLib.influenceInfo[options.influence2 - 1].key] = true
-	end
-
 	-- Calculate base output with a blank item
 	local calcFunc, baseOutput = self.itemsTab.build.calcsTab:GetMiscCalculator()
 	local baseItemOutput = slot and calcFunc({ repSlotName = slot.slotName, repItem = testItem }) or baseOutput
@@ -716,7 +671,7 @@ function TradeQueryGeneratorClass:ExecuteQuery()
 	self:GenerateModWeights(self.modData["Explicit"])
 	self:GenerateModWeights(self.modData["Implicit"])
 	if self.calcContext.options.includeCorrupted then
-		self:GenerateModWeights(self.modData["Corrupted"])
+		-- self:GenerateModWeights(self.modData["Corrupted"]) tbd
 	end
 end
 
@@ -777,21 +732,6 @@ function TradeQueryGeneratorClass:FinishQuery()
 		queryTable.query[k] = v
 	end
 
-	local andFilters = { type = "and", filters = { } }
-
-	local options = self.calcContext.options
-	if options.influence1 > 1 then
-		t_insert(andFilters.filters, { id = hasInfluenceModIds[options.influence1 - 1] })
-		filters = filters + 1
-	end
-	if options.influence2 > 1 then
-		t_insert(andFilters.filters, { id = hasInfluenceModIds[options.influence2 - 1] })
-		filters = filters + 1
-	end
-
-	if #andFilters.filters > 0 then
-		t_insert(queryTable.query.stats, andFilters)
-	end
 
 	for _, entry in pairs(self.modWeights) do
 		t_insert(queryTable.query.stats[1].filters, { id = entry.tradeModId, value = { weight = (entry.invert == true and entry.weight * -1 or entry.weight) } })
@@ -831,37 +771,6 @@ function TradeQueryGeneratorClass:FinishQuery()
 		}
 	end
 
-	if options.sockets and options.sockets > 0 then
-		queryTable.query.filters.socket_filters = {
-			disabled = false,
-			filters = {
-				sockets = {
-					max = options.sockets,
-					min = options.sockets
-				}
-			}
-		}
-	end
-
-	if options.links and options.links > 0 then
-		if not queryTable.query.filters.socket_filters then
-			queryTable.query.filters.socket_filters = {
-				disabled = false,
-				filters = {
-					links = {
-						max = options.links,
-						min = options.links
-					}
-				}
-			}
-		else -- do not overwrite options.sockets
-			queryTable.query.filters.socket_filters.filters["links"] = {
-				max = options.links,
-				min = options.links
-			}
-		end
-	end
-
 	local errMsg = nil
 	if #queryTable.query.stats[1].filters == 0 then
 		-- No mods to filter
@@ -884,20 +793,12 @@ function TradeQueryGeneratorClass:RequestQuery(slot, context, statWeights, callb
 	local popupHeight = 110
 
 	local isJewelSlot = slot and slot.slotName:find("Jewel") ~= nil
-	local isAbyssalJewelSlot = slot and slot.slotName:find("Abyssal") ~= nil
-	local isAmuletSlot = slot and slot.slotName == "Amulet"
-	local isEldritchModSlot = slot and eldritchModSlots[slot.slotName] == true
 
 	controls.includeCorrupted = new("CheckBoxControl", {"TOP",nil,"TOP"}, {-40, 30, 18}, "Corrupted Mods:", function(state) end)
 	controls.includeCorrupted.state = not context.slotTbl.alreadyCorrupted and (self.lastIncludeCorrupted == nil or self.lastIncludeCorrupted == true)
 	controls.includeCorrupted.enabled = not context.slotTbl.alreadyCorrupted
 
-	-- removing checkbox until synthesis mods are supported
-	--controls.includeSynthesis = new("CheckBoxControl", {"TOPRIGHT",controls.includeEldritch,"BOTTOMRIGHT"}, {0, 5, 18}, "Synthesis Mods:", function(state) end)
-	--controls.includeSynthesis.state = (self.lastIncludeSynthesis == nil or self.lastIncludeSynthesis == true)
-
 	local lastItemAnchor = controls.includeCorrupted
-	local includeScourge = self.queryTab.pbLeagueRealName == "Standard" or self.queryTab.pbLeagueRealName == "Hardcore"
 
 	local function updateLastAnchor(anchor, height)
 		lastItemAnchor = anchor
@@ -912,64 +813,27 @@ function TradeQueryGeneratorClass:RequestQuery(slot, context, statWeights, callb
 	controls.includeMirrored.state = (self.lastIncludeMirrored == nil or self.lastIncludeMirrored == true)
 	updateLastAnchor(controls.includeMirrored)
 
-	if not isJewelSlot and not isAbyssalJewelSlot and includeScourge then
-		controls.includeScourge = new("CheckBoxControl", {"TOPRIGHT",lastItemAnchor,"BOTTOMRIGHT"}, {0, 5, 18}, "Scourge Mods:", function(state) end)
-		controls.includeScourge.state = (self.lastIncludeScourge == nil or self.lastIncludeScourge == true)
-		updateLastAnchor(controls.includeScourge)
-	end
-
-	if isAmuletSlot then
-		controls.includeTalisman = new("CheckBoxControl", {"TOPRIGHT",lastItemAnchor,"BOTTOMRIGHT"}, {0, 5, 18}, "Talisman Mods:", function(state) end)
-		controls.includeTalisman.state = (self.lastIncludeTalisman == nil or self.lastIncludeTalisman == true)
-		updateLastAnchor(controls.includeTalisman)
-	end
-
-	if isEldritchModSlot then
-		controls.includeEldritch = new("CheckBoxControl", {"TOPRIGHT",lastItemAnchor,"BOTTOMRIGHT"}, {0, 5, 18}, "Eldritch Mods:", function(state) end)
-		controls.includeEldritch.state = (self.lastIncludeEldritch == true)
-		updateLastAnchor(controls.includeEldritch)
-	end
 
 	if isJewelSlot then
-		controls.jewelType = new("DropDownControl", {"TOPLEFT",lastItemAnchor,"BOTTOMLEFT"}, {0, 5, 100, 18}, { "Any", "Base", "Abyss" }, function(index, value) end)
+		controls.jewelType = new("DropDownControl", {"TOPLEFT",lastItemAnchor,"BOTTOMLEFT"}, {0, 5, 100, 18}, { "Any", "Base", "Radius" }, function(index, value) end) -- this does nothing atm
 		controls.jewelType.selIndex = self.lastJewelType or 1
-		controls.jewelTypeLabel = new("LabelControl", {"RIGHT",controls.jewelType,"LEFT"}, {-5, 0, 0, 16}, "Jewel Type:")
-		updateLastAnchor(controls.jewelType)
-	elseif slot and not isAbyssalJewelSlot then
-		controls.influence1 = new("DropDownControl", {"TOPLEFT",lastItemAnchor,"BOTTOMLEFT"}, {0, 5, 100, 18}, influenceDropdownNames, function(index, value) end)
-		controls.influence1.selIndex = self.lastInfluence1 or 1
-		controls.influence1Label = new("LabelControl", {"RIGHT",controls.influence1,"LEFT"}, {-5, 0, 0, 16}, "Influence 1:")
-
-		controls.influence2 = new("DropDownControl", {"TOPLEFT",controls.influence1,"BOTTOMLEFT"}, {0, 5, 100, 18}, influenceDropdownNames, function(index, value) end)
-		controls.influence2.selIndex = self.lastInfluence2 or 1
-		controls.influence2Label = new("LabelControl", {"RIGHT",controls.influence2,"LEFT"}, {-5, 0, 0, 16}, "Influence 2:")
-		updateLastAnchor(controls.influence2, 46)
-	elseif isAbyssalJewelSlot then
-		controls.jewelType = new("DropDownControl", {"TOPLEFT",lastItemAnchor,"BOTTOMLEFT"}, {0, 5, 100, 18}, { "Abyss" }, nil)
-		controls.jewelType.selIndex = 1
 		controls.jewelTypeLabel = new("LabelControl", {"RIGHT",controls.jewelType,"LEFT"}, {-5, 0, 0, 16}, "Jewel Type:")
 		updateLastAnchor(controls.jewelType)
 	end
 
 	-- Add max price limit selection dropbox
 	local currencyTable = {
-		{ name = "Chaos Orb Equivalent", id = nil },
+		{ name = "Relative", id = nil },
+		{ name = "Exalted Orb", id = "exalted" },
 		{ name = "Chaos Orb", id = "chaos" },
 		{ name = "Divine Orb", id = "divine" },
-		{ name = "Orb of Alchemy", id = "alch" },
-		{ name = "Orb of Alteration", id = "alt" },
-		{ name = "Chromatic Orb", id = "chrome" },
-		{ name = "Exalted Orb", id = "exalted" },
-		{ name = "Blessed Orb", id = "blessed" },
-		{ name = "Cartographer's Chisel", id = "chisel" },
-		{ name = "Gemcutter's Prism", id = "gcp" },
-		{ name = "Jeweller's Orb", id = "jewellers" },
-		{ name = "Orb of Scouring", id = "scour" },
-		{ name = "Orb of Regret", id = "regret" },
-		{ name = "Orb of Fusing", id = "fusing" },
-		{ name = "Orb of Chance", id = "chance" },
+		{ name = "Orb of Augmentation", id = "aug" },
+		{ name = "Orb of Transmutation", id = "transmute" },
 		{ name = "Regal Orb", id = "regal" },
-		{ name = "Vaal Orb", id = "vaal" }
+		{ name = "Vaal Orb", id = "vaal" },
+		{ name = "Annulment Orb", id = "annul" },
+		{ name = "Orb of Alchemy", id = "alch" },
+		{ name = "Mirror of Kalandra", id = "mirror" }
 	}
 	local currencyDropdownNames = { }
 	for _, currency in ipairs(currencyTable) do
@@ -984,18 +848,6 @@ function TradeQueryGeneratorClass:RequestQuery(slot, context, statWeights, callb
 	controls.maxLevelLabel = new("LabelControl", {"RIGHT",controls.maxLevel,"LEFT"}, {-5, 0, 0, 16}, "Max Level:")
 	updateLastAnchor(controls.maxLevel)
 
-	-- basic filtering by slot for sockets and links, Megalomaniac does not have slot and Sockets use "Jewel nodeId"
-	if slot and not isJewelSlot and not isAbyssalJewelSlot and not slot.slotName:find("Flask") then
-		controls.sockets = new("EditControl", {"TOPLEFT",lastItemAnchor,"BOTTOMLEFT"}, {0, 5, 70, 18}, nil, nil, "%D")
-		controls.socketsLabel = new("LabelControl", {"RIGHT",controls.sockets,"LEFT"}, {-5, 0, 0, 16}, "# of Sockets:")
-		updateLastAnchor(controls.sockets)
-
-		if not slot.slotName:find("Belt") and not slot.slotName:find("Ring") and not slot.slotName:find("Amulet") then
-			controls.links = new("EditControl", {"TOPLEFT",lastItemAnchor,"BOTTOMLEFT"}, {0, 5, 70, 18}, nil, nil, "%D")
-			controls.linksLabel = new("LabelControl", {"RIGHT",controls.links,"LEFT"}, {-5, 0, 0, 16}, "# of Links:")
-			updateLastAnchor(controls.links)
-		end
-	end
 
 	for i, stat in ipairs(statWeights) do
 		controls["sortStatType"..tostring(i)] = new("LabelControl", {"TOPLEFT",lastItemAnchor,"BOTTOMLEFT"}, {0, i == 1 and 5 or 3, 70, 16}, i < (#statWeights < 6 and 10 or 5) and s_format("^7%.2f: %s", stat.weightMult, stat.label) or ("+ "..tostring(#statWeights - 4).." Additional Stats"))
@@ -1029,28 +881,6 @@ function TradeQueryGeneratorClass:RequestQuery(slot, context, statWeights, callb
 		if controls.includeCorrupted then
 			self.lastIncludeCorrupted, options.includeCorrupted = controls.includeCorrupted.state, controls.includeCorrupted.state
 		end
-		if controls.includeSynthesis then
-			self.lastIncludeSynthesis, options.includeSynthesis = controls.includeSynthesis.state, controls.includeSynthesis.state
-		end
-		if controls.includeEldritch then
-			self.lastIncludeEldritch, options.includeEldritch = controls.includeEldritch.state, controls.includeEldritch.state
-		end
-		if controls.includeScourge then
-			self.lastIncludeScourge, options.includeScourge = controls.includeScourge.state, controls.includeScourge.state
-		end
-		if controls.includeTalisman then
-			self.lastIncludeTalisman, options.includeTalisman = controls.includeTalisman.state, controls.includeTalisman.state
-		end
-		if controls.influence1 then
-			self.lastInfluence1, options.influence1 = controls.influence1.selIndex, controls.influence1.selIndex
-		else
-			options.influence1 = 1
-		end
-		if controls.influence2 then
-			self.lastInfluence2, options.influence2 = controls.influence2.selIndex, controls.influence2.selIndex
-		else
-			options.influence2 = 1
-		end
 		if controls.jewelType then
 			self.lastJewelType = controls.jewelType.selIndex
 			options.jewelType = controls.jewelType.list[controls.jewelType.selIndex]
@@ -1061,12 +891,6 @@ function TradeQueryGeneratorClass:RequestQuery(slot, context, statWeights, callb
 		end
 		if controls.maxLevel.buf then
 			options.maxLevel = tonumber(controls.maxLevel.buf)
-		end
-		if controls.sockets and controls.sockets.buf then
-			options.sockets = tonumber(controls.sockets.buf)
-		end
-		if controls.links and controls.links.buf then
-			options.links = tonumber(controls.links.buf)
 		end
 		options.statWeights = statWeights
 

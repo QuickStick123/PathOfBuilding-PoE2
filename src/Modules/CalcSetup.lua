@@ -775,6 +775,9 @@ function calcs.initEnv(build, mode, override, specEnv)
 			for _, slot in pairs(build.itemsTab.orderedSlots) do
 				local slotName = slot.slotName
 				if items[slotName] then
+					-- ConPrintf(slotName)
+					-- ConPrintTable(items, true)
+					-- ConPrintTable(items[slotName])
 					local srcList = items[slotName].modList or items[slotName].slotModList[slot.slotNum]
 					for _, mod in ipairs(srcList) do
 						-- checks if it disables another slot
