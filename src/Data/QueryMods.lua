@@ -7367,23 +7367,6 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1050883682_"] = {
-			["1HAxe"] = {
-				["max"] = 1, 
-				["min"] = 1, 
-			}, 
-			["1HWeapon"] = {
-				["max"] = 1, 
-				["min"] = 1, 
-			}, 
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "implicit.stat_1050883682", 
-				["text"] = "Has no Accuracy Penalty from Range", 
-				["type"] = "implicit", 
-			}, 
-		}, 
 		["implicit.stat_1207554355_"] = {
 			["Quiver"] = {
 				["max"] = 30, 
@@ -7399,14 +7382,6 @@ return {
 			}, 
 		}, 
 		["implicit.stat_1379411836_"] = {
-			["1HSword"] = {
-				["max"] = 24, 
-				["min"] = 16, 
-			}, 
-			["1HWeapon"] = {
-				["max"] = 24, 
-				["min"] = 16, 
-			}, 
 			["Amulet"] = {
 				["max"] = 7, 
 				["min"] = 5, 
@@ -7561,34 +7536,6 @@ return {
 			["tradeMod"] = {
 				["id"] = "implicit.stat_1691862754", 
 				["text"] = "Used when you become Frozen", 
-				["type"] = "implicit", 
-			}, 
-		}, 
-		["implicit.stat_1702195217_"] = {
-			["sign"] = "+", 
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "implicit.stat_1702195217", 
-				["text"] = "#% to Block chance", 
-				["type"] = "implicit", 
-			}, 
-		}, 
-		["implicit.stat_1725749947_"] = {
-			["1HAxe"] = {
-				["max"] = 1, 
-				["min"] = 1, 
-			}, 
-			["1HWeapon"] = {
-				["max"] = 1, 
-				["min"] = 1, 
-			}, 
-			["sign"] = "", 
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "implicit.stat_1725749947", 
-				["text"] = "Gain # Rage on Hit", 
 				["type"] = "implicit", 
 			}, 
 		}, 
@@ -7790,16 +7737,6 @@ return {
 			["tradeMod"] = {
 				["id"] = "implicit.stat_275498888", 
 				["text"] = "Maximum Quality is #%", 
-				["type"] = "implicit", 
-			}, 
-		}, 
-		["implicit.stat_2763429652_"] = {
-			["sign"] = "", 
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "implicit.stat_2763429652", 
-				["text"] = "#% chance to Maim on Hit", 
 				["type"] = "implicit", 
 			}, 
 		}, 
@@ -8236,26 +8173,6 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_535217483_"] = {
-			["sign"] = "", 
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "implicit.stat_535217483", 
-				["text"] = "#% increased Projectile Speed when thrown", 
-				["type"] = "implicit", 
-			}, 
-		}, 
-		["implicit.stat_548198834_"] = {
-			["sign"] = "", 
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "implicit.stat_548198834", 
-				["text"] = "#% increased Range", 
-				["type"] = "implicit", 
-			}, 
-		}, 
 		["implicit.stat_585126960_"] = {
 			["Charm"] = {
 				["max"] = 1, 
@@ -8294,24 +8211,6 @@ return {
 			["tradeMod"] = {
 				["id"] = "implicit.stat_644456512", 
 				["text"] = "#% reduced Flask Charges used", 
-				["type"] = "implicit", 
-			}, 
-		}, 
-		["implicit.stat_669069897_"] = {
-			["1HWeapon"] = {
-				["max"] = 4, 
-				["min"] = 4, 
-			}, 
-			["Dagger"] = {
-				["max"] = 4, 
-				["min"] = 4, 
-			}, 
-			["sign"] = "", 
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "implicit.stat_669069897", 
-				["text"] = "Leeches #% of Physical Damage as Mana", 
 				["type"] = "implicit", 
 			}, 
 		}, 

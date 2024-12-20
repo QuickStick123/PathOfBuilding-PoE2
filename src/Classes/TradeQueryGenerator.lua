@@ -61,20 +61,20 @@ local tradeCategoryNames = {
 	["Quiver"] = { "Quiver" },
 	["Shield"] = { "Shield" },
 	["Focus"] = { "Focus" },
-	["1HWeapon"] = { "One Handed Sword", "Thrusting One Handed Sword", "One Handed Axe", "One Handed Mace", "Dagger", "Wand", "Claw", "Sceptre" },
-	["2HWeapon"] = { "Fishing Rod", "Two Handed Sword", "Staff", "Two Handed Mace", "Two Handed Axe", "Crossbow" },
-	["1HAxe"] = { "One Handed Axe" },
-	["1HSword"] = { "One Handed Sword", "Thrusting One Handed Sword" },
+	["1HWeapon"] = { "One Handed Mace", "Wand", "Sceptre" },
+	["2HWeapon"] = { "Staff", "Quarterstaff", "Two Handed Mace", "Crossbow" },
+	-- ["1HAxe"] = { "One Handed Axe" },
+	-- ["1HSword"] = { "One Handed Sword", "Thrusting One Handed Sword" },
 	["1HMace"] = { "One Handed Mace", "Sceptre" },
-	["Dagger"] = { "Dagger" },
+	-- ["Dagger"] = { "Dagger" },
 	["Wand"] = { "Wand" },
-	["Claw"] = { "Claw" },
-	["Staff"] = { "Staff" },
+	-- ["Claw"] = { "Claw" },
+	["Staff"] = { "Staff", "Quarterstaff" },
 	["Bow"] = { "Bow" },
-	["2HAxe"] = { "Two Handed Axe" },
-	["2HSword"] = { "Two Handed Sword" },
+	-- ["2HAxe"] = { "Two Handed Axe" },
+	-- ["2HSword"] = { "Two Handed Sword" },
 	["2HMace"] = { "Two Handed Mace" },
-	["FishingRod"] = { "Fishing Rod" },
+	-- ["FishingRod"] = { "Fishing Rod" },
 	["RadiusJewel"] = { "Time-Lost"},
 	["BaseJewel"] = { "Jewel" },
 	["AnyJewel"] = { "Jewel", "Time-Lost Jewel" },
@@ -159,7 +159,6 @@ function TradeQueryGeneratorClass.WeightedRatioOutputs(baseOutput, newOutput, st
 end
 
 function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCategoriesMask, itemCategoriesOverride)
-	ConPrintTable(mod)
 	for index, modLine in ipairs(mod) do
 		if modLine:find("Grants Level") or modLine:find("inflict Decay") then -- skip mods that grant skills / decay, as they will often be overwhelmingly powerful but don't actually fit into the build
 			goto nextModLine
@@ -395,8 +394,10 @@ function TradeQueryGeneratorClass:InitMods()
 				end
 			end
 
-			-- process implicit mod
-			self:ProcessMod(mod, tradeQueryStatsParsed, regularItemMask, maskOverride)
+			-- mask found process implicit mod this avoids processing unimplemnted bases i.e. two handed axes.
+			if next(maskOverride) ~= nil then
+				self:ProcessMod(mod, tradeQueryStatsParsed, regularItemMask, maskOverride)
+			end
 		end
 	end
 
