@@ -2,6 +2,998 @@
 -- Stat data (c) Grinding Gear Games
 
 return {
+	["Corrupted"] = {
+		["1089_AllDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2154246560", 
+				["text"] = "#% increased Damage", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["1229_LocalChaosDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2223678961", 
+				["text"] = "Adds # to # Chaos Damage", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["1372_EnergyShieldDelay"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1782086450", 
+				["text"] = "#% faster start of Energy Shield Recharge", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["1409_GlobalIncreasePhysicalSpellSkillGemLevel"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1600707273", 
+				["text"] = "# to Level of all Physical Spell Skills", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["1451_GainLifeOnBlock"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_762600725", 
+				["text"] = "# Life gained when you Block", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["1452_GainManaOnBlock"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2122183138", 
+				["text"] = "# Mana gained when you Block", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["1493_MaximumEnduranceCharges"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1515657623", 
+				["text"] = "# to Maximum Endurance Charges", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["1498_MaximumFrenzyCharges"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_4078695", 
+				["text"] = "# to Maximum Frenzy Charges", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["1503_MaximumPowerCharges"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_227523295", 
+				["text"] = "# to Maximum Power Charges", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["1627_LifeRegenerationRatePercentage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_836936635", 
+				["text"] = "Regenerate #% of Life per second", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["1668_MaximumBlockChance"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_480796730", 
+				["text"] = "#% to maximum Block chance", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["1944_BlindingHit"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2301191210", 
+				["text"] = "#% chance to Blind Enemies on hit", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["2156_LocalChanceToBleed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1519615863", 
+				["text"] = "#% chance to cause Bleeding on Hit", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["2627_FireResistancePenetration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2653955271", 
+				["text"] = "Damage Penetrates #% Fire Resistance", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["2628_ColdResistancePenetration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3417711605", 
+				["text"] = "Damage Penetrates #% Cold Resistance", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["2629_LightningResistancePenetration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_818778753", 
+				["text"] = "Damage Penetrates #% Lightning Resistance", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["2901_IncreasedStunThreshold"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_680068163", 
+				["text"] = "#% increased Stun Threshold", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["2902_FreezeThreshold"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3780644166", 
+				["text"] = "#% increased Freeze Threshold", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["4162_GlobalSkillGemLevel"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_4283407333", 
+				["text"] = "# to Level of all Skills", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["4254_ArmourBreak"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1776411443", 
+				["text"] = "Break #% increased Armour", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["4475_SlowEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3650992555", 
+				["text"] = "Debuffs you inflict have #% increased Slow Magnitude", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["4506_SlowPotency"] = {
+			["inverse"] = true, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_924253255", 
+				["text"] = "#% increased Slowing Potency of Debuffs on You", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["6104_CharmChargeGeneration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_185580205", 
+				["text"] = "Charms gain # charges per Second", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["6106_LifeFlaskChargeGeneration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1102738251", 
+				["text"] = "Life Flasks gain # charges per Second", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["6107_ManaFlaskChargeGeneration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2200293569", 
+				["text"] = "Mana Flasks gain # charges per Second", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["6702_LocalWeaponRangeIncrease"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_548198834", 
+				["text"] = "#% increased Range", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["6799_LocalRageOnHit"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1725749947", 
+				["text"] = "Gain # Rage on Hit", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["6852_LocalChanceToMaim"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2763429652", 
+				["text"] = "#% chance to Maim on Hit", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["6867_LocalChanceToPoisonOnHit"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3885634897", 
+				["text"] = "#% chance to Poison on Hit", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["822_LocalPhysicalDamagePercent"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1509134228", 
+				["text"] = "#% increased Physical Damage", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["824_LocalFireDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_709508406", 
+				["text"] = "Adds # to # Fire Damage", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["825_LocalColdDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1037193709", 
+				["text"] = "Adds # to # Cold Damage", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["826_LocalLightningDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3336890334", 
+				["text"] = "Adds # to # Lightning Damage", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["8272_ChainFromTerrain"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_4081947835", 
+				["text"] = "Projectiles have #% chance to Chain an additional time from terrain", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["828_MovementVelocity"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2250533757", 
+				["text"] = "#% increased Movement Speed", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["829_IncreasedSkillSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_970213192", 
+				["text"] = "#% increased Skill Speed", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["831_LocalIncreasedBlockPercentage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2481353198", 
+				["text"] = "#% increased Block chance", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["836_LocalPhysicalDamageReductionRatingPercent"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1062208444", 
+				["text"] = "#% increased Armour", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["837_LocalEvasionRatingIncreasePercent"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_124859000", 
+				["text"] = "#% increased Evasion Rating", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["838_LocalEnergyShieldPercent"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_4015621042", 
+				["text"] = "#% increased Energy Shield", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["839_LocalArmourAndEvasion"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2451402625", 
+				["text"] = "#% increased Armour and Evasion", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["840_LocalArmourAndEnergyShield"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3321629045", 
+				["text"] = "#% increased Armour and Energy Shield", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["841_LocalEvasionAndEnergyShield"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1999113824", 
+				["text"] = "#% increased Evasion and Energy Shield", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["843_LocalIncreasedSpiritPercent"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3984865854", 
+				["text"] = "#% increased Spirit", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["854_WeaponSpellDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2974417149", 
+				["text"] = "#% increased Spell Damage", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["860_IncreasedWeaponElementalDamagePercent"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_387439868", 
+				["text"] = "#% increased Elemental Damage with Attacks", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["863_IncreasedAccuracy"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_803737631", 
+				["text"] = "# to Accuracy Rating", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["866_GlobalPhysicalDamageReductionRatingPercent"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1062208444", 
+				["text"] = "#% increased Armour", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["868_GlobalEvasionRatingPercent"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_124859000", 
+				["text"] = "#% increased Evasion Rating", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["870_GlobalEnergyShieldPercent"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2482852589", 
+				["text"] = "#% increased maximum Energy Shield", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["871_IncreasedLife"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3299347043", 
+				["text"] = "# to maximum Life", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["873_IncreasedMana"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1050105434", 
+				["text"] = "# to maximum Mana", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["876_BaseSpirit"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3981240776", 
+				["text"] = "# to Spirit", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["883_AlliesInPresenceAllDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1798257884", 
+				["text"] = "Allies in your Presence deal #% increased Damage", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["8882_ThornsDamageIncrease"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1315743832", 
+				["text"] = "#% increased Thorns damage", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["890_AlliesInPresenceCriticalStrikeMultiplier"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3057012405", 
+				["text"] = "Allies in your Presence have #% increased Critical Damage Bonus", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["891_AlliesInPresenceIncreasedAttackSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1998951374", 
+				["text"] = "Allies in your Presence have #% increased Attack Speed", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["892_AlliesInPresenceIncreasedCastSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_289128254", 
+				["text"] = "Allies in your Presence have #% increased Cast Speed", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["9092_WeaponSwapSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3233599707", 
+				["text"] = "#% increased Weapon Swap Speed", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["911_ItemFoundRarityIncrease"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3917489142", 
+				["text"] = "#% increased Rarity of Items found", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["913_LocalCriticalStrikeMultiplier"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2694482655", 
+				["text"] = "#% to Critical Damage Bonus", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["914_LocalIncreasedAttackSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_210067635", 
+				["text"] = "#% increased Attack Speed", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["915_LocalAttributeRequirements"] = {
+			["inverse"] = true, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3639275092", 
+				["text"] = "#% increased Attribute Requirements", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["917_GlobalIncreaseFireSpellSkillGemLevel"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_591105508", 
+				["text"] = "# to Level of all Fire Spell Skills", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["918_GlobalIncreaseColdSpellSkillGemLevel"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2254480358", 
+				["text"] = "# to Level of all Cold Spell Skills", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["919_GlobalIncreaseLightningSpellSkillGemLevel"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1545858329", 
+				["text"] = "# to Level of all Lightning Spell Skills", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["920_GlobalIncreaseChaosSpellSkillGemLevel"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_4226189338", 
+				["text"] = "# to Level of all Chaos Spell Skills", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["921_GlobalIncreaseMeleeSkillGemLevel"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_9187492", 
+				["text"] = "# to Level of all Melee Skills", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["923_GlobalIncreaseMinionSpellSkillGemLevel"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2162097452", 
+				["text"] = "# to Level of all Minion Skills", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["927_SpellCriticalStrikeChance"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_737908626", 
+				["text"] = "#% increased Critical Hit Chance for Spells", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["929_CriticalStrikeMultiplier"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3556824919", 
+				["text"] = "#% increased Critical Damage Bonus", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["934_IncreasedCastSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2891184298", 
+				["text"] = "#% increased Cast Speed", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["935_AdditionalAmmo"] = {
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1039380318", 
+				["text"] = "Loads an additional bolt", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["937_AdditionalArrows"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+				["overrideModLineSingular"] = "Bow Attacks fire an additional Arrow", 
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3885405204", 
+				["text"] = "Bow Attacks fire # additional Arrows", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["939_Strength"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_4080418644", 
+				["text"] = "# to Strength", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["940_Dexterity"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3261801346", 
+				["text"] = "# to Dexterity", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["941_Intelligence"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_328541901", 
+				["text"] = "# to Intelligence", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["943_ReducedPhysicalDamageTaken"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3771516363", 
+				["text"] = "#% additional Physical Damage Reduction", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["944_MaximumElementalResistance"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1978899297", 
+				["text"] = "#% to all Maximum Elemental Resistances", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["945_MaximumFireResist"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_4095671657", 
+				["text"] = "#% to Maximum Fire Resistance", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["946_MaximumColdResist"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3676141501", 
+				["text"] = "#% to Maximum Cold Resistance", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["947_MaximumLightningResistance"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1011760251", 
+				["text"] = "#% to Maximum Lightning Resistance", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["949_AllResistances"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2901986750", 
+				["text"] = "#% to all Elemental Resistances", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["950_FireResistance"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3372524247", 
+				["text"] = "#% to Fire Resistance", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["951_ColdResistance"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_4220027924", 
+				["text"] = "#% to Cold Resistance", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["952_LightningResistance"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1671376347", 
+				["text"] = "#% to Lightning Resistance", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["953_ChaosResistance"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2923486259", 
+				["text"] = "#% to Chaos Resistance", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["959_DamageTakenGainedAsLife"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1444556985", 
+				["text"] = "#% of Damage taken Recouped as Life", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["960_LifeLeechPermyriad"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2557965901", 
+				["text"] = "Leech #% of Physical Attack Damage as Life", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["964_LifeGainedFromEnemyDeath"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3695891184", 
+				["text"] = "Gain # Life per Enemy Killed", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["965_ManaRegeneration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_789117908", 
+				["text"] = "#% increased Mana Regeneration Rate", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["966_PercentDamageGoesToMana"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_472520716", 
+				["text"] = "#% of Damage taken Recouped as Mana", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["968_ManaLeechPermyriad"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_707457662", 
+				["text"] = "Leech #% of Physical Attack Damage as Mana", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["969_ManaGainedFromEnemyDeath"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1368271171", 
+				["text"] = "Gain # Mana per Enemy Killed", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["974_LocalStunDamageIncrease"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_791928121", 
+				["text"] = "Causes #% increased Stun Buildup", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["978_IgniteChanceIncrease"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2968503605", 
+				["text"] = "#% increased chance to Ignite", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["980_FreezeDamageIncrease"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_473429811", 
+				["text"] = "#% increased Freeze Buildup", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["982_ShockChanceIncrease"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_293638271", 
+				["text"] = "#% increased chance to Shock", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["991_ChanceToPierce"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2321178454", 
+				["text"] = "#% chance to Pierce an Enemy", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+	}, 
 	["Enchant"] = {
 	}, 
 	["Explicit"] = {

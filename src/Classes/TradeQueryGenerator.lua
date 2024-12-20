@@ -91,6 +91,7 @@ local tradeStatCategoryIndices = {
 	["Explicit"] = 1,
 	["Implicit"] = 2,
 	["Enchant"] = 3,
+	["Corrupted"] = 3,
 	["Rune"] = 4,
 }
 
@@ -225,7 +226,7 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 		local tradeMod = nil
 		local inverse
 
-		if mod.statOrder == nil then -- if there isn't a mod order we have to use the trade id instead e.g. implciits.
+		if mod.statOrder == nil then -- if there isn't a mod order we have to use the trade id instead e.g. implcits.
 			tradeMod, inverse = getTradeMod(modLine, modType)
 			if tradeMod == nil then
 				logToFile("Unable to match %s mod: %s", modType, modLine)
@@ -341,6 +342,7 @@ function TradeQueryGeneratorClass:InitMods()
 		["Explicit"] = { },
 		["Implicit"] = { },
 		["Enchant"] = { },
+		["Corrupted"] = { },
 		["Rune"] = { },
 	}
 
