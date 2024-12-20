@@ -62,26 +62,26 @@ local tradeCategoryNames = {
 	["Shield"] = { "Shield" },
 	["Focus"] = { "Focus" },
 	["1HWeapon"] = { "One Handed Mace", "Wand", "Sceptre" },
-	["2HWeapon"] = { "Staff", "Quarterstaff", "Two Handed Mace", "Crossbow" },
+	["2HWeapon"] = { "Staff", { "Staff", "Warstaff" }, "Two Handed Mace", "Crossbow" },
 	-- ["1HAxe"] = { "One Handed Axe" },
 	-- ["1HSword"] = { "One Handed Sword", "Thrusting One Handed Sword" },
 	["1HMace"] = { "One Handed Mace", "Sceptre" },
 	-- ["Dagger"] = { "Dagger" },
 	["Wand"] = { "Wand" },
 	-- ["Claw"] = { "Claw" },
-	["Staff"] = { "Staff", "Quarterstaff" },
+	["Staff"] = { "Staff", { "Staff", "Warstaff" } },
 	["Bow"] = { "Bow" },
 	-- ["2HAxe"] = { "Two Handed Axe" },
 	-- ["2HSword"] = { "Two Handed Sword" },
 	["2HMace"] = { "Two Handed Mace" },
 	-- ["FishingRod"] = { "Fishing Rod" },
-	["RadiusJewel"] = { "Time-Lost"},
+	["RadiusJewel"] = { { "Jewel", "Radius"} },
 	["BaseJewel"] = { "Jewel" },
-	["AnyJewel"] = { "Jewel", "Time-Lost Jewel" },
-	["Flask"] = { "Life Flask", "Mana Flask" },
+	["AnyJewel"] = { "Jewel", { "Jewel", "Radius"} },
+	["Flask"] = { { "Flask", "Life" }, { "Flask", "Mana" } },
 	["Charm"] = { "Charm" },
 	-- not in the game yet.
-	-- ["TrapTool"] = { "Trap Tool"}, Unsure if correct
+	-- ["TrapTool"] = { "TrapTool"}, Unsure if correct
 	-- ["Flail"] = { "Flail" },
 	-- ["Spear"] = { "Spear" }
 }
@@ -356,7 +356,7 @@ function TradeQueryGeneratorClass:InitMods()
 		end
 	end
 
-	-- create mask for regular mods (excl flasks. charms and jewels)
+	-- create mask for regular mods
 	local regularItemMask = { }
 	for category, _ in pairs(tradeCategoryTags) do
 		regularItemMask[category] = true
@@ -378,8 +378,6 @@ function TradeQueryGeneratorClass:InitMods()
 	-- implicit mods
 	for baseName, entry in pairs(data.itemBases) do
 		if entry.implicit ~= nil then
-			local type = (entry.subType and entry.subType .. " " or "") .. entry.type
-
 			local mod = { type = "Implicit" }
 			for modLine in string.gmatch(entry.implicit, "([^".."\n".."]+)") do
 				t_insert(mod, modLine)
@@ -389,7 +387,7 @@ function TradeQueryGeneratorClass:InitMods()
 			local maskOverride = {}
 			for tradeName, typeNames in pairs(tradeCategoryNames) do
 				for _, typeName in ipairs(typeNames) do
-					if typeName == type then
+					if type(typeName) == "table" and typeName[2] == entry.subType and typeName[1] == entry.type or typeName == entry.type then
 						maskOverride[tradeName] = true;
 						break
 					end

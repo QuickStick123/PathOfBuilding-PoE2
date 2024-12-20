@@ -8035,6 +8035,24 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
+		["implicit.stat_1702195217_"] = {
+			["2HWeapon"] = {
+				["max"] = 15, 
+				["min"] = 10, 
+			}, 
+			["Staff"] = {
+				["max"] = 15, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1702195217", 
+				["text"] = "#% to Block chance", 
+				["type"] = "implicit", 
+			}, 
+		}, 
 		["implicit.stat_1782086450_"] = {
 			["Chest"] = {
 				["max"] = 50, 
@@ -8666,6 +8684,24 @@ return {
 			["tradeMod"] = {
 				["id"] = "implicit.stat_462041840", 
 				["text"] = "#% of Flask Recovery applied Instantly", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_548198834_"] = {
+			["2HWeapon"] = {
+				["max"] = 16, 
+				["min"] = 16, 
+			}, 
+			["Staff"] = {
+				["max"] = 16, 
+				["min"] = 16, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_548198834", 
+				["text"] = "#% increased Range", 
 				["type"] = "implicit", 
 			}, 
 		}, 
