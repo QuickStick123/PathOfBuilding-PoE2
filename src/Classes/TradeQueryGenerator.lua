@@ -504,7 +504,7 @@ end
 function TradeQueryGeneratorClass:StartQuery(slot, options)
 	-- Figure out what type of item we're searching for
 	local existingItem = slot and self.itemsTab.items[slot.selItemId]
-	local testItemType = existingItem and existingItem.baseName or "Ring"
+	local testItemType = existingItem and existingItem.baseName or "Diamond"
 	local itemCategoryQueryStr
 	local itemCategory
 	local special = { }
@@ -738,6 +738,7 @@ function TradeQueryGeneratorClass:FinishQuery()
 		queryTable.query[k] = v
 	end
 
+	local options = self.calcContext.options
 
 	for _, entry in pairs(self.modWeights) do
 		t_insert(queryTable.query.stats[1].filters, { id = entry.tradeModId, value = { weight = (entry.invert == true and entry.weight * -1 or entry.weight) } })
