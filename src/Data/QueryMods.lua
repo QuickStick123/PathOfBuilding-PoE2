@@ -1162,15 +1162,7 @@ return {
 			}, 
 		}, 
 		["822_LocalIncreasedPhysicalDamagePercentAndAccuracyRating"] = {
-			["1HAxe"] = {
-				["max"] = 79, 
-				["min"] = 15, 
-			}, 
 			["1HMace"] = {
-				["max"] = 79, 
-				["min"] = 15, 
-			}, 
-			["1HSword"] = {
 				["max"] = 79, 
 				["min"] = 15, 
 			}, 
@@ -1178,15 +1170,7 @@ return {
 				["max"] = 79, 
 				["min"] = 15, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 79, 
-				["min"] = 15, 
-			}, 
 			["2HMace"] = {
-				["max"] = 79, 
-				["min"] = 15, 
-			}, 
-			["2HSword"] = {
 				["max"] = 79, 
 				["min"] = 15, 
 			}, 
@@ -1199,10 +1183,6 @@ return {
 				["min"] = 15, 
 			}, 
 			["Claw"] = {
-				["max"] = 79, 
-				["min"] = 15, 
-			}, 
-			["Dagger"] = {
 				["max"] = 79, 
 				["min"] = 15, 
 			}, 
@@ -1224,15 +1204,7 @@ return {
 			}, 
 		}, 
 		["822_LocalPhysicalDamagePercent"] = {
-			["1HAxe"] = {
-				["max"] = 179, 
-				["min"] = 40, 
-			}, 
 			["1HMace"] = {
-				["max"] = 179, 
-				["min"] = 40, 
-			}, 
-			["1HSword"] = {
 				["max"] = 179, 
 				["min"] = 40, 
 			}, 
@@ -1240,15 +1212,7 @@ return {
 				["max"] = 179, 
 				["min"] = 40, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 179, 
-				["min"] = 40, 
-			}, 
 			["2HMace"] = {
-				["max"] = 179, 
-				["min"] = 40, 
-			}, 
-			["2HSword"] = {
 				["max"] = 179, 
 				["min"] = 40, 
 			}, 
@@ -1261,10 +1225,6 @@ return {
 				["min"] = 40, 
 			}, 
 			["Claw"] = {
-				["max"] = 179, 
-				["min"] = 40, 
-			}, 
-			["Dagger"] = {
 				["max"] = 179, 
 				["min"] = 40, 
 			}, 
@@ -1286,15 +1246,7 @@ return {
 			}, 
 		}, 
 		["823_LocalPhysicalDamage"] = {
-			["1HAxe"] = {
-				["max"] = 52.5, 
-				["min"] = 2.5, 
-			}, 
 			["1HMace"] = {
-				["max"] = 52.5, 
-				["min"] = 2.5, 
-			}, 
-			["1HSword"] = {
 				["max"] = 52.5, 
 				["min"] = 2.5, 
 			}, 
@@ -1302,15 +1254,7 @@ return {
 				["max"] = 52.5, 
 				["min"] = 2.5, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 74.5, 
-				["min"] = 3.5, 
-			}, 
 			["2HMace"] = {
-				["max"] = 74.5, 
-				["min"] = 3.5, 
-			}, 
-			["2HSword"] = {
 				["max"] = 74.5, 
 				["min"] = 3.5, 
 			}, 
@@ -1327,10 +1271,6 @@ return {
 				["min"] = 2.5, 
 			}, 
 			["Crossbow"] = {
-				["max"] = 52.5, 
-				["min"] = 2.5, 
-			}, 
-			["Dagger"] = {
 				["max"] = 52.5, 
 				["min"] = 2.5, 
 			}, 
@@ -1352,15 +1292,7 @@ return {
 			}, 
 		}, 
 		["824_LocalFireDamage"] = {
-			["1HAxe"] = {
-				["max"] = 140.5, 
-				["min"] = 3, 
-			}, 
 			["1HMace"] = {
-				["max"] = 140.5, 
-				["min"] = 3, 
-			}, 
-			["1HSword"] = {
 				["max"] = 140.5, 
 				["min"] = 3, 
 			}, 
@@ -1368,15 +1300,7 @@ return {
 				["max"] = 140.5, 
 				["min"] = 3, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 140.5, 
-				["min"] = 3, 
-			}, 
 			["2HMace"] = {
-				["max"] = 140.5, 
-				["min"] = 3, 
-			}, 
-			["2HSword"] = {
 				["max"] = 140.5, 
 				["min"] = 3, 
 			}, 
@@ -1393,10 +1317,6 @@ return {
 				["min"] = 3, 
 			}, 
 			["Crossbow"] = {
-				["max"] = 98.5, 
-				["min"] = 3, 
-			}, 
-			["Dagger"] = {
 				["max"] = 98.5, 
 				["min"] = 3, 
 			}, 
@@ -1414,15 +1334,7 @@ return {
 			}, 
 		}, 
 		["825_LocalColdDamage"] = {
-			["1HAxe"] = {
-				["max"] = 112, 
-				["min"] = 2, 
-			}, 
 			["1HMace"] = {
-				["max"] = 112, 
-				["min"] = 2, 
-			}, 
-			["1HSword"] = {
 				["max"] = 112, 
 				["min"] = 2, 
 			}, 
@@ -1430,15 +1342,7 @@ return {
 				["max"] = 112, 
 				["min"] = 2, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 112, 
-				["min"] = 2, 
-			}, 
 			["2HMace"] = {
-				["max"] = 112, 
-				["min"] = 2, 
-			}, 
-			["2HSword"] = {
 				["max"] = 112, 
 				["min"] = 2, 
 			}, 
@@ -1455,10 +1359,6 @@ return {
 				["min"] = 2, 
 			}, 
 			["Crossbow"] = {
-				["max"] = 79, 
-				["min"] = 2, 
-			}, 
-			["Dagger"] = {
 				["max"] = 79, 
 				["min"] = 2, 
 			}, 
@@ -1476,15 +1376,7 @@ return {
 			}, 
 		}, 
 		["826_LocalLightningDamage"] = {
-			["1HAxe"] = {
-				["max"] = 140.5, 
-				["min"] = 4, 
-			}, 
 			["1HMace"] = {
-				["max"] = 140.5, 
-				["min"] = 4, 
-			}, 
-			["1HSword"] = {
 				["max"] = 140.5, 
 				["min"] = 4, 
 			}, 
@@ -1492,15 +1384,7 @@ return {
 				["max"] = 140.5, 
 				["min"] = 4, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 140.5, 
-				["min"] = 4, 
-			}, 
 			["2HMace"] = {
-				["max"] = 140.5, 
-				["min"] = 4, 
-			}, 
-			["2HSword"] = {
 				["max"] = 140.5, 
 				["min"] = 4, 
 			}, 
@@ -1517,10 +1401,6 @@ return {
 				["min"] = 4, 
 			}, 
 			["Crossbow"] = {
-				["max"] = 99, 
-				["min"] = 4, 
-			}, 
-			["Dagger"] = {
 				["max"] = 99, 
 				["min"] = 4, 
 			}, 
@@ -1548,15 +1428,7 @@ return {
 			}, 
 		}, 
 		["827_LocalAccuracyRating"] = {
-			["1HAxe"] = {
-				["max"] = 550, 
-				["min"] = 11, 
-			}, 
 			["1HMace"] = {
-				["max"] = 550, 
-				["min"] = 11, 
-			}, 
-			["1HSword"] = {
 				["max"] = 550, 
 				["min"] = 11, 
 			}, 
@@ -1564,15 +1436,7 @@ return {
 				["max"] = 550, 
 				["min"] = 11, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 550, 
-				["min"] = 11, 
-			}, 
 			["2HMace"] = {
-				["max"] = 550, 
-				["min"] = 11, 
-			}, 
-			["2HSword"] = {
 				["max"] = 550, 
 				["min"] = 11, 
 			}, 
@@ -1585,10 +1449,6 @@ return {
 				["min"] = 11, 
 			}, 
 			["Claw"] = {
-				["max"] = 550, 
-				["min"] = 11, 
-			}, 
-			["Dagger"] = {
 				["max"] = 550, 
 				["min"] = 11, 
 			}, 
@@ -1610,15 +1470,7 @@ return {
 			}, 
 		}, 
 		["827_LocalIncreasedPhysicalDamagePercentAndAccuracyRating"] = {
-			["1HAxe"] = {
-				["max"] = 200, 
-				["min"] = 16, 
-			}, 
 			["1HMace"] = {
-				["max"] = 200, 
-				["min"] = 16, 
-			}, 
-			["1HSword"] = {
 				["max"] = 200, 
 				["min"] = 16, 
 			}, 
@@ -1626,15 +1478,7 @@ return {
 				["max"] = 200, 
 				["min"] = 16, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 200, 
-				["min"] = 16, 
-			}, 
 			["2HMace"] = {
-				["max"] = 200, 
-				["min"] = 16, 
-			}, 
-			["2HSword"] = {
 				["max"] = 200, 
 				["min"] = 16, 
 			}, 
@@ -1647,10 +1491,6 @@ return {
 				["min"] = 16, 
 			}, 
 			["Claw"] = {
-				["max"] = 200, 
-				["min"] = 16, 
-			}, 
-			["Dagger"] = {
 				["max"] = 200, 
 				["min"] = 16, 
 			}, 
@@ -1672,15 +1512,7 @@ return {
 			}, 
 		}, 
 		["827_LocalLightRadiusAndAccuracy"] = {
-			["1HAxe"] = {
-				["max"] = 60, 
-				["min"] = 10, 
-			}, 
 			["1HMace"] = {
-				["max"] = 60, 
-				["min"] = 10, 
-			}, 
-			["1HSword"] = {
 				["max"] = 60, 
 				["min"] = 10, 
 			}, 
@@ -1688,15 +1520,7 @@ return {
 				["max"] = 60, 
 				["min"] = 10, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 60, 
-				["min"] = 10, 
-			}, 
 			["2HMace"] = {
-				["max"] = 60, 
-				["min"] = 10, 
-			}, 
-			["2HSword"] = {
 				["max"] = 60, 
 				["min"] = 10, 
 			}, 
@@ -1709,10 +1533,6 @@ return {
 				["min"] = 10, 
 			}, 
 			["Claw"] = {
-				["max"] = 60, 
-				["min"] = 10, 
-			}, 
-			["Dagger"] = {
 				["max"] = 60, 
 				["min"] = 10, 
 			}, 
@@ -3454,15 +3274,7 @@ return {
 			}, 
 		}, 
 		["860_IncreasedWeaponElementalDamagePercent"] = {
-			["1HAxe"] = {
-				["max"] = 100, 
-				["min"] = 19, 
-			}, 
 			["1HMace"] = {
-				["max"] = 100, 
-				["min"] = 19, 
-			}, 
-			["1HSword"] = {
 				["max"] = 100, 
 				["min"] = 19, 
 			}, 
@@ -3470,15 +3282,7 @@ return {
 				["max"] = 100, 
 				["min"] = 19, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 139, 
-				["min"] = 34, 
-			}, 
 			["2HMace"] = {
-				["max"] = 139, 
-				["min"] = 34, 
-			}, 
-			["2HSword"] = {
 				["max"] = 139, 
 				["min"] = 34, 
 			}, 
@@ -3491,10 +3295,6 @@ return {
 				["min"] = 19, 
 			}, 
 			["Claw"] = {
-				["max"] = 100, 
-				["min"] = 19, 
-			}, 
-			["Dagger"] = {
 				["max"] = 100, 
 				["min"] = 19, 
 			}, 
@@ -4781,15 +4581,7 @@ return {
 			}, 
 		}, 
 		["912_LocalBaseCriticalStrikeChance"] = {
-			["1HAxe"] = {
-				["max"] = 5, 
-				["min"] = 1, 
-			}, 
 			["1HMace"] = {
-				["max"] = 5, 
-				["min"] = 1, 
-			}, 
-			["1HSword"] = {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
@@ -4797,15 +4589,7 @@ return {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 5, 
-				["min"] = 1, 
-			}, 
 			["2HMace"] = {
-				["max"] = 5, 
-				["min"] = 1, 
-			}, 
-			["2HSword"] = {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
@@ -4818,10 +4602,6 @@ return {
 				["min"] = 1, 
 			}, 
 			["Claw"] = {
-				["max"] = 5, 
-				["min"] = 1, 
-			}, 
-			["Dagger"] = {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
@@ -4843,15 +4623,7 @@ return {
 			}, 
 		}, 
 		["913_LocalCriticalStrikeMultiplier"] = {
-			["1HAxe"] = {
-				["max"] = 39, 
-				["min"] = 10, 
-			}, 
 			["1HMace"] = {
-				["max"] = 39, 
-				["min"] = 10, 
-			}, 
-			["1HSword"] = {
 				["max"] = 39, 
 				["min"] = 10, 
 			}, 
@@ -4859,15 +4631,7 @@ return {
 				["max"] = 39, 
 				["min"] = 10, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 39, 
-				["min"] = 10, 
-			}, 
 			["2HMace"] = {
-				["max"] = 39, 
-				["min"] = 10, 
-			}, 
-			["2HSword"] = {
 				["max"] = 39, 
 				["min"] = 10, 
 			}, 
@@ -4880,10 +4644,6 @@ return {
 				["min"] = 10, 
 			}, 
 			["Claw"] = {
-				["max"] = 39, 
-				["min"] = 10, 
-			}, 
-			["Dagger"] = {
 				["max"] = 39, 
 				["min"] = 10, 
 			}, 
@@ -4905,15 +4665,7 @@ return {
 			}, 
 		}, 
 		["914_LocalIncreasedAttackSpeed"] = {
-			["1HAxe"] = {
-				["max"] = 28, 
-				["min"] = 5, 
-			}, 
 			["1HMace"] = {
-				["max"] = 28, 
-				["min"] = 5, 
-			}, 
-			["1HSword"] = {
 				["max"] = 28, 
 				["min"] = 5, 
 			}, 
@@ -4921,15 +4673,7 @@ return {
 				["max"] = 28, 
 				["min"] = 5, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 28, 
-				["min"] = 5, 
-			}, 
 			["2HMace"] = {
-				["max"] = 28, 
-				["min"] = 5, 
-			}, 
-			["2HSword"] = {
 				["max"] = 28, 
 				["min"] = 5, 
 			}, 
@@ -4942,10 +4686,6 @@ return {
 				["min"] = 5, 
 			}, 
 			["Claw"] = {
-				["max"] = 28, 
-				["min"] = 5, 
-			}, 
-			["Dagger"] = {
 				["max"] = 28, 
 				["min"] = 5, 
 			}, 
@@ -4967,15 +4707,7 @@ return {
 			}, 
 		}, 
 		["915_LocalAttributeRequirements"] = {
-			["1HAxe"] = {
-				["max"] = -15, 
-				["min"] = -35, 
-			}, 
 			["1HMace"] = {
-				["max"] = -15, 
-				["min"] = -35, 
-			}, 
-			["1HSword"] = {
 				["max"] = -15, 
 				["min"] = -35, 
 			}, 
@@ -4983,15 +4715,7 @@ return {
 				["max"] = -15, 
 				["min"] = -35, 
 			}, 
-			["2HAxe"] = {
-				["max"] = -15, 
-				["min"] = -35, 
-			}, 
 			["2HMace"] = {
-				["max"] = -15, 
-				["min"] = -35, 
-			}, 
-			["2HSword"] = {
 				["max"] = -15, 
 				["min"] = -35, 
 			}, 
@@ -5012,10 +4736,6 @@ return {
 				["min"] = -35, 
 			}, 
 			["Claw"] = {
-				["max"] = -15, 
-				["min"] = -35, 
-			}, 
-			["Dagger"] = {
 				["max"] = -15, 
 				["min"] = -35, 
 			}, 
@@ -5245,15 +4965,7 @@ return {
 			}, 
 		}, 
 		["921_GlobalIncreaseMeleeSkillGemLevel"] = {
-			["1HAxe"] = {
-				["max"] = 5, 
-				["min"] = 1, 
-			}, 
 			["1HMace"] = {
-				["max"] = 5, 
-				["min"] = 1, 
-			}, 
-			["1HSword"] = {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
@@ -5266,10 +4978,6 @@ return {
 				["min"] = 1, 
 			}, 
 			["Claw"] = {
-				["max"] = 5, 
-				["min"] = 1, 
-			}, 
-			["Dagger"] = {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
@@ -5291,15 +4999,7 @@ return {
 			}, 
 		}, 
 		["921_GlobalIncreaseMeleeSkillGemLevelWeapon"] = {
-			["2HAxe"] = {
-				["max"] = 7, 
-				["min"] = 1, 
-			}, 
 			["2HMace"] = {
-				["max"] = 7, 
-				["min"] = 1, 
-			}, 
-			["2HSword"] = {
 				["max"] = 7, 
 				["min"] = 1, 
 			}, 
@@ -5671,15 +5371,7 @@ return {
 			}, 
 		}, 
 		["939_Strength"] = {
-			["1HAxe"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
 			["1HMace"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
-			["1HSword"] = {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
@@ -5687,15 +5379,7 @@ return {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
 			["2HMace"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
-			["2HSword"] = {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
@@ -5745,18 +5429,6 @@ return {
 			}, 
 		}, 
 		["940_Dexterity"] = {
-			["1HSword"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
-			["1HWeapon"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
-			["2HSword"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
 			["2HWeapon"] = {
 				["max"] = 33, 
 				["min"] = 5, 
@@ -5782,10 +5454,6 @@ return {
 				["min"] = 5, 
 			}, 
 			["Crossbow"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
-			["Dagger"] = {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
@@ -5840,10 +5508,6 @@ return {
 				["min"] = 5, 
 			}, 
 			["Chest"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
-			["Dagger"] = {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
@@ -6207,15 +5871,7 @@ return {
 			}, 
 		}, 
 		["961_LifeLeechLocalPermyriad"] = {
-			["1HAxe"] = {
-				["max"] = 9.9, 
-				["min"] = 5, 
-			}, 
 			["1HMace"] = {
-				["max"] = 9.9, 
-				["min"] = 5, 
-			}, 
-			["1HSword"] = {
 				["max"] = 9.9, 
 				["min"] = 5, 
 			}, 
@@ -6223,15 +5879,7 @@ return {
 				["max"] = 9.9, 
 				["min"] = 5, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 9.9, 
-				["min"] = 5, 
-			}, 
 			["2HMace"] = {
-				["max"] = 9.9, 
-				["min"] = 5, 
-			}, 
-			["2HSword"] = {
 				["max"] = 9.9, 
 				["min"] = 5, 
 			}, 
@@ -6244,10 +5892,6 @@ return {
 				["min"] = 5, 
 			}, 
 			["Claw"] = {
-				["max"] = 9.9, 
-				["min"] = 5, 
-			}, 
-			["Dagger"] = {
 				["max"] = 9.9, 
 				["min"] = 5, 
 			}, 
@@ -6283,15 +5927,7 @@ return {
 			}, 
 		}, 
 		["963_LifeGainPerTargetLocal"] = {
-			["1HAxe"] = {
-				["max"] = 5, 
-				["min"] = 2, 
-			}, 
 			["1HMace"] = {
-				["max"] = 5, 
-				["min"] = 2, 
-			}, 
-			["1HSword"] = {
 				["max"] = 5, 
 				["min"] = 2, 
 			}, 
@@ -6299,15 +5935,7 @@ return {
 				["max"] = 5, 
 				["min"] = 2, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 5, 
-				["min"] = 2, 
-			}, 
 			["2HMace"] = {
-				["max"] = 5, 
-				["min"] = 2, 
-			}, 
-			["2HSword"] = {
 				["max"] = 5, 
 				["min"] = 2, 
 			}, 
@@ -6320,10 +5948,6 @@ return {
 				["min"] = 2, 
 			}, 
 			["Claw"] = {
-				["max"] = 5, 
-				["min"] = 2, 
-			}, 
-			["Dagger"] = {
 				["max"] = 5, 
 				["min"] = 2, 
 			}, 
@@ -6345,15 +5969,7 @@ return {
 			}, 
 		}, 
 		["964_LifeGainedFromEnemyDeath"] = {
-			["1HAxe"] = {
-				["max"] = 84, 
-				["min"] = 4, 
-			}, 
 			["1HMace"] = {
-				["max"] = 84, 
-				["min"] = 4, 
-			}, 
-			["1HSword"] = {
 				["max"] = 84, 
 				["min"] = 4, 
 			}, 
@@ -6361,15 +5977,7 @@ return {
 				["max"] = 84, 
 				["min"] = 4, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 84, 
-				["min"] = 4, 
-			}, 
 			["2HMace"] = {
-				["max"] = 84, 
-				["min"] = 4, 
-			}, 
-			["2HSword"] = {
 				["max"] = 84, 
 				["min"] = 4, 
 			}, 
@@ -6382,10 +5990,6 @@ return {
 				["min"] = 4, 
 			}, 
 			["Claw"] = {
-				["max"] = 84, 
-				["min"] = 4, 
-			}, 
-			["Dagger"] = {
 				["max"] = 84, 
 				["min"] = 4, 
 			}, 
@@ -6513,15 +6117,7 @@ return {
 			}, 
 		}, 
 		["967_ManaLeechLocalPermyriad"] = {
-			["1HAxe"] = {
-				["max"] = 8.9, 
-				["min"] = 4, 
-			}, 
 			["1HMace"] = {
-				["max"] = 8.9, 
-				["min"] = 4, 
-			}, 
-			["1HSword"] = {
 				["max"] = 8.9, 
 				["min"] = 4, 
 			}, 
@@ -6529,15 +6125,7 @@ return {
 				["max"] = 8.9, 
 				["min"] = 4, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 8.9, 
-				["min"] = 4, 
-			}, 
 			["2HMace"] = {
-				["max"] = 8.9, 
-				["min"] = 4, 
-			}, 
-			["2HSword"] = {
 				["max"] = 8.9, 
 				["min"] = 4, 
 			}, 
@@ -6550,10 +6138,6 @@ return {
 				["min"] = 4, 
 			}, 
 			["Claw"] = {
-				["max"] = 8.9, 
-				["min"] = 4, 
-			}, 
-			["Dagger"] = {
 				["max"] = 8.9, 
 				["min"] = 4, 
 			}, 
@@ -6593,15 +6177,7 @@ return {
 			}, 
 		}, 
 		["969_ManaGainedFromEnemyDeath"] = {
-			["1HAxe"] = {
-				["max"] = 45, 
-				["min"] = 2, 
-			}, 
 			["1HMace"] = {
-				["max"] = 45, 
-				["min"] = 2, 
-			}, 
-			["1HSword"] = {
 				["max"] = 45, 
 				["min"] = 2, 
 			}, 
@@ -6609,15 +6185,7 @@ return {
 				["max"] = 45, 
 				["min"] = 2, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 45, 
-				["min"] = 2, 
-			}, 
 			["2HMace"] = {
-				["max"] = 45, 
-				["min"] = 2, 
-			}, 
-			["2HSword"] = {
 				["max"] = 45, 
 				["min"] = 2, 
 			}, 
@@ -6630,10 +6198,6 @@ return {
 				["min"] = 2, 
 			}, 
 			["Claw"] = {
-				["max"] = 45, 
-				["min"] = 2, 
-			}, 
-			["Dagger"] = {
 				["max"] = 45, 
 				["min"] = 2, 
 			}, 
@@ -6691,15 +6255,7 @@ return {
 			}, 
 		}, 
 		["974_LocalStunDamageIncrease"] = {
-			["1HAxe"] = {
-				["max"] = 80, 
-				["min"] = 21, 
-			}, 
 			["1HMace"] = {
-				["max"] = 80, 
-				["min"] = 21, 
-			}, 
-			["1HSword"] = {
 				["max"] = 80, 
 				["min"] = 21, 
 			}, 
@@ -6707,15 +6263,7 @@ return {
 				["max"] = 80, 
 				["min"] = 21, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 80, 
-				["min"] = 21, 
-			}, 
 			["2HMace"] = {
-				["max"] = 80, 
-				["min"] = 21, 
-			}, 
-			["2HSword"] = {
 				["max"] = 80, 
 				["min"] = 21, 
 			}, 
@@ -6728,10 +6276,6 @@ return {
 				["min"] = 21, 
 			}, 
 			["Claw"] = {
-				["max"] = 80, 
-				["min"] = 21, 
-			}, 
-			["Dagger"] = {
 				["max"] = 80, 
 				["min"] = 21, 
 			}, 
@@ -6753,15 +6297,7 @@ return {
 			}, 
 		}, 
 		["976_LocalStunDuration"] = {
-			["1HAxe"] = {
-				["max"] = 30, 
-				["min"] = 11, 
-			}, 
 			["1HMace"] = {
-				["max"] = 30, 
-				["min"] = 11, 
-			}, 
-			["1HSword"] = {
 				["max"] = 30, 
 				["min"] = 11, 
 			}, 
@@ -6769,15 +6305,7 @@ return {
 				["max"] = 30, 
 				["min"] = 11, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 30, 
-				["min"] = 11, 
-			}, 
 			["2HMace"] = {
-				["max"] = 30, 
-				["min"] = 11, 
-			}, 
-			["2HSword"] = {
 				["max"] = 30, 
 				["min"] = 11, 
 			}, 
@@ -6790,10 +6318,6 @@ return {
 				["min"] = 11, 
 			}, 
 			["Claw"] = {
-				["max"] = 30, 
-				["min"] = 11, 
-			}, 
-			["Dagger"] = {
 				["max"] = 30, 
 				["min"] = 11, 
 			}, 
@@ -7223,15 +6747,7 @@ return {
 			}, 
 		}, 
 		["993_LocalLightRadiusAndAccuracy"] = {
-			["1HAxe"] = {
-				["max"] = 15, 
-				["min"] = 5, 
-			}, 
 			["1HMace"] = {
-				["max"] = 15, 
-				["min"] = 5, 
-			}, 
-			["1HSword"] = {
 				["max"] = 15, 
 				["min"] = 5, 
 			}, 
@@ -7239,15 +6755,7 @@ return {
 				["max"] = 15, 
 				["min"] = 5, 
 			}, 
-			["2HAxe"] = {
-				["max"] = 15, 
-				["min"] = 5, 
-			}, 
 			["2HMace"] = {
-				["max"] = 15, 
-				["min"] = 5, 
-			}, 
-			["2HSword"] = {
 				["max"] = 15, 
 				["min"] = 5, 
 			}, 
@@ -7260,10 +6768,6 @@ return {
 				["min"] = 5, 
 			}, 
 			["Claw"] = {
-				["max"] = 15, 
-				["min"] = 5, 
-			}, 
-			["Dagger"] = {
 				["max"] = 15, 
 				["min"] = 5, 
 			}, 
