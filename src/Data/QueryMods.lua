@@ -5,6 +5,16 @@ return {
 	["Enchant"] = {
 	}, 
 	["Explicit"] = {
+		["1068_IncreasedBlockChance"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2481353198", 
+				["text"] = "#% increased Block chance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["1089_AllDamage"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
@@ -12,6 +22,26 @@ return {
 			["tradeMod"] = {
 				["id"] = "explicit.stat_2154246560", 
 				["text"] = "#% increased Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1091_TotemDamageForJewel"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3851254963", 
+				["text"] = "#% increased Totem Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1095_AttackDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2843214518", 
+				["text"] = "#% increased Attack Damage", 
 				["type"] = "explicit", 
 			}, 
 		}, 
@@ -25,6 +55,36 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
+		["1126_MeleeDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1002362373", 
+				["text"] = "#% increased Melee Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1177_IncreasedStaffDamageForJewel"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4045894391", 
+				["text"] = "#% increased Damage with Quarterstaves", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1188_IncreasedMaceDamageForJewel"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1181419800", 
+				["text"] = "#% increased Damage with Maces", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["1192_IncreasedBowDamageForJewel"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
@@ -35,6 +95,46 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
+		["1227_ChaosDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_674553446", 
+				["text"] = "Adds # to # Chaos Damage to Attacks", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1258_StaffAttackSpeedForJewel"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3283482523", 
+				["text"] = "#% increased Attack Speed with Quarterstaves", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1262_BowAttackSpeedForJewel"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3759735052", 
+				["text"] = "#% increased Attack Speed with Bows", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1270_IncreasedAccuracyPercent"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_624954515", 
+				["text"] = "#% increased Accuracy Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["1279_BowIncreasedAccuracyRating"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
@@ -42,6 +142,52 @@ return {
 			["tradeMod"] = {
 				["id"] = "explicit.stat_169946467", 
 				["text"] = "#% increased Accuracy Rating with Bows", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1372_EnergyShieldDelay"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1782086450", 
+				["text"] = "#% faster start of Energy Shield Recharge", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1409_GlobalIncreasePhysicalSpellSkillGemLevel"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1600707273", 
+				["text"] = "# to Level of all Physical Spell Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1409_GlobalIncreasePhysicalSpellSkillGemLevelWeapon"] = {
+			["1HWeapon"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["Staff"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["Wand"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1600707273", 
+				["text"] = "# to Level of all Physical Spell Skills", 
 				["type"] = "explicit", 
 			}, 
 		}, 
@@ -65,6 +211,46 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
+		["1465_IncreasedTotemLife"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_686254215", 
+				["text"] = "#% increased Totem Life", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1472_BaseCurseDuration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3824372849", 
+				["text"] = "#% increased Curse Duration", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1546_IncreasedChillDuration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3485067555", 
+				["text"] = "#% increased Chill Duration on Enemies", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1547_ShockDuration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3668351662", 
+				["text"] = "#% increased Shock Duration", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["1564_AreaOfEffect"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
@@ -85,6 +271,176 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
+		["1655_MinionDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1589917703", 
+				["text"] = "Minions deal #% increased Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1660_ElementalDamagePercent"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3141070085", 
+				["text"] = "#% increased Elemental Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1673_ShieldArmourIncrease"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1215155013", 
+				["text"] = "#% increased Defences from Equipped Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1675_ProjectileDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1839076647", 
+				["text"] = "#% increased Projectile Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1681_KnockbackDistance"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_565784293", 
+				["text"] = "#% increased Knockback Distance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1717_AttackAndCastSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2672805335", 
+				["text"] = "#% increased Attack and Cast Speed", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1730_GlobalFlaskLifeRecovery"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_821241191", 
+				["text"] = "#% increased Life Recovery from Flasks", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1731_FlaskManaRecovery"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2222186378", 
+				["text"] = "#% increased Mana Recovery from Flasks", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1831_LifeLeechAmount"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2112395885", 
+				["text"] = "#% increased amount of Life Leeched", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1833_ManaLeechAmount"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2839066308", 
+				["text"] = "#% increased amount of Mana Leeched", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1882_MarkCastSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4189061307", 
+				["text"] = "Mark Skills have #% increased Cast Speed", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1886_CurseAreaOfEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_153777645", 
+				["text"] = "#% increased Area of Effect of Curses", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["1954_MinionPhysicalDamageReduction"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3119612865", 
+				["text"] = "Minions have #% additional Physical Damage Reduction", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2250_SummonTotemCastSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3374165039", 
+				["text"] = "#% increased Totem Placement speed", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2266_CurseEffectiveness"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2353576063", 
+				["text"] = "#% increased Effect of your Curses", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2266_CurseEffectivenessForJewel"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2353576063", 
+				["text"] = "#% increased Effect of your Curses", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2268_MarkEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_712554801", 
+				["text"] = "#% increased Effect of your Mark Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["2362_DamageRemovedFromManaBeforeLife"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
@@ -95,13 +451,252 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
+		["2475_AuraEffectForJewel"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_315791320", 
+				["text"] = "#% increased Effect of Auras from your Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2562_MinionElementalResistance"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1423639565", 
+				["text"] = "Minions have #% to all Elemental Resistances", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2563_MinionChaosResistance"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3837707023", 
+				["text"] = "Minions have #% to Chaos Resistance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2627_FireResistancePenetration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2653955271", 
+				["text"] = "Damage Penetrates #% Fire Resistance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2628_ColdResistancePenetration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3417711605", 
+				["text"] = "Damage Penetrates #% Cold Resistance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2629_LightningResistancePenetration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_818778753", 
+				["text"] = "Damage Penetrates #% Lightning Resistance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2668_MinionAreaOfEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3811191316", 
+				["text"] = "Minions have #% increased Area of Effect", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2805_PoisonDuration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2011656677", 
+				["text"] = "#% increased Poison Duration", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2805_PoisonDurationChaosDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2011656677", 
+				["text"] = "#% increased Poison Duration", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["2808_BaseChanceToPoison"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
-				["id"] = "explicit.stat_3885634897", 
+				["id"] = "explicit.stat_795138349", 
 				["text"] = "#% chance to Poison on Hit", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2840_DamageVsRareOrUnique"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1852872083", 
+				["text"] = "#% increased Damage with Hits against Rare and Unique Enemies", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2901_IncreasedStunThreshold"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_680068163", 
+				["text"] = "#% increased Stun Threshold", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2902_FreezeThreshold"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3780644166", 
+				["text"] = "#% increased Freeze Threshold", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2907_WarcrySpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1316278494", 
+				["text"] = "#% increased Warcry Speed", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2954_WarcryCooldownSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4159248054", 
+				["text"] = "#% increased Warcry Cooldown Recovery Rate", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["2992_CannotBePoisoned"] = {
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3835551335", 
+				["text"] = "Cannot be Poisoned", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["3847_DamageIfConsumedCorpse"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2118708619", 
+				["text"] = "#% increased Damage if you have Consumed a Corpse Recently", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["3895_CrossbowDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_427684353", 
+				["text"] = "#% increased Damage with Crossbows", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["3899_CrossbowSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1135928777", 
+				["text"] = "#% increased Attack Speed with Crossbows", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["4144_AilmentChance"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1772247089", 
+				["text"] = "#% increased chance to inflict Ailments", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["4145_AilmentEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1303248024", 
+				["text"] = "#% increased Magnitude of Ailments you inflict", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["4150_IncreasedAilmentThreshold"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3544800472", 
+				["text"] = "#% increased Elemental Ailment Threshold", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["4254_ArmourBreak"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1776411443", 
+				["text"] = "Break #% increased Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["4257_ArmourBreakDuration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2215233444", 
+				["text"] = "#% increased Armour Break Duration", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["4399_AttacksBlindOnHitChance"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_318953428", 
+				["text"] = "#% chance to Blind Enemies on Hit with Attacks", 
 				["type"] = "explicit", 
 			}, 
 		}, 
@@ -112,6 +707,318 @@ return {
 			["tradeMod"] = {
 				["id"] = "explicit.stat_1459321413", 
 				["text"] = "#% increased Bleeding Duration", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["4461_BaseChanceToBleed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2174054121", 
+				["text"] = "#% chance to inflict Bleeding on Hit", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["4467_GlobalCooldownRecovery"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1004011302", 
+				["text"] = "#% increased Cooldown Recovery Rate", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["4504_LifeCost"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2480498143", 
+				["text"] = "#% of Skill Mana Costs Converted to Life Costs", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["4506_SlowPotency"] = {
+			["inverse"] = true, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_924253255", 
+				["text"] = "#% increased Slowing Potency of Debuffs on You", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["4555_BleedDotMultiplier"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3166958180", 
+				["text"] = "#% increased Magnitude of Bleeding you inflict", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["4671_BlindEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1585769763", 
+				["text"] = "#% increased Blind Effect", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["4989_ForkingProjectiles"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3003542304", 
+				["text"] = "Projectiles have #% chance for an additional Projectile when Forking", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5066_BeltIncreasedCharmChargesGained"] = {
+			["Belt"] = {
+				["max"] = 40, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3585532255", 
+				["text"] = "#% increased Charm Charges gained", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5066_CharmChargesGained"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3585532255", 
+				["text"] = "#% increased Charm Charges gained", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5068_BeltReducedCharmChargesUsed"] = {
+			["Belt"] = {
+				["max"] = 25, 
+				["min"] = 8, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1570770415", 
+				["text"] = "#% reduced Charm Charges used", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5213_CriticalAilmentEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_440490623", 
+				["text"] = "#% increased Magnitude of Damaging Ailments you inflict with Critical Hits", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5306_CurseDelay"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1104825894", 
+				["text"] = "#% faster Curse Activation", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5324_DamagevsArmourBrokenEnemies"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2301718443", 
+				["text"] = "#% increased Damage against Enemies with Fully Broken Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5387_CharmDamageWhileUsing"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_627767961", 
+				["text"] = "#% increased Damage while you have an active Charm", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5392_HeraldDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_21071013", 
+				["text"] = "Herald Skills deal #% increased Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5426_DamagingAilmentDuration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1829102168", 
+				["text"] = "#% increased Duration of Damaging Ailments on Enemies", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5428_FasterAilmentDamageForJewel"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_538241406", 
+				["text"] = "Damaging Ailments deal damage #% faster", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5436_DazeBuildup"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1949833742", 
+				["text"] = "#% increased Daze Buildup", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5456_DebuffTimePassed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1238227257", 
+				["text"] = "Debuffs on you expire #% faster", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5647_ExertedAttackDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1569101201", 
+				["text"] = "Empowered Attacks deal #% increased Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5708_EnergyGeneration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4236566306", 
+				["text"] = "Meta Skills gain #% increased Energy", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5718_FocusEnergyShield"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3174700878", 
+				["text"] = "#% increased Energy Shield from Equipped Focus", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5904_BeltIncreasedFlaskChargesGained"] = {
+			["Belt"] = {
+				["max"] = 40, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1836676211", 
+				["text"] = "#% increased Flask Charges gained", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["5904_IncreasedFlaskChargesGained"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1836676211", 
+				["text"] = "#% increased Flask Charges gained", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["6086_RageOnHit"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2709367754", 
+				["text"] = "Gain # Rage on Melee Hit", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["6088_GainRageWhenHit"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3292710273", 
+				["text"] = "Gain # Rage when Hit by an Enemy", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["6379_PinBuildup"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3473929743", 
+				["text"] = "#% increased Pin Buildup", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["6432_IgniteEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3791899485", 
+				["text"] = "#% increased Magnitude of Ignite you inflict", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["6433_ElementalAilmentDuration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1062710370", 
+				["text"] = "#% increased Duration of Ignite, Shock and Chill on Enemies", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["6561_LifeFlaskChargePercentGeneration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4009879772", 
+				["text"] = "#% increased Life Flask Charges gained", 
 				["type"] = "explicit", 
 			}, 
 		}, 
@@ -134,6 +1041,698 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
+		["6840_JewelRadiusSmallNodeEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1060572482", 
+				["text"] = "#% increased Effect of Small Passive Skills in Radius", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["6991_MaceStun"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_872504239", 
+				["text"] = "#% increased Stun Buildup with Maces", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["7018_ManaFlaskChargePercentGeneration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3590792340", 
+				["text"] = "#% increased Mana Flask Charges gained", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["7720_MarkDuration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2594634307", 
+				["text"] = "Mark Skills have #% increased Skill Effect Duration", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["7857_MinionAccuracyRatingForJewel"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1718147982", 
+				["text"] = "#% increased Minion Accuracy Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["7861_MinionAttackSpeedAndCastSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3091578504", 
+				["text"] = "Minions have #% increased Attack and Cast Speed", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["7878_MinionCriticalStrikeChanceIncrease"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_491450213", 
+				["text"] = "Minions have #% increased Critical Hit Chance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["7880_MinionCriticalStrikeMultiplier"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1854213750", 
+				["text"] = "Minions have #% increased Critical Damage Bonus", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["7925_MinionReviveSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2639966148", 
+				["text"] = "Minions Revive #% faster", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8122_OfferingDuration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2957407601", 
+				["text"] = "Offering Skills have #% increased Duration", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8123_OfferingLife"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3787460122", 
+				["text"] = "Offerings have #% increased Maximum Life", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8229_PoisonEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2487305362", 
+				["text"] = "#% increased Magnitude of Poison you inflict", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["822_LocalIncreasedPhysicalDamagePercentAndAccuracyRating"] = {
+			["1HAxe"] = {
+				["max"] = 79, 
+				["min"] = 15, 
+			}, 
+			["1HMace"] = {
+				["max"] = 79, 
+				["min"] = 15, 
+			}, 
+			["1HSword"] = {
+				["max"] = 79, 
+				["min"] = 15, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 79, 
+				["min"] = 15, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 79, 
+				["min"] = 15, 
+			}, 
+			["2HMace"] = {
+				["max"] = 79, 
+				["min"] = 15, 
+			}, 
+			["2HSword"] = {
+				["max"] = 79, 
+				["min"] = 15, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 79, 
+				["min"] = 15, 
+			}, 
+			["Bow"] = {
+				["max"] = 79, 
+				["min"] = 15, 
+			}, 
+			["Claw"] = {
+				["max"] = 79, 
+				["min"] = 15, 
+			}, 
+			["Dagger"] = {
+				["max"] = 79, 
+				["min"] = 15, 
+			}, 
+			["Staff"] = {
+				["max"] = 79, 
+				["min"] = 15, 
+			}, 
+			["Wand"] = {
+				["max"] = 79, 
+				["min"] = 15, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1509134228", 
+				["text"] = "#% increased Physical Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["822_LocalPhysicalDamagePercent"] = {
+			["1HAxe"] = {
+				["max"] = 179, 
+				["min"] = 40, 
+			}, 
+			["1HMace"] = {
+				["max"] = 179, 
+				["min"] = 40, 
+			}, 
+			["1HSword"] = {
+				["max"] = 179, 
+				["min"] = 40, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 179, 
+				["min"] = 40, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 179, 
+				["min"] = 40, 
+			}, 
+			["2HMace"] = {
+				["max"] = 179, 
+				["min"] = 40, 
+			}, 
+			["2HSword"] = {
+				["max"] = 179, 
+				["min"] = 40, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 179, 
+				["min"] = 40, 
+			}, 
+			["Bow"] = {
+				["max"] = 179, 
+				["min"] = 40, 
+			}, 
+			["Claw"] = {
+				["max"] = 179, 
+				["min"] = 40, 
+			}, 
+			["Dagger"] = {
+				["max"] = 179, 
+				["min"] = 40, 
+			}, 
+			["Staff"] = {
+				["max"] = 179, 
+				["min"] = 40, 
+			}, 
+			["Wand"] = {
+				["max"] = 179, 
+				["min"] = 40, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1509134228", 
+				["text"] = "#% increased Physical Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["823_LocalPhysicalDamage"] = {
+			["1HAxe"] = {
+				["max"] = 52.5, 
+				["min"] = 2.5, 
+			}, 
+			["1HMace"] = {
+				["max"] = 52.5, 
+				["min"] = 2.5, 
+			}, 
+			["1HSword"] = {
+				["max"] = 52.5, 
+				["min"] = 2.5, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 52.5, 
+				["min"] = 2.5, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 74.5, 
+				["min"] = 3.5, 
+			}, 
+			["2HMace"] = {
+				["max"] = 74.5, 
+				["min"] = 3.5, 
+			}, 
+			["2HSword"] = {
+				["max"] = 74.5, 
+				["min"] = 3.5, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 74.5, 
+				["min"] = 2.5, 
+			}, 
+			["Bow"] = {
+				["max"] = 74.5, 
+				["min"] = 2.5, 
+			}, 
+			["Claw"] = {
+				["max"] = 52.5, 
+				["min"] = 2.5, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 52.5, 
+				["min"] = 2.5, 
+			}, 
+			["Dagger"] = {
+				["max"] = 52.5, 
+				["min"] = 2.5, 
+			}, 
+			["Staff"] = {
+				["max"] = 74.5, 
+				["min"] = 3.5, 
+			}, 
+			["Wand"] = {
+				["max"] = 52.5, 
+				["min"] = 2.5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1940865751", 
+				["text"] = "Adds # to # Physical Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["824_LocalFireDamage"] = {
+			["1HAxe"] = {
+				["max"] = 140.5, 
+				["min"] = 3, 
+			}, 
+			["1HMace"] = {
+				["max"] = 140.5, 
+				["min"] = 3, 
+			}, 
+			["1HSword"] = {
+				["max"] = 140.5, 
+				["min"] = 3, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 140.5, 
+				["min"] = 3, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 140.5, 
+				["min"] = 3, 
+			}, 
+			["2HMace"] = {
+				["max"] = 140.5, 
+				["min"] = 3, 
+			}, 
+			["2HSword"] = {
+				["max"] = 140.5, 
+				["min"] = 3, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 140.5, 
+				["min"] = 3, 
+			}, 
+			["Bow"] = {
+				["max"] = 98.5, 
+				["min"] = 3, 
+			}, 
+			["Claw"] = {
+				["max"] = 98.5, 
+				["min"] = 3, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 98.5, 
+				["min"] = 3, 
+			}, 
+			["Dagger"] = {
+				["max"] = 98.5, 
+				["min"] = 3, 
+			}, 
+			["Staff"] = {
+				["max"] = 140.5, 
+				["min"] = 3.5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_709508406", 
+				["text"] = "Adds # to # Fire Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["825_LocalColdDamage"] = {
+			["1HAxe"] = {
+				["max"] = 112, 
+				["min"] = 2, 
+			}, 
+			["1HMace"] = {
+				["max"] = 112, 
+				["min"] = 2, 
+			}, 
+			["1HSword"] = {
+				["max"] = 112, 
+				["min"] = 2, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 112, 
+				["min"] = 2, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 112, 
+				["min"] = 2, 
+			}, 
+			["2HMace"] = {
+				["max"] = 112, 
+				["min"] = 2, 
+			}, 
+			["2HSword"] = {
+				["max"] = 112, 
+				["min"] = 2, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 112, 
+				["min"] = 2, 
+			}, 
+			["Bow"] = {
+				["max"] = 79, 
+				["min"] = 2, 
+			}, 
+			["Claw"] = {
+				["max"] = 79, 
+				["min"] = 2, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 79, 
+				["min"] = 2, 
+			}, 
+			["Dagger"] = {
+				["max"] = 79, 
+				["min"] = 2, 
+			}, 
+			["Staff"] = {
+				["max"] = 112, 
+				["min"] = 3, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1037193709", 
+				["text"] = "Adds # to # Cold Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["826_LocalLightningDamage"] = {
+			["1HAxe"] = {
+				["max"] = 140.5, 
+				["min"] = 4, 
+			}, 
+			["1HMace"] = {
+				["max"] = 140.5, 
+				["min"] = 4, 
+			}, 
+			["1HSword"] = {
+				["max"] = 140.5, 
+				["min"] = 4, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 140.5, 
+				["min"] = 4, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 140.5, 
+				["min"] = 4, 
+			}, 
+			["2HMace"] = {
+				["max"] = 140.5, 
+				["min"] = 4, 
+			}, 
+			["2HSword"] = {
+				["max"] = 140.5, 
+				["min"] = 4, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 140.5, 
+				["min"] = 4, 
+			}, 
+			["Bow"] = {
+				["max"] = 99, 
+				["min"] = 4, 
+			}, 
+			["Claw"] = {
+				["max"] = 99, 
+				["min"] = 4, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 99, 
+				["min"] = 4, 
+			}, 
+			["Dagger"] = {
+				["max"] = 99, 
+				["min"] = 4, 
+			}, 
+			["Staff"] = {
+				["max"] = 140.5, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3336890334", 
+				["text"] = "Adds # to # Lightning Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8272_ChainFromTerrain"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4081947835", 
+				["text"] = "Projectiles have #% chance to Chain an additional time from terrain", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["827_LocalAccuracyRating"] = {
+			["1HAxe"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["1HMace"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["1HSword"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["2HMace"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["2HSword"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["Bow"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["Claw"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["Dagger"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["Staff"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["Wand"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_691932474", 
+				["text"] = "# to Accuracy Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["827_LocalIncreasedPhysicalDamagePercentAndAccuracyRating"] = {
+			["1HAxe"] = {
+				["max"] = 200, 
+				["min"] = 16, 
+			}, 
+			["1HMace"] = {
+				["max"] = 200, 
+				["min"] = 16, 
+			}, 
+			["1HSword"] = {
+				["max"] = 200, 
+				["min"] = 16, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 200, 
+				["min"] = 16, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 200, 
+				["min"] = 16, 
+			}, 
+			["2HMace"] = {
+				["max"] = 200, 
+				["min"] = 16, 
+			}, 
+			["2HSword"] = {
+				["max"] = 200, 
+				["min"] = 16, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 200, 
+				["min"] = 16, 
+			}, 
+			["Bow"] = {
+				["max"] = 200, 
+				["min"] = 16, 
+			}, 
+			["Claw"] = {
+				["max"] = 200, 
+				["min"] = 16, 
+			}, 
+			["Dagger"] = {
+				["max"] = 200, 
+				["min"] = 16, 
+			}, 
+			["Staff"] = {
+				["max"] = 200, 
+				["min"] = 16, 
+			}, 
+			["Wand"] = {
+				["max"] = 200, 
+				["min"] = 16, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_691932474", 
+				["text"] = "# to Accuracy Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["827_LocalLightRadiusAndAccuracy"] = {
+			["1HAxe"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["1HMace"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["1HSword"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["2HMace"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["2HSword"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["Bow"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["Claw"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["Dagger"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["Staff"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["Wand"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_691932474", 
+				["text"] = "# to Accuracy Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["828_MovementVelocity"] = {
 			["Boots"] = {
 				["max"] = 35, 
@@ -148,6 +1747,1808 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
+		["8315_QuarterstaffFreezeBuildup"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1697447343", 
+				["text"] = "#% increased Freeze Buildup with Quarterstaves", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["831_LocalIncreasedBlockPercentage"] = {
+			["Shield"] = {
+				["max"] = 81, 
+				["min"] = 40, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2481353198", 
+				["text"] = "#% increased Block chance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8323_QuiverModifierEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1200678966", 
+				["text"] = "#% increased bonuses gained from Equipped Quiver", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8327_MaximumRage"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1181501418", 
+				["text"] = "# to Maximum Rage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["833_LocalBaseArmourAndEnergyShield"] = {
+			["Boots"] = {
+				["max"] = 138, 
+				["min"] = 8, 
+			}, 
+			["Chest"] = {
+				["max"] = 138, 
+				["min"] = 8, 
+			}, 
+			["Gloves"] = {
+				["max"] = 138, 
+				["min"] = 8, 
+			}, 
+			["Helmet"] = {
+				["max"] = 138, 
+				["min"] = 8, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3484657501", 
+				["text"] = "# to Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["833_LocalBaseArmourAndEvasionRating"] = {
+			["Boots"] = {
+				["max"] = 138, 
+				["min"] = 8, 
+			}, 
+			["Chest"] = {
+				["max"] = 138, 
+				["min"] = 8, 
+			}, 
+			["Gloves"] = {
+				["max"] = 138, 
+				["min"] = 8, 
+			}, 
+			["Helmet"] = {
+				["max"] = 138, 
+				["min"] = 8, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3484657501", 
+				["text"] = "# to Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["833_LocalIncreasedArmourAndBase"] = {
+			["Boots"] = {
+				["max"] = 86, 
+				["min"] = 7, 
+			}, 
+			["Chest"] = {
+				["max"] = 86, 
+				["min"] = 7, 
+			}, 
+			["Gloves"] = {
+				["max"] = 86, 
+				["min"] = 7, 
+			}, 
+			["Helmet"] = {
+				["max"] = 86, 
+				["min"] = 7, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3484657501", 
+				["text"] = "# to Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["833_LocalIncreasedArmourAndEnergyShieldAndBase"] = {
+			["Boots"] = {
+				["max"] = 43, 
+				["min"] = 4, 
+			}, 
+			["Chest"] = {
+				["max"] = 43, 
+				["min"] = 4, 
+			}, 
+			["Gloves"] = {
+				["max"] = 43, 
+				["min"] = 4, 
+			}, 
+			["Helmet"] = {
+				["max"] = 43, 
+				["min"] = 4, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3484657501", 
+				["text"] = "# to Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["833_LocalIncreasedArmourAndEvasionAndBase"] = {
+			["Boots"] = {
+				["max"] = 43, 
+				["min"] = 4, 
+			}, 
+			["Chest"] = {
+				["max"] = 43, 
+				["min"] = 4, 
+			}, 
+			["Gloves"] = {
+				["max"] = 43, 
+				["min"] = 4, 
+			}, 
+			["Helmet"] = {
+				["max"] = 43, 
+				["min"] = 4, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3484657501", 
+				["text"] = "# to Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["833_LocalPhysicalDamageReductionRating"] = {
+			["Boots"] = {
+				["max"] = 276, 
+				["min"] = 16, 
+			}, 
+			["Chest"] = {
+				["max"] = 276, 
+				["min"] = 16, 
+			}, 
+			["Gloves"] = {
+				["max"] = 276, 
+				["min"] = 16, 
+			}, 
+			["Helmet"] = {
+				["max"] = 276, 
+				["min"] = 16, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3484657501", 
+				["text"] = "# to Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["834_LocalBaseArmourAndEvasionRating"] = {
+			["Boots"] = {
+				["max"] = 126, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 126, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 126, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 126, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_53045048", 
+				["text"] = "# to Evasion Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["834_LocalBaseEvasionRatingAndEnergyShield"] = {
+			["Boots"] = {
+				["max"] = 126, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 126, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 126, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 126, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_53045048", 
+				["text"] = "# to Evasion Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["834_LocalEvasionRating"] = {
+			["Boots"] = {
+				["max"] = 251, 
+				["min"] = 11, 
+			}, 
+			["Chest"] = {
+				["max"] = 251, 
+				["min"] = 11, 
+			}, 
+			["Gloves"] = {
+				["max"] = 251, 
+				["min"] = 11, 
+			}, 
+			["Helmet"] = {
+				["max"] = 251, 
+				["min"] = 11, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_53045048", 
+				["text"] = "# to Evasion Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["834_LocalIncreasedArmourAndEvasionAndBase"] = {
+			["Boots"] = {
+				["max"] = 39, 
+				["min"] = 3, 
+			}, 
+			["Chest"] = {
+				["max"] = 39, 
+				["min"] = 3, 
+			}, 
+			["Gloves"] = {
+				["max"] = 39, 
+				["min"] = 3, 
+			}, 
+			["Helmet"] = {
+				["max"] = 39, 
+				["min"] = 3, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_53045048", 
+				["text"] = "# to Evasion Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["834_LocalIncreasedEvasionAndBase"] = {
+			["Boots"] = {
+				["max"] = 79, 
+				["min"] = 5, 
+			}, 
+			["Chest"] = {
+				["max"] = 79, 
+				["min"] = 5, 
+			}, 
+			["Gloves"] = {
+				["max"] = 79, 
+				["min"] = 5, 
+			}, 
+			["Helmet"] = {
+				["max"] = 79, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_53045048", 
+				["text"] = "# to Evasion Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["834_LocalIncreasedEvasionAndEnergyShieldAndBase"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_53045048", 
+				["text"] = "# to Evasion Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["835_LocalBaseArmourAndEnergyShield"] = {
+			["Boots"] = {
+				["max"] = 48, 
+				["min"] = 5, 
+			}, 
+			["Chest"] = {
+				["max"] = 48, 
+				["min"] = 5, 
+			}, 
+			["Gloves"] = {
+				["max"] = 48, 
+				["min"] = 5, 
+			}, 
+			["Helmet"] = {
+				["max"] = 48, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4052037485", 
+				["text"] = "# to maximum Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["835_LocalBaseEvasionRatingAndEnergyShield"] = {
+			["Boots"] = {
+				["max"] = 48, 
+				["min"] = 5, 
+			}, 
+			["Chest"] = {
+				["max"] = 48, 
+				["min"] = 5, 
+			}, 
+			["Gloves"] = {
+				["max"] = 48, 
+				["min"] = 5, 
+			}, 
+			["Helmet"] = {
+				["max"] = 48, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4052037485", 
+				["text"] = "# to maximum Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["835_LocalEnergyShield"] = {
+			["Boots"] = {
+				["max"] = 96, 
+				["min"] = 10, 
+			}, 
+			["Chest"] = {
+				["max"] = 96, 
+				["min"] = 10, 
+			}, 
+			["Gloves"] = {
+				["max"] = 96, 
+				["min"] = 10, 
+			}, 
+			["Helmet"] = {
+				["max"] = 96, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4052037485", 
+				["text"] = "# to maximum Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["835_LocalIncreasedArmourAndEnergyShieldAndBase"] = {
+			["Boots"] = {
+				["max"] = 15, 
+				["min"] = 2, 
+			}, 
+			["Chest"] = {
+				["max"] = 15, 
+				["min"] = 2, 
+			}, 
+			["Gloves"] = {
+				["max"] = 15, 
+				["min"] = 2, 
+			}, 
+			["Helmet"] = {
+				["max"] = 15, 
+				["min"] = 2, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4052037485", 
+				["text"] = "# to maximum Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["835_LocalIncreasedEnergyShieldAndBase"] = {
+			["Boots"] = {
+				["max"] = 30, 
+				["min"] = 4, 
+			}, 
+			["Chest"] = {
+				["max"] = 30, 
+				["min"] = 4, 
+			}, 
+			["Gloves"] = {
+				["max"] = 30, 
+				["min"] = 4, 
+			}, 
+			["Helmet"] = {
+				["max"] = 30, 
+				["min"] = 4, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4052037485", 
+				["text"] = "# to maximum Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["835_LocalIncreasedEvasionAndEnergyShieldAndBase"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4052037485", 
+				["text"] = "# to maximum Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["836_LocalArmourAndStunThreshold"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1062208444", 
+				["text"] = "#% increased Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["836_LocalIncreasedArmourAndBase"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1062208444", 
+				["text"] = "#% increased Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["836_LocalIncreasedArmourAndLife"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1062208444", 
+				["text"] = "#% increased Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["836_LocalIncreasedArmourAndMana"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1062208444", 
+				["text"] = "#% increased Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["836_LocalPhysicalDamageReductionRatingPercent"] = {
+			["Boots"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Chest"] = {
+				["max"] = 110, 
+				["min"] = 15, 
+			}, 
+			["Gloves"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Helmet"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Shield"] = {
+				["max"] = 110, 
+				["min"] = 101, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1062208444", 
+				["text"] = "#% increased Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["837_LocalEvasionAndStunThreshold"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_124859000", 
+				["text"] = "#% increased Evasion Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["837_LocalEvasionRatingIncreasePercent"] = {
+			["Boots"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Chest"] = {
+				["max"] = 110, 
+				["min"] = 15, 
+			}, 
+			["Gloves"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Helmet"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Shield"] = {
+				["max"] = 110, 
+				["min"] = 101, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_124859000", 
+				["text"] = "#% increased Evasion Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["837_LocalIncreasedEvasionAndBase"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_124859000", 
+				["text"] = "#% increased Evasion Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["837_LocalIncreasedEvasionAndLife"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_124859000", 
+				["text"] = "#% increased Evasion Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["837_LocalIncreasedEvasionAndMana"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_124859000", 
+				["text"] = "#% increased Evasion Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["838_LocalEnergyShieldAndStunThreshold"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4015621042", 
+				["text"] = "#% increased Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["838_LocalEnergyShieldPercent"] = {
+			["Boots"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Chest"] = {
+				["max"] = 110, 
+				["min"] = 15, 
+			}, 
+			["Gloves"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Helmet"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Shield"] = {
+				["max"] = 110, 
+				["min"] = 101, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4015621042", 
+				["text"] = "#% increased Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["838_LocalIncreasedEnergyShieldAndBase"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4015621042", 
+				["text"] = "#% increased Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["838_LocalIncreasedEnergyShieldAndLife"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4015621042", 
+				["text"] = "#% increased Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["838_LocalIncreasedEnergyShieldAndMana"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4015621042", 
+				["text"] = "#% increased Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["839_LocalArmourAndEvasion"] = {
+			["Boots"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Chest"] = {
+				["max"] = 110, 
+				["min"] = 15, 
+			}, 
+			["Gloves"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Helmet"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Shield"] = {
+				["max"] = 110, 
+				["min"] = 101, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2451402625", 
+				["text"] = "#% increased Armour and Evasion", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["839_LocalArmourAndEvasionAndStunThreshold"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2451402625", 
+				["text"] = "#% increased Armour and Evasion", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["839_LocalIncreasedArmourAndEvasionAndBase"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2451402625", 
+				["text"] = "#% increased Armour and Evasion", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["839_LocalIncreasedArmourAndEvasionAndLife"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2451402625", 
+				["text"] = "#% increased Armour and Evasion", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["839_LocalIncreasedArmourAndEvasionAndMana"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2451402625", 
+				["text"] = "#% increased Armour and Evasion", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["840_LocalArmourAndEnergyShield"] = {
+			["Boots"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Chest"] = {
+				["max"] = 110, 
+				["min"] = 15, 
+			}, 
+			["Gloves"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Helmet"] = {
+				["max"] = 100, 
+				["min"] = 15, 
+			}, 
+			["Shield"] = {
+				["max"] = 110, 
+				["min"] = 101, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3321629045", 
+				["text"] = "#% increased Armour and Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["840_LocalArmourAndEnergyShieldAndStunThreshold"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3321629045", 
+				["text"] = "#% increased Armour and Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["840_LocalIncreasedArmourAndEnergyShieldAndBase"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3321629045", 
+				["text"] = "#% increased Armour and Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["840_LocalIncreasedArmourAndEnergyShieldAndLife"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3321629045", 
+				["text"] = "#% increased Armour and Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["840_LocalIncreasedArmourAndEnergyShieldAndMana"] = {
+			["Boots"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 42, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3321629045", 
+				["text"] = "#% increased Armour and Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["841_LocalEvasionAndEnergyShield"] = {
+			["Chest"] = {
+				["max"] = 110, 
+				["min"] = 101, 
+			}, 
+			["Shield"] = {
+				["max"] = 110, 
+				["min"] = 101, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1999113824", 
+				["text"] = "#% increased Evasion and Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["841_LocalEvasionAndEnergyShieldAndStunThreshold"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1999113824", 
+				["text"] = "#% increased Evasion and Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["841_LocalIncreasedEvasionAndEnergyShieldAndBase"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1999113824", 
+				["text"] = "#% increased Evasion and Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["841_LocalIncreasedEvasionAndEnergyShieldAndLife"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1999113824", 
+				["text"] = "#% increased Evasion and Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["841_LocalIncreasedEvasionAndEnergyShieldAndMana"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1999113824", 
+				["text"] = "#% increased Evasion and Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8435_CrossbowReloadSpeed"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3192728503", 
+				["text"] = "#% increased Crossbow Reload Speed", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["843_LocalIncreasedSpiritAndMana"] = {
+			["1HMace"] = {
+				["max"] = 38, 
+				["min"] = 10, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 38, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3984865854", 
+				["text"] = "#% increased Spirit", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["843_LocalIncreasedSpiritPercent"] = {
+			["1HMace"] = {
+				["max"] = 65, 
+				["min"] = 27, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 65, 
+				["min"] = 27, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3984865854", 
+				["text"] = "#% increased Spirit", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["844_PhysicalDamage"] = {
+			["Gloves"] = {
+				["max"] = 25.5, 
+				["min"] = 2, 
+			}, 
+			["Quiver"] = {
+				["max"] = 25.5, 
+				["min"] = 2, 
+			}, 
+			["Ring"] = {
+				["max"] = 25.5, 
+				["min"] = 2, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3032590688", 
+				["text"] = "Adds # to # Physical Damage to Attacks", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["845_FireDamage"] = {
+			["Gloves"] = {
+				["max"] = 37, 
+				["min"] = 2, 
+			}, 
+			["Quiver"] = {
+				["max"] = 37, 
+				["min"] = 2, 
+			}, 
+			["Ring"] = {
+				["max"] = 37, 
+				["min"] = 2, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1573130764", 
+				["text"] = "Adds # to # Fire damage to Attacks", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["846_ColdDamage"] = {
+			["Gloves"] = {
+				["max"] = 30.5, 
+				["min"] = 2, 
+			}, 
+			["Quiver"] = {
+				["max"] = 30.5, 
+				["min"] = 2, 
+			}, 
+			["Ring"] = {
+				["max"] = 30.5, 
+				["min"] = 2, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4067062424", 
+				["text"] = "Adds # to # Cold damage to Attacks", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["847_LightningDamage"] = {
+			["Gloves"] = {
+				["max"] = 37.5, 
+				["min"] = 3, 
+			}, 
+			["Quiver"] = {
+				["max"] = 37.5, 
+				["min"] = 3, 
+			}, 
+			["Ring"] = {
+				["max"] = 37.5, 
+				["min"] = 3, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1754445556", 
+				["text"] = "Adds # to # Lightning damage to Attacks", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["848_DamageGainedAsFire"] = {
+			["1HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["Staff"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["Wand"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3015669065", 
+				["text"] = "Gain #% of Damage as Extra Fire Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["850_DamageGainedAsCold"] = {
+			["1HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["Staff"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["Wand"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2505884597", 
+				["text"] = "Gain #% of Damage as Extra Cold Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8514_ShockEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2527686725", 
+				["text"] = "#% increased Magnitude of Shock you inflict", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["852_DamageGainedAsLightning"] = {
+			["1HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["Staff"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["Wand"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3278136794", 
+				["text"] = "Gain #% of Damage as Extra Lightning Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["854_SpellDamage"] = {
+			["Amulet"] = {
+				["max"] = 30, 
+				["min"] = 3, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2974417149", 
+				["text"] = "#% increased Spell Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["854_WeaponSpellDamage"] = {
+			["1HWeapon"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 169, 
+				["min"] = 35, 
+			}, 
+			["Focus"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["Shield"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["Staff"] = {
+				["max"] = 169, 
+				["min"] = 35, 
+			}, 
+			["Wand"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2974417149", 
+				["text"] = "#% increased Spell Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["854_WeaponSpellDamageAndMana"] = {
+			["1HWeapon"] = {
+				["max"] = 49, 
+				["min"] = 15, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 69, 
+				["min"] = 21, 
+			}, 
+			["Staff"] = {
+				["max"] = 69, 
+				["min"] = 21, 
+			}, 
+			["Wand"] = {
+				["max"] = 49, 
+				["min"] = 15, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2974417149", 
+				["text"] = "#% increased Spell Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["856_FireDamagePercentage"] = {
+			["Ring"] = {
+				["max"] = 30, 
+				["min"] = 3, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3962278098", 
+				["text"] = "#% increased Fire Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["856_FireDamageWeaponPrefix"] = {
+			["1HWeapon"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 169, 
+				["min"] = 35, 
+			}, 
+			["Focus"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["Shield"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["Staff"] = {
+				["max"] = 169, 
+				["min"] = 35, 
+			}, 
+			["Wand"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3962278098", 
+				["text"] = "#% increased Fire Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["857_ColdDamagePercentage"] = {
+			["Ring"] = {
+				["max"] = 30, 
+				["min"] = 3, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3291658075", 
+				["text"] = "#% increased Cold Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["857_ColdDamageWeaponPrefix"] = {
+			["1HWeapon"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 169, 
+				["min"] = 35, 
+			}, 
+			["Focus"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["Shield"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["Staff"] = {
+				["max"] = 169, 
+				["min"] = 35, 
+			}, 
+			["Wand"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3291658075", 
+				["text"] = "#% increased Cold Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["858_LightningDamagePercentage"] = {
+			["Ring"] = {
+				["max"] = 30, 
+				["min"] = 3, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2231156303", 
+				["text"] = "#% increased Lightning Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["858_LightningDamageWeaponPrefix"] = {
+			["1HWeapon"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 169, 
+				["min"] = 35, 
+			}, 
+			["Focus"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["Shield"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["Staff"] = {
+				["max"] = 169, 
+				["min"] = 35, 
+			}, 
+			["Wand"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2231156303", 
+				["text"] = "#% increased Lightning Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["859_ChaosDamageWeaponPrefix"] = {
+			["1HWeapon"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 169, 
+				["min"] = 35, 
+			}, 
+			["Focus"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["Shield"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["Staff"] = {
+				["max"] = 169, 
+				["min"] = 35, 
+			}, 
+			["Wand"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_736967255", 
+				["text"] = "#% increased Chaos Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["859_IncreasedChaosDamage"] = {
+			["Ring"] = {
+				["max"] = 30, 
+				["min"] = 3, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_736967255", 
+				["text"] = "#% increased Chaos Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["859_PoisonDurationChaosDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_736967255", 
+				["text"] = "#% increased Chaos Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["860_IncreasedWeaponElementalDamagePercent"] = {
+			["1HAxe"] = {
+				["max"] = 100, 
+				["min"] = 19, 
+			}, 
+			["1HMace"] = {
+				["max"] = 100, 
+				["min"] = 19, 
+			}, 
+			["1HSword"] = {
+				["max"] = 100, 
+				["min"] = 19, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 100, 
+				["min"] = 19, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 139, 
+				["min"] = 34, 
+			}, 
+			["2HMace"] = {
+				["max"] = 139, 
+				["min"] = 34, 
+			}, 
+			["2HSword"] = {
+				["max"] = 139, 
+				["min"] = 34, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 139, 
+				["min"] = 19, 
+			}, 
+			["Bow"] = {
+				["max"] = 139, 
+				["min"] = 19, 
+			}, 
+			["Claw"] = {
+				["max"] = 100, 
+				["min"] = 19, 
+			}, 
+			["Dagger"] = {
+				["max"] = 100, 
+				["min"] = 19, 
+			}, 
+			["Staff"] = {
+				["max"] = 139, 
+				["min"] = 34, 
+			}, 
+			["Wand"] = {
+				["max"] = 100, 
+				["min"] = 19, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_387439868", 
+				["text"] = "#% increased Elemental Damage with Attacks", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["861_PhysicalSpellDamageWeaponPrefix"] = {
+			["1HWeapon"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 169, 
+				["min"] = 35, 
+			}, 
+			["Focus"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["Shield"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["Staff"] = {
+				["max"] = 169, 
+				["min"] = 35, 
+			}, 
+			["Wand"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2768835289", 
+				["text"] = "#% increased Spell Physical Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["862_DamageWithBowSkills"] = {
 			["Quiver"] = {
 				["max"] = 59, 
@@ -159,6 +3560,134 @@ return {
 			["tradeMod"] = {
 				["id"] = "explicit.stat_1241625305", 
 				["text"] = "#% increased Damage with Bow Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["863_IncreasedAccuracy"] = {
+			["Amulet"] = {
+				["max"] = 450, 
+				["min"] = 11, 
+			}, 
+			["Gloves"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["Helmet"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["Quiver"] = {
+				["max"] = 550, 
+				["min"] = 11, 
+			}, 
+			["Ring"] = {
+				["max"] = 450, 
+				["min"] = 11, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_691932474", 
+				["text"] = "# to Accuracy Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["863_LightRadiusAndAccuracy"] = {
+			["Helmet"] = {
+				["max"] = 60, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_691932474", 
+				["text"] = "# to Accuracy Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["865_PhysicalDamageReductionRating"] = {
+			["Belt"] = {
+				["max"] = 255, 
+				["min"] = 12, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3484657501", 
+				["text"] = "# to Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["866_GlobalPhysicalDamageReductionRatingPercent"] = {
+			["Amulet"] = {
+				["max"] = 50, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1062208444", 
+				["text"] = "#% increased Armour", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["867_EvasionRating"] = {
+			["Ring"] = {
+				["max"] = 203, 
+				["min"] = 8, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_53045048", 
+				["text"] = "# to Evasion Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["868_GlobalEvasionRatingPercent"] = {
+			["Amulet"] = {
+				["max"] = 50, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_124859000", 
+				["text"] = "#% increased Evasion Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["869_EnergyShield"] = {
+			["Amulet"] = {
+				["max"] = 89, 
+				["min"] = 8, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4052037485", 
+				["text"] = "# to maximum Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["870_GlobalEnergyShieldPercent"] = {
+			["Amulet"] = {
+				["max"] = 50, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2482852589", 
+				["text"] = "#% increased maximum Energy Shield", 
 				["type"] = "explicit", 
 			}, 
 		}, 
@@ -628,6 +4157,388 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
+		["876_BaseSpirit"] = {
+			["Amulet"] = {
+				["max"] = 50, 
+				["min"] = 30, 
+			}, 
+			["Chest"] = {
+				["max"] = 61, 
+				["min"] = 30, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3981240776", 
+				["text"] = "# to Spirit", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8774_StunThresholdfromEnergyShield"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_416040624", 
+				["text"] = "Gain #% of maximum Energy Shield as additional Stun Threshold", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8776_IncreasedStunThresholdIfNoRecentStun"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1405298142", 
+				["text"] = "#% increased Stun Threshold if you haven't been Stunned Recently", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["877_ProjectileSpeed"] = {
+			["Quiver"] = {
+				["max"] = 46, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3759663284", 
+				["text"] = "#% increased Projectile Speed", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["878_BeltFlaskLifeRecoveryRate"] = {
+			["Belt"] = {
+				["max"] = 40, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_51994685", 
+				["text"] = "#% increased Flask Life Recovery rate", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["879_BeltFlaskManaRecoveryRate"] = {
+			["Belt"] = {
+				["max"] = 40, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1412217137", 
+				["text"] = "#% increased Flask Mana Recovery rate", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["880_BeltIncreasedCharmDuration"] = {
+			["Belt"] = {
+				["max"] = 33, 
+				["min"] = 4, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1389754388", 
+				["text"] = "#% increased Charm Effect Duration", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["880_CharmDuration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1389754388", 
+				["text"] = "#% increased Charm Effect Duration", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["881_FlaskDuration"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3741323227", 
+				["text"] = "#% increased Flask Effect Duration", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["883_AlliesInPresenceAllDamage"] = {
+			["1HMace"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 119, 
+				["min"] = 25, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1798257884", 
+				["text"] = "Allies in your Presence deal #% increased Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["884_AlliesInPresenceAddedPhysicalDamage"] = {
+			["1HMace"] = {
+				["max"] = 25.5, 
+				["min"] = 2, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 25.5, 
+				["min"] = 2, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1574590649", 
+				["text"] = "Allies in your Presence deal # to # additional Attack Physical Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["885_AlliesInPresenceAddedFireDamage"] = {
+			["1HMace"] = {
+				["max"] = 37, 
+				["min"] = 2, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 37, 
+				["min"] = 2, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_849987426", 
+				["text"] = "Allies in your Presence deal # to # additional Attack Fire Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["886_AlliesInPresenceAddedColdDamage"] = {
+			["1HMace"] = {
+				["max"] = 30.5, 
+				["min"] = 2, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 30.5, 
+				["min"] = 2, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2347036682", 
+				["text"] = "Allies in your Presence deal # to # additional Attack Cold Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["887_AlliesInPresenceAddedLightningDamage"] = {
+			["1HMace"] = {
+				["max"] = 37.5, 
+				["min"] = 3, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 37.5, 
+				["min"] = 3, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2854751904", 
+				["text"] = "Allies in your Presence deal # to # additional Attack Lightning Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8882_ThornsDamageIncrease"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1315743832", 
+				["text"] = "#% increased Thorns damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8888_ThornsPhysicalDamage"] = {
+			["Belt"] = {
+				["max"] = 47, 
+				["min"] = 2, 
+			}, 
+			["Chest"] = {
+				["max"] = 47, 
+				["min"] = 2, 
+			}, 
+			["Shield"] = {
+				["max"] = 47, 
+				["min"] = 2, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2881298780", 
+				["text"] = "# to # Physical Thorns damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["888_AlliesInPresenceIncreasedAccuracy"] = {
+			["1HMace"] = {
+				["max"] = 450, 
+				["min"] = 11, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 450, 
+				["min"] = 11, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3169585282", 
+				["text"] = "Allies in your Presence have # to Accuracy Rating", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["889_AlliesInPresenceCriticalStrikeChance"] = {
+			["1HMace"] = {
+				["max"] = 38, 
+				["min"] = 10, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 38, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1250712710", 
+				["text"] = "Allies in your Presence have #% increased Critical Hit Chance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["890_AlliesInPresenceCriticalStrikeMultiplier"] = {
+			["1HMace"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3057012405", 
+				["text"] = "Allies in your Presence have #% increased Critical Damage Bonus", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["891_AlliesInPresenceIncreasedAttackSpeed"] = {
+			["1HMace"] = {
+				["max"] = 16, 
+				["min"] = 5, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 16, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1998951374", 
+				["text"] = "Allies in your Presence have #% increased Attack Speed", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["892_AlliesInPresenceIncreasedCastSpeed"] = {
+			["1HMace"] = {
+				["max"] = 20, 
+				["min"] = 5, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 20, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_289128254", 
+				["text"] = "Allies in your Presence have #% increased Cast Speed", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["893_AlliesInPresenceAllResistances"] = {
+			["1HMace"] = {
+				["max"] = 18, 
+				["min"] = 3, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 18, 
+				["min"] = 3, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3850614073", 
+				["text"] = "Allies in your Presence have #% to all Elemental Resistances", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8943_DamageWithTriggeredSpells"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3067892458", 
+				["text"] = "Triggered Spells deal #% increased Spell Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["894_AlliesInPresenceLifeRegeneration"] = {
+			["1HMace"] = {
+				["max"] = 33, 
+				["min"] = 1, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 33, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4010677958", 
+				["text"] = "Allies in your Presence Regenerate # Life per second", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["895_CharmGuardWhileActive"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2676834156", 
+				["text"] = "Gain # Guard during Effect", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["896_CharmGainLifeOnUse"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
@@ -688,6 +4599,16 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
+		["901_FlaskIncreasedRecoveryOnLowLife"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_886931978", 
+				["text"] = "#% more Recovery if used while on Low Life", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["903_FlaskExtraLifeCostsMana"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
@@ -737,6 +4658,26 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
+		["9080_WarcryEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3037553757", 
+				["text"] = "#% increased Warcry Buff Effect", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["9083_WarcryDamage"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1594812856", 
+				["text"] = "#% increased Damage with Warcries", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["908_FlaskIncreasedRecoverySpeed"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
@@ -774,6 +4715,848 @@ return {
 			["tradeMod"] = {
 				["id"] = "explicit.stat_959641748", 
 				["text"] = "Removes #% of Mana Recovered from Life when used", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["9111_WitheredEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2545584555", 
+				["text"] = "#% increased Effect of Withered", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["911_ItemFoundRarityIncrease"] = {
+			["Amulet"] = {
+				["max"] = 30, 
+				["min"] = 6, 
+			}, 
+			["Boots"] = {
+				["max"] = 30, 
+				["min"] = 6, 
+			}, 
+			["Gloves"] = {
+				["max"] = 30, 
+				["min"] = 6, 
+			}, 
+			["Helmet"] = {
+				["max"] = 30, 
+				["min"] = 6, 
+			}, 
+			["Ring"] = {
+				["max"] = 30, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3917489142", 
+				["text"] = "#% increased Rarity of Items found", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["911_ItemFoundRarityIncreasePrefix"] = {
+			["Amulet"] = {
+				["max"] = 32, 
+				["min"] = 8, 
+			}, 
+			["Helmet"] = {
+				["max"] = 32, 
+				["min"] = 8, 
+			}, 
+			["Ring"] = {
+				["max"] = 32, 
+				["min"] = 8, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3917489142", 
+				["text"] = "#% increased Rarity of Items found", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["912_LocalBaseCriticalStrikeChance"] = {
+			["1HAxe"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["1HMace"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["1HSword"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["2HMace"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["2HSword"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["Bow"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["Claw"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["Dagger"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["Staff"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["Wand"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_518292764", 
+				["text"] = "#% to Critical Hit Chance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["913_LocalCriticalStrikeMultiplier"] = {
+			["1HAxe"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["1HMace"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["1HSword"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["2HMace"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["2HSword"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["Bow"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["Claw"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["Dagger"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["Staff"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["Wand"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2694482655", 
+				["text"] = "#% to Critical Damage Bonus", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["914_LocalIncreasedAttackSpeed"] = {
+			["1HAxe"] = {
+				["max"] = 28, 
+				["min"] = 5, 
+			}, 
+			["1HMace"] = {
+				["max"] = 28, 
+				["min"] = 5, 
+			}, 
+			["1HSword"] = {
+				["max"] = 28, 
+				["min"] = 5, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 28, 
+				["min"] = 5, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 28, 
+				["min"] = 5, 
+			}, 
+			["2HMace"] = {
+				["max"] = 28, 
+				["min"] = 5, 
+			}, 
+			["2HSword"] = {
+				["max"] = 28, 
+				["min"] = 5, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 28, 
+				["min"] = 5, 
+			}, 
+			["Bow"] = {
+				["max"] = 28, 
+				["min"] = 5, 
+			}, 
+			["Claw"] = {
+				["max"] = 28, 
+				["min"] = 5, 
+			}, 
+			["Dagger"] = {
+				["max"] = 28, 
+				["min"] = 5, 
+			}, 
+			["Staff"] = {
+				["max"] = 28, 
+				["min"] = 5, 
+			}, 
+			["Wand"] = {
+				["max"] = 28, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_210067635", 
+				["text"] = "#% increased Attack Speed", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["915_LocalAttributeRequirements"] = {
+			["1HAxe"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["1HMace"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["1HSword"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["2HAxe"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["2HMace"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["2HSword"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["Boots"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["Bow"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["Chest"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["Claw"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["Dagger"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["Focus"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["Gloves"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["Helmet"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["Shield"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["Staff"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["Wand"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["inverse"] = true, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3639275092", 
+				["text"] = "#% increased Attribute Requirements", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["916_GlobalIncreaseSpellSkillGemLevel"] = {
+			["Amulet"] = {
+				["max"] = 3, 
+				["min"] = 1, 
+			}, 
+			["Focus"] = {
+				["max"] = 2, 
+				["min"] = 1, 
+			}, 
+			["Shield"] = {
+				["max"] = 2, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_124131830", 
+				["text"] = "# to Level of all Spell Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["916_GlobalIncreaseSpellSkillGemLevelWeapon"] = {
+			["1HWeapon"] = {
+				["max"] = 4, 
+				["min"] = 1, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 6, 
+				["min"] = 1, 
+			}, 
+			["Staff"] = {
+				["max"] = 6, 
+				["min"] = 1, 
+			}, 
+			["Wand"] = {
+				["max"] = 4, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_124131830", 
+				["text"] = "# to Level of all Spell Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["917_GlobalIncreaseFireSpellSkillGemLevel"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_591105508", 
+				["text"] = "# to Level of all Fire Spell Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["917_GlobalIncreaseFireSpellSkillGemLevelWeapon"] = {
+			["1HWeapon"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["Staff"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["Wand"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_591105508", 
+				["text"] = "# to Level of all Fire Spell Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["918_GlobalIncreaseColdSpellSkillGemLevel"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2254480358", 
+				["text"] = "# to Level of all Cold Spell Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["918_GlobalIncreaseColdSpellSkillGemLevelWeapon"] = {
+			["1HWeapon"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["Staff"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["Wand"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2254480358", 
+				["text"] = "# to Level of all Cold Spell Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["919_GlobalIncreaseLightningSpellSkillGemLevel"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1545858329", 
+				["text"] = "# to Level of all Lightning Spell Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["919_GlobalIncreaseLightningSpellSkillGemLevelWeapon"] = {
+			["1HWeapon"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["Staff"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["Wand"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1545858329", 
+				["text"] = "# to Level of all Lightning Spell Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["920_GlobalIncreaseChaosSpellSkillGemLevel"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4226189338", 
+				["text"] = "# to Level of all Chaos Spell Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["920_GlobalIncreaseChaosSpellSkillGemLevelWeapon"] = {
+			["1HWeapon"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["Staff"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["Wand"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4226189338", 
+				["text"] = "# to Level of all Chaos Spell Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["921_GlobalIncreaseMeleeSkillGemLevel"] = {
+			["1HAxe"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["1HMace"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["1HSword"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["Amulet"] = {
+				["max"] = 3, 
+				["min"] = 1, 
+			}, 
+			["Claw"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["Dagger"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["Gloves"] = {
+				["max"] = 2, 
+				["min"] = 1, 
+			}, 
+			["Wand"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_9187492", 
+				["text"] = "# to Level of all Melee Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["921_GlobalIncreaseMeleeSkillGemLevelWeapon"] = {
+			["2HAxe"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["2HMace"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["2HSword"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["Bow"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["Staff"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_9187492", 
+				["text"] = "# to Level of all Melee Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["922_GlobalIncreaseProjectileSkillGemLevel"] = {
+			["Amulet"] = {
+				["max"] = 3, 
+				["min"] = 1, 
+			}, 
+			["Quiver"] = {
+				["max"] = 2, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1202301673", 
+				["text"] = "# to Level of all Projectile Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["922_GlobalIncreaseProjectileSkillGemLevelWeapon"] = {
+			["2HWeapon"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["Bow"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1202301673", 
+				["text"] = "# to Level of all Projectile Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["923_GlobalIncreaseMinionSpellSkillGemLevel"] = {
+			["Amulet"] = {
+				["max"] = 3, 
+				["min"] = 1, 
+			}, 
+			["Helmet"] = {
+				["max"] = 2, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2162097452", 
+				["text"] = "# to Level of all Minion Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["923_GlobalIncreaseMinionSpellSkillGemLevelWeapon"] = {
+			["1HMace"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 5, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2162097452", 
+				["text"] = "# to Level of all Minion Skills", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["925_CriticalStrikeChance"] = {
+			["Amulet"] = {
+				["max"] = 38, 
+				["min"] = 10, 
+			}, 
+			["Helmet"] = {
+				["max"] = 34, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_587431675", 
+				["text"] = "#% increased Critical Hit Chance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["926_AttackCriticalStrikeChance"] = {
+			["Quiver"] = {
+				["max"] = 38, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2194114101", 
+				["text"] = "#% increased Critical Hit Chance for Attacks", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["927_SpellCriticalStrikeChance"] = {
+			["1HWeapon"] = {
+				["max"] = 109, 
+				["min"] = 10, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 109, 
+				["min"] = 10, 
+			}, 
+			["Focus"] = {
+				["max"] = 99, 
+				["min"] = 10, 
+			}, 
+			["Shield"] = {
+				["max"] = 99, 
+				["min"] = 10, 
+			}, 
+			["Staff"] = {
+				["max"] = 109, 
+				["min"] = 10, 
+			}, 
+			["Wand"] = {
+				["max"] = 109, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_737908626", 
+				["text"] = "#% increased Critical Hit Chance for Spells", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["929_CriticalStrikeMultiplier"] = {
+			["Amulet"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["Gloves"] = {
+				["max"] = 34, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3556824919", 
+				["text"] = "#% increased Critical Damage Bonus", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["930_AttackCriticalStrikeMultiplier"] = {
+			["Quiver"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3714003708", 
+				["text"] = "#% increased Critical Damage Bonus for Attack Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["931_SpellCritMultiplierForJewel"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_274716455", 
+				["text"] = "#% increased Critical Spell Damage Bonus", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["931_SpellCriticalStrikeMultiplier"] = {
+			["1HWeapon"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["Focus"] = {
+				["max"] = 34, 
+				["min"] = 10, 
+			}, 
+			["Shield"] = {
+				["max"] = 34, 
+				["min"] = 10, 
+			}, 
+			["Staff"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["Wand"] = {
+				["max"] = 39, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_274716455", 
+				["text"] = "#% increased Critical Spell Damage Bonus", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["933_IncreasedAttackSpeed"] = {
+			["Gloves"] = {
+				["max"] = 16, 
+				["min"] = 5, 
+			}, 
+			["Quiver"] = {
+				["max"] = 16, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_210067635", 
+				["text"] = "#% increased Attack Speed", 
 				["type"] = "explicit", 
 			}, 
 		}, 
@@ -836,6 +5619,507 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
+		["936_AdditionalCharm"] = {
+			["Belt"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1416292992", 
+				["text"] = "# Charm Slot", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["937_AdditionalArrows"] = {
+			["2HWeapon"] = {
+				["max"] = 2, 
+				["min"] = 1, 
+			}, 
+			["Bow"] = {
+				["max"] = 2, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+				["overrideModLineSingular"] = "Bow Attacks fire an additional Arrow", 
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3885405204", 
+				["text"] = "Bow Attacks fire # additional Arrows", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["938_AllAttributes"] = {
+			["Amulet"] = {
+				["max"] = 24, 
+				["min"] = 2, 
+			}, 
+			["Ring"] = {
+				["max"] = 13, 
+				["min"] = 2, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1379411836", 
+				["text"] = "# to all Attributes", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["939_Strength"] = {
+			["1HAxe"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["1HMace"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["1HSword"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["2HMace"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["2HSword"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Amulet"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Belt"] = {
+				["max"] = 36, 
+				["min"] = 5, 
+			}, 
+			["Boots"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Chest"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Gloves"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Helmet"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Ring"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4080418644", 
+				["text"] = "# to Strength", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["940_Dexterity"] = {
+			["1HSword"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["2HSword"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Amulet"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Boots"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Bow"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Chest"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Claw"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Dagger"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Gloves"] = {
+				["max"] = 36, 
+				["min"] = 5, 
+			}, 
+			["Helmet"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Quiver"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Ring"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Staff"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3261801346", 
+				["text"] = "# to Dexterity", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["941_Intelligence"] = {
+			["1HMace"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Amulet"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Boots"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Chest"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Dagger"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Gloves"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Helmet"] = {
+				["max"] = 36, 
+				["min"] = 5, 
+			}, 
+			["Ring"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Staff"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Wand"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_328541901", 
+				["text"] = "# to Intelligence", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["942_ReducedExtraDamageFromCrits"] = {
+			["Shield"] = {
+				["max"] = 54, 
+				["min"] = 21, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3855016469", 
+				["text"] = "Hits against you have #% reduced Critical Damage Bonus", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["943_ReducedPhysicalDamageTaken"] = {
+			["Shield"] = {
+				["max"] = 8, 
+				["min"] = 4, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3771516363", 
+				["text"] = "#% additional Physical Damage Reduction", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["944_MaximumElementalResistance"] = {
+			["Shield"] = {
+				["max"] = 2, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1978899297", 
+				["text"] = "#% to all Maximum Elemental Resistances", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["945_MaximumFireResist"] = {
+			["Shield"] = {
+				["max"] = 3, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4095671657", 
+				["text"] = "#% to Maximum Fire Resistance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["946_MaximumColdResist"] = {
+			["Shield"] = {
+				["max"] = 3, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3676141501", 
+				["text"] = "#% to Maximum Cold Resistance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["947_MaximumLightningResistance"] = {
+			["Shield"] = {
+				["max"] = 3, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1011760251", 
+				["text"] = "#% to Maximum Lightning Resistance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["948_MaximumChaosResistance"] = {
+			["Shield"] = {
+				["max"] = 3, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1301765461", 
+				["text"] = "#% to Maximum Chaos Resistance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["949_AllResistances"] = {
+			["Amulet"] = {
+				["max"] = 18, 
+				["min"] = 3, 
+			}, 
+			["Ring"] = {
+				["max"] = 16, 
+				["min"] = 3, 
+			}, 
+			["Shield"] = {
+				["max"] = 18, 
+				["min"] = 3, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2901986750", 
+				["text"] = "#% to all Elemental Resistances", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["950_FireResistance"] = {
+			["Amulet"] = {
+				["max"] = 45, 
+				["min"] = 6, 
+			}, 
+			["Belt"] = {
+				["max"] = 45, 
+				["min"] = 6, 
+			}, 
+			["Ring"] = {
+				["max"] = 45, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3372524247", 
+				["text"] = "#% to Fire Resistance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["951_ColdResistance"] = {
+			["Amulet"] = {
+				["max"] = 45, 
+				["min"] = 6, 
+			}, 
+			["Belt"] = {
+				["max"] = 45, 
+				["min"] = 6, 
+			}, 
+			["Ring"] = {
+				["max"] = 45, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_4220027924", 
+				["text"] = "#% to Cold Resistance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["952_LightningResistance"] = {
+			["Amulet"] = {
+				["max"] = 45, 
+				["min"] = 6, 
+			}, 
+			["Belt"] = {
+				["max"] = 45, 
+				["min"] = 6, 
+			}, 
+			["Ring"] = {
+				["max"] = 45, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1671376347", 
+				["text"] = "#% to Lightning Resistance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["953_ChaosResistance"] = {
+			["Amulet"] = {
+				["max"] = 27, 
+				["min"] = 4, 
+			}, 
+			["Belt"] = {
+				["max"] = 27, 
+				["min"] = 4, 
+			}, 
+			["Ring"] = {
+				["max"] = 27, 
+				["min"] = 4, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2923486259", 
+				["text"] = "#% to Chaos Resistance", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["955_MinionLife"] = {
+			["1HMace"] = {
+				["max"] = 50, 
+				["min"] = 21, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 50, 
+				["min"] = 21, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_770672621", 
+				["text"] = "Minions have #% increased maximum Life", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["956_EnergyShieldRegeneration"] = {
+			["Focus"] = {
+				["max"] = 50, 
+				["min"] = 26, 
+			}, 
+			["Shield"] = {
+				["max"] = 50, 
+				["min"] = 26, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2339757871", 
+				["text"] = "#% increased Energy Shield Recharge Rate", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["957_LifeRegeneration"] = {
 			["Amulet"] = {
 				["max"] = 33, 
@@ -877,6 +6161,186 @@ return {
 			["tradeMod"] = {
 				["id"] = "explicit.stat_44972811", 
 				["text"] = "#% increased Life Regeneration rate", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["959_DamageTakenGainedAsLife"] = {
+			["Amulet"] = {
+				["max"] = 24, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1444556985", 
+				["text"] = "#% of Damage taken Recouped as Life", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["959_LifeRecoupForJewel"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1444556985", 
+				["text"] = "#% of Damage taken Recouped as Life", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["960_LifeLeechPermyriad"] = {
+			["Gloves"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["Ring"] = {
+				["max"] = 7.9, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2557965901", 
+				["text"] = "Leech #% of Physical Attack Damage as Life", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["961_LifeLeechLocalPermyriad"] = {
+			["1HAxe"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["1HMace"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["1HSword"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["2HMace"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["2HSword"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["Bow"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["Claw"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["Dagger"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["Staff"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["Wand"] = {
+				["max"] = 9.9, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_55876295", 
+				["text"] = "Leeches #% of Physical Damage as Life", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["962_LifeGainPerTarget"] = {
+			["Gloves"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2797971005", 
+				["text"] = "Gain # Life per Enemy Hit with Attacks", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["963_LifeGainPerTargetLocal"] = {
+			["1HAxe"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["1HMace"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["1HSword"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["2HMace"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["2HSword"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["Bow"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["Claw"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["Dagger"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["Staff"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["Wand"] = {
+				["max"] = 5, 
+				["min"] = 2, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_821021828", 
+				["text"] = "Grants # Life per Enemy Hit", 
 				["type"] = "explicit", 
 			}, 
 		}, 
@@ -1034,6 +6498,100 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
+		["966_PercentDamageGoesToMana"] = {
+			["Amulet"] = {
+				["max"] = 24, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_472520716", 
+				["text"] = "#% of Damage taken Recouped as Mana", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["967_ManaLeechLocalPermyriad"] = {
+			["1HAxe"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["1HMace"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["1HSword"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["2HMace"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["2HSword"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["Bow"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["Claw"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["Dagger"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["Staff"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["Wand"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_669069897", 
+				["text"] = "Leeches #% of Physical Damage as Mana", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["968_ManaLeechPermyriad"] = {
+			["Gloves"] = {
+				["max"] = 8.9, 
+				["min"] = 4, 
+			}, 
+			["Ring"] = {
+				["max"] = 6.9, 
+				["min"] = 4, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_707457662", 
+				["text"] = "Leech #% of Physical Attack Damage as Mana", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["969_ManaGainedFromEnemyDeath"] = {
 			["1HAxe"] = {
 				["max"] = 45, 
@@ -1108,6 +6666,624 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
+		["971_BeltReducedFlaskChargesUsed"] = {
+			["Belt"] = {
+				["max"] = 25, 
+				["min"] = 8, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_644456512", 
+				["text"] = "#% reduced Flask Charges used", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["973_StunDamageIncrease"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_239367161", 
+				["text"] = "#% increased Stun Buildup", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["974_LocalStunDamageIncrease"] = {
+			["1HAxe"] = {
+				["max"] = 80, 
+				["min"] = 21, 
+			}, 
+			["1HMace"] = {
+				["max"] = 80, 
+				["min"] = 21, 
+			}, 
+			["1HSword"] = {
+				["max"] = 80, 
+				["min"] = 21, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 80, 
+				["min"] = 21, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 80, 
+				["min"] = 21, 
+			}, 
+			["2HMace"] = {
+				["max"] = 80, 
+				["min"] = 21, 
+			}, 
+			["2HSword"] = {
+				["max"] = 80, 
+				["min"] = 21, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 80, 
+				["min"] = 21, 
+			}, 
+			["Bow"] = {
+				["max"] = 80, 
+				["min"] = 21, 
+			}, 
+			["Claw"] = {
+				["max"] = 80, 
+				["min"] = 21, 
+			}, 
+			["Dagger"] = {
+				["max"] = 80, 
+				["min"] = 21, 
+			}, 
+			["Staff"] = {
+				["max"] = 80, 
+				["min"] = 21, 
+			}, 
+			["Wand"] = {
+				["max"] = 80, 
+				["min"] = 21, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_791928121", 
+				["text"] = "Causes #% increased Stun Buildup", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["976_LocalStunDuration"] = {
+			["1HAxe"] = {
+				["max"] = 30, 
+				["min"] = 11, 
+			}, 
+			["1HMace"] = {
+				["max"] = 30, 
+				["min"] = 11, 
+			}, 
+			["1HSword"] = {
+				["max"] = 30, 
+				["min"] = 11, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 11, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 30, 
+				["min"] = 11, 
+			}, 
+			["2HMace"] = {
+				["max"] = 30, 
+				["min"] = 11, 
+			}, 
+			["2HSword"] = {
+				["max"] = 30, 
+				["min"] = 11, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 11, 
+			}, 
+			["Bow"] = {
+				["max"] = 30, 
+				["min"] = 11, 
+			}, 
+			["Claw"] = {
+				["max"] = 30, 
+				["min"] = 11, 
+			}, 
+			["Dagger"] = {
+				["max"] = 30, 
+				["min"] = 11, 
+			}, 
+			["Staff"] = {
+				["max"] = 30, 
+				["min"] = 11, 
+			}, 
+			["Wand"] = {
+				["max"] = 30, 
+				["min"] = 11, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_748522257", 
+				["text"] = "#% increased Stun Duration", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["978_IgniteChanceIncrease"] = {
+			["1HWeapon"] = {
+				["max"] = 100, 
+				["min"] = 51, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 100, 
+				["min"] = 51, 
+			}, 
+			["Staff"] = {
+				["max"] = 100, 
+				["min"] = 51, 
+			}, 
+			["Wand"] = {
+				["max"] = 100, 
+				["min"] = 51, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2968503605", 
+				["text"] = "#% increased chance to Ignite", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["980_FreezeDamageIncrease"] = {
+			["1HWeapon"] = {
+				["max"] = 80, 
+				["min"] = 31, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 80, 
+				["min"] = 31, 
+			}, 
+			["Staff"] = {
+				["max"] = 80, 
+				["min"] = 31, 
+			}, 
+			["Wand"] = {
+				["max"] = 80, 
+				["min"] = 31, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_473429811", 
+				["text"] = "#% increased Freeze Buildup", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["982_ShockChanceIncrease"] = {
+			["1HWeapon"] = {
+				["max"] = 100, 
+				["min"] = 51, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 100, 
+				["min"] = 51, 
+			}, 
+			["Staff"] = {
+				["max"] = 100, 
+				["min"] = 51, 
+			}, 
+			["Wand"] = {
+				["max"] = 100, 
+				["min"] = 51, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_293638271", 
+				["text"] = "#% increased chance to Shock", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["984_LocalArmourAndEnergyShieldAndStunThreshold"] = {
+			["Boots"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Chest"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Gloves"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Helmet"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_915769802", 
+				["text"] = "# to Stun Threshold", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["984_LocalArmourAndEvasionAndStunThreshold"] = {
+			["Boots"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Chest"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Gloves"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Helmet"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_915769802", 
+				["text"] = "# to Stun Threshold", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["984_LocalArmourAndStunThreshold"] = {
+			["Boots"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Chest"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Gloves"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Helmet"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_915769802", 
+				["text"] = "# to Stun Threshold", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["984_LocalEnergyShieldAndStunThreshold"] = {
+			["Boots"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Chest"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Gloves"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Helmet"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_915769802", 
+				["text"] = "# to Stun Threshold", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["984_LocalEvasionAndEnergyShieldAndStunThreshold"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_915769802", 
+				["text"] = "# to Stun Threshold", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["984_LocalEvasionAndStunThreshold"] = {
+			["Boots"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Chest"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Gloves"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["Helmet"] = {
+				["max"] = 136, 
+				["min"] = 8, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_915769802", 
+				["text"] = "# to Stun Threshold", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["984_StunThreshold"] = {
+			["Belt"] = {
+				["max"] = 304, 
+				["min"] = 6, 
+			}, 
+			["Boots"] = {
+				["max"] = 352, 
+				["min"] = 6, 
+			}, 
+			["Chest"] = {
+				["max"] = 304, 
+				["min"] = 6, 
+			}, 
+			["Shield"] = {
+				["max"] = 304, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_915769802", 
+				["text"] = "# to Stun Threshold", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["985_ReducedBleedDuration"] = {
+			["Chest"] = {
+				["max"] = -36, 
+				["min"] = -60, 
+			}, 
+			["inverse"] = true, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1692879867", 
+				["text"] = "#% increased Bleeding Duration on you", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["986_ReducedBurnDuration"] = {
+			["Chest"] = {
+				["max"] = 60, 
+				["min"] = 36, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_986397080", 
+				["text"] = "#% reduced Ignite Duration on you", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["987_ReducedChillDuration"] = {
+			["Boots"] = {
+				["max"] = 60, 
+				["min"] = 36, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1874553720", 
+				["text"] = "#% reduced Chill Duration on you", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["988_ReducedFreezeDuration"] = {
+			["Boots"] = {
+				["max"] = 60, 
+				["min"] = 36, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2160282525", 
+				["text"] = "#% reduced Freeze Duration on you", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["989_ReducedShockDuration"] = {
+			["Boots"] = {
+				["max"] = 60, 
+				["min"] = 36, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_99927264", 
+				["text"] = "#% reduced Shock duration on you", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["990_ReducedPoisonDuration"] = {
+			["Chest"] = {
+				["max"] = -36, 
+				["min"] = -60, 
+			}, 
+			["inverse"] = true, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3301100256", 
+				["text"] = "#% increased Poison Duration on you", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["991_ChanceToPierce"] = {
+			["Quiver"] = {
+				["max"] = 26, 
+				["min"] = 12, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2321178454", 
+				["text"] = "#% chance to Pierce an Enemy", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["992_PresenceRadius"] = {
+			["1HMace"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 13, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_101878827", 
+				["text"] = "#% increased Presence Area of Effect", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["993_LightRadiusAndAccuracy"] = {
+			["Helmet"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1263695895", 
+				["text"] = "#% increased Light Radius", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["993_LightRadiusAndManaRegeneration"] = {
+			["1HMace"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["Ring"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["Staff"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["Wand"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1263695895", 
+				["text"] = "#% increased Light Radius", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["993_LocalLightRadiusAndAccuracy"] = {
+			["1HAxe"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["1HMace"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["1HSword"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["2HAxe"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["2HMace"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["2HSword"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["Bow"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["Claw"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["Dagger"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["Staff"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["Wand"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1263695895", 
+				["text"] = "#% increased Light Radius", 
+				["type"] = "explicit", 
+			}, 
+		}, 
 		["994_FlaskChanceRechargeOnKill"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
@@ -1150,6 +7326,20 @@ return {
 		}, 
 	}, 
 	["Implicit"] = {
+		["implicit.stat_1028592286_"] = {
+			["Bow"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1028592286", 
+				["text"] = "#% chance to Chain an additional time", 
+				["type"] = "implicit", 
+			}, 
+		}, 
 		["implicit.stat_1039380318_"] = {
 			["2HWeapon"] = {
 				["max"] = 1, 
@@ -1177,6 +7367,23 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
+		["implicit.stat_1050883682_"] = {
+			["1HAxe"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1050883682", 
+				["text"] = "Has no Accuracy Penalty from Range", 
+				["type"] = "implicit", 
+			}, 
+		}, 
 		["implicit.stat_1207554355_"] = {
 			["Quiver"] = {
 				["max"] = 30, 
@@ -1188,6 +7395,214 @@ return {
 			["tradeMod"] = {
 				["id"] = "implicit.stat_1207554355", 
 				["text"] = "#% increased Arrow Speed", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1379411836_"] = {
+			["1HSword"] = {
+				["max"] = 24, 
+				["min"] = 16, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 24, 
+				["min"] = 16, 
+			}, 
+			["Amulet"] = {
+				["max"] = 7, 
+				["min"] = 5, 
+			}, 
+			["Helmet"] = {
+				["max"] = 24, 
+				["min"] = 16, 
+			}, 
+			["Ring"] = {
+				["max"] = 12, 
+				["min"] = 8, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1379411836", 
+				["text"] = "# to all Attributes", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1389754388_"] = {
+			["Belt"] = {
+				["max"] = 20, 
+				["min"] = 15, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1389754388", 
+				["text"] = "#% increased Charm Effect Duration", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1412682799_"] = {
+			["Charm"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1412682799", 
+				["text"] = "Used when you become Poisoned", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1443060084_"] = {
+			["Quiver"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1443060084", 
+				["text"] = "#% reduced Enemy Stun Threshold", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1541903247_"] = {
+			["2HMace"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1541903247", 
+				["text"] = "Causes Enemies to Explode on Critical kill, for #% of their Life as Physical Damage", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1559935218_"] = {
+			["1HMace"] = {
+				["max"] = 100, 
+				["min"] = 100, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 100, 
+				["min"] = 100, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1559935218", 
+				["text"] = "Causes Daze buildup equal to #% of Damage dealt", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1570770415_"] = {
+			["Belt"] = {
+				["max"] = 15, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1570770415", 
+				["text"] = "#% reduced Charm Charges used", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1573130764_"] = {
+			["Quiver"] = {
+				["max"] = 4, 
+				["min"] = 4, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1573130764", 
+				["text"] = "Adds # to # Fire damage to Attacks", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1671376347_"] = {
+			["Chest"] = {
+				["max"] = 25, 
+				["min"] = 20, 
+			}, 
+			["Ring"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1671376347", 
+				["text"] = "#% to Lightning Resistance", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1691862754_"] = {
+			["Charm"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1691862754", 
+				["text"] = "Used when you become Frozen", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1702195217_"] = {
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1702195217", 
+				["text"] = "#% to Block chance", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1725749947_"] = {
+			["1HAxe"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1725749947", 
+				["text"] = "Gain # Rage on Hit", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1782086450_"] = {
+			["Chest"] = {
+				["max"] = 50, 
+				["min"] = 40, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1782086450", 
+				["text"] = "#% faster start of Energy Shield Recharge", 
 				["type"] = "implicit", 
 			}, 
 		}, 
@@ -1205,6 +7620,115 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
+		["implicit.stat_1810482573_"] = {
+			["Charm"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1810482573", 
+				["text"] = "Used when you become Stunned", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1836676211_"] = {
+			["Belt"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1836676211", 
+				["text"] = "#% increased Flask Charges gained", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1978899297_"] = {
+			["Chest"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1978899297", 
+				["text"] = "#% to all Maximum Elemental Resistances", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1980802737_"] = {
+			["2HWeapon"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1980802737", 
+				["text"] = "Grenade Skills Fire an additional Projectile", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_2016937536_"] = {
+			["Charm"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_2016937536", 
+				["text"] = "Used when you take Lightning damage from a Hit", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_2055966527_"] = {
+			["Quiver"] = {
+				["max"] = 15, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_2055966527", 
+				["text"] = "Attacks have #% chance to cause Bleeding", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_2194114101_"] = {
+			["Quiver"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_2194114101", 
+				["text"] = "#% increased Critical Hit Chance for Attacks", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_2222186378_"] = {
+			["Belt"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_2222186378", 
+				["text"] = "#% increased Mana Recovery from Flasks", 
+				["type"] = "implicit", 
+			}, 
+		}, 
 		["implicit.stat_2250533757_"] = {
 			["Chest"] = {
 				["max"] = 5, 
@@ -1219,6 +7743,93 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
+		["implicit.stat_2321178454_"] = {
+			["2HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["Quiver"] = {
+				["max"] = 100, 
+				["min"] = 100, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_2321178454", 
+				["text"] = "#% chance to Pierce an Enemy", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_2694482655_"] = {
+			["1HMace"] = {
+				["max"] = 40, 
+				["min"] = 30, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 40, 
+				["min"] = 30, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_2694482655", 
+				["text"] = "#% to Critical Damage Bonus", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_275498888_"] = {
+			["Ring"] = {
+				["max"] = 50, 
+				["min"] = 50, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_275498888", 
+				["text"] = "Maximum Quality is #%", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_2763429652_"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_2763429652", 
+				["text"] = "#% chance to Maim on Hit", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_2778646494_"] = {
+			["Charm"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_2778646494", 
+				["text"] = "Used when you are affected by a Slow", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_2797971005_"] = {
+			["Quiver"] = {
+				["max"] = 3, 
+				["min"] = 2, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_2797971005", 
+				["text"] = "Gain # Life per Enemy Hit with Attacks", 
+				["type"] = "implicit", 
+			}, 
+		}, 
 		["implicit.stat_2891184298_"] = {
 			["Ring"] = {
 				["max"] = 10, 
@@ -1230,6 +7841,113 @@ return {
 			["tradeMod"] = {
 				["id"] = "implicit.stat_2891184298", 
 				["text"] = "#% increased Cast Speed", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_2901986750_"] = {
+			["Boots"] = {
+				["max"] = 16, 
+				["min"] = 8, 
+			}, 
+			["Chest"] = {
+				["max"] = 25, 
+				["min"] = 15, 
+			}, 
+			["Helmet"] = {
+				["max"] = 16, 
+				["min"] = 8, 
+			}, 
+			["Ring"] = {
+				["max"] = 10, 
+				["min"] = 7, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_2901986750", 
+				["text"] = "#% to all Elemental Resistances", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_2923486259_"] = {
+			["Chest"] = {
+				["max"] = 13, 
+				["min"] = 7, 
+			}, 
+			["Ring"] = {
+				["max"] = 13, 
+				["min"] = 7, 
+			}, 
+			["Shield"] = {
+				["max"] = 19, 
+				["min"] = 11, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_2923486259", 
+				["text"] = "#% to Chaos Resistance", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_2994271459_"] = {
+			["Charm"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_2994271459", 
+				["text"] = "Used when you take Cold damage from a Hit", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_3032590688_"] = {
+			["Quiver"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Ring"] = {
+				["max"] = 2.5, 
+				["min"] = 2.5, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3032590688", 
+				["text"] = "Adds # to # Physical Damage to Attacks", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_3261801346_"] = {
+			["Amulet"] = {
+				["max"] = 15, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3261801346", 
+				["text"] = "# to Dexterity", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_328541901_"] = {
+			["Amulet"] = {
+				["max"] = 15, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_328541901", 
+				["text"] = "# to Intelligence", 
 				["type"] = "implicit", 
 			}, 
 		}, 
@@ -1255,6 +7973,19 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
+		["implicit.stat_3310778564_"] = {
+			["Charm"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3310778564", 
+				["text"] = "Used when you take Chaos damage from a Hit", 
+				["type"] = "implicit", 
+			}, 
+		}, 
 		["implicit.stat_3325883026_"] = {
 			["Amulet"] = {
 				["max"] = 4, 
@@ -1269,6 +8000,252 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
+		["implicit.stat_3372524247_"] = {
+			["Ring"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3372524247", 
+				["text"] = "#% to Fire Resistance", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_3489782002_"] = {
+			["Amulet"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3489782002", 
+				["text"] = "# to maximum Energy Shield", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_3544800472_"] = {
+			["Chest"] = {
+				["max"] = 40, 
+				["min"] = 30, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3544800472", 
+				["text"] = "#% increased Elemental Ailment Threshold", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_3585532255_"] = {
+			["Belt"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3585532255", 
+				["text"] = "#% increased Charm Charges gained", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_3675300253_"] = {
+			["2HMace"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3675300253", 
+				["text"] = "Strikes deal Splash damage to targets within 1.8 metres", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_3676540188_"] = {
+			["Charm"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3676540188", 
+				["text"] = "Used when you start Bleeding", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_3699444296_"] = {
+			["Charm"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3699444296", 
+				["text"] = "Used when you become Shocked", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_3854901951_"] = {
+			["Charm"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3854901951", 
+				["text"] = "Used when you take Fire damage from a Hit", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_3885405204_"] = {
+			["Bow"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+				["overrideModLineSingular"] = "Bow Attacks fire an additional Arrow", 
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3885405204", 
+				["text"] = "Bow Attacks fire # additional Arrows", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_3917489142_"] = {
+			["Amulet"] = {
+				["max"] = 20, 
+				["min"] = 12, 
+			}, 
+			["Belt"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["Ring"] = {
+				["max"] = 15, 
+				["min"] = 6, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3917489142", 
+				["text"] = "#% increased Rarity of Items found", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_3954735777_"] = {
+			["Quiver"] = {
+				["max"] = 15, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3954735777", 
+				["text"] = "#% chance to Poison on Hit with Attacks", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_3981240776_"] = {
+			["Amulet"] = {
+				["max"] = 15, 
+				["min"] = 10, 
+			}, 
+			["Chest"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_3981240776", 
+				["text"] = "# to Spirit", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_4010341289_"] = {
+			["Charm"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_4010341289", 
+				["text"] = "Used when you Kill a Rare or Unique Enemy", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_4080418644_"] = {
+			["Amulet"] = {
+				["max"] = 15, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_4080418644", 
+				["text"] = "# to Strength", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_4220027924_"] = {
+			["Ring"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_4220027924", 
+				["text"] = "#% to Cold Resistance", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_462041840_"] = {
+			["Belt"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_462041840", 
+				["text"] = "#% of Flask Recovery applied Instantly", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_535217483_"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_535217483", 
+				["text"] = "#% increased Projectile Speed when thrown", 
+				["type"] = "implicit", 
+			}, 
+		}, 
 		["implicit.stat_548198834_"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
@@ -1276,6 +8253,111 @@ return {
 			["tradeMod"] = {
 				["id"] = "implicit.stat_548198834", 
 				["text"] = "#% increased Range", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_585126960_"] = {
+			["Charm"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_585126960", 
+				["text"] = "Used when you become Ignited", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_624954515_"] = {
+			["Quiver"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_624954515", 
+				["text"] = "#% increased Accuracy Rating", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_644456512_"] = {
+			["Belt"] = {
+				["max"] = 15, 
+				["min"] = 10, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_644456512", 
+				["text"] = "#% reduced Flask Charges used", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_669069897_"] = {
+			["1HWeapon"] = {
+				["max"] = 4, 
+				["min"] = 4, 
+			}, 
+			["Dagger"] = {
+				["max"] = 4, 
+				["min"] = 4, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_669069897", 
+				["text"] = "Leeches #% of Physical Damage as Mana", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_680068163_"] = {
+			["Belt"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["Chest"] = {
+				["max"] = 40, 
+				["min"] = 30, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_680068163", 
+				["text"] = "#% increased Stun Threshold", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_681332047_"] = {
+			["Quiver"] = {
+				["max"] = 10, 
+				["min"] = 7, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_681332047", 
+				["text"] = "#% increased Attack Speed", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_731781020_"] = {
+			["Belt"] = {
+				["max"] = 0.17, 
+				["min"] = 0.17, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_731781020", 
+				["text"] = "Flasks gain # charges per Second", 
 				["type"] = "implicit", 
 			}, 
 		}, 
@@ -1297,6 +8379,66 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
+		["implicit.stat_791928121_"] = {
+			["2HMace"] = {
+				["max"] = 50, 
+				["min"] = 30, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 50, 
+				["min"] = 30, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_791928121", 
+				["text"] = "Causes #% increased Stun Buildup", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_803737631_"] = {
+			["Ring"] = {
+				["max"] = 160, 
+				["min"] = 120, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_803737631", 
+				["text"] = "# to Accuracy Rating", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_809229260_"] = {
+			["Belt"] = {
+				["max"] = 140, 
+				["min"] = 100, 
+			}, 
+			["sign"] = "+", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_809229260", 
+				["text"] = "# to Armour", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_821241191_"] = {
+			["Belt"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_821241191", 
+				["text"] = "#% increased Life Recovery from Flasks", 
+				["type"] = "implicit", 
+			}, 
+		}, 
 		["implicit.stat_836936635_"] = {
 			["Chest"] = {
 				["max"] = 2.5, 
@@ -1308,6 +8450,20 @@ return {
 			["tradeMod"] = {
 				["id"] = "implicit.stat_836936635", 
 				["text"] = "Regenerate #% of Life per second", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_924253255_"] = {
+			["Chest"] = {
+				["max"] = -20, 
+				["min"] = -30, 
+			}, 
+			["inverse"] = true, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_924253255", 
+				["text"] = "#% increased Slowing Potency of Debuffs on You", 
 				["type"] = "implicit", 
 			}, 
 		}, 

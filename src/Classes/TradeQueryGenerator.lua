@@ -349,6 +349,11 @@ function TradeQueryGeneratorClass:InitMods()
 	local tradeStats = fetchStats()
 	tradeStats:gsub("\n", " ")
 	local tradeQueryStatsParsed = dkjson.decode(tradeStats)
+	for _, modDomain in ipairs(tradeQueryStatsParsed.result) do
+		for _, mod in ipairs(modDomain.entries) do
+			mod.text = mod.text:gsub("%[([^|%]]+)%]", "%1"):gsub("%[[^|]+|([^|]+)%]", "%1")
+		end
+	end
 
 	-- create mask for regular mods (excl flasks. charms and jewels)
 	local regularItemMask = { }
