@@ -589,11 +589,12 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					end
 					return ""
 				end)
-
-				if modLine.enchant or modLine.rune then
+				if modLine.rune then
+					modLine.enchant = true
+				end
+				if modLine.enchant then
 					modLine.implicit = true
 				end
-
 				local baseName
 				if not self.base and (self.rarity == "NORMAL" or self.rarity == "MAGIC") then
 					-- Exact match (affix-less magic and normal items)
