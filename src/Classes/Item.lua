@@ -278,6 +278,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	self.base = nil
 	self.rarity = rarity or "UNIQUE"
 	self.charmLimit = nil
+	self.spiritValue = nil
 	self.quality = nil
 	self.rawLines = { }
 	-- Find non-blank lines and trim whitespace
@@ -404,6 +405,8 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					self.classRestriction = specVal
 				elseif specName == "Charm Slots" then
 					self.charmLimit = specToNumber(specVal)
+				elseif specName == "Spirit" then
+					self.spiritValue = specToNumber(specVal)
 				elseif specName == "Quality" then
 					self.quality = specToNumber(specVal)
 				elseif specName == "Sockets" then
@@ -651,6 +654,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 						self.type = base.type
 						self.base = base
 						self.charmLimit = base.charmLimit
+						self.spiritValue = base.spirit
 						self.affixes = (self.base.subType and data.itemMods[self.base.type..self.base.subType])
 								or data.itemMods[self.base.type]
 								or data.itemMods.Item
@@ -921,6 +925,9 @@ function ItemClass:BuildRaw()
 	end
 	if self.charmLimit then
 		t_insert(rawLines, "Charm Slots: " .. self.charmLimit)
+	end
+	if self.spiritValue then
+		t_insert(rawLines, "Spirit: " .. self.spiritValue)
 	end
 	if self.armourData then
 		for _, type in ipairs({ "Armour", "Evasion", "EnergyShield", "Ward" }) do

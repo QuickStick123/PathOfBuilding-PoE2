@@ -94,9 +94,9 @@ local formList = {
 	["penetrates? (%d+)%%"] = "PEN",
 	["penetrates (%d+)%% of"] = "PEN",
 	["penetrates (%d+)%% of enemy"] = "PEN",
-	["^([%d%.]+) (.+) regenerated per second"] = "REGENFLAT",
-	["^([%d%.]+)%% (.+) regenerated per second"] = "REGENPERCENT",
-	["^([%d%.]+)%% of (.+) regenerated per second"] = "REGENPERCENT",
+	["^([%d%.]+) (.+) regeneration per second"] = "REGENFLAT",
+	["^([%d%.]+)%% (.+) regeneration per second"] = "REGENPERCENT",
+	["^([%d%.]+)%% of (.+) regeneration per second"] = "REGENPERCENT",
 	["^regenerate ([%d%.]+) (.-) per second"] = "REGENFLAT",
 	["^regenerate ([%d%.]+)%% (.-) per second"] = "REGENPERCENT",
 	["^regenerate ([%d%.]+)%% of (.-) per second"] = "REGENPERCENT",
@@ -157,9 +157,11 @@ local modNameList = {
 	["attributes"] = { "Str", "Dex", "Int", "All" },
 	["all attributes"] = { "Str", "Dex", "Int", "All" },
 	["devotion"] = "Devotion",
-	-- Life/mana
+	-- Life/Mana/Spirit
+	["spirit"] = "Spirit",
 	["life"] = "Life",
 	["maximum life"] = "Life",
+	["life regeneration"] = "LifeRegen",
 	["life regeneration rate"] = "LifeRegen",
 	["mana"] = "Mana",
 	["maximum mana"] = "Mana",
@@ -2248,6 +2250,18 @@ local specialModList = {
 	["life leech is instant"] = { mod("InstantLifeLeech", "BASE", 100), },
 	["mana leech is instant"] = { mod("InstantManaLeech", "BASE", 100), },
 	["mana leech effects also recover energy shield"] = { flag("ManaLeechRecoversEnergyShield") },
+	["leeche?s? (%d.+)%% of (%a+) damage as mana"] = function(num, _, dmgType) return {
+		mod(firstToUpper(dmgType) .. "DamageManaLeech", "BASE", num),
+	} end,
+	["leeche?s? (%d.+)%% of (%a+) damage as life"] = function(num, _, dmgType) return {
+		mod(firstToUpper(dmgType) .. "DamageLifeLeech", "BASE", num),
+	} end,
+	["leeche?s? (%d.+)%% of (%a+) attack damage as mana"] = function(num, _, dmgType) return {
+		mod(firstToUpper(dmgType) .. "DamageManaLeech", "BASE", num, nil, ModFlag.Attack, 0),
+	} end,
+	["leeche?s? (%d.+)%% of (%a+) attack damage as life"] = function(num, _, dmgType) return {
+		mod(firstToUpper(dmgType) .. "DamageLifeLeech", "BASE", num, nil, ModFlag.Attack, 0),
+	} end,
 	-- Ascendant
 	["grants (%d+) passive skill points?"] = function(num) return { mod("ExtraPoints", "BASE", num) } end,
 	["can allocate passives from the %a+'s starting point"] = { },

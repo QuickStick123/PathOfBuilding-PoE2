@@ -1800,6 +1800,7 @@ function ItemsTabClass:CraftItem()
 		item.base = base.base
 		item.baseName = base.name
 		item.charmLimit = base.charmLimit
+		item.spiritValue = base.spiritValue
 		item.buffModLines = { }
 		item.enchantModLines = { }
 		item.classRequirementModLines = { }
@@ -2460,6 +2461,9 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 	end
 	if item.charmLimit then
 		tooltip:AddLine(16, s_format("^x7F7F7FCharm Slots: %d", item.charmLimit))
+	end
+	if item.spiritValue then
+		tooltip:AddLine(16, s_format("^x7F7F7FSpirit: %d", item.spiritValue))
 	end
 	tooltip:AddSeparator(10)
 
