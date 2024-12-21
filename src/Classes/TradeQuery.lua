@@ -1086,12 +1086,12 @@ function TradeQueryClass:UpdateRealms()
 		self.tradeQueryRequests:FetchRealmsAndLeaguesHTML(function(data, errMsg)
 			if errMsg then
 				self:SetNotice(self.controls.pbNotice, "Error while fetching league list: "..errMsg)
-				if errMsg:match("403") then -- We were forbbiden access league data using the give POESSID there it is is invalid.
-					main.POESESSID = ""
-					self:SetNotice(self.controls.pbNotice, "Invalid POESESSID")
-				else
+				-- if errMsg:match("403") then -- We were forbbiden access league data using the give POESSID there it is is invalid.
+				-- 	main.POESESSID = ""
+				-- 	self:SetNotice(self.controls.pbNotice, "Invalid POESESSID")
+				-- else
 					self:SetNotice(self.controls.pbNotice, "Error while fetching league list: "..errMsg)
-				end
+				-- end
 				return
 			end
 			local leagues = data.leagues
