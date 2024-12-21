@@ -60,7 +60,7 @@ end)
 ---@param callback fun()
 function TradeQueryClass:FetchCurrencyConversionTable(callback)
 	launch:DownloadPage(
-		"https://www.pathofexile.com/api/trade/data/static",
+		"https://www.pathofexile.com/api/trade2/data/static",
 		function(response, errMsg)
 			if errMsg then
 				callback(response, errMsg)
@@ -410,21 +410,6 @@ Highest Weight - Displays the order retrieved from trade]]
 		self:UpdateRealms()
 	end
 
-	local activeAbyssalSockets = {
-		["Weapon 1"] = { }, ["Weapon 2"] = { }, ["Helmet"] = { }, ["Body Armour"] = { }, ["Gloves"] = { }, ["Boots"] = { }, ["Belt"] = { },
-	}
-	-- loop all slots, set any active abyssal sockets
-	for index, slot in pairs(self.itemsTab.slots) do
-		if index:find("Abyssal") and slot.shown() then
-			t_insert(activeAbyssalSockets[slot.parentSlot.slotName], slot)
-		end
-	end
-	for _, abyssal in pairs(activeAbyssalSockets) do -- sort Abyssal #1 > Abyssal #2 etc
-		t_sort(abyssal, function(a, b)
-			return a.label < b.label
-		end)
-	end
-
 	-- Individual slot rows
 	local slotTables = {}
 	for _, slotName in ipairs(baseSlots) do
@@ -624,13 +609,12 @@ function TradeQueryClass:SetCurrencyConversionButton()
 	if self.pbLeague == nil then
 		return
 	end
-	if self.pbRealm ~= "pc" then
+	if true then -- tbd once poe ninja has data for poe2
 		self.controls.updateCurrencyConversion.label = "Currency Rates are not available"
 		self.controls.updateCurrencyConversion.enabled = false
 		self.controls.updateCurrencyConversion.tooltipFunc = function(tooltip)
 			tooltip:Clear()
 			tooltip:AddLine(16, "Currency Conversion rates are pulled from PoE Ninja")
-			tooltip:AddLine(16, "The data is only available for the PC realm.")
 		end
 		return
 	end
@@ -879,7 +863,7 @@ function TradeQueryClass:PriceItemRowDisplay(row_idx, top_pane_alignment_ref, ro
 				self:SetNotice(context.controls.pbNotice, "")
 			end
 			if main.POESESSID == nil or main.POESESSID == "" then
-				local url = self.tradeQueryRequests:buildUrl(self.hostName .. "trade/search", self.pbRealm, self.pbLeague)
+				local url = self.tradeQueryRequests:buildUrl(self.hostName .. "trade2/search", self.pbRealm, self.pbLeague)
 				url = url .. "?q=" .. urlEncode(query)
 				controls["uri"..context.row_idx]:SetText(url, true)
 				return
@@ -900,7 +884,7 @@ function TradeQueryClass:PriceItemRowDisplay(row_idx, top_pane_alignment_ref, ro
 				end,
 				{
 					callbackQueryId = function(queryId)
-						local url = self.tradeQueryRequests:buildUrl(self.hostName .. "trade/search", self.pbRealm, self.pbLeague, queryId)
+						local url = self.tradeQueryRequests:buildUrl(self.hostName .. "trade2/search", self.pbRealm, self.pbLeague, queryId)
 						controls["uri"..context.row_idx]:SetText(url, true)
 					end
 				}
@@ -911,7 +895,7 @@ function TradeQueryClass:PriceItemRowDisplay(row_idx, top_pane_alignment_ref, ro
 	controls["bestButton"..row_idx].tooltipText = "Creates a weighted search to find the highest Stat Value items for this slot."
 	local pbURL
 	controls["uri"..row_idx] = new("EditControl", { "TOPLEFT", controls["bestButton"..row_idx], "TOPRIGHT"}, {8, 0, 514, row_height}, nil, nil, "^%C\t\n", nil, function(buf)
-		local subpath = buf:match(self.hostName .. "trade/search/(.+)$") or ""
+		local subpath = buf:match(self.hostName .. "trade2/search/(.+)$") or ""
 		local paths = {}
 		for path in subpath:gmatch("[^/]+") do
 			table.insert(paths, path)
@@ -933,7 +917,7 @@ function TradeQueryClass:PriceItemRowDisplay(row_idx, top_pane_alignment_ref, ro
 	end
 	controls["uri"..row_idx].tooltipFunc = function(tooltip)
 		tooltip:Clear()
-		if controls["uri"..row_idx].buf:find('^'..self.hostName..'trade/search/') ~= nil then
+		if controls["uri"..row_idx].buf:find('^'..self.hostName..'trade2/search/') ~= nil then
 			tooltip:AddLine(16, "Control + click to open in web-browser")
 		end
 	end
@@ -1124,9 +1108,7 @@ function TradeQueryClass:UpdateRealms()
 		-- Fallback to static list
 		ConPrintf("Using static realms list")
 		self.realmIds = {
-			["PC"]   = "pc",
-			["PS4"]  = "sony",
-			["Xbox"] = "xbox",
+			["PoE 2"]   = "poe2",
 		}
 		setRealmDropList()
 	end

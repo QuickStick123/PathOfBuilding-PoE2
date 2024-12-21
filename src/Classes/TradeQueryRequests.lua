@@ -177,7 +177,7 @@ end
 ---@param callback fun(response:table, errMsg:string)
 function TradeQueryRequestsClass:PerformSearch(realm, league, query, callback)
 	table.insert(self.requestQueue["search"], {
-		url = self:buildUrl(self.hostName .. "api/trade/search", realm, league),
+		url = self:buildUrl(self.hostName .. "api/trade2/search", realm, league),
 		body = query,
 		callback = function(response, errMsg)
 			if errMsg and not errMsg:find("Response code: 400") then
@@ -206,7 +206,7 @@ function TradeQueryRequestsClass:PerformSearch(realm, league, query, callback)
 						errMsg = "[ " .. response.error.code .. ": " .. response.error.message .. " ]"
 					end
 				else
-					ConPrintf("Found 0 results for " .. self.hostName .. "api/trade/search/" .. league .. "/" .. response.id)
+					ConPrintf("Found 0 results for " .. self.hostName .. "api/trade2/search/" .. league .. "/" .. response.id)
 					errMsg = "No Matching Results Found"
 				end
 				return callback(response, errMsg)
@@ -227,7 +227,7 @@ function TradeQueryRequestsClass:FetchResults(itemHashes, queryId, callback)
 	for fetch_block_start = 1, quantity_found, max_block_size do
 		local fetch_block_end = math.min(fetch_block_start + max_block_size - 1, quantity_found)
 		local param_item_hashes = table.concat({unpack(itemHashes, fetch_block_start, fetch_block_end)}, ",")
-		local fetch_url = self.hostName .. "api/trade/fetch/"..param_item_hashes.."?query="..queryId
+		local fetch_url = self.hostName .. "api/trade2/fetch/"..param_item_hashes.."?query="..queryId
 		self:FetchResultBlock(fetch_url, function(itemBlock, errMsg)
 			if errMsg then
 				return callback(nil, errMsg)
@@ -280,7 +280,7 @@ end
 
 ---@param callback fun(items:table, errMsg:string)
 function TradeQueryRequestsClass:SearchWithURL(url, callback)
-	local subpath = url:match(self.hostName .. "trade/search/(.+)$")
+	local subpath = url:match(self.hostName .. "trade2/search/(.+)$")
 	local paths = {}
 	for path in subpath:gmatch("[^/]+") do
 		table.insert(paths, path)
@@ -307,7 +307,7 @@ end
 ---@param league string
 ---@param callback fun(query:string, errMsg:string)
 function TradeQueryRequestsClass:FetchSearchQuery(realm, league, queryId, callback)
-	local url = self:buildUrl(self.hostName .. "api/trade/search", realm, league, queryId)
+	local url = self:buildUrl(self.hostName .. "api/trade2/search", realm, league, queryId)
 	table.insert(self.requestQueue["search"], {
 		url = url,
 		callback = function(response, errMsg)
@@ -334,7 +334,7 @@ function TradeQueryRequestsClass:FetchSearchQueryHTML(realm, league, queryId, ca
 		return callback(nil, "Please provide your POESESSID")
 	end
 	local header = "Cookie: POESESSID=" .. main.POESESSID
-	launch:DownloadPage(self:buildUrl(self.hostName .. "trade/search", realm, league, queryId),
+	launch:DownloadPage(self:buildUrl(self.hostName .. "trade2/search", realm, league, queryId),
 		function(response, errMsg)
 			if errMsg then
 				return callback(nil, errMsg)
@@ -371,19 +371,19 @@ end
 ---
 --- example output:
 --- result = {
---- 	leagues = [
---- 		{
---- 			"id": "Sanctum",
---- 			"realm": "pc",
---- 			"text": "Sanctum"
---- 		},
----		],
---- 	realms = [
+---		"realms": [],
+---		"leagues": [
 ---			{
----			    "id": "sony",
----			    "text": "PS4"
+---				"id": "Standard",
+---				"realm": "poe2",
+---				"text": "PoE2 - Standard"
 ---			},
---- 	]
+---			{
+---				"id": "Hardcore",
+---				"realm": "poe2",
+---				"text": "PoE2 - Hardcore"
+---			}
+---		],
 --- }
 ---@param callback fun(result:table, errMsg:string)
 function TradeQueryRequestsClass:FetchRealmsAndLeaguesHTML(callback)
@@ -392,7 +392,7 @@ function TradeQueryRequestsClass:FetchRealmsAndLeaguesHTML(callback)
 	end
 	local header = "Cookie: POESESSID=" .. main.POESESSID
 	launch:DownloadPage(
-		self.hostName .. "trade",
+		self.hostName .. "trade2",
 		function(response, errMsg)
 			if errMsg then
 				return callback(nil, errMsg)
@@ -416,25 +416,28 @@ end
 ---@param realm string
 ---@param callback fun(query:table, errMsg:string)
 function TradeQueryRequestsClass:FetchLeagues(realm, callback)
-	launch:DownloadPage(
-		self.hostName .. "api/leagues?compact=1&realm=" .. realm,
-		function(response, errMsg)
-			if errMsg then
-				return callback(nil, errMsg)
-			end
-			local json_data = dkjson.decode(response.body)
-			if not json_data or json_data.error then
-				errMsg = json_data and json_data.error or "Failed to get leagues"
-			end
-			local leagues = {}
-				for _, value in pairs(json_data) do
-					if (not value.id:find("SSF") and not value.id:find("Solo")) then
-						table.insert(leagues, value.id)
-					end
-				end
-			callback(leagues, errMsg)
-		end
-	)
+	-- launch:DownloadPage(
+	-- 		self.hostName .. "api/leagues?compact=1&realm=" .. realm,
+	-- 		function(response, errMsg)
+	-- 			if errMsg then
+	-- 				return callback(nil, errMsg)
+	-- 			end
+	-- 			local json_data = dkjson.decode(response.body)
+	-- 			if not json_data or json_data.error then
+	-- 				errMsg = json_data and json_data.error or "Failed to get leagues"
+	-- 			end
+	-- 			local leagues = {}
+	-- 				for _, value in pairs(json_data) do
+	-- 					if (not value.id:find("SSF") and not value.id:find("Solo")) then
+	-- 						table.insert(leagues, value.id)
+	-- 					end
+	-- 				end
+	-- 			callback(leagues, errMsg)
+	-- 		end
+	-- )
+
+	-- api not in poe2 so use hardcoded fallback
+	callback( {"Standard", "Hardcore"}, nil)
 end
 
 --- Build search and trade URLs with proper encoding
