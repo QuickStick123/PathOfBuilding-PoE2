@@ -861,7 +861,7 @@ function ImportTabClass:ImportItem(itemData, slotName)
 	if itemData.ilvl > 0 then
 		item.itemLevel = itemData.ilvl
 	end
-	if item.base.weapon or item.base.armour or item.base.flask or item.base.tincture then
+	if item.base.weapon or item.base.armour or item.base.flask or item.base.tincture or item.base.type == "Wand" or item.base.type == "Sceptre" or item.base.type == "Staff" then
 		item.quality = 0
 	end
 	if itemData.properties then
@@ -898,13 +898,7 @@ function ImportTabClass:ImportItem(itemData, slotName)
 	if itemData.sockets and itemData.sockets[1] then
 		item.sockets = { }
 		for i, socket in pairs(itemData.sockets) do
-			if socket.sColour == "A" then
-				item.abyssalSocketCount = item.abyssalSocketCount or 0 + 1
-			end
 			item.sockets[i] = { group = socket.group, color = socket.sColour }
-		end
-		if item.abyssalSocketCount and item.abyssalSocketCount > 0 and item.name:match("Energy Blade") then
-			t_insert(itemData.explicitMods, "Has " .. item.abyssalSocketCount .. " Abyssal Sockets")
 		end
 	end
 	if itemData.socketedItems then

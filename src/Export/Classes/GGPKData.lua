@@ -54,14 +54,14 @@ end)
 function GGPKClass:CleanDir()
 	local cmd = 'del ' .. self.oozPath .. 'Data ' .. self.oozPath .. 'Metadata /Q /S'
 	ConPrintf(cmd)
-	--os.execute(cmd)
+	os.execute(cmd)
 end
 
 function GGPKClass:ExtractFilesWithBun(fileListStr, useRegex)
 	local useRegex = useRegex or false
 	local cmd = 'cd ' .. self.oozPath .. ' && bun_extract_file.exe extract-files ' .. (useRegex and '--regex "' or '"') .. self.path .. '" . ' .. fileListStr
 	ConPrintf(cmd)
-	--os.execute(cmd)
+	os.execute(cmd)
 end
 
 function GGPKClass:ExtractFiles()
@@ -218,25 +218,15 @@ function GGPKClass:GetNeededFiles()
 		"Data/ReminderText.dat",
 		"Data/Projectiles.dat",
 		"Data/ItemExperienceTypes.dat",
-		"Data/WeaponPassiveSkills.dat",
-		"Data/WeaponPassiveSkillTypes.dat",
-		"Data/WeaponPassiveTreeBalancePerItemLevel.dat",
-		"Data/WeaponPassiveTreeUniqueBaseTypes.dat",
-		"Data/CrucibleTags.dat",
 		"Data/UniqueStashLayout.dat",
 		"Data/UniqueStashTypes.dat",
 		"Data/Shrines.dat",
 		"Data/passiveoverridelimits.dat",
 		"Data/passiveskilloverrides.dat",
 		"Data/passiveskilloverridetypes.dat",
-		"Data/passiveskilltattoos.dat",
-		"Data/passiveskilltattootargetsets.dat",
 		"Data/displayminionmonstertype.dat",
-		"Data/tinctures.dat",
 		"Data/gemeffects.dat",
 		"Data/actiontypes.dat",
-		"Data/itemisedcorpse.dat",
-		"Data/indexableskillgems.dat",
 		"Data/indexablesupportgems.dat",
 		"Data/itemclasscategories.dat",
 		"Data/miniontype.dat",
@@ -286,6 +276,16 @@ function GGPKClass:GetNeededFiles()
 		"Data/traptools.dat",
 		"Data/uncutgemadditionaltiers.dat",
 		"Data/uncutgemtiers.dat",
+		"Data/passiveskilltrees.dat",
+		"Data/passiveskilltreeuiart.dat",
+		"Data/BlightCraftingTypes.dat",
+		"Data/BlightCraftingRecipes.dat",
+		"Data/BlightCraftingResults.dat",
+		"Data/BlightCraftingItems.dat",
+		"Data/ItemSpirit.dat",
+		"Data/ItemInherentSkills.dat",
+		"Data/startingpassiveskills.dat",
+		"Data/ClassPassiveSkillOverrides.dat"
 	}
 	local csdFiles = {
 		"^Metadata/StatDescriptions/specific_skill_stat_descriptions/\\w+.csd$",
@@ -310,7 +310,7 @@ function GGPKClass:GetNeededFiles()
 		"Metadata/Items/Weapons/OneHandWeapons/OneHandSwords/AbstractOneHandSword.it",
 		"Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/AbstractOneHandMace.it",
 		"Metadata/Items/Weapons/OneHandWeapons/OneHandAxes/AbstractOneHandAxe.it",
-		"Metadata/Items/Weapons/OneHandWeapons/Flails/AbstractFlail.it",
+		"Metadata/Items/Weapons/OneHandWeapons/Flail/AbstractFlail.it",
 		"Metadata/Items/Weapons/OneHandWeapons/Daggers/AbstractDagger.it",
 		"Metadata/Items/Weapons/OneHandWeapons/Claws/AbstractClaw.it",
 		"Metadata/Items/Wands/AbstractWand.it",

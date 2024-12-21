@@ -5,3 +5,216 @@
 --
 local skills, mod, flag, skill = ...
 
+#skill SupportFasterProjectilesPlayer
+	statMap = {
+		["support_faster_projectiles_projectile_speed_+%_final"] = {
+			mod("ProjectileSpeed", "MORE", nil),
+		},
+	},
+#mods
+
+#skill SupportAmmoConservationPlayer
+	statMap = {
+		["crossbow_attack_%_chance_to_not_consume_ammo"] = {
+			mod("ChanceToNotConsumeAmmo", "BASE", nil),
+		},
+	},
+#mods
+
+#skill SupportBlindPlayer
+#mods
+
+#skill SupportDazedBreakPlayer
+#mods
+
+#skill SupportAdditionalAccuracyPlayer
+	statMap = {
+		["support_additional_accurary_rating_+%_final"] = {
+			mod("Accuracy", "MORE", nil),
+		},
+	},
+#mods
+
+#skill SupportBurstingPlaguePlayer
+#mods
+
+#skill PlagueBurstPlayer
+#mods
+
+#skill SupportChainPlayer
+	statMap = {
+		["support_chain_hit_damage_+%_final"] = {
+			mod("Damage", "MORE", nil),
+		},
+	},
+#mods
+
+#skill SupportCloseCombatPlayer
+#mods
+
+#skill SupportComboFinisherPlayer
+#mods
+
+#skill SupportMultiplePoisonPlayer
+#mods
+
+#skill SupportChanceToShockPlayer
+#mods
+
+#skill SupportCorrosionPlayer
+#mods
+
+#skill SupportCrescendoPlayer
+#mods
+
+#skill SupportCullingStrikePlayer
+#mods
+
+#skill SupportCulminationPlayer
+#mods
+
+#skill SupportDeadlyPoisonPlayer
+#mods
+
+#skill SupportSlowerProjectilesPlayer
+	statMap = {
+		["support_faster_projectiles_projectile_speed_+%_final"] = {
+			mod("ProjectileSpeed", "MORE", nil),
+		},
+	},
+#mods
+
+#skill SupportDazingPlayer
+#mods
+
+#skill SupportElectrocutePlayer
+#mods
+
+#skill SupportEncumberancePlayer
+#mods
+
+#skill SupportChanceToPoisonPlayer
+#mods
+
+#skill SupportFerocityPlayer
+#mods
+
+#skill SupportForkPlayer
+#mods
+
+#skill SupportFusilladePlayer
+#mods
+
+#skill SupportCooldownReductionPlayer
+#mods
+
+#skill SupportInnervatePlayer
+#mods
+
+#skill SupportLastingShockPlayer
+#mods
+
+#skill SupportLeveragePlayer
+#mods
+
+#skill SupportLifeFlaskPlayer
+#mods
+
+#skill SupportLifeOnCullPlayer
+#mods
+
+#skill SupportLightningExposurePlayer
+#mods
+
+#skill SupportAddedLightningDamagePlayer
+	statMap = {
+		["support_cold_and_fire_damage_+%_final"] = {
+			mod("ColdDamage", "MORE", nil),
+			mod("FireDamage", "MORE", nil),
+		},
+	},
+#mods
+
+#skill SupportLightningPenetrationPlayer
+#mods
+
+#skill SupportLockdownPlayer
+#mods
+
+#skill SupportFarCombatPlayer
+#mods
+
+#skill SupportMaimPlayer
+#mods
+
+#skill SupportManaFlaskPlayer
+#mods
+
+#skill SupportFasterAttackPlayer
+#mods
+
+#skill SupportMobilityPlayer
+#mods
+
+#skill SupportMomentumPlayer
+#mods
+
+#skill SupportEmpoweredCullPlayer
+#mods
+
+#skill SupportNeuralOverloadPlayer
+#mods
+
+#skill SupportNimbleReloadPlayer
+#mods
+
+#skill SupportIncreaseLimitPlayer
+#mods
+
+#skill SupportOverchargePlayer
+#mods
+
+#skill SupportPayloadPlayer
+#mods
+
+#skill SupportPerpetualChargePlayer
+#mods
+
+#skill SupportPiercePlayer
+#mods
+
+#skill SupportPinPlayer
+#mods
+
+#skill SupportPracticedComboPlayer
+#mods
+
+#skill SupportPrecisionPlayer
+#mods
+
+#skill SupportMultipleChargesPlayer
+#mods
+
+#skill SupportRicochetPlayer
+#mods
+
+#skill SupportMultipleProjectilesPlayer
+#mods
+
+#skill SupportSecondWindPlayer
+#mods
+
+#skill SupportManaOnCullPlayer
+#mods
+
+#skill SupportSwiftAfflictionPlayer
+#mods
+
+#skill SupportKnockbackWavePlayer
+#mods
+
+#skill KnockbackWavePlayer
+#mods
+
+#skill SupportWindowOfOpportunityPlayer
+#mods

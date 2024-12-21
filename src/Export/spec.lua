@@ -140,6 +140,55 @@ return {
 	activeskillrequirementicons={
 	},
 	activeskillrequirements={
+		[1]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=230
+		},
+		[2]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=350
+		},
+		[3]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[4]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[5]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[6]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=50
+		},
+		[7]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=50
+		}
 	},
 	activeskills={
 		[1]={
@@ -361,14 +410,14 @@ return {
 		},
 		[32]={
 			list=false,
-			name="",
-			refTo="",
+			name="Audio",
+			refTo="CharacterAudioEvents",
 			type="Key",
 			width=150
 		},
 		[33]={
 			list=false,
-			name="",
+			name="CompanionAIScript",
 			refTo="",
 			type="String",
 			width=150
@@ -1026,6 +1075,13 @@ return {
 		}
 	},
 	applydamagefunctions={
+		[1]={
+			list=false,
+			name="",
+			refTo="",
+			type="String",
+			width=250
+		}
 	},
 	archetyperewards={
 	},
@@ -2014,12 +2070,117 @@ return {
 	blightchesttypes={
 	},
 	blightcraftingitems={
+		[1]={
+			list=false,
+			name="Oil",
+			refTo="BaseItemTypes",
+			type="Key",
+			width=300
+		},
+		[2]={
+			list=false,
+			name="Tier",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[3]={
+			list=true,
+			name="Achievements",
+			refTo="",
+			type="Key",
+			width=150
+		},
+		[4]={
+			list=false,
+			name="UseType",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[5]={
+			list=false,
+			name="NameShort",
+			refTo="",
+			type="String",
+			width=150
+		}
 	},
 	blightcraftingrecipes={
+		[1]={
+			list=false,
+			name="Id",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[2]={
+			list=false,
+			name="BlightCraftingResultsKey",
+			refTo="BlightCraftingResults",
+			type="ShortKey",
+			width=150
+		},
+		[3]={
+			list=false,
+			name="",
+			refTo="",
+			type="ShortKey",
+			width=150
+		},
+		[4]={
+			list=true,
+			name="Recipe",
+			refTo="BlightCraftingItems",
+			type="Key",
+			width=810
+		}
 	},
 	blightcraftingresults={
+		[1]={
+			list=false,
+			name="Id",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[2]={
+			list=false,
+			name="ModsKey",
+			refTo="Mods",
+			type="Key",
+			width=150
+		},
+		[3]={
+			list=false,
+			name="PassiveSkillsKey",
+			refTo="PassiveSkills",
+			type="Key",
+			width=150
+		}
 	},
 	blightcraftingtypes={
+		[1]={
+			list=false,
+			name="Id",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[2]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[3]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		}
 	},
 	blightcraftinguniques={
 	},
@@ -3070,6 +3231,384 @@ return {
 			refTo="",
 			type="Int",
 			width=100
+		},
+		[16]={
+			list=true,
+			name="",
+			refTo="",
+			type="Key",
+			width=150
+		},
+		[17]={
+			list=false,
+			name="Description",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[18]={
+			list=false,
+			name="StartSkillGem",
+			refTo="BaseItemTypes",
+			type="Key",
+			width=150
+		},
+		[19]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=30
+		},
+		[20]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=30
+		},
+		[21]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=30
+		},
+		[22]={
+			list=false,
+			name="CharacterSize",
+			refTo="",
+			type="Int",
+			width=80
+		},
+		[23]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=30
+		},
+		[24]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=30
+		},
+		[25]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=30
+		},
+		[26]={
+			list=false,
+			name="IntroSoundFile",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[27]={
+			list=true,
+			name="StartWeapons",
+			refTo="BaseItemTypes",
+			type="Key",
+			width=150
+		},
+		[28]={
+			list=false,
+			name="Gender",
+			refTo="",
+			type="String",
+			width=60
+		},
+		[29]={
+			list=false,
+			name="TraitDescription",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[30]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=30
+		},
+		[31]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=30
+		},
+		[32]={
+			list=true,
+			name="",
+			refTo="",
+			type="Key",
+			width=30
+		},
+		[33]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=50
+		},
+		[34]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=50
+		},
+		[35]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=30
+		},
+		[36]={
+			list=false,
+			name="PassiveTreeImage",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[37]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=50
+		},
+		[38]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=30
+		},
+		[39]={
+			list=false,
+			name="AttrsAsId",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[40]={
+			list=false,
+			name="LoginScreen",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[41]={
+			list=false,
+			name="PlayerCritter",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[42]={
+			list=false,
+			name="PlayerEffect",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[43]={
+			list=false,
+			name="AfterImage",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[44]={
+			list=false,
+			name="Mirage",
+			refTo="MonsterVarieties",
+			type="Key",
+			width=150
+		},
+		[45]={
+			list=false,
+			name="CloneImmobile",
+			refTo="MonsterVarieties",
+			type="Key",
+			width=150
+		},
+		[46]={
+			list=false,
+			name="ReplicateClone",
+			refTo="MonsterVarieties",
+			type="Key",
+			width=150
+		},
+		[47]={
+			list=false,
+			name="LightningClone",
+			refTo="MonsterVarieties",
+			type="Key",
+			width=150
+		},
+		[48]={
+			list=false,
+			name="",
+			refTo="",
+			type="Float",
+			width=50
+		},
+		[49]={
+			list=false,
+			name="",
+			refTo="",
+			type="Float",
+			width=60
+		},
+		[50]={
+			list=false,
+			name="SkillTreeBackground",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[51]={
+			list=false,
+			name="Clone",
+			refTo="MonsterVarieties",
+			type="Key",
+			width=150
+		},
+		[52]={
+			list=true,
+			name="",
+			refTo="",
+			type="Key",
+			width=30
+		},
+		[53]={
+			list=false,
+			name="MirageWarrior",
+			refTo="MonsterVarieties",
+			type="Key",
+			width=150
+		},
+		[54]={
+			list=false,
+			name="DoubleTwo",
+			refTo="MonsterVarieties",
+			type="Key",
+			width=150
+		},
+		[55]={
+			list=false,
+			name="DarkExile",
+			refTo="MonsterVarieties",
+			type="Key",
+			width=150
+		},
+		[56]={
+			list=false,
+			name="Attr",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[57]={
+			list=false,
+			name="AttrLowercase",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[58]={
+			list=false,
+			name="Script",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[59]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=150
+		},
+		[60]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=50
+		},
+		[61]={
+			list=false,
+			name="",
+			refTo="",
+			type="Float",
+			width=50
+		},
+		[62]={
+			list=false,
+			name="",
+			refTo="",
+			type="Float",
+			width=50
+		},
+		[63]={
+			list=false,
+			name="",
+			refTo="",
+			type="Float",
+			width=50
+		},
+		[64]={
+			list=false,
+			name="BaseClass",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[65]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[66]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=150
+		},
+		[67]={
+			list=true,
+			name="",
+			refTo="",
+			type="Key",
+			width=150
+		},
+		[68]={
+			list=false,
+			name="",
+			refTo="",
+			type="Float",
+			width=150
+		},
+		[69]={
+			list=false,
+			name="GemCuttingIcon",
+			refTo="",
+			type="String",
+			width=150
 		}
 	},
 	characterstartitems={
@@ -3099,24 +3638,24 @@ return {
 	classpassiveskilloverrides={
 		[1]={
 			list=false,
-			name="",
-			refTo="",
+			name="Character",
+			refTo="Characters",
 			type="Key",
-			width=150
+			width=200
 		},
 		[2]={
 			list=false,
-			name="",
-			refTo="",
+			name="OriginalNode",
+			refTo="PassiveSkills",
 			type="Key",
-			width=350
+			width=200
 		},
 		[3]={
 			list=false,
-			name="",
-			refTo="",
+			name="SwitchedNode",
+			refTo="PassiveSkills",
 			type="Key",
-			width=300
+			width=200
 		}
 	},
 	clientlakedifficulty={
@@ -5135,7 +5674,7 @@ return {
 			list=false,
 			name="",
 			refTo="",
-			type="UInt",
+			type="Int",
 			width=150
 		},
 		[5]={
@@ -6495,18 +7034,18 @@ return {
 			name="BaseItemType",
 			refTo="BaseItemTypes",
 			type="Key",
-			width=150
+			width=450
 		},
 		[2]={
 			list=true,
 			name="Skill",
 			refTo="SkillGems",
 			type="ShortKey",
-			width=330
+			width=400
 		},
 		[3]={
 			list=false,
-			name="",
+			name="Mainhand",
 			refTo="",
 			type="Bool",
 			width=50
@@ -6555,7 +7094,7 @@ return {
 	itemspirit={
 		[1]={
 			list=false,
-			name="",
+			name="BaseItemType",
 			refTo="BaseItemTypes",
 			type="Key",
 			width=430
@@ -10713,7 +11252,7 @@ return {
 		},
 		[46]={
 			list=false,
-			name="",
+			name="Attribute",
 			refTo="",
 			type="Bool",
 			width=150
@@ -10727,7 +11266,7 @@ return {
 		},
 		[48]={
 			list=false,
-			name="",
+			name="IsRootOfAtlas",
 			refTo="",
 			type="Bool",
 			width=150
@@ -10748,6 +11287,20 @@ return {
 		}
 	},
 	passiveskillstatcategories={
+		[1]={
+			list=false,
+			name="Id",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[2]={
+			list=false,
+			name="Name",
+			refTo="",
+			type="String",
+			width=150
+		}
 	},
 	passiveskilltattoos={
 		[1]={
@@ -10819,34 +11372,167 @@ return {
 		}
 	},
 	passiveskilltrees={
-	},
-	passiveskilltreetutorial={
-	},
-	passiveskilltreeuiart={
 		[1]={
 			list=false,
-			name="",
+			name="Id",
 			refTo="",
 			type="String",
 			width=150
 		},
 		[2]={
 			list=false,
+			name="PassiveSkillGraph",
+			refTo="",
+			type="String",
+			width=390
+		},
+		[3]={
+			list=false,
 			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[4]={
+			list=false,
+			name="",
+			refTo="",
+			type="Float",
+			width=150
+		},
+		[5]={
+			list=false,
+			name="",
+			refTo="",
+			type="Float",
+			width=150
+		},
+		[6]={
+			list=false,
+			name="",
+			refTo="",
+			type="Float",
+			width=150
+		},
+		[7]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[8]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[9]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[10]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[11]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[12]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[13]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[14]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[15]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[16]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[17]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[18]={
+			list=false,
+			name="ClientStrings",
+			refTo="ClientStrings",
+			type="Key",
+			width=600
+		},
+		[19]={
+			list=false,
+			name="UIArt",
+			refTo="passiveskilltreeuiart",
+			type="Key",
+			width=150
+		}
+	},
+	passiveskilltreetutorial={
+	},
+	passiveskilltreeuiart={
+		[1]={
+			list=false,
+			name="Id",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[2]={
+			list=false,
+			name="GroupBackgroundSmall",
 			refTo="",
 			type="String",
 			width=550
 		},
 		[3]={
 			list=false,
-			name="",
+			name="GroupBackgroundMedium",
 			refTo="",
 			type="String",
 			width=550
 		},
 		[4]={
 			list=false,
-			name="",
+			name="GroupBackgroundLarge",
 			refTo="",
 			type="String",
 			width=550
@@ -10860,94 +11546,94 @@ return {
 		},
 		[6]={
 			list=false,
-			name="",
+			name="PassiveFrameNormal",
 			refTo="",
 			type="String",
-			width=500
+			width=550
 		},
 		[7]={
 			list=false,
-			name="",
+			name="NotableFrameNormal",
 			refTo="",
 			type="String",
 			width=550
 		},
 		[8]={
 			list=false,
-			name="",
+			name="KeystoneFrameNormal",
 			refTo="",
 			type="String",
 			width=550
 		},
 		[9]={
 			list=false,
-			name="",
+			name="PassiveFrameActive",
 			refTo="",
 			type="String",
-			width=500
+			width=550
 		},
 		[10]={
 			list=false,
-			name="",
+			name="NotableFrameActive",
 			refTo="",
 			type="String",
-			width=520
+			width=550
 		},
 		[11]={
 			list=false,
-			name="",
+			name="KeystoneFrameActive",
 			refTo="",
 			type="String",
 			width=550
 		},
 		[12]={
 			list=false,
-			name="",
+			name="PassiveFrameCanAllocate",
 			refTo="",
 			type="String",
-			width=520
+			width=550
 		},
 		[13]={
 			list=false,
-			name="",
+			name="NotableFrameCanAllocate",
 			refTo="",
 			type="String",
 			width=550
 		},
 		[14]={
 			list=false,
-			name="",
+			name="KeystoneFrameCanAllocate",
 			refTo="",
 			type="String",
 			width=550
 		},
 		[15]={
 			list=false,
-			name="",
+			name="Ornament",
 			refTo="",
 			type="String",
-			width=460
+			width=550
 		},
 		[16]={
 			list=false,
-			name="",
+			name="GroupBackgroundSmallBlank",
 			refTo="",
 			type="String",
-			width=570
+			width=550
 		},
 		[17]={
 			list=false,
-			name="",
+			name="GroupBackgroundMediumBlank",
 			refTo="",
 			type="String",
-			width=600
+			width=550
 		},
 		[18]={
 			list=false,
-			name="",
+			name="GroupBackgroundLargeBlank",
 			refTo="",
 			type="String",
-			width=600
+			width=550
 		}
 	},
 	passiveskilltypes={
@@ -12013,9 +12699,16 @@ return {
 	skillcraftingdata={
 		[1]={
 			list=false,
-			name="",
+			name="Id",
 			refTo="",
 			type="String",
+			width=150
+		},
+		[2]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
 			width=150
 		}
 	},
@@ -12534,38 +13227,17 @@ return {
 	startingpassiveskills={
 		[1]={
 			list=false,
-			name="",
+			name="Id",
 			refTo="",
 			type="String",
 			width=150
 		},
 		[2]={
-			list=false,
-			name="",
-			refTo="",
-			type="Int",
-			width=150
-		},
-		[3]={
-			list=false,
-			name="",
-			refTo="",
-			type="Int",
-			width=150
-		},
-		[4]={
-			list=false,
-			name="",
-			refTo="",
-			type="Int",
-			width=150
-		},
-		[5]={
-			list=false,
-			name="",
-			refTo="",
-			type="Int",
-			width=150
+			list=true,
+			name="PassiveSkills",
+			refTo="PassiveSkills",
+			type="Key",
+			width=300
 		}
 	},
 	stashid={
@@ -13949,56 +14621,7 @@ return {
 			name="Id",
 			refTo="",
 			type="String",
-			width=300
-		},
-		[2]={
-			list=false,
-			name="ModTier",
-			refTo="",
-			type="Int",
-			width=150
-		},
-		[3]={
-			list=false,
-			name="Mod",
-			refTo="Mods",
-			type="Key",
-			width=450
-		},
-		[4]={
-			list=true,
-			name="NodeSpawnLocation",
-			refTo="",
-			type="Int",
-			width=150
-		},
-		[5]={
-			list=true,
-			name="Tags",
-			refTo="CrucibleTags",
-			type="Key",
-			width=200
-		},
-		[6]={
-			list=false,
-			name="ArtFilepath",
-			refTo="",
-			type="String",
-			width=450
-		},
-		[7]={
-			list=false,
-			name="Type",
-			refTo="WeaponPassiveSkillTypes",
-			type="Key",
-			width=150
-		},
-		[8]={
-			list=true,
-			name="Achievements",
-			refTo="AchievementItems",
-			type="Key",
-			width=360
+			width=230
 		}
 	},
 	weaponpassiveskilltypes={
@@ -14007,58 +14630,16 @@ return {
 			name="Id",
 			refTo="",
 			type="String",
-			width=150
-		},
-		[2]={
-			list=false,
-			name="",
-			refTo="",
-			type="Int",
-			width=150
+			width=250
 		}
 	},
 	weaponpassivetreebalanceperitemlevel={
 		[1]={
 			list=false,
-			name="ItemLevel",
+			name="Id",
 			refTo="",
-			type="Int",
-			width=80
-		},
-		[2]={
-			list=false,
-			name="XPNode1",
-			refTo="",
-			type="Int",
-			width=150
-		},
-		[3]={
-			list=false,
-			name="XPNode2",
-			refTo="",
-			type="Int",
-			width=150
-		},
-		[4]={
-			list=false,
-			name="XPNode3",
-			refTo="",
-			type="Int",
-			width=150
-		},
-		[5]={
-			list=false,
-			name="XPNode4",
-			refTo="",
-			type="Int",
-			width=150
-		},
-		[6]={
-			list=false,
-			name="XPNode5",
-			refTo="",
-			type="Int",
-			width=150
+			type="String",
+			width=230
 		}
 	},
 	weaponpassivetreeuniquebasetypes={
@@ -14066,15 +14647,8 @@ return {
 			list=false,
 			name="UniqueBase",
 			refTo="BaseItemTypes",
-			type="Key",
+			type="String",
 			width=500
-		},
-		[2]={
-			list=false,
-			name="",
-			refTo="",
-			type="Int",
-			width=150
 		}
 	},
 	weaponsoundtypes={
@@ -14131,10 +14705,10 @@ return {
 		},
 		[8]={
 			list=false,
-			name="",
+			name="ReloadTime",
 			refTo="",
 			type="Int",
-			width=50
+			width=80
 		}
 	},
 	wieldableclasses={

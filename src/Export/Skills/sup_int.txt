@@ -5,3 +5,280 @@
 --
 local skills, mod, flag, skill = ...
 
+#skill SupportAblationPlayer
+#mods
+
+#skill SupportAmbushPlayer
+#mods
+
+#skill SupportArcaneSurgePlayer
+#mods
+
+#skill SupportFasterCastPlayer
+#mods
+
+#skill SupportAstralProjectionPlayer
+#mods
+
+#skill SupportBiddingPlayer
+#mods
+
+#skill SupportBitingFrostPlayer
+#mods
+
+#skill SupportBurningRunesPlayer
+#mods
+
+#skill TriggeredBurningRunesPlayer
+#mods
+
+#skill SupportCapacitorPlayer
+#mods
+
+#skill SupportAddedChaosDamagePlayer
+	statMap = {
+		["support_chaos_support_non_chaos_damage_+%_final"] = {
+			mod("ColdDamage", "MORE", nil),
+			mod("LightningDamage", "MORE", nil),
+			mod("FireDamage", "MORE", nil),
+			mod("PhysicalDamage", "MORE", nil),
+		},
+	},
+#mods
+
+#skill SupportChaosMasteryPlayer
+#mods
+
+#skill SupportChaoticFreezePlayer
+#mods
+
+#skill SupportClarityPlayer
+#mods
+
+#skill SupportColdExposurePlayer
+#mods
+
+#skill SupportAddedColdDamagePlayer
+	statMap = {
+		["support_fire_and_lightning_damage_+%_final"] = {
+			mod("FireDamage", "MORE", nil),
+			mod("LightningDamage", "MORE", nil),
+		},
+	},
+#mods
+
+#skill SupportColdMasteryPlayer
+#mods
+
+#skill SupportColdPenetrationPlayer
+#mods
+
+#skill SupportConcentratedEffectPlayer
+#mods
+
+#skill SupportConsideredCastingPlayer
+#mods
+
+#skill SupportControlledDestructionPlayer
+#mods
+
+#skill SupportCorpseConservationPlayer
+#mods
+
+#skill SupportCoursingCurrentPlayer
+#mods
+
+#skill SupportCursedGroundPlayer
+#mods
+
+#skill SupportDanseMacabrePlayer
+#mods
+
+#skill SupportDecayingHexPlayer
+#mods
+
+#skill SupportLastingFrostPlayer
+#mods
+
+#skill SupportDrainedAilmentPlayer
+#mods
+
+#skill SupportElementalArmyPlayer
+#mods
+
+#skill SupportElementalDischargePlayer
+#mods
+
+#skill TriggeredElementalDischargePlayer
+#mods
+
+#skill SupportElementalFocusPlayer
+#mods
+
+#skill SupportEnergyBarrierPlayer
+#mods
+
+#skill SupportEnergyRetentionPlayer
+#mods
+
+#skill SupportExcisePlayer
+#mods
+
+#skill SupportExecratePlayer
+#mods
+
+#skill SupportExpandingGroundPlayer
+#mods
+
+#skill SupportExpansePlayer
+#mods
+
+#skill SupportExtractionPlayer
+#mods
+
+#skill SupportFeedingFrenzyPlayer
+#mods
+
+#skill SupportFieryDeathPlayer
+#mods
+
+#skill TriggeredFieryDeathPlayer
+#mods
+
+#skill SupportFireMasteryPlayer
+#mods
+
+#skill SupportFocusedCursePlayer
+#mods
+
+#skill SupportManaFountainPlayer
+#mods
+
+#skill SupportWallFortressPlayer
+#mods
+
+#skill SupportChillingIcePlayer
+#mods
+
+#skill SupportFrostfirePlayer
+#mods
+
+#skill SupportFrozenVortexPlayer
+#mods
+
+#skill SupportGlaciationPlayer
+#mods
+
+#skill SupportGlacierPlayer
+#mods
+
+#skill SupportCurseEffectPlayer
+#mods
+
+#skill SupportHexBloomPlayer
+#mods
+
+#skill SupportHinderPlayer
+#mods
+
+#skill SupportHourglassPlayer
+#mods
+
+#skill SupportIceBitePlayer
+#mods
+
+#skill SupportIciclePlayer
+#mods
+
+#skill ViciousHexSupportPlayer
+#mods
+
+#skill DoomBlastPlayer
+#mods
+
+#skill SupportImpetusPlayer
+#mods
+
+#skill SupportInevitableCriticalsPlayer
+#mods
+
+#skill SupportChaoticAssassinationPlayer
+#mods
+
+#skill SupportLastGaspPlayer
+#mods
+
+#skill SupportLightningMasteryPlayer
+#mods
+
+#skill SupportIncreasedAreaOfEffectPlayer
+#mods
+
+#skill SupportManaFlarePlayer
+#mods
+
+#skill TriggeredManaFlarePlayer
+#mods
+
+#skill SupportMinionInstabilityPlayer
+#mods
+
+#skill SupportMinionMasteryPlayer
+#mods
+
+#skill SupportMinionPactPlayer
+#mods
+
+#skill SupportPhysicalMasteryPlayer
+#mods
+
+#skill SupportPotentialPlayer
+#mods
+
+#skill SupportTempestuousTempoPlayer
+#mods
+
+#skill SupportRitualisticCursePlayer
+#mods
+
+#skill SupportSacrificialLambPlayer
+#mods
+
+#skill SupportEnergyShieldOnShockKillPlayer
+#mods
+
+#skill SupportManaLeechPlayer
+#mods
+
+#skill SupportSoulbreakerPlayer
+#mods
+
+#skill TriggeredSoulbreakerPlayer
+#mods
+
+#skill SupportSpellCascadePlayer
+#mods
+
+#skill SupportSpellEchoPlayer
+#mods
+
+#skill SupportStormfirePlayer
+#mods
+
+#skill SupportStripAwayPlayer
+#mods
+
+#skill SupportIncreasedCriticalDamagePlayer
+#mods
+
+#skill SupportUnleashPlayer
+#mods
+
+#skill SupportWildfirePlayer
+#mods
+
+#skill SupportWildshardsPlayer
+#mods
+
+#skill SupportWitheringTouchPlayer
+#mods

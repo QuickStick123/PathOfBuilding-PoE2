@@ -24,10 +24,7 @@ local rarityDropList = {
 }
 
 local socketDropList = {
-	{ label = colorCodes.STRENGTH.."R", color = "R" },
-	{ label = colorCodes.DEXTERITY.."G", color = "G" },
-	{ label = colorCodes.INTELLIGENCE.."B", color = "B" },
-	{ label = colorCodes.SCION.."W", color = "W" }
+	{ label = colorCodes.SCION.."S", color = "W" }
 }
 
 local baseSlots = { "Weapon 1", "Weapon 2", "Helmet", "Body Armour", "Gloves", "Boots", "Amulet", "Ring 1", "Ring 2", "Belt", "Charm 1", "Charm 2", "Charm 3", "Flask 1", "Flask 2" }
@@ -133,7 +130,11 @@ local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Contro
 		end
 		if slotName == "Weapon 1" or slotName == "Weapon 2" or slotName == "Helmet" or slotName == "Gloves" or slotName == "Body Armour" or slotName == "Boots" or slotName == "Belt" then
 			-- Add Rune / Soul Core Socket slots
-			for i = 1, 3 do
+			local maxSocketCount = 3
+			if slotName == "Body Armour" then
+				maxSocketCount = 6
+			end
+			for i = 1, maxSocketCount do
 				local socket = new("ItemSlotControl", {"TOPLEFT",prevSlot,"BOTTOMLEFT"}, 0, 2, self, slotName.." Socket "..i, "Socket #"..i)			
 				addSlot(socket)
 				socket.parentSlot = slot
@@ -1776,16 +1777,14 @@ function ItemsTabClass:IsItemValidForSlot(item, slotName, itemSet)
 	elseif (item.type == "Rune" or item.type == "SoulCore") and slotName:match("Socket") then
 		return true
 	elseif slotName == "Weapon 1" or slotName == "Weapon 1 Swap" or slotName == "Weapon" then
-		return item.base.weapon ~= nil
+		return item.base.tags.onehand or item.base.tags.twohand
 	elseif slotName == "Weapon 2" or slotName == "Weapon 2 Swap" then
 		local weapon1Sel = itemSet[slotName == "Weapon 2" and "Weapon 1" or "Weapon 1 Swap"].selItemId or 0
-		local weapon1Type = self.items[weapon1Sel] and self.items[weapon1Sel].base.type or "None"
-		if weapon1Type == "None" then
-			return item.type == "Shield" or (self.build.data.weaponTypeInfo[item.type] and self.build.data.weaponTypeInfo[item.type].oneHand)
-		elseif weapon1Type == "Bow" then
+		local weapon1Base = self.items[weapon1Sel] and self.items[weapon1Sel].base or "Unarmed"
+		if weapon1Base.type == "Bow" then
 			return item.type == "Quiver"
-		elseif self.build.data.weaponTypeInfo[weapon1Type].oneHand then
-			return item.type == "Shield" or (self.build.data.weaponTypeInfo[item.type] and self.build.data.weaponTypeInfo[item.type].oneHand and ((weapon1Type == "Wand" and item.type == "Wand") or (weapon1Type ~= "Wand" and item.type ~= "Wand")))
+		elseif weapon1Base == "Unarmed" or weapon1Base.tags.onehand then
+			return item.type == "Shield" or item.type == "Focus" or item.type == "Sceptre" or (item.base.tags.one_hand_weapon and weapon1Base.type ~= "Wand" and weapon1Base.type ~= "Sceptre")
 		end
 	end
 end
@@ -2535,7 +2534,7 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 		if totalDamageTypes > 1 then
 			tooltip:AddLine(16, s_format("^x7F7F7FTotal DPS: "..colorCodes.MAGIC.."%.1f", weaponData.TotalDPS))
 		end
-		tooltip:AddLine(16, s_format("^x7F7F7FCritical Strike Chance: %s%.2f%%", main:StatColor(weaponData.CritChance, base.weapon.CritChanceBase), weaponData.CritChance))
+		tooltip:AddLine(16, s_format("^x7F7F7FCritical Hit Chance: %s%.2f%%", main:StatColor(weaponData.CritChance, base.weapon.CritChanceBase), weaponData.CritChance))
 		tooltip:AddLine(16, s_format("^x7F7F7FAttacks per Second: %s%.2f", main:StatColor(weaponData.AttackRate, base.weapon.AttackRateBase), weaponData.AttackRate))
 		if weaponData.range < 120 then
 			tooltip:AddLine(16, s_format("^x7F7F7FWeapon Range: %s%.1f ^x7F7F7Fmetres", main:StatColor(weaponData.range, base.weapon.Range), weaponData.range / 10))
@@ -2652,8 +2651,13 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 		tooltip:AddSeparator(10)
 	end
 
-	if #item.sockets > 0 then
-		tooltip:AddLine(16, "^x7F7F7FSockets: "..tostring(#item.sockets))
+	if item.itemSocketCount > 0 then
+		local socketString = ""
+		for _ = 1, item.itemSocketCount do
+			socketString = socketString .. "S "
+		end
+		socketString = socketString:gsub(" $", "")
+		tooltip:AddLine(16, "^x7F7F7FSockets: " .. socketString)
 	end
 	tooltip:AddSeparator(10)
 

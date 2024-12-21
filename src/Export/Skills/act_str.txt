@@ -45,6 +45,10 @@ local skills, mod, flag, skill = ...
 #flags
 #mods
 
+#skill MetaCastOnMeleeKillPlayer
+#flags
+#mods
+
 #skill SupportMetaCastOnMeleeKillPlayer
 #flags
 #mods
@@ -57,23 +61,11 @@ local skills, mod, flag, skill = ...
 #flags
 #mods
 
-#skill MetaCastWhenDamageTakenPlayer
-#flags
-#mods
-
-#skill SupportMetaCastWhenDamageTakenPlayer
-#flags
-#mods
-
 #skill ClusterGrenadePlayer
 #flags
 #mods
 
 #skill ClusterGrenadeMiniPlayer
-#flags
-#mods
-
-#skill StaffConsecratePlayer
 #flags
 #mods
 
@@ -94,11 +86,35 @@ local skills, mod, flag, skill = ...
 #mods
 
 #skill EarthquakePlayer
-#flags
+#flags attack melee area duration
+	parts = {
+		{
+			name = "Initial impact",
+		},
+		{
+			name = "Aftershock",
+		},
+	},
+	statMap = {
+		["jagged_ground_effect_+%"] = {
+			mod("Damage", "MORE", nil, 0, 0, { type = "SkillPart", skillPart = 2 }),
+		},
+		["active_skill_base_area_of_effect_radius"] = {
+			skill("radius", nil, { type = "SkillPart", skillPart = 1 }),
+		},
+		["active_skill_base_tertiary_area_of_effect_radius"] = {
+			skill("radius", nil, { type = "SkillPart", skillPart = 2 }),
+		},
+		["skill_jagged_ground_base_duration_ms"] = {
+			skill("duration", nil),
+			div = 1000,
+		},
+	},
+#baseMod skill("showAverage", true, { type = "SkillPart", skillPart = 2 })
 #mods
 
 #skill EarthshatterPlayer
-#flags
+#flags attack melee area duration
 #mods
 
 #skill EmergencyReloadPlayer
@@ -109,23 +125,7 @@ local skills, mod, flag, skill = ...
 #flags
 #mods
 
-#skill ExsanguinatePlayer
-#flags
-#mods
-
-#skill BearWarcryMetaPlayer
-#flags
-#mods
-
-#skill SupportBearWarcryPlayer
-#flags
-#mods
-
 #skill FlashGrenadePlayer
-#flags
-#mods
-
-#skill BearSlamPlayer
 #flags
 #mods
 
@@ -281,10 +281,6 @@ local skills, mod, flag, skill = ...
 #flags
 #mods
 
-#skill BearMaulPlayer
-#flags
-#mods
-
 #skill MoltenBlastPlayer
 #flags
 #mods
@@ -298,14 +294,6 @@ local skills, mod, flag, skill = ...
 #mods
 
 #skill PerfectStrikePlayer
-#flags
-#mods
-
-#skill BearRampagePlayer
-#flags
-#mods
-
-#skill ReapPlayer
 #flags
 #mods
 
@@ -353,15 +341,7 @@ local skills, mod, flag, skill = ...
 #flags
 #mods
 
-#skill SpinningInfernoPlayer
-#flags
-#mods
-
 #skill StampedePlayer
-#flags
-#mods
-
-#skill SummonWolfCompanionPlayer
 #flags
 #mods
 
@@ -377,15 +357,7 @@ local skills, mod, flag, skill = ...
 #flags
 #mods
 
-#skill TornadoPlayer
-#flags
-#mods
-
 #skill VolcanicFissurePlayer
-#flags
-#mods
-
-#skill VolcanoPlayer
 #flags
 #mods
 

@@ -462,12 +462,12 @@ function calcs.initEnv(build, mode, override, specEnv)
 		end
 		modDB.multipliers["Level"] = m_max(1, m_min(100, build.characterLevel))
 		calcs.initModDB(env, modDB)
-		modDB:NewMod("Life", "BASE", 12, "Base", { type = "Multiplier", var = "Level", base = 38 })
-		modDB:NewMod("Mana", "BASE", 6, "Base", { type = "Multiplier", var = "Level", base = 34 })
-		modDB:NewMod("ManaRegen", "BASE", 0.0175, "Base", { type = "PerStat", stat = "Mana", div = 1 })
+		modDB:NewMod("Life", "BASE", 12, "Base", { type = "Multiplier", var = "Level", base = 16 })
+		modDB:NewMod("Mana", "BASE", 4, "Base", { type = "Multiplier", var = "Level", base = 30 })
+		modDB:NewMod("ManaRegen", "BASE", 0.04, "Base", { type = "PerStat", stat = "Mana", div = 1 })
 		modDB:NewMod("Devotion", "BASE", 0, "Base")
-		modDB:NewMod("Evasion", "BASE", 15, "Base")
-		modDB:NewMod("Accuracy", "BASE", 2, "Base", { type = "Multiplier", var = "Level", base = -2 })
+		modDB:NewMod("Evasion", "BASE", 30, "Base")
+		modDB:NewMod("Accuracy", "BASE", 3, "Base", { type = "Multiplier", var = "Level", base = -3 })
 		modDB:NewMod("CritMultiplier", "BASE", 50, "Base")
 		modDB:NewMod("DotMultiplier", "BASE", 50, "Base", { type = "Condition", var = "CriticalStrike" })
 		modDB:NewMod("FireResist", "BASE", env.configInput.resistancePenalty or -60, "Base")
@@ -928,7 +928,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 						item:NormaliseQuality()
 						item:BuildAndParseRaw()
 						item.sockets = previousItem.sockets
-						item.socketCount = previousItem.socketCount
+						item.itemSocketCount = previousItem.itemSocketCount
 						env.player.itemList[slotName] = item
 					else
 						env.itemModDB:ScaleAddList(srcList, scale)
@@ -1103,21 +1103,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 							end
 						end
 					end
-					for i, socket in ipairs(item.sockets) do
-						-- Check socket color to ignore abyssal sockets
-						if socket.color == 'R' or socket.color == 'B' or socket.color == 'G' or socket.color == 'W' then
-							slotGemSocketsCount = slotGemSocketsCount + 1
-							-- loop through sockets indexes that are greater than number of socketed gems
-							if i > socketedGems then
-								slotEmptySocketsCount[socket.color] = slotEmptySocketsCount[socket.color] + 1
-							end
-						end
-					end
-					env.itemModDB.multipliers["SocketedGemsIn"..slotName] = (env.itemModDB.multipliers["SocketedGemsIn"..slotName] or 0) + math.min(slotGemSocketsCount, socketedGems)
-					env.itemModDB.multipliers.EmptyRedSocketsInAnySlot = (env.itemModDB.multipliers.EmptyRedSocketsInAnySlot or 0) + slotEmptySocketsCount.R
-					env.itemModDB.multipliers.EmptyGreenSocketsInAnySlot = (env.itemModDB.multipliers.EmptyGreenSocketsInAnySlot or 0) + slotEmptySocketsCount.G
-					env.itemModDB.multipliers.EmptyBlueSocketsInAnySlot = (env.itemModDB.multipliers.EmptyBlueSocketsInAnySlot or 0) + slotEmptySocketsCount.B
-					env.itemModDB.multipliers.EmptyWhiteSocketsInAnySlot = (env.itemModDB.multipliers.EmptyWhiteSocketsInAnySlot or 0) + slotEmptySocketsCount.W
 					-- Warn if socketed gems over socket limit
 					if socketedGems > slotGemSocketsCount then
 						env.itemWarnings.socketLimitWarning = env.itemWarnings.socketLimitWarning or { }

@@ -81,6 +81,10 @@ directiveTable.base = function(state, args, out)
 			out:write('\tcharmLimit = ', beltType.CharmCount, ',\n')
 		end
 	end
+	local itemSpirit = dat("ItemSpirit"):GetRow("BaseItemType", baseItemType)
+	if itemSpirit then
+		out:write('\tspirit = ', itemSpirit.Value, ',\n')
+	end
 	if (baseItemType.Hidden == 0 or state.forceHide) and not baseTypeId:match("Talisman") and not state.forceShow then
 		out:write('\thidden = true,\n')
 	end
@@ -110,6 +114,14 @@ directiveTable.base = function(state, args, out)
 	end
 	if #implicitLines > 0 then
 		out:write('\timplicit = "', table.concat(implicitLines, "\\n"), '",\n')
+	end
+	local inherentSkillType = dat("ItemInherentSkills"):GetRow("BaseItemType", baseItemType)
+	if inherentSkillType then
+		local skillGem = dat("SkillGems"):GetRow("BaseItemType", inherentSkillType.Skill)
+		if #inherentSkillType.Skill > 1 then
+			print("Unhandled Instance - Inherent Skill number more than 1")
+		end
+		out:write('\timplicit = "Grants Skill: Level (1-20) ', inherentSkillType.Skill[1].BaseItemType.Name, '",\n')
 	end
 	out:write('\timplicitModTypes = { ')
 	for i=1,#implicitModTypes do
@@ -183,7 +195,7 @@ directiveTable.base = function(state, args, out)
 			itemValueSum = itemValueSum + armourType.EnergyShield
 		end
 		if armourType.MovementPenalty ~= 0 then
-			out:write('MovementPenalty = ', -armourType.MovementPenalty, ', ')
+			out:write('MovementPenalty = ', -armourType.MovementPenalty / 10000, ', ')
 		end
 		out:write('},\n')
 	end
@@ -258,7 +270,7 @@ directiveTable.base = function(state, args, out)
 	if reqLevel > 1 then
 		out:write('level = ', reqLevel, ', ')
 	end
-	local compAtt = dat("AttributeRequirements"):GetRow("BaseType", baseItemType.Id)
+	local compAtt = dat("AttributeRequirements"):GetRow("BaseType", baseItemType)
 	if compAtt then
 		if compAtt.ReqStr > 0 then
 			out:write('str = ', compAtt.ReqStr, ', ')
