@@ -381,14 +381,12 @@ Highest Weight - Displays the order retrieved from trade]]
 				end
 				local sorted_leagues = { }
 				for _, league in ipairs(leagues) do
-					if league ~= "Standard" and  league ~= "Ruthless" and league ~= "Hardcore" and league ~= "Hardcore Ruthless" then
+					if league ~= "Standard" and league ~= "Hardcore" then
 						t_insert(sorted_leagues, league)
 					end
 				end
 				t_insert(sorted_leagues, "Standard")
 				t_insert(sorted_leagues, "Hardcore")
-				t_insert(sorted_leagues, "Ruthless")
-				t_insert(sorted_leagues, "Hardcore Ruthless")
 				self.allLeagues[self.pbRealm] = sorted_leagues
 				setLeagueDropList()
 			end)
@@ -1066,12 +1064,7 @@ function TradeQueryClass:UpdateRealms()
 	local function setRealmDropList()
 		self.realmDropList = {}
 		for realm, _ in pairs(self.realmIds) do
-			-- place PC as the first entry
-			if realm == "PC" then
-				t_insert(self.realmDropList, 1, realm)
-			else
-				t_insert(self.realmDropList, realm)
-			end
+			t_insert(self.realmDropList, realm)
 		end
 		self.controls.realm:SetList(self.realmDropList)
 		-- invalidate selIndex to trigger select function call in the SetSel
@@ -1086,12 +1079,12 @@ function TradeQueryClass:UpdateRealms()
 		self.tradeQueryRequests:FetchRealmsAndLeaguesHTML(function(data, errMsg)
 			if errMsg then
 				self:SetNotice(self.controls.pbNotice, "Error while fetching league list: "..errMsg)
-				-- if errMsg:match("403") then -- We were forbbiden access league data using the give POESSID there it is is invalid.
-				-- 	main.POESESSID = ""
-				-- 	self:SetNotice(self.controls.pbNotice, "Invalid POESESSID")
-				-- else
-					self:SetNotice(self.controls.pbNotice, "Error while fetching league list: "..errMsg)
-				-- end
+				-- Fallback to static list
+				ConPrintf("Using static realms list")
+				self.realmIds = {
+					["PoE 2"]   = "poe2",
+				}
+				setRealmDropList()
 				return
 			end
 			local leagues = data.leagues
@@ -1103,8 +1096,8 @@ function TradeQueryClass:UpdateRealms()
 			self.realmIds = {}
 			for _, value in pairs(data.realms) do
 				-- filter out only Path of Exile one realms, as poe2 is not supported yet
-				if value.text:match("PoE 1 ") then
-					self.realmIds[value.text:gsub("PoE 1 ", "")] = value.id
+				if value.text:match("PoE 2 ") then
+					self.realmIds[value.text] = value.id
 				end
 			end
 			setRealmDropList()
