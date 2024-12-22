@@ -352,7 +352,7 @@ function TradeQueryGeneratorClass:InitMods()
 	local tradeQueryStatsParsed = dkjson.decode(tradeStats)
 	for _, modDomain in ipairs(tradeQueryStatsParsed.result) do
 		for _, mod in ipairs(modDomain.entries) do
-			mod.text = mod.text:gsub("%[([^|%]]+)%]", "%1"):gsub("%[[^|]+|([^|]+)%]", "%1")
+			mod.text = escapeGGGString(mod.text)
 		end
 	end
 
