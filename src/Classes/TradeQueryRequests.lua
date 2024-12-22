@@ -264,10 +264,122 @@ function TradeQueryRequestsClass:FetchResultBlock(url, callback)
 			end
 			local items = {}
 			for _, trade_entry in pairs(response.result) do
+				local item = trade_entry.item
+				local spirit
+				local armour
+				local evasion
+				local es
+				local quality
+				local t_insert = table.insert
+				local catalystList = {"Abrasive", "Accelerating", "Fertile", "Imbued", "Intrinsic", "Noxious", "Prismatic", "Tempering", "Turbulent", "Unstable"}
+				
+				for _, property in ipairs(item.properties) do
+					local name = escapeGGGString(property.name)
+					if name == "Armour" then
+						armour = property.values[1][1]
+					elseif name == "Evasion Rating" then
+						evasion = property.values[1][1]
+					elseif name == "Energy Shield" then
+						es = property.values[1][1]
+					elseif name == "Quality" then
+						quality = property.values[1][1]:sub(2, -2) -- remove + and % on quality value	
+					elseif name == "Spirit" then
+						spirit = property.values[1][1]
+					end 
+				end
+				
+				local rawLines = { }
+				t_insert(rawLines, "Rarity: " .. item.rarity)
+				-- item.name is empty when magic and full magic name is in typeLine but typeLine == bayeType when rare.
+				if item.name ~= "" then
+					t_insert(rawLines, item.name) 
+				end
+				t_insert(rawLines, item.typeLine)
+
+				-- if self.charmLimit then
+				-- 	t_insert(rawLines, "Charm Slots: " .. self.charmLimit)
+				-- end
+				
+				if spirit then
+					t_insert(rawLines, "Spirit: " .. spirit)
+				end
+
+				if armour then
+						t_insert(rawLines,  "Armour: " .. armour)
+				end
+				if evasion then
+						t_insert(rawLines,  "Evasion: " ..evasion)
+				end
+				if es then
+						t_insert(rawLines,  "Energy Shield: " .. es)
+				end
+
+
+				-- if self.catalyst and self.catalyst > 0 then
+				-- 	t_insert(rawLines, "Catalyst: " .. catalystList[self.catalyst])
+				-- end
+				-- if self.catalystQuality then
+				-- 	t_insert(rawLines, "CatalystQuality: " .. self.catalystQuality)
+				-- end
+				if item.ilvl then
+					t_insert(rawLines, "Item Level: " .. item.ilvl)
+				end
+				if quality then
+					t_insert(rawLines, "Quality: " .. quality)
+				end
+				if item.sockets then
+					local socketString = ""
+					for _, _ in ipairs(item.sockets) do
+						socketString = socketString .. "S "
+					end
+					socketString = socketString:gsub(" $", "")
+					t_insert(rawLines, "Sockets: " .. socketString)
+				end
+
+				for _, requiremnt in ipairs(item.requirements) do
+					if requiremnt.name == "Level"  then
+						t_insert(rawLines, "LevelReq: " .. requiremnt.values[1][1])
+					end
+				end
+
+				-- if self.jewelRadiusLabel then
+				-- 	t_insert(rawLines, "Radius: " .. self.jewelRadiusLabel)
+				-- end
+				-- if self.limit then
+				-- 	t_insert(rawLines, "Limited to: " .. self.limit)
+				-- end
+
+				-- ensure these fields are initalised
+				item.enchantMods = item.enchantMods or { }
+				item.runeMods = item.runeMods or { }
+				item.implicitMods = item.implicitMods or { }
+				item.explicitMods = item.explicitMods or { }
+
+				t_insert(rawLines, "Implicits: " .. (#item.enchantMods + #item.runeMods + #item.implicitMods))
+				for _, modLine in ipairs(item.enchantMods) do
+					t_insert(rawLines, "{enchant}"	.. escapeGGGString(modLine))
+				end
+				for _, modLine in ipairs(item.runeMods) do
+					t_insert(rawLines, "{enchant}"	.. escapeGGGString(modLine))
+				end
+				for _, modLine in ipairs(item.implicitMods) do
+					t_insert(rawLines, escapeGGGString(modLine))
+				end
+				for _, modLine in ipairs(item.explicitMods) do
+					t_insert(rawLines, escapeGGGString(modLine))
+				end
+				if item.mirrored then
+					t_insert(rawLines, "Mirrored")
+				end
+				if item.corrupted then
+					t_insert(rawLines, "Corrupted")
+				end
+				
+
 				table.insert(items, {
 					amount = trade_entry.listing.price.amount,
 					currency = trade_entry.listing.price.currency,
-					item_string = common.base64.decode(trade_entry.item.extended.text),
+					item_string = table.concat(rawLines, "\n"),--common.base64.decode(trade_entry.item.extended.text),
 					whisper = trade_entry.listing.whisper,
 					weight = trade_entry.item.pseudoMods and trade_entry.item.pseudoMods[1]:match("Sum: (.+)") or "0",
 					id = trade_entry.id
