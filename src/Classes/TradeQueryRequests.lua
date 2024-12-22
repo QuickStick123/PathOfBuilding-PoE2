@@ -390,7 +390,7 @@ function TradeQueryRequestsClass:FetchResultBlock(url, callback)
 				table.insert(items, {
 					amount = trade_entry.listing.price.amount,
 					currency = trade_entry.listing.price.currency,
-					item_string = table.concat(rawLines, "\n"),--common.base64.decode(trade_entry.item.extended.text),
+					item_string = table.concat(rawLines, "\n"),
 					whisper = trade_entry.listing.whisper,
 					weight = trade_entry.item.pseudoMods and trade_entry.item.pseudoMods[1]:match("Sum: (.+)") or "0",
 					id = trade_entry.id
