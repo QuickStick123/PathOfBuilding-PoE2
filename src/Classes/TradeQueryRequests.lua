@@ -269,9 +269,12 @@ function TradeQueryRequestsClass:FetchResultBlock(url, callback)
 				local armour
 				local evasion
 				local es
+				local charmSlots
 				local quality
+				local radius
+				local limit
 				local t_insert = table.insert
-				local catalystList = {"Abrasive", "Accelerating", "Fertile", "Imbued", "Intrinsic", "Noxious", "Prismatic", "Tempering", "Turbulent", "Unstable"}
+				-- local catalystList = {"Abrasive", "Accelerating", "Fertile", "Imbued", "Intrinsic", "Noxious", "Prismatic", "Tempering", "Turbulent", "Unstable"}
 				
 				for _, property in ipairs(item.properties) do
 					local name = escapeGGGString(property.name)
@@ -285,7 +288,15 @@ function TradeQueryRequestsClass:FetchResultBlock(url, callback)
 						quality = property.values[1][1]:sub(2, -2) -- remove + and % on quality value	
 					elseif name == "Spirit" then
 						spirit = property.values[1][1]
-					end 
+					elseif name == "Charm Slots" then
+						charmSlots = property.values[1][1]
+					-- elseif name == "Quality (Mana Modifiers)" then
+						-- catalyst quality stuff tbd it all needs reworking anyway as it has changed.
+					elseif name == "Radius" then
+						radius = property.values[1][1]
+					elseif name == "Limited To" then
+						limit = property.values[1][1]
+					end
 				end
 				
 				local rawLines = { }
@@ -296,9 +307,9 @@ function TradeQueryRequestsClass:FetchResultBlock(url, callback)
 				end
 				t_insert(rawLines, item.typeLine)
 
-				-- if self.charmLimit then
-				-- 	t_insert(rawLines, "Charm Slots: " .. self.charmLimit)
-				-- end
+				if charmSlots then
+					t_insert(rawLines, "Charm Slots: " .. charmSlots)
+				end
 				
 				if spirit then
 					t_insert(rawLines, "Spirit: " .. spirit)
@@ -314,13 +325,13 @@ function TradeQueryRequestsClass:FetchResultBlock(url, callback)
 						t_insert(rawLines,  "Energy Shield: " .. es)
 				end
 
-
 				-- if self.catalyst and self.catalyst > 0 then
 				-- 	t_insert(rawLines, "Catalyst: " .. catalystList[self.catalyst])
 				-- end
 				-- if self.catalystQuality then
 				-- 	t_insert(rawLines, "CatalystQuality: " .. self.catalystQuality)
 				-- end
+
 				if item.ilvl then
 					t_insert(rawLines, "Item Level: " .. item.ilvl)
 				end
@@ -342,12 +353,12 @@ function TradeQueryRequestsClass:FetchResultBlock(url, callback)
 					end
 				end
 
-				-- if self.jewelRadiusLabel then
-				-- 	t_insert(rawLines, "Radius: " .. self.jewelRadiusLabel)
-				-- end
-				-- if self.limit then
-				-- 	t_insert(rawLines, "Limited to: " .. self.limit)
-				-- end
+				if radius then
+					t_insert(rawLines, "Radius: " .. radius)
+				end
+				if limit then
+					t_insert(rawLines, "Limited to: " .. limit)
+				end
 
 				-- ensure these fields are initalised
 				item.enchantMods = item.enchantMods or { }
