@@ -316,13 +316,13 @@ function TradeQueryRequestsClass:FetchResultBlock(url, callback)
 				end
 
 				if armour then
-						t_insert(rawLines,  "Armour: " .. armour)
+					t_insert(rawLines,  "Armour: " .. armour)
 				end
 				if evasion then
-						t_insert(rawLines,  "Evasion: " ..evasion)
+					t_insert(rawLines,  "Evasion: " ..evasion)
 				end
 				if es then
-						t_insert(rawLines,  "Energy Shield: " .. es)
+					t_insert(rawLines,  "Energy Shield: " .. es)
 				end
 
 				-- if self.catalyst and self.catalyst > 0 then
