@@ -782,6 +782,17 @@ function TradeQueryGeneratorClass:FinishQuery()
 		}
 	end
 
+	if options.sockets and options.sockets > 0 then
+		queryTable.query.filters.equipment_filters = {
+			disabled = false,
+			filters = {
+				rune_sockets = {
+					min = options.sockets
+				}
+			}
+		}
+	end
+
 	local errMsg = nil
 	if #queryTable.query.stats[1].filters == 0 then
 		-- No mods to filter
@@ -859,6 +870,12 @@ function TradeQueryGeneratorClass:RequestQuery(slot, context, statWeights, callb
 	controls.maxLevelLabel = new("LabelControl", {"RIGHT",controls.maxLevel,"LEFT"}, {-5, 0, 0, 16}, "Max Level:")
 	updateLastAnchor(controls.maxLevel)
 
+	-- basic filtering by slot for sockets Megalomaniac does not have slot and Sockets use "Jewel nodeId"
+	if slot and not isJewelSlot and not slot.slotName:find("Flask") and not slot.slotName:find("Belt") and not slot.slotName:find("Ring") and not slot.slotName:find("Amulet") and not slot.slotName:find("Charm") then
+		controls.sockets = new("EditControl", {"TOPLEFT",lastItemAnchor,"BOTTOMLEFT"}, {0, 5, 70, 18}, nil, nil, "%D")
+		controls.socketsLabel = new("LabelControl", {"RIGHT",controls.sockets,"LEFT"}, {-5, 0, 0, 16}, "# of Empty Sockets:")
+		updateLastAnchor(controls.sockets)
+	end
 
 	for i, stat in ipairs(statWeights) do
 		controls["sortStatType"..tostring(i)] = new("LabelControl", {"TOPLEFT",lastItemAnchor,"BOTTOMLEFT"}, {0, i == 1 and 5 or 3, 70, 16}, i < (#statWeights < 6 and 10 or 5) and s_format("^7%.2f: %s", stat.weightMult, stat.label) or ("+ "..tostring(#statWeights - 4).." Additional Stats"))
@@ -902,6 +919,9 @@ function TradeQueryGeneratorClass:RequestQuery(slot, context, statWeights, callb
 		end
 		if controls.maxLevel.buf then
 			options.maxLevel = tonumber(controls.maxLevel.buf)
+		end
+		if controls.sockets and controls.sockets.buf then
+			options.sockets = tonumber(controls.sockets.buf)
 		end
 		options.statWeights = statWeights
 
