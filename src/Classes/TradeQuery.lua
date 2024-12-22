@@ -849,7 +849,7 @@ function TradeQueryClass:PriceItemRowDisplay(row_idx, top_pane_alignment_ref, ro
 	local controls = self.controls
 	local slotTbl = self.slotTables[row_idx]
 	local activeSlotRef = slotTbl.nodeId and self.itemsTab.activeItemSet[slotTbl.nodeId] or self.itemsTab.activeItemSet[slotTbl.slotName]
-	local activeSlot = slotTbl.nodeId and self.itemsTab.sockets[slotTbl.nodeId] or slotTbl.slotName and (self.itemsTab.slots[slotTbl.slotName] or slotTbl.fullName and self.itemsTab.slots[slotTbl.fullName]) -- fullName for Abyssal Sockets
+	local activeSlot = slotTbl.nodeId and self.itemsTab.sockets[slotTbl.nodeId] or slotTbl.slotName and self.itemsTab.slots[slotTbl.slotName]
 	local nameColor = slotTbl.unique and colorCodes.UNIQUE or "^7"
 	controls["name"..row_idx] = new("LabelControl", top_pane_alignment_ref, {0, row_idx*(row_height + row_vertical_padding), 100, row_height - 4}, nameColor..slotTbl.slotName)
 	controls["bestButton"..row_idx] = new("ButtonControl", { "LEFT", controls["name"..row_idx], "LEFT"}, {100 + 8, 0, 80, row_height}, "Find best", function()
