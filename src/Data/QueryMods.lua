@@ -333,7 +333,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["8272_ChainFromTerrain"] = {
+		["8273_ChainFromTerrain"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -543,7 +543,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["8882_ThornsDamageIncrease"] = {
+		["8883_ThornsDamageIncrease"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -583,7 +583,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["9092_WeaponSwapSpeed"] = {
+		["9093_WeaponSwapSpeed"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -1198,7 +1198,7 @@ return {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
-				["id"] = "explicit.stat_1030153674", 
+				["id"] = "explicit.stat_1604736568", 
 				["text"] = "Recover #% of Mana on Kill", 
 				["type"] = "explicit", 
 			}, 
@@ -2123,7 +2123,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8122_OfferingDuration"] = {
+		["8123_OfferingDuration"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -2133,23 +2133,13 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8123_OfferingLife"] = {
+		["8124_OfferingLife"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
 				["id"] = "explicit.stat_3787460122", 
 				["text"] = "Offerings have #% increased Maximum Life", 
-				["type"] = "explicit", 
-			}, 
-		}, 
-		["8229_PoisonEffect"] = {
-			["sign"] = "", 
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "explicit.stat_2487305362", 
-				["text"] = "#% increased Magnitude of Poison you inflict", 
 				["type"] = "explicit", 
 			}, 
 		}, 
@@ -2234,6 +2224,16 @@ return {
 			["tradeMod"] = {
 				["id"] = "explicit.stat_1509134228", 
 				["text"] = "#% increased Physical Damage", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8230_PoisonEffect"] = {
+			["sign"] = "", 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_2487305362", 
+				["text"] = "#% increased Magnitude of Poison you inflict", 
 				["type"] = "explicit", 
 			}, 
 		}, 
@@ -2409,7 +2409,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8272_ChainFromTerrain"] = {
+		["8273_ChainFromTerrain"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -2456,7 +2456,7 @@ return {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
-				["id"] = "explicit.stat_691932474", 
+				["id"] = "explicit.stat_803737631", 
 				["text"] = "# to Accuracy Rating", 
 				["type"] = "explicit", 
 			}, 
@@ -2498,7 +2498,7 @@ return {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
-				["id"] = "explicit.stat_691932474", 
+				["id"] = "explicit.stat_803737631", 
 				["text"] = "# to Accuracy Rating", 
 				["type"] = "explicit", 
 			}, 
@@ -2540,7 +2540,7 @@ return {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
-				["id"] = "explicit.stat_691932474", 
+				["id"] = "explicit.stat_803737631", 
 				["text"] = "# to Accuracy Rating", 
 				["type"] = "explicit", 
 			}, 
@@ -2559,7 +2559,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8315_QuarterstaffFreezeBuildup"] = {
+		["8316_QuarterstaffFreezeBuildup"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -2583,7 +2583,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8323_QuiverModifierEffect"] = {
+		["8324_QuiverModifierEffect"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -2593,7 +2593,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8327_MaximumRage"] = {
+		["8328_MaximumRage"] = {
 			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
@@ -3767,7 +3767,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8435_CrossbowReloadSpeed"] = {
+		["8436_CrossbowReloadSpeed"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -3778,11 +3778,11 @@ return {
 			}, 
 		}, 
 		["843_LocalIncreasedSpiritAndMana"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 38, 
 				["min"] = 10, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 38, 
 				["min"] = 10, 
 			}, 
@@ -3796,11 +3796,11 @@ return {
 			}, 
 		}, 
 		["843_LocalIncreasedSpiritPercent"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 65, 
 				["min"] = 27, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 65, 
 				["min"] = 27, 
 			}, 
@@ -3953,7 +3953,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8514_ShockEffect"] = {
+		["8515_ShockEffect"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -4380,7 +4380,7 @@ return {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
-				["id"] = "explicit.stat_691932474", 
+				["id"] = "explicit.stat_803737631", 
 				["text"] = "# to Accuracy Rating", 
 				["type"] = "explicit", 
 			}, 
@@ -4394,7 +4394,7 @@ return {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
-				["id"] = "explicit.stat_691932474", 
+				["id"] = "explicit.stat_803737631", 
 				["text"] = "# to Accuracy Rating", 
 				["type"] = "explicit", 
 			}, 
@@ -4680,10 +4680,6 @@ return {
 			}, 
 		}, 
 		["873_IncreasedMana"] = {
-			["1HMace"] = {
-				["max"] = 179, 
-				["min"] = 10, 
-			}, 
 			["1HWeapon"] = {
 				["max"] = 179, 
 				["min"] = 10, 
@@ -4718,6 +4714,10 @@ return {
 			}, 
 			["Ring"] = {
 				["max"] = 189, 
+				["min"] = 10, 
+			}, 
+			["Sceptre"] = {
+				["max"] = 179, 
 				["min"] = 10, 
 			}, 
 			["Shield"] = {
@@ -4882,11 +4882,11 @@ return {
 			}, 
 		}, 
 		["873_LocalIncreasedSpiritAndMana"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 45, 
 				["min"] = 17, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 45, 
 				["min"] = 17, 
 			}, 
@@ -4967,7 +4967,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8774_StunThresholdfromEnergyShield"] = {
+		["8775_StunThresholdfromEnergyShield"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -4977,7 +4977,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8776_IncreasedStunThresholdIfNoRecentStun"] = {
+		["8777_IncreasedStunThresholdIfNoRecentStun"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -5064,11 +5064,11 @@ return {
 			}, 
 		}, 
 		["883_AlliesInPresenceAllDamage"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
@@ -5082,11 +5082,11 @@ return {
 			}, 
 		}, 
 		["884_AlliesInPresenceAddedPhysicalDamage"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 25.5, 
 				["min"] = 2, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 25.5, 
 				["min"] = 2, 
 			}, 
@@ -5100,11 +5100,11 @@ return {
 			}, 
 		}, 
 		["885_AlliesInPresenceAddedFireDamage"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 37, 
 				["min"] = 2, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 37, 
 				["min"] = 2, 
 			}, 
@@ -5118,11 +5118,11 @@ return {
 			}, 
 		}, 
 		["886_AlliesInPresenceAddedColdDamage"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 30.5, 
 				["min"] = 2, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 30.5, 
 				["min"] = 2, 
 			}, 
@@ -5136,11 +5136,11 @@ return {
 			}, 
 		}, 
 		["887_AlliesInPresenceAddedLightningDamage"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 37.5, 
 				["min"] = 3, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 37.5, 
 				["min"] = 3, 
 			}, 
@@ -5153,7 +5153,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8882_ThornsDamageIncrease"] = {
+		["8883_ThornsDamageIncrease"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -5163,7 +5163,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8888_ThornsPhysicalDamage"] = {
+		["8889_ThornsPhysicalDamage"] = {
 			["Belt"] = {
 				["max"] = 47, 
 				["min"] = 2, 
@@ -5186,11 +5186,11 @@ return {
 			}, 
 		}, 
 		["888_AlliesInPresenceIncreasedAccuracy"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 450, 
 				["min"] = 11, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 450, 
 				["min"] = 11, 
 			}, 
@@ -5204,11 +5204,11 @@ return {
 			}, 
 		}, 
 		["889_AlliesInPresenceCriticalStrikeChance"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 38, 
 				["min"] = 10, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 38, 
 				["min"] = 10, 
 			}, 
@@ -5222,11 +5222,11 @@ return {
 			}, 
 		}, 
 		["890_AlliesInPresenceCriticalStrikeMultiplier"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 39, 
 				["min"] = 10, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 39, 
 				["min"] = 10, 
 			}, 
@@ -5240,11 +5240,11 @@ return {
 			}, 
 		}, 
 		["891_AlliesInPresenceIncreasedAttackSpeed"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 16, 
 				["min"] = 5, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 16, 
 				["min"] = 5, 
 			}, 
@@ -5258,11 +5258,11 @@ return {
 			}, 
 		}, 
 		["892_AlliesInPresenceIncreasedCastSpeed"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 20, 
 				["min"] = 5, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 20, 
 				["min"] = 5, 
 			}, 
@@ -5276,11 +5276,11 @@ return {
 			}, 
 		}, 
 		["893_AlliesInPresenceAllResistances"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 18, 
 				["min"] = 3, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 18, 
 				["min"] = 3, 
 			}, 
@@ -5293,7 +5293,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8943_DamageWithTriggeredSpells"] = {
+		["8944_DamageWithTriggeredSpells"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -5304,11 +5304,11 @@ return {
 			}, 
 		}, 
 		["894_AlliesInPresenceLifeRegeneration"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 33, 
 				["min"] = 1, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 33, 
 				["min"] = 1, 
 			}, 
@@ -5450,7 +5450,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["9080_WarcryEffect"] = {
+		["9081_WarcryEffect"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -5460,7 +5460,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["9083_WarcryDamage"] = {
+		["9084_WarcryDamage"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -5480,7 +5480,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["9092_WeaponSwapSpeed"] = {
+		["9093_WeaponSwapSpeed"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -5510,7 +5510,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["9111_WitheredEffect"] = {
+		["9112_WitheredEffect"] = {
 			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
@@ -5575,35 +5575,35 @@ return {
 		["912_LocalBaseCriticalStrikeChance"] = {
 			["1HMace"] = {
 				["max"] = 5, 
-				["min"] = 1, 
+				["min"] = 1.01, 
 			}, 
 			["1HWeapon"] = {
 				["max"] = 5, 
-				["min"] = 1, 
+				["min"] = 1.01, 
 			}, 
 			["2HMace"] = {
 				["max"] = 5, 
-				["min"] = 1, 
+				["min"] = 1.01, 
 			}, 
 			["2HWeapon"] = {
 				["max"] = 5, 
-				["min"] = 1, 
+				["min"] = 1.01, 
 			}, 
 			["Bow"] = {
 				["max"] = 5, 
-				["min"] = 1, 
+				["min"] = 1.01, 
 			}, 
 			["Claw"] = {
 				["max"] = 5, 
-				["min"] = 1, 
+				["min"] = 1.01, 
 			}, 
 			["Staff"] = {
 				["max"] = 5, 
-				["min"] = 1, 
+				["min"] = 1.01, 
 			}, 
 			["Wand"] = {
 				["max"] = 5, 
-				["min"] = 1, 
+				["min"] = 1.01, 
 			}, 
 			["sign"] = "+", 
 			["specialCaseData"] = {
@@ -5740,6 +5740,10 @@ return {
 				["min"] = -35, 
 			}, 
 			["Helmet"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["Sceptre"] = {
 				["max"] = -15, 
 				["min"] = -35, 
 			}, 
@@ -6075,11 +6079,11 @@ return {
 			}, 
 		}, 
 		["923_GlobalIncreaseMinionSpellSkillGemLevelWeapon"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
@@ -6411,6 +6415,10 @@ return {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
+			["Sceptre"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
 			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
@@ -6479,10 +6487,6 @@ return {
 			}, 
 		}, 
 		["941_Intelligence"] = {
-			["1HMace"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
 			["1HWeapon"] = {
 				["max"] = 33, 
 				["min"] = 5, 
@@ -6512,6 +6516,10 @@ return {
 				["min"] = 5, 
 			}, 
 			["Ring"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Sceptre"] = {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
@@ -6741,11 +6749,11 @@ return {
 			}, 
 		}, 
 		["955_MinionLife"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 50, 
 				["min"] = 21, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 50, 
 				["min"] = 21, 
 			}, 
@@ -7015,10 +7023,6 @@ return {
 			}, 
 		}, 
 		["965_LightRadiusAndManaRegeneration"] = {
-			["1HMace"] = {
-				["max"] = 22, 
-				["min"] = 8, 
-			}, 
 			["1HWeapon"] = {
 				["max"] = 22, 
 				["min"] = 8, 
@@ -7028,6 +7032,10 @@ return {
 				["min"] = 8, 
 			}, 
 			["Ring"] = {
+				["max"] = 22, 
+				["min"] = 8, 
+			}, 
+			["Sceptre"] = {
 				["max"] = 22, 
 				["min"] = 8, 
 			}, 
@@ -7049,10 +7057,6 @@ return {
 			}, 
 		}, 
 		["965_ManaRegeneration"] = {
-			["1HMace"] = {
-				["max"] = 69, 
-				["min"] = 10, 
-			}, 
 			["1HWeapon"] = {
 				["max"] = 69, 
 				["min"] = 10, 
@@ -7070,6 +7074,10 @@ return {
 				["min"] = 10, 
 			}, 
 			["Ring"] = {
+				["max"] = 69, 
+				["min"] = 10, 
+			}, 
+			["Sceptre"] = {
 				["max"] = 69, 
 				["min"] = 10, 
 			}, 
@@ -7673,11 +7681,11 @@ return {
 			}, 
 		}, 
 		["992_PresenceRadius"] = {
-			["1HMace"] = {
+			["1HWeapon"] = {
 				["max"] = 30, 
 				["min"] = 13, 
 			}, 
-			["1HWeapon"] = {
+			["Sceptre"] = {
 				["max"] = 30, 
 				["min"] = 13, 
 			}, 
@@ -7705,10 +7713,6 @@ return {
 			}, 
 		}, 
 		["993_LightRadiusAndManaRegeneration"] = {
-			["1HMace"] = {
-				["max"] = 15, 
-				["min"] = 5, 
-			}, 
 			["1HWeapon"] = {
 				["max"] = 15, 
 				["min"] = 5, 
@@ -7718,6 +7722,10 @@ return {
 				["min"] = 5, 
 			}, 
 			["Ring"] = {
+				["max"] = 15, 
+				["min"] = 5, 
+			}, 
+			["Sceptre"] = {
 				["max"] = 15, 
 				["min"] = 5, 
 			}, 

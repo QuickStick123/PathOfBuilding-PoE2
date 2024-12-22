@@ -25,7 +25,8 @@ local tradeCategoryTags = {
 	["2HWeapon"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["staff"] = true, ["attack_staff"] = true, ["warstaff"] = true, ["bow"] = true, ["mace"] = true, ["crossbow"] = true },
 	-- ["1HAxe"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["axe"] = true},
 	-- ["1HSword"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["sword"] = true, ["rapier"] = true },
-	["1HMace"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["mace"] = true, ["sceptre"] = true },
+	["1HMace"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["mace"] = true },
+	["Sceptre"] = { ["onehand"] = true, ["sceptre"] = true },
 	-- ["Dagger"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["attack_dagger"] = true, ["dagger"] = true, ["rune_dagger"] = true },
 	["Wand"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["wand"] = true, ["weapon_can_roll_minion_modifiers"] = true },
 	["Claw"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["claw"] = true },
@@ -566,9 +567,12 @@ function TradeQueryGeneratorClass:StartQuery(slot, options)
 			elseif existingItem.type == "One Handed Axe" then
 				itemCategoryQueryStr = "weapon.oneaxe"
 				itemCategory = "1HAxe"
-			elseif existingItem.type == "One Handed Mace" or existingItem.type == "Sceptre" then
+			elseif existingItem.type == "One Handed Mace" then
 				itemCategoryQueryStr = "weapon.onemace"
 				itemCategory = "1HMace"
+			elseif existingItem.type == "Sceptre" then
+				itemCategoryQueryStr = "weapon.sceptre"
+				itemCategory = "Sceptre"
 			elseif existingItem.type == "Wand" then
 				itemCategoryQueryStr = "weapon.wand"
 				itemCategory = "Wand"
