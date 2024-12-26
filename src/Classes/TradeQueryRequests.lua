@@ -35,6 +35,15 @@ function TradeQueryRequestsClass:ProcessQueue()
 						table.insert(queue, 1, request)
 						return
 					end
+					-- if limit rules don't return account then the POESESSID is invalid.
+					if response.header:match("X%-Rate%-Limit%-Rules: (.-)\n"):match("Account") == nil and main.POESESSID ~= "" then
+						main.POESESSID = ""
+						if errMsg then
+							errMsg = errMsg .. "\nPOESESSID is invalid. Please Re-Log and reset"
+						else
+							errMsg = "POESESSID is invalid. Please Re-Log and reset"
+						end
+					end
 					request.callback(response.body, errMsg, unpack(request.callbackParams or {}))
 				end
 				-- self:SendRequest(request.url , onComplete, {body = request.body, poesessid = main.POESESSID})
@@ -180,7 +189,7 @@ function TradeQueryRequestsClass:PerformSearch(realm, league, query, callback)
 		url = self:buildUrl(self.hostName .. "api/trade2/search", realm, league),
 		body = query,
 		callback = function(response, errMsg)
-			if errMsg and not errMsg:find("Response code: 400") then
+			if errMsg and not errMsg:find("Response code: 400") and not errMsg:find("POESESSID") then
 				return callback(nil, errMsg)
 			end
 			local response = dkjson.decode(response)
@@ -198,6 +207,7 @@ function TradeQueryRequestsClass:PerformSearch(realm, league, query, callback)
 					if response.error.message:find("Logging in will increase this limit") then
 						if main.POESESSID ~= "" then
 							errMsg = "POESESSID is invalid. Please Re-Log and reset"
+							main.POESESSID = ""
 						else
 							errMsg = "Session is invalid. Please add your POESESSID"
 						end
@@ -489,78 +499,31 @@ function TradeQueryRequestsClass:FetchSearchQueryHTML(realm, league, queryId, ca
 		{header = header})
 end
 
---- Fetches the list of all available leagues using HTML parsing
---- This should get all leagues, including the ones that are not available through API
----
---- example output:
---- result = {
----		"realms": [],
----		"leagues": [
----			{
----				"id": "Standard",
----				"realm": "poe2",
----				"text": "PoE2 - Standard"
----			},
----			{
----				"id": "Hardcore",
----				"realm": "poe2",
----				"text": "PoE2 - Hardcore"
----			}
----		],
---- }
----@param callback fun(result:table, errMsg:string)
-function TradeQueryRequestsClass:FetchRealmsAndLeaguesHTML(callback)
-	if main.POESESSID == "" then
-		return callback(nil, "Please provide your POESESSID")
-	end
-	local header = "Cookie: POESESSID=" .. main.POESESSID
-	launch:DownloadPage(
-		self.hostName .. "trade2",
-		function(response, errMsg)
-			if errMsg then
-				return callback(nil, errMsg)
-			end
-			-- full json state obj from HTML
-			local dataStr = response.body:match('require%(%["main"%].+ t%((.+)%);}%);}%);')
-			if not dataStr then
-				return callback(nil, "JSON object not found on the page.")
-			end
-			local data, _, err = dkjson.decode(dataStr)
-			if err then
-				return callback(nil, "Failed to parse JSON object. ".. err)
-			end
-			callback({leagues = data.leagues, realms = data.realms}, errMsg)
-		end,
-		{header = header}
-	)
-end
-
---- Fetches the list of all available leagues using poe API
+--- Fetches the list of all available leagues using trade2 league API
 ---@param realm string
 ---@param callback fun(query:table, errMsg:string)
 function TradeQueryRequestsClass:FetchLeagues(realm, callback)
-	-- launch:DownloadPage(
-	-- 		self.hostName .. "api/leagues?compact=1&realm=" .. realm,
-	-- 		function(response, errMsg)
-	-- 			if errMsg then
-	-- 				return callback(nil, errMsg)
-	-- 			end
-	-- 			local json_data = dkjson.decode(response.body)
-	-- 			if not json_data or json_data.error then
-	-- 				errMsg = json_data and json_data.error or "Failed to get leagues"
-	-- 			end
-	-- 			local leagues = {}
-	-- 				for _, value in pairs(json_data) do
-	-- 					if (not value.id:find("SSF") and not value.id:find("Solo")) then
-	-- 						table.insert(leagues, value.id)
-	-- 					end
-	-- 				end
-	-- 			callback(leagues, errMsg)
-	-- 		end
-	-- )
-
-	-- api not in poe2 so use hardcoded fallback
-	callback( {"Standard", "Hardcore"}, nil)
+	local header = "Cookie: POESESSID=" .. main.POESESSID
+	launch:DownloadPage(
+			self.hostName .. "api/trade2/data/leagues",
+			function(response, errMsg)
+				if errMsg then
+					return callback({"Standard", "Hardcore"}, errMsg)
+				end
+				local json_data = dkjson.decode(response.body)
+				if not json_data or json_data.error then
+					errMsg = json_data and json_data.error or "Failed to parse trade leagues JSON"
+				end
+				local leagues = {}
+					for _, value in pairs(json_data.result) do
+						if value.realm == realm then
+							table.insert(leagues, value.id)
+						end
+					end
+				callback(leagues, errMsg)
+			end,
+			{header = header}
+	)
 end
 
 --- Build search and trade URLs with proper encoding

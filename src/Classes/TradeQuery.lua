@@ -45,7 +45,9 @@ local TradeQueryClass = newClass("TradeQuery", function(self, itemsTab)
 	-- table holding all realm/league pairs. (allLeagues[realm] = [league.id,...])
 	self.allLeagues = {}
 	-- realm id-text table to pair realm name with API parameter
-	self.realmIds = {}
+	self.realmIds = {
+		["PoE 2"]   = "poe2",
+	}
 
 	self.tradeQueryRequests = new("TradeQueryRequests")
 	main.onFrameFuncs["TradeQueryRequests"] = function()
@@ -1073,42 +1075,26 @@ function TradeQueryClass:UpdateRealms()
 		self.controls.realm:SetSel(self.pbRealmIndex)
 	end
 
-	if main.POESESSID and main.POESESSID ~= "" then
-		-- Fetch from trade page using POESESSID, includes private leagues
-		ConPrintf("Fetching realms and leagues using POESESSID")
-		self.tradeQueryRequests:FetchRealmsAndLeaguesHTML(function(data, errMsg)
+	-- use trade leagues api to get trade leagues including private leagues if valid.
+	for _, realmId in pairs (self.realmIds) do
+		self.tradeQueryRequests:FetchLeagues(realmId, function(leagues, errMsg)
 			if errMsg then
-				self:SetNotice(self.controls.pbNotice, "Error while fetching league list: "..errMsg)
-				-- Fallback to static list
-				ConPrintf("Using static realms list")
-				self.realmIds = {
-					["PoE 2"]   = "poe2",
-				}
-				setRealmDropList()
-				return
+				self:SetNotice(self.controls.pbNotice, "Using Fallback Error while fetching league list: "..errMsg)
 			end
-			local leagues = data.leagues
 			self.allLeagues = {}
-			for _, value in ipairs(leagues) do
-				if not self.allLeagues[value.realm] then self.allLeagues[value.realm] = {} end
-				t_insert(self.allLeagues[value.realm], value.id)
-			end
-			self.realmIds = {}
-			for _, value in pairs(data.realms) do
-				-- filter out only Path of Exile one realms, as poe2 is not supported yet
-				if value.text:match("PoE 2 ") then
-					self.realmIds[value.text] = value.id
-				end
+			for _, league in ipairs(leagues) do
+				if not self.allLeagues[realmId] then self.allLeagues[realmId] = {} end
+				t_insert(self.allLeagues[realmId], league)
 			end
 			setRealmDropList()
 
 		end)
-	else
-		-- Fallback to static list
-		ConPrintf("Using static realms list")
-		self.realmIds = {
-			["PoE 2"]   = "poe2",
-		}
-		setRealmDropList()
 	end
+
+	-- perform a generic search to make sure POESESSID if valid.
+	self.tradeQueryRequests:PerformSearch("poe2", "standard", [[{"query":{"status":{"option":"online"},"stats":[{"type":"and","filters":[]}]},"sort":{"price":"asc"}}]], function(response, errMsg) 
+		if errMsg then
+			self:SetNotice(self.controls.pbNotice, "Error: " .. tostring(errMsg))
+		end
+	end)
 end
