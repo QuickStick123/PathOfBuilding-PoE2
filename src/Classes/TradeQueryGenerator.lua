@@ -138,6 +138,24 @@ local function canModSpawnForItemCategory(mod, category)
 	return false
 end
 
+-- Swaps mod word for the inverse and sign
+local function swapInverse(modLine)
+	if modLine:match("increased") then
+		modLine = modLine:gsub("([^ ]+) increased", "-%1 reduced")
+	elseif modLine:match("reduced") then
+		modLine = modLine:gsub("([^ ]+) reduced", "-%1 increased")
+	elseif modLine:match("more") then
+		modLine = modLine:gsub("([^ ]+) more", "-%1 less")
+	elseif modLine:match("less") then
+		modLine = modLine:gsub("([^ ]+) less", "-%1 more")
+	elseif modLine:match("expires ([^ ]+) slower") then
+		modLine = modLine:gsub("([^ ]+) slower", "-%1 faster")
+	elseif modLine:match("expires ([^ ]+) faster") then
+		modLine = modLine:gsub("([^ ]+) faster", "-%1 slower")
+	end
+	return modLine
+end
+
 function TradeQueryGeneratorClass.WeightedRatioOutputs(baseOutput, newOutput, statWeights)
 	local meanStatDiff = 0
 	local function ratioModSums(...)
@@ -189,23 +207,6 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 		if not self.modData[modType] then
 			logToFile("Unhandled Mod Type: %s", modType)
 			goto continue
-		end
-
-		local function swapInverse(modLine)
-			if modLine:match("increased") then
-				modLine = modLine:gsub("([^ ]+) increased", "-%1 reduced")
-			elseif modLine:match("reduced") then
-				modLine = modLine:gsub("([^ ]+) reduced", "-%1 increased")
-			elseif modLine:match("more") then
-				modLine = modLine:gsub("([^ ]+) more", "-%1 less")
-			elseif modLine:match("less") then
-				modLine = modLine:gsub("([^ ]+) less", "-%1 more")
-			elseif modLine:match("expires ([^ ]+) slower") then
-				modLine = modLine:gsub("([^ ]+) slower", "-%1 faster")
-			elseif modLine:match("expires ([^ ]+) faster") then
-				modLine = modLine:gsub("([^ ]+) faster", "-%1 slower")
-			end
-			return modLine
 		end
 
 		-- iterate trade mod category to find mod with matching text.
@@ -435,6 +436,11 @@ function TradeQueryGeneratorClass:GenerateModWeights(modsToTest)
 			end
 			modLine = modLine:gsub("#",modValueStr)
 
+			-- swap lines here to avoid leading to modLine's that the Item parser can't handle.
+			if entry.inverse then
+				modLine = swapInverse(modLine)
+			end
+
 			self.calcContext.testItem.explicitModLines[1] = { line = modLine, custom = true }
 			self.calcContext.testItem:BuildAndParseRaw()
 
@@ -544,7 +550,7 @@ function TradeQueryGeneratorClass:StartQuery(slot, options)
 			elseif existingItem.type == "Crossbow" then
 				itemCategoryQueryStr = "weapon.crossbow"
 				itemCategory = "Crossbow"
-			elseif existingItem.type == "Staff" and existingItem.subType == "Warstaff" then
+			elseif existingItem.type == "Staff" and existingItem.base.subType == "Warstaff" then
 				itemCategoryQueryStr = "weapon.warstaff"
 				itemCategory = "Quarterstaff"
 			elseif existingItem.type == "Staff" then
