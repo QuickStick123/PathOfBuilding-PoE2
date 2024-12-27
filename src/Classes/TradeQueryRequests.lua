@@ -286,26 +286,28 @@ function TradeQueryRequestsClass:FetchResultBlock(url, callback)
 				local t_insert = table.insert
 				-- local catalystList = {"Abrasive", "Accelerating", "Fertile", "Imbued", "Intrinsic", "Noxious", "Prismatic", "Tempering", "Turbulent", "Unstable"}
 				
-				for _, property in ipairs(item.properties) do
-					local name = escapeGGGString(property.name)
-					if name == "Armour" then
-						armour = property.values[1][1]
-					elseif name == "Evasion Rating" then
-						evasion = property.values[1][1]
-					elseif name == "Energy Shield" then
-						es = property.values[1][1]
-					elseif name == "Quality" then
-						quality = property.values[1][1]:sub(2, -2) -- remove + and % on quality value	
-					elseif name == "Spirit" then
-						spirit = property.values[1][1]
-					elseif name == "Charm Slots" then
-						charmSlots = property.values[1][1]
-					-- elseif name == "Quality (Mana Modifiers)" then
-						-- catalyst quality stuff tbd it all needs reworking anyway as it has changed.
-					elseif name == "Radius" then
-						radius = property.values[1][1]
-					elseif name == "Limited To" then
-						limit = property.values[1][1]
+				if item.properties then
+					for _, property in ipairs(item.properties) do
+						local name = escapeGGGString(property.name)
+						if name == "Armour" then
+							armour = property.values[1][1]
+						elseif name == "Evasion Rating" then
+							evasion = property.values[1][1]
+						elseif name == "Energy Shield" then
+							es = property.values[1][1]
+						elseif name == "Quality" then
+							quality = property.values[1][1]:sub(2, -2) -- remove + and % on quality value	
+						elseif name == "Spirit" then
+							spirit = property.values[1][1]
+						elseif name == "Charm Slots" then
+							charmSlots = property.values[1][1]
+						-- elseif name == "Quality (Mana Modifiers)" then
+							-- catalyst quality stuff tbd it all needs reworking anyway as it has changed.
+						elseif name == "Radius" then
+							radius = property.values[1][1]
+						elseif name == "Limited to" then
+							limit = property.values[1][1]
+						end
 					end
 				end
 				
@@ -357,9 +359,11 @@ function TradeQueryRequestsClass:FetchResultBlock(url, callback)
 					t_insert(rawLines, "Sockets: " .. socketString)
 				end
 
-				for _, requiremnt in ipairs(item.requirements) do
-					if requiremnt.name == "Level"  then
-						t_insert(rawLines, "LevelReq: " .. requiremnt.values[1][1])
+				if item.requirements then
+					for _, requiremnt in ipairs(item.requirements) do
+						if requiremnt.name == "Level"  then
+							t_insert(rawLines, "LevelReq: " .. requiremnt.values[1][1])
+						end
 					end
 				end
 
@@ -427,10 +431,25 @@ function TradeQueryRequestsClass:SearchWithURL(url, callback)
 	end
 	league = paths[#paths-1]
 	queryId = paths[#paths]
-	self:FetchSearchQueryHTML(realm, league, queryId, function(query, errMsg)
+	self:FetchSearchQuery(realm, league, queryId, function(query, errMsg)
 		if errMsg then
 			return callback(nil, errMsg)
 		end
+
+		-- update sorting on provided url to sort by weights.
+		local json_data = dkjson.decode(query)
+		if not json_data or json_data.error then
+			errMsg = json_data and json_data.error or "Failed to parse search query JSON"
+		end
+		if json_data.query.stats and json_data.query.stats[1] and json_data.query.stats[1].type == "weight" then
+			json_data.sort = {}
+			json_data.sort["statgroup.0"] = "desc"
+		else
+			json_data.sort = { price = "asc"}
+		end
+		-- json_data.query.status = { option = json_data.query.status} -- works either way?
+		query = dkjson.encode(json_data)
+
 		self:SearchWithQuery(realm, league, query, callback)
 	end)
 end
@@ -454,49 +473,6 @@ function TradeQueryRequestsClass:FetchSearchQuery(realm, league, queryId, callba
 			callback(response, errMsg)
 		end
 	})
-end
-
---- HTML parsing to circumvent extra API call for query fetching
---- queryId -> query fetching via Poe API call costs precious search requests
---- But the search page HTML also contains the query object and this request is not throttled
----@param queryId string
----@param callback fun(query:string, errMsg:string)
----@see TradeQueryRequests#FetchSearchQuery
-function TradeQueryRequestsClass:FetchSearchQueryHTML(realm, league, queryId, callback)
-	if main.POESESSID == "" then
-		return callback(nil, "Please provide your POESESSID")
-	end
-	local header = "Cookie: POESESSID=" .. main.POESESSID
-	launch:DownloadPage(self:buildUrl(self.hostName .. "trade2/search", realm, league, queryId),
-		function(response, errMsg)
-			if errMsg then
-				return callback(nil, errMsg)
-			end
-			-- check if response.header includes "Cache-Control: must-revalidate" which indicates an invalid session
-			if response.header:lower():match("cache%-control:.+must%-revalidate") then
-				return callback(nil, "Failed to get search query, check POESESSID")
-			end
-			-- full json state obj from HTML
-			local dataStr = response.body:match('require%(%["main"%].+ t%((.+)%);}%);}%);')
-			if not dataStr then
-				return callback(nil, "JSON object not found on the page.")
-			end
-			local data, _, err = dkjson.decode(dataStr)
-			if err then
-				return callback(nil, "Failed to parse JSON object. ".. err)
-			end
-			local query = { query = data.state }
-			if data.state.stats and data.state.stats[1] and data.state.stats[1].type == "weight" then
-				query.sort = {}
-				query.sort["statgroup.0"] = "desc"
-			else
-				query.sort = { price = "asc"}
-			end
-			query.query.status = { option = query.query.status} -- works either way?
-			local queryStr = dkjson.encode(query)
-			callback(queryStr, errMsg)
-		end,
-		{header = header})
 end
 
 --- Fetches the list of all available leagues using trade2 league API
