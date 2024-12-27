@@ -358,7 +358,7 @@ Highest Weight - Displays the order retrieved from trade]]
 	self.controls.updateCurrencyConversion = new("ButtonControl", {"BOTTOMLEFT", nil, "BOTTOMLEFT"}, {pane_margins_horizontal, -pane_margins_vertical, 240, row_height}, "Get Currency Conversion Rates", function()
 		-- self:PullPoENinjaCurrencyConversion(self.pbLeague)
 	end)
-	self.controls.pbNotice = new("LabelControl",  {"BOTTOMRIGHT", nil, "BOTTOMRIGHT"}, {-row_height - pane_margins_vertical - row_vertical_padding, -pane_margins_vertical, 300, row_height}, "")
+	self.controls.pbNotice = new("LabelControl",  {"BOTTOMRIGHT", nil, "BOTTOMRIGHT"}, {-row_height - pane_margins_vertical - row_vertical_padding, -pane_margins_vertical - row_height - row_vertical_padding, 300, row_height}, "")
 
 	-- Realm selection
 	self.controls.realmLabel = new("LabelControl", {"LEFT", self.controls.setSelect, "RIGHT"}, {18, 0, 20, row_height - 4}, "^7Realm:")
@@ -1092,7 +1092,7 @@ function TradeQueryClass:UpdateRealms()
 	end
 
 	-- perform a generic search to make sure POESESSID if valid.
-	self.tradeQueryRequests:PerformSearch("poe2", "standard", [[{"query":{"status":{"option":"online"},"stats":[{"type":"and","filters":[]}]},"sort":{"price":"asc"}}]], function(response, errMsg) 
+	self.tradeQueryRequests:PerformSearch("poe2", "Standard", [[{"query":{"status":{"option":"online"},"stats":[{"type":"and","filters":[]}]},"sort":{"price":"asc"}}]], function(response, errMsg) 
 		if errMsg then
 			self:SetNotice(self.controls.pbNotice, "Error: " .. tostring(errMsg))
 		end
