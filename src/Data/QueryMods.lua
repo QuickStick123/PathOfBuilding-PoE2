@@ -4,7 +4,6 @@
 return {
 	["Corrupted"] = {
 		["1089_AllDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -14,7 +13,6 @@ return {
 			}, 
 		}, 
 		["1229_LocalChaosDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -24,7 +22,6 @@ return {
 			}, 
 		}, 
 		["1372_EnergyShieldDelay"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -34,7 +31,6 @@ return {
 			}, 
 		}, 
 		["1409_GlobalIncreasePhysicalSpellSkillGemLevel"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -44,7 +40,6 @@ return {
 			}, 
 		}, 
 		["1451_GainLifeOnBlock"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -54,7 +49,6 @@ return {
 			}, 
 		}, 
 		["1452_GainManaOnBlock"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -64,7 +58,6 @@ return {
 			}, 
 		}, 
 		["1493_MaximumEnduranceCharges"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -74,7 +67,6 @@ return {
 			}, 
 		}, 
 		["1498_MaximumFrenzyCharges"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -84,7 +76,6 @@ return {
 			}, 
 		}, 
 		["1503_MaximumPowerCharges"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -94,7 +85,6 @@ return {
 			}, 
 		}, 
 		["1627_LifeRegenerationRatePercentage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -104,7 +94,6 @@ return {
 			}, 
 		}, 
 		["1668_MaximumBlockChance"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -114,7 +103,6 @@ return {
 			}, 
 		}, 
 		["1944_BlindingHit"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -124,7 +112,6 @@ return {
 			}, 
 		}, 
 		["2156_LocalChanceToBleed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -134,7 +121,6 @@ return {
 			}, 
 		}, 
 		["2627_FireResistancePenetration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -144,7 +130,6 @@ return {
 			}, 
 		}, 
 		["2628_ColdResistancePenetration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -154,7 +139,6 @@ return {
 			}, 
 		}, 
 		["2629_LightningResistancePenetration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -164,7 +148,6 @@ return {
 			}, 
 		}, 
 		["2901_IncreasedStunThreshold"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -174,7 +157,6 @@ return {
 			}, 
 		}, 
 		["2902_FreezeThreshold"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -184,7 +166,6 @@ return {
 			}, 
 		}, 
 		["4162_GlobalSkillGemLevel"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -194,7 +175,6 @@ return {
 			}, 
 		}, 
 		["4254_ArmourBreak"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -204,7 +184,6 @@ return {
 			}, 
 		}, 
 		["4475_SlowEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -214,7 +193,7 @@ return {
 			}, 
 		}, 
 		["4506_SlowPotency"] = {
-			["inverse"] = true, 
+			["invertOnNegative"] = true, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -224,7 +203,6 @@ return {
 			}, 
 		}, 
 		["6104_CharmChargeGeneration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -234,7 +212,6 @@ return {
 			}, 
 		}, 
 		["6106_LifeFlaskChargeGeneration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -244,7 +221,6 @@ return {
 			}, 
 		}, 
 		["6107_ManaFlaskChargeGeneration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -254,7 +230,6 @@ return {
 			}, 
 		}, 
 		["6702_LocalWeaponRangeIncrease"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -264,7 +239,6 @@ return {
 			}, 
 		}, 
 		["6799_LocalRageOnHit"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -274,7 +248,6 @@ return {
 			}, 
 		}, 
 		["6852_LocalChanceToMaim"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -284,7 +257,6 @@ return {
 			}, 
 		}, 
 		["6867_LocalChanceToPoisonOnHit"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -294,7 +266,6 @@ return {
 			}, 
 		}, 
 		["822_LocalPhysicalDamagePercent"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -304,7 +275,6 @@ return {
 			}, 
 		}, 
 		["824_LocalFireDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -314,7 +284,6 @@ return {
 			}, 
 		}, 
 		["825_LocalColdDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -324,7 +293,6 @@ return {
 			}, 
 		}, 
 		["826_LocalLightningDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -334,7 +302,6 @@ return {
 			}, 
 		}, 
 		["8273_ChainFromTerrain"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -344,7 +311,6 @@ return {
 			}, 
 		}, 
 		["828_MovementVelocity"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -354,7 +320,6 @@ return {
 			}, 
 		}, 
 		["829_IncreasedSkillSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -364,7 +329,6 @@ return {
 			}, 
 		}, 
 		["831_LocalIncreasedBlockPercentage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -374,7 +338,6 @@ return {
 			}, 
 		}, 
 		["836_LocalPhysicalDamageReductionRatingPercent"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -384,7 +347,6 @@ return {
 			}, 
 		}, 
 		["837_LocalEvasionRatingIncreasePercent"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -394,7 +356,6 @@ return {
 			}, 
 		}, 
 		["838_LocalEnergyShieldPercent"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -404,7 +365,6 @@ return {
 			}, 
 		}, 
 		["839_LocalArmourAndEvasion"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -414,7 +374,6 @@ return {
 			}, 
 		}, 
 		["840_LocalArmourAndEnergyShield"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -424,7 +383,6 @@ return {
 			}, 
 		}, 
 		["841_LocalEvasionAndEnergyShield"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -434,7 +392,6 @@ return {
 			}, 
 		}, 
 		["843_LocalIncreasedSpiritPercent"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -444,7 +401,6 @@ return {
 			}, 
 		}, 
 		["854_WeaponSpellDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -454,7 +410,6 @@ return {
 			}, 
 		}, 
 		["860_IncreasedWeaponElementalDamagePercent"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -464,7 +419,6 @@ return {
 			}, 
 		}, 
 		["863_IncreasedAccuracy"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -474,7 +428,6 @@ return {
 			}, 
 		}, 
 		["866_GlobalPhysicalDamageReductionRatingPercent"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -484,7 +437,6 @@ return {
 			}, 
 		}, 
 		["868_GlobalEvasionRatingPercent"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -494,7 +446,6 @@ return {
 			}, 
 		}, 
 		["870_GlobalEnergyShieldPercent"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -504,7 +455,6 @@ return {
 			}, 
 		}, 
 		["871_IncreasedLife"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -514,7 +464,6 @@ return {
 			}, 
 		}, 
 		["873_IncreasedMana"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -524,7 +473,6 @@ return {
 			}, 
 		}, 
 		["876_BaseSpirit"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -534,7 +482,6 @@ return {
 			}, 
 		}, 
 		["883_AlliesInPresenceAllDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -544,7 +491,6 @@ return {
 			}, 
 		}, 
 		["8883_ThornsDamageIncrease"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -554,7 +500,6 @@ return {
 			}, 
 		}, 
 		["890_AlliesInPresenceCriticalStrikeMultiplier"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -564,7 +509,6 @@ return {
 			}, 
 		}, 
 		["891_AlliesInPresenceIncreasedAttackSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -574,7 +518,6 @@ return {
 			}, 
 		}, 
 		["892_AlliesInPresenceIncreasedCastSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -584,7 +527,6 @@ return {
 			}, 
 		}, 
 		["9093_WeaponSwapSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -594,7 +536,6 @@ return {
 			}, 
 		}, 
 		["911_ItemFoundRarityIncrease"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -604,7 +545,6 @@ return {
 			}, 
 		}, 
 		["913_LocalCriticalStrikeMultiplier"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -614,7 +554,6 @@ return {
 			}, 
 		}, 
 		["914_LocalIncreasedAttackSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -624,7 +563,7 @@ return {
 			}, 
 		}, 
 		["915_LocalAttributeRequirements"] = {
-			["inverse"] = true, 
+			["invertOnNegative"] = true, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -634,7 +573,6 @@ return {
 			}, 
 		}, 
 		["917_GlobalIncreaseFireSpellSkillGemLevel"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -644,7 +582,6 @@ return {
 			}, 
 		}, 
 		["918_GlobalIncreaseColdSpellSkillGemLevel"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -654,7 +591,6 @@ return {
 			}, 
 		}, 
 		["919_GlobalIncreaseLightningSpellSkillGemLevel"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -664,7 +600,6 @@ return {
 			}, 
 		}, 
 		["920_GlobalIncreaseChaosSpellSkillGemLevel"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -674,7 +609,6 @@ return {
 			}, 
 		}, 
 		["921_GlobalIncreaseMeleeSkillGemLevel"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -684,7 +618,6 @@ return {
 			}, 
 		}, 
 		["923_GlobalIncreaseMinionSpellSkillGemLevel"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -694,7 +627,6 @@ return {
 			}, 
 		}, 
 		["927_SpellCriticalStrikeChance"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -704,7 +636,6 @@ return {
 			}, 
 		}, 
 		["929_CriticalStrikeMultiplier"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -714,7 +645,6 @@ return {
 			}, 
 		}, 
 		["934_IncreasedCastSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -733,7 +663,6 @@ return {
 			}, 
 		}, 
 		["937_AdditionalArrows"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 				["overrideModLineSingular"] = "Bow Attacks fire an additional Arrow", 
 			}, 
@@ -744,7 +673,6 @@ return {
 			}, 
 		}, 
 		["939_Strength"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -754,7 +682,6 @@ return {
 			}, 
 		}, 
 		["940_Dexterity"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -764,7 +691,6 @@ return {
 			}, 
 		}, 
 		["941_Intelligence"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -774,7 +700,6 @@ return {
 			}, 
 		}, 
 		["943_ReducedPhysicalDamageTaken"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -784,7 +709,6 @@ return {
 			}, 
 		}, 
 		["944_MaximumElementalResistance"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -794,7 +718,6 @@ return {
 			}, 
 		}, 
 		["945_MaximumFireResist"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -804,7 +727,6 @@ return {
 			}, 
 		}, 
 		["946_MaximumColdResist"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -814,7 +736,6 @@ return {
 			}, 
 		}, 
 		["947_MaximumLightningResistance"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -824,7 +745,6 @@ return {
 			}, 
 		}, 
 		["949_AllResistances"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -834,7 +754,6 @@ return {
 			}, 
 		}, 
 		["950_FireResistance"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -844,7 +763,6 @@ return {
 			}, 
 		}, 
 		["951_ColdResistance"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -854,7 +772,6 @@ return {
 			}, 
 		}, 
 		["952_LightningResistance"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -864,7 +781,6 @@ return {
 			}, 
 		}, 
 		["953_ChaosResistance"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -874,7 +790,6 @@ return {
 			}, 
 		}, 
 		["959_DamageTakenGainedAsLife"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -884,7 +799,6 @@ return {
 			}, 
 		}, 
 		["960_LifeLeechPermyriad"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -894,7 +808,6 @@ return {
 			}, 
 		}, 
 		["964_LifeGainedFromEnemyDeath"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -904,7 +817,6 @@ return {
 			}, 
 		}, 
 		["965_ManaRegeneration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -914,7 +826,6 @@ return {
 			}, 
 		}, 
 		["966_PercentDamageGoesToMana"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -924,7 +835,6 @@ return {
 			}, 
 		}, 
 		["968_ManaLeechPermyriad"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -934,7 +844,6 @@ return {
 			}, 
 		}, 
 		["969_ManaGainedFromEnemyDeath"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -944,7 +853,6 @@ return {
 			}, 
 		}, 
 		["974_LocalStunDamageIncrease"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -954,7 +862,6 @@ return {
 			}, 
 		}, 
 		["978_IgniteChanceIncrease"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -964,7 +871,6 @@ return {
 			}, 
 		}, 
 		["980_FreezeDamageIncrease"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -974,7 +880,6 @@ return {
 			}, 
 		}, 
 		["982_ShockChanceIncrease"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -984,7 +889,6 @@ return {
 			}, 
 		}, 
 		["991_ChanceToPierce"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -998,7 +902,6 @@ return {
 	}, 
 	["Explicit"] = {
 		["1068_IncreasedBlockChance"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1008,7 +911,6 @@ return {
 			}, 
 		}, 
 		["1089_AllDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1018,7 +920,6 @@ return {
 			}, 
 		}, 
 		["1091_TotemDamageForJewel"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1028,7 +929,6 @@ return {
 			}, 
 		}, 
 		["1095_AttackDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1038,7 +938,6 @@ return {
 			}, 
 		}, 
 		["1124_PhysicalDamagePercent"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1048,7 +947,6 @@ return {
 			}, 
 		}, 
 		["1126_MeleeDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1058,7 +956,6 @@ return {
 			}, 
 		}, 
 		["1177_IncreasedStaffDamageForJewel"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1068,7 +965,6 @@ return {
 			}, 
 		}, 
 		["1188_IncreasedMaceDamageForJewel"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1078,7 +974,6 @@ return {
 			}, 
 		}, 
 		["1192_IncreasedBowDamageForJewel"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1088,7 +983,6 @@ return {
 			}, 
 		}, 
 		["1227_ChaosDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1098,7 +992,6 @@ return {
 			}, 
 		}, 
 		["1258_StaffAttackSpeedForJewel"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1108,7 +1001,6 @@ return {
 			}, 
 		}, 
 		["1262_BowAttackSpeedForJewel"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1118,7 +1010,6 @@ return {
 			}, 
 		}, 
 		["1270_IncreasedAccuracyPercent"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1128,7 +1019,6 @@ return {
 			}, 
 		}, 
 		["1279_BowIncreasedAccuracyRating"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1138,7 +1028,6 @@ return {
 			}, 
 		}, 
 		["1372_EnergyShieldDelay"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1148,7 +1037,6 @@ return {
 			}, 
 		}, 
 		["1409_GlobalIncreasePhysicalSpellSkillGemLevel"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1174,7 +1062,6 @@ return {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1184,7 +1071,6 @@ return {
 			}, 
 		}, 
 		["1443_MaximumLifeOnKillPercent"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1194,7 +1080,6 @@ return {
 			}, 
 		}, 
 		["1449_ManaGainedOnKillPercentage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1204,7 +1089,6 @@ return {
 			}, 
 		}, 
 		["1465_IncreasedTotemLife"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1214,7 +1098,6 @@ return {
 			}, 
 		}, 
 		["1472_BaseCurseDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1224,7 +1107,6 @@ return {
 			}, 
 		}, 
 		["1546_IncreasedChillDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1234,7 +1116,6 @@ return {
 			}, 
 		}, 
 		["1547_ShockDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1244,7 +1125,6 @@ return {
 			}, 
 		}, 
 		["1564_AreaOfEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1254,7 +1134,6 @@ return {
 			}, 
 		}, 
 		["1579_SkillEffectDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1264,7 +1143,6 @@ return {
 			}, 
 		}, 
 		["1655_MinionDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1274,7 +1152,6 @@ return {
 			}, 
 		}, 
 		["1660_ElementalDamagePercent"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1284,7 +1161,6 @@ return {
 			}, 
 		}, 
 		["1673_ShieldArmourIncrease"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1294,7 +1170,6 @@ return {
 			}, 
 		}, 
 		["1675_ProjectileDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1304,7 +1179,6 @@ return {
 			}, 
 		}, 
 		["1681_KnockbackDistance"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1314,7 +1188,6 @@ return {
 			}, 
 		}, 
 		["1717_AttackAndCastSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1324,7 +1197,6 @@ return {
 			}, 
 		}, 
 		["1730_GlobalFlaskLifeRecovery"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1334,7 +1206,6 @@ return {
 			}, 
 		}, 
 		["1731_FlaskManaRecovery"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1344,7 +1215,6 @@ return {
 			}, 
 		}, 
 		["1831_LifeLeechAmount"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1354,7 +1224,6 @@ return {
 			}, 
 		}, 
 		["1833_ManaLeechAmount"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1364,7 +1233,6 @@ return {
 			}, 
 		}, 
 		["1882_MarkCastSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1374,7 +1242,6 @@ return {
 			}, 
 		}, 
 		["1886_CurseAreaOfEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1384,7 +1251,6 @@ return {
 			}, 
 		}, 
 		["1954_MinionPhysicalDamageReduction"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1394,7 +1260,6 @@ return {
 			}, 
 		}, 
 		["2250_SummonTotemCastSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1404,7 +1269,6 @@ return {
 			}, 
 		}, 
 		["2266_CurseEffectiveness"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1414,7 +1278,6 @@ return {
 			}, 
 		}, 
 		["2266_CurseEffectivenessForJewel"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1424,7 +1287,6 @@ return {
 			}, 
 		}, 
 		["2268_MarkEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1434,7 +1296,6 @@ return {
 			}, 
 		}, 
 		["2362_DamageRemovedFromManaBeforeLife"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1444,7 +1305,6 @@ return {
 			}, 
 		}, 
 		["2475_AuraEffectForJewel"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1454,7 +1314,6 @@ return {
 			}, 
 		}, 
 		["2562_MinionElementalResistance"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1464,7 +1323,6 @@ return {
 			}, 
 		}, 
 		["2563_MinionChaosResistance"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1474,7 +1332,6 @@ return {
 			}, 
 		}, 
 		["2627_FireResistancePenetration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1484,7 +1341,6 @@ return {
 			}, 
 		}, 
 		["2628_ColdResistancePenetration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1494,7 +1350,6 @@ return {
 			}, 
 		}, 
 		["2629_LightningResistancePenetration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1504,7 +1359,6 @@ return {
 			}, 
 		}, 
 		["2668_MinionAreaOfEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1514,7 +1368,6 @@ return {
 			}, 
 		}, 
 		["2805_PoisonDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1524,7 +1377,6 @@ return {
 			}, 
 		}, 
 		["2805_PoisonDurationChaosDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1534,7 +1386,6 @@ return {
 			}, 
 		}, 
 		["2808_BaseChanceToPoison"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1544,7 +1395,6 @@ return {
 			}, 
 		}, 
 		["2840_DamageVsRareOrUnique"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1554,7 +1404,6 @@ return {
 			}, 
 		}, 
 		["2901_IncreasedStunThreshold"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1564,7 +1413,6 @@ return {
 			}, 
 		}, 
 		["2902_FreezeThreshold"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1574,7 +1422,6 @@ return {
 			}, 
 		}, 
 		["2907_WarcrySpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1584,7 +1431,6 @@ return {
 			}, 
 		}, 
 		["2954_WarcryCooldownSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1603,7 +1449,6 @@ return {
 			}, 
 		}, 
 		["3847_DamageIfConsumedCorpse"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1613,7 +1458,6 @@ return {
 			}, 
 		}, 
 		["3895_CrossbowDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1623,7 +1467,6 @@ return {
 			}, 
 		}, 
 		["3899_CrossbowSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1633,7 +1476,6 @@ return {
 			}, 
 		}, 
 		["4144_AilmentChance"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1643,7 +1485,6 @@ return {
 			}, 
 		}, 
 		["4145_AilmentEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1653,7 +1494,6 @@ return {
 			}, 
 		}, 
 		["4150_IncreasedAilmentThreshold"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1663,7 +1503,6 @@ return {
 			}, 
 		}, 
 		["4254_ArmourBreak"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1673,7 +1512,6 @@ return {
 			}, 
 		}, 
 		["4257_ArmourBreakDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1683,7 +1521,6 @@ return {
 			}, 
 		}, 
 		["4399_AttacksBlindOnHitChance"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1693,7 +1530,6 @@ return {
 			}, 
 		}, 
 		["4454_BleedDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1703,7 +1539,6 @@ return {
 			}, 
 		}, 
 		["4461_BaseChanceToBleed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1713,7 +1548,6 @@ return {
 			}, 
 		}, 
 		["4467_GlobalCooldownRecovery"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1723,7 +1557,6 @@ return {
 			}, 
 		}, 
 		["4504_LifeCost"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1733,7 +1566,7 @@ return {
 			}, 
 		}, 
 		["4506_SlowPotency"] = {
-			["inverse"] = true, 
+			["invertOnNegative"] = true, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1743,7 +1576,6 @@ return {
 			}, 
 		}, 
 		["4555_BleedDotMultiplier"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1753,7 +1585,6 @@ return {
 			}, 
 		}, 
 		["4671_BlindEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1763,7 +1594,6 @@ return {
 			}, 
 		}, 
 		["4989_ForkingProjectiles"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1777,7 +1607,6 @@ return {
 				["max"] = 40, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1787,7 +1616,6 @@ return {
 			}, 
 		}, 
 		["5066_CharmChargesGained"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1801,7 +1629,6 @@ return {
 				["max"] = 25, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1811,7 +1638,6 @@ return {
 			}, 
 		}, 
 		["5213_CriticalAilmentEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1821,7 +1647,6 @@ return {
 			}, 
 		}, 
 		["5306_CurseDelay"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1831,7 +1656,6 @@ return {
 			}, 
 		}, 
 		["5324_DamagevsArmourBrokenEnemies"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1841,7 +1665,6 @@ return {
 			}, 
 		}, 
 		["5387_CharmDamageWhileUsing"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1851,7 +1674,6 @@ return {
 			}, 
 		}, 
 		["5392_HeraldDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1861,7 +1683,6 @@ return {
 			}, 
 		}, 
 		["5426_DamagingAilmentDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1871,7 +1692,6 @@ return {
 			}, 
 		}, 
 		["5428_FasterAilmentDamageForJewel"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1881,7 +1701,6 @@ return {
 			}, 
 		}, 
 		["5436_DazeBuildup"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1891,7 +1710,6 @@ return {
 			}, 
 		}, 
 		["5456_DebuffTimePassed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1901,7 +1719,6 @@ return {
 			}, 
 		}, 
 		["5647_ExertedAttackDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1911,7 +1728,6 @@ return {
 			}, 
 		}, 
 		["5708_EnergyGeneration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1921,7 +1737,6 @@ return {
 			}, 
 		}, 
 		["5718_FocusEnergyShield"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1935,7 +1750,6 @@ return {
 				["max"] = 40, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1945,7 +1759,6 @@ return {
 			}, 
 		}, 
 		["5904_IncreasedFlaskChargesGained"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1955,7 +1768,6 @@ return {
 			}, 
 		}, 
 		["6086_RageOnHit"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1965,7 +1777,6 @@ return {
 			}, 
 		}, 
 		["6088_GainRageWhenHit"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1975,7 +1786,6 @@ return {
 			}, 
 		}, 
 		["6379_PinBuildup"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1985,7 +1795,6 @@ return {
 			}, 
 		}, 
 		["6432_IgniteEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -1995,7 +1804,6 @@ return {
 			}, 
 		}, 
 		["6433_ElementalAilmentDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2005,7 +1813,6 @@ return {
 			}, 
 		}, 
 		["6561_LifeFlaskChargePercentGeneration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2015,7 +1822,6 @@ return {
 			}, 
 		}, 
 		["6796_FlaskGainChargePerMinute"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2034,7 +1840,6 @@ return {
 			}, 
 		}, 
 		["6840_JewelRadiusSmallNodeEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2044,7 +1849,6 @@ return {
 			}, 
 		}, 
 		["6991_MaceStun"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2054,7 +1858,6 @@ return {
 			}, 
 		}, 
 		["7018_ManaFlaskChargePercentGeneration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2064,7 +1867,6 @@ return {
 			}, 
 		}, 
 		["7720_MarkDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2074,7 +1876,6 @@ return {
 			}, 
 		}, 
 		["7857_MinionAccuracyRatingForJewel"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2084,7 +1885,6 @@ return {
 			}, 
 		}, 
 		["7861_MinionAttackSpeedAndCastSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2094,7 +1894,6 @@ return {
 			}, 
 		}, 
 		["7878_MinionCriticalStrikeChanceIncrease"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2104,7 +1903,6 @@ return {
 			}, 
 		}, 
 		["7880_MinionCriticalStrikeMultiplier"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2114,7 +1912,6 @@ return {
 			}, 
 		}, 
 		["7925_MinionReviveSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2124,7 +1921,6 @@ return {
 			}, 
 		}, 
 		["8123_OfferingDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2134,7 +1930,6 @@ return {
 			}, 
 		}, 
 		["8124_OfferingLife"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2176,7 +1971,6 @@ return {
 				["max"] = 79, 
 				["min"] = 15, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2218,7 +2012,6 @@ return {
 				["max"] = 179, 
 				["min"] = 40, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2228,7 +2021,6 @@ return {
 			}, 
 		}, 
 		["8230_PoisonEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2274,7 +2066,6 @@ return {
 				["max"] = 52.5, 
 				["min"] = 2.5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2316,7 +2107,6 @@ return {
 				["max"] = 140.5, 
 				["min"] = 3.5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2358,7 +2148,6 @@ return {
 				["max"] = 112, 
 				["min"] = 3, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2400,7 +2189,6 @@ return {
 				["max"] = 140.5, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2410,7 +2198,6 @@ return {
 			}, 
 		}, 
 		["8273_ChainFromTerrain"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2452,7 +2239,6 @@ return {
 				["max"] = 550, 
 				["min"] = 11, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2494,7 +2280,6 @@ return {
 				["max"] = 200, 
 				["min"] = 16, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2536,7 +2321,6 @@ return {
 				["max"] = 60, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2550,7 +2334,6 @@ return {
 				["max"] = 35, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2560,7 +2343,6 @@ return {
 			}, 
 		}, 
 		["8316_QuarterstaffFreezeBuildup"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2574,7 +2356,6 @@ return {
 				["max"] = 81, 
 				["min"] = 40, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2584,7 +2365,6 @@ return {
 			}, 
 		}, 
 		["8324_QuiverModifierEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2594,7 +2374,6 @@ return {
 			}, 
 		}, 
 		["8328_MaximumRage"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2620,7 +2399,6 @@ return {
 				["max"] = 138, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2646,7 +2424,6 @@ return {
 				["max"] = 138, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2672,7 +2449,6 @@ return {
 				["max"] = 86, 
 				["min"] = 7, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2698,7 +2474,6 @@ return {
 				["max"] = 43, 
 				["min"] = 4, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2724,7 +2499,6 @@ return {
 				["max"] = 43, 
 				["min"] = 4, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2750,7 +2524,6 @@ return {
 				["max"] = 276, 
 				["min"] = 16, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2776,7 +2549,6 @@ return {
 				["max"] = 126, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2802,7 +2574,6 @@ return {
 				["max"] = 126, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2828,7 +2599,6 @@ return {
 				["max"] = 251, 
 				["min"] = 11, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2854,7 +2624,6 @@ return {
 				["max"] = 39, 
 				["min"] = 3, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2880,7 +2649,6 @@ return {
 				["max"] = 79, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2890,7 +2658,6 @@ return {
 			}, 
 		}, 
 		["834_LocalIncreasedEvasionAndEnergyShieldAndBase"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2916,7 +2683,6 @@ return {
 				["max"] = 48, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2942,7 +2708,6 @@ return {
 				["max"] = 48, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2968,7 +2733,6 @@ return {
 				["max"] = 96, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -2994,7 +2758,6 @@ return {
 				["max"] = 15, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3020,7 +2783,6 @@ return {
 				["max"] = 30, 
 				["min"] = 4, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3030,7 +2792,6 @@ return {
 			}, 
 		}, 
 		["835_LocalIncreasedEvasionAndEnergyShieldAndBase"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3056,7 +2817,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3082,7 +2842,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3108,7 +2867,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3134,7 +2892,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3164,7 +2921,6 @@ return {
 				["max"] = 110, 
 				["min"] = 101, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3190,7 +2946,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3220,7 +2975,6 @@ return {
 				["max"] = 110, 
 				["min"] = 101, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3246,7 +3000,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3272,7 +3025,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3298,7 +3050,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3324,7 +3075,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3354,7 +3104,6 @@ return {
 				["max"] = 110, 
 				["min"] = 101, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3380,7 +3129,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3406,7 +3154,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3432,7 +3179,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3462,7 +3208,6 @@ return {
 				["max"] = 110, 
 				["min"] = 101, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3488,7 +3233,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3514,7 +3258,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3540,7 +3283,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3566,7 +3308,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3596,7 +3337,6 @@ return {
 				["max"] = 110, 
 				["min"] = 101, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3622,7 +3362,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3648,7 +3387,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3674,7 +3412,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3700,7 +3437,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3718,7 +3454,6 @@ return {
 				["max"] = 110, 
 				["min"] = 101, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3728,7 +3463,6 @@ return {
 			}, 
 		}, 
 		["841_LocalEvasionAndEnergyShieldAndStunThreshold"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3738,7 +3472,6 @@ return {
 			}, 
 		}, 
 		["841_LocalIncreasedEvasionAndEnergyShieldAndBase"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3748,7 +3481,6 @@ return {
 			}, 
 		}, 
 		["841_LocalIncreasedEvasionAndEnergyShieldAndLife"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3758,7 +3490,6 @@ return {
 			}, 
 		}, 
 		["841_LocalIncreasedEvasionAndEnergyShieldAndMana"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3768,7 +3499,6 @@ return {
 			}, 
 		}, 
 		["8436_CrossbowReloadSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3786,7 +3516,6 @@ return {
 				["max"] = 38, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3804,7 +3533,6 @@ return {
 				["max"] = 65, 
 				["min"] = 27, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3826,7 +3554,6 @@ return {
 				["max"] = 25.5, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3848,7 +3575,6 @@ return {
 				["max"] = 37, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3870,7 +3596,6 @@ return {
 				["max"] = 30.5, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3892,7 +3617,6 @@ return {
 				["max"] = 37.5, 
 				["min"] = 3, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3918,7 +3642,6 @@ return {
 				["max"] = 30, 
 				["min"] = 13, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3944,7 +3667,6 @@ return {
 				["max"] = 30, 
 				["min"] = 13, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3954,7 +3676,6 @@ return {
 			}, 
 		}, 
 		["8515_ShockEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3980,7 +3701,6 @@ return {
 				["max"] = 30, 
 				["min"] = 13, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -3994,7 +3714,6 @@ return {
 				["max"] = 30, 
 				["min"] = 3, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4028,7 +3747,6 @@ return {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4054,7 +3772,6 @@ return {
 				["max"] = 49, 
 				["min"] = 15, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4068,7 +3785,6 @@ return {
 				["max"] = 30, 
 				["min"] = 3, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4102,7 +3818,6 @@ return {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4116,7 +3831,6 @@ return {
 				["max"] = 30, 
 				["min"] = 3, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4150,7 +3864,6 @@ return {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4164,7 +3877,6 @@ return {
 				["max"] = 30, 
 				["min"] = 3, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4198,7 +3910,6 @@ return {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4232,7 +3943,6 @@ return {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4246,7 +3956,6 @@ return {
 				["max"] = 30, 
 				["min"] = 3, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4256,7 +3965,6 @@ return {
 			}, 
 		}, 
 		["859_PoisonDurationChaosDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4298,7 +4006,6 @@ return {
 				["max"] = 100, 
 				["min"] = 19, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4332,7 +4039,6 @@ return {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4346,7 +4052,6 @@ return {
 				["max"] = 59, 
 				["min"] = 11, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4376,7 +4081,6 @@ return {
 				["max"] = 450, 
 				["min"] = 11, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4390,7 +4094,6 @@ return {
 				["max"] = 60, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4404,7 +4107,6 @@ return {
 				["max"] = 255, 
 				["min"] = 12, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4418,7 +4120,6 @@ return {
 				["max"] = 50, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4432,7 +4133,6 @@ return {
 				["max"] = 203, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4446,7 +4146,6 @@ return {
 				["max"] = 50, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4460,7 +4159,6 @@ return {
 				["max"] = 89, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4474,7 +4172,6 @@ return {
 				["max"] = 50, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4516,7 +4213,6 @@ return {
 				["max"] = 189, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4542,7 +4238,6 @@ return {
 				["max"] = 49, 
 				["min"] = 7, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4568,7 +4263,6 @@ return {
 				["max"] = 49, 
 				["min"] = 7, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4594,7 +4288,6 @@ return {
 				["max"] = 49, 
 				["min"] = 7, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4620,7 +4313,6 @@ return {
 				["max"] = 49, 
 				["min"] = 7, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4630,7 +4322,6 @@ return {
 			}, 
 		}, 
 		["871_LocalIncreasedEvasionAndEnergyShieldAndLife"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4656,7 +4347,6 @@ return {
 				["max"] = 49, 
 				["min"] = 7, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4670,7 +4360,6 @@ return {
 				["max"] = 8, 
 				["min"] = 3, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4732,7 +4421,6 @@ return {
 				["max"] = 179, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4758,7 +4446,6 @@ return {
 				["max"] = 39, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4784,7 +4471,6 @@ return {
 				["max"] = 39, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4810,7 +4496,6 @@ return {
 				["max"] = 39, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4836,7 +4521,6 @@ return {
 				["max"] = 39, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4846,7 +4530,6 @@ return {
 			}, 
 		}, 
 		["873_LocalIncreasedEvasionAndEnergyShieldAndMana"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4872,7 +4555,6 @@ return {
 				["max"] = 39, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4890,7 +4572,6 @@ return {
 				["max"] = 45, 
 				["min"] = 17, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4916,7 +4597,6 @@ return {
 				["max"] = 45, 
 				["min"] = 17, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4926,7 +4606,6 @@ return {
 			}, 
 		}, 
 		["873_WeaponTrapDamageAndMana"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4940,7 +4619,6 @@ return {
 				["max"] = 10, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4958,7 +4636,6 @@ return {
 				["max"] = 61, 
 				["min"] = 30, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4968,7 +4645,6 @@ return {
 			}, 
 		}, 
 		["8775_StunThresholdfromEnergyShield"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4978,7 +4654,6 @@ return {
 			}, 
 		}, 
 		["8777_IncreasedStunThresholdIfNoRecentStun"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4992,7 +4667,6 @@ return {
 				["max"] = 46, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5006,7 +4680,6 @@ return {
 				["max"] = 40, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5020,7 +4693,6 @@ return {
 				["max"] = 40, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5034,7 +4706,6 @@ return {
 				["max"] = 33, 
 				["min"] = 4, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5044,7 +4715,6 @@ return {
 			}, 
 		}, 
 		["880_CharmDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5054,7 +4724,6 @@ return {
 			}, 
 		}, 
 		["881_FlaskDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5072,7 +4741,6 @@ return {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5090,7 +4758,6 @@ return {
 				["max"] = 25.5, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5108,7 +4775,6 @@ return {
 				["max"] = 37, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5126,7 +4792,6 @@ return {
 				["max"] = 30.5, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5144,7 +4809,6 @@ return {
 				["max"] = 37.5, 
 				["min"] = 3, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5154,7 +4818,6 @@ return {
 			}, 
 		}, 
 		["8883_ThornsDamageIncrease"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5176,7 +4839,6 @@ return {
 				["max"] = 47, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5194,7 +4856,6 @@ return {
 				["max"] = 450, 
 				["min"] = 11, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5212,7 +4873,6 @@ return {
 				["max"] = 38, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5230,7 +4890,6 @@ return {
 				["max"] = 39, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5248,7 +4907,6 @@ return {
 				["max"] = 16, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5266,7 +4924,6 @@ return {
 				["max"] = 20, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5284,7 +4941,6 @@ return {
 				["max"] = 18, 
 				["min"] = 3, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5294,7 +4950,6 @@ return {
 			}, 
 		}, 
 		["8944_DamageWithTriggeredSpells"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5312,7 +4967,6 @@ return {
 				["max"] = 33, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5322,7 +4976,6 @@ return {
 			}, 
 		}, 
 		["895_CharmGuardWhileActive"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5332,7 +4985,6 @@ return {
 			}, 
 		}, 
 		["896_CharmGainLifeOnUse"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5342,7 +4994,6 @@ return {
 			}, 
 		}, 
 		["897_CharmGainManaOnUse"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5352,7 +5003,6 @@ return {
 			}, 
 		}, 
 		["898_CharmIncreasedDuration"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5362,7 +5012,6 @@ return {
 			}, 
 		}, 
 		["899_FlaskIncreasedRecoveryOnLowMana"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5372,7 +5021,7 @@ return {
 			}, 
 		}, 
 		["900_FlaskFullInstantRecovery"] = {
-			["inverse"] = true, 
+			["invertOnNegative"] = true, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5382,7 +5031,6 @@ return {
 			}, 
 		}, 
 		["900_FlaskIncreasedRecoveryAmount"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5392,7 +5040,6 @@ return {
 			}, 
 		}, 
 		["901_FlaskIncreasedRecoveryOnLowLife"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5402,7 +5049,6 @@ return {
 			}, 
 		}, 
 		["903_FlaskExtraLifeCostsMana"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5412,7 +5058,6 @@ return {
 			}, 
 		}, 
 		["904_FlaskExtraManaCostsLife"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5422,7 +5067,6 @@ return {
 			}, 
 		}, 
 		["905_FlaskHealsMinions"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5441,7 +5085,6 @@ return {
 			}, 
 		}, 
 		["907_FlaskPartialInstantRecovery"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5451,7 +5094,6 @@ return {
 			}, 
 		}, 
 		["9081_WarcryEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5461,7 +5103,6 @@ return {
 			}, 
 		}, 
 		["9084_WarcryDamage"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5471,7 +5112,6 @@ return {
 			}, 
 		}, 
 		["908_FlaskIncreasedRecoverySpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5481,7 +5121,6 @@ return {
 			}, 
 		}, 
 		["9093_WeaponSwapSpeed"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5491,7 +5130,6 @@ return {
 			}, 
 		}, 
 		["909_FlaskExtraLifeCostsMana"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5501,7 +5139,6 @@ return {
 			}, 
 		}, 
 		["910_FlaskExtraManaCostsLife"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5511,7 +5148,6 @@ return {
 			}, 
 		}, 
 		["9112_WitheredEffect"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5541,7 +5177,6 @@ return {
 				["max"] = 30, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5563,7 +5198,6 @@ return {
 				["max"] = 32, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5605,7 +5239,6 @@ return {
 				["max"] = 5, 
 				["min"] = 1.01, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5647,7 +5280,6 @@ return {
 				["max"] = 39, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5689,7 +5321,6 @@ return {
 				["max"] = 28, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5763,7 +5394,7 @@ return {
 				["max"] = -15, 
 				["min"] = -35, 
 			}, 
-			["inverse"] = true, 
+			["invertOnNegative"] = true, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5785,7 +5416,6 @@ return {
 				["max"] = 2, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5811,7 +5441,6 @@ return {
 				["max"] = 4, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5821,7 +5450,6 @@ return {
 			}, 
 		}, 
 		["917_GlobalIncreaseFireSpellSkillGemLevel"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5847,7 +5475,6 @@ return {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5857,7 +5484,6 @@ return {
 			}, 
 		}, 
 		["918_GlobalIncreaseColdSpellSkillGemLevel"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5883,7 +5509,6 @@ return {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5893,7 +5518,6 @@ return {
 			}, 
 		}, 
 		["919_GlobalIncreaseLightningSpellSkillGemLevel"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5919,7 +5543,6 @@ return {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5929,7 +5552,6 @@ return {
 			}, 
 		}, 
 		["920_GlobalIncreaseChaosSpellSkillGemLevel"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5955,7 +5577,6 @@ return {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5989,7 +5610,6 @@ return {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6015,7 +5635,6 @@ return {
 				["max"] = 7, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6033,7 +5652,6 @@ return {
 				["max"] = 2, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6055,7 +5673,6 @@ return {
 				["max"] = 7, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6073,7 +5690,6 @@ return {
 				["max"] = 2, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6091,7 +5707,6 @@ return {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6109,7 +5724,6 @@ return {
 				["max"] = 34, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6123,7 +5737,6 @@ return {
 				["max"] = 38, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6157,7 +5770,6 @@ return {
 				["max"] = 109, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6175,7 +5787,6 @@ return {
 				["max"] = 34, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6189,7 +5800,6 @@ return {
 				["max"] = 39, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6199,7 +5809,6 @@ return {
 			}, 
 		}, 
 		["931_SpellCritMultiplierForJewel"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6233,7 +5842,6 @@ return {
 				["max"] = 39, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6251,7 +5859,6 @@ return {
 				["max"] = 16, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6293,7 +5900,6 @@ return {
 				["max"] = 35, 
 				["min"] = 9, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6324,7 +5930,6 @@ return {
 				["max"] = 1, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6342,7 +5947,6 @@ return {
 				["max"] = 2, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 				["overrideModLineSingular"] = "Bow Attacks fire an additional Arrow", 
 			}, 
@@ -6361,7 +5965,6 @@ return {
 				["max"] = 13, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6423,7 +6026,6 @@ return {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6481,7 +6083,6 @@ return {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6539,7 +6140,6 @@ return {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6553,7 +6153,6 @@ return {
 				["max"] = 54, 
 				["min"] = 21, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6567,7 +6166,6 @@ return {
 				["max"] = 8, 
 				["min"] = 4, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6581,7 +6179,6 @@ return {
 				["max"] = 2, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6595,7 +6192,6 @@ return {
 				["max"] = 3, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6609,7 +6205,6 @@ return {
 				["max"] = 3, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6623,7 +6218,6 @@ return {
 				["max"] = 3, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6637,7 +6231,6 @@ return {
 				["max"] = 3, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6659,7 +6252,6 @@ return {
 				["max"] = 18, 
 				["min"] = 3, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6681,7 +6273,6 @@ return {
 				["max"] = 45, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6703,7 +6294,6 @@ return {
 				["max"] = 45, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6725,7 +6315,6 @@ return {
 				["max"] = 45, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6747,7 +6336,6 @@ return {
 				["max"] = 27, 
 				["min"] = 4, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6765,7 +6353,6 @@ return {
 				["max"] = 50, 
 				["min"] = 21, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6783,7 +6370,6 @@ return {
 				["max"] = 50, 
 				["min"] = 26, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6817,7 +6403,6 @@ return {
 				["max"] = 18, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6827,7 +6412,6 @@ return {
 			}, 
 		}, 
 		["958_LifeRegenerationRate"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6841,7 +6425,6 @@ return {
 				["max"] = 24, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6851,7 +6434,6 @@ return {
 			}, 
 		}, 
 		["959_LifeRecoupForJewel"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6869,7 +6451,6 @@ return {
 				["max"] = 7.9, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6911,7 +6492,6 @@ return {
 				["max"] = 9.9, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6925,7 +6505,6 @@ return {
 				["max"] = 5, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -6967,7 +6546,6 @@ return {
 				["max"] = 5, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7025,7 +6603,6 @@ return {
 				["max"] = 84, 
 				["min"] = 4, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7059,7 +6636,6 @@ return {
 				["max"] = 22, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7105,7 +6681,6 @@ return {
 				["max"] = 69, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7119,7 +6694,6 @@ return {
 				["max"] = 24, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7161,7 +6735,6 @@ return {
 				["max"] = 8.9, 
 				["min"] = 4, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7179,7 +6752,6 @@ return {
 				["max"] = 6.9, 
 				["min"] = 4, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7237,7 +6809,6 @@ return {
 				["max"] = 45, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7251,7 +6822,6 @@ return {
 				["max"] = 25, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7261,7 +6831,6 @@ return {
 			}, 
 		}, 
 		["973_StunDamageIncrease"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7303,7 +6872,6 @@ return {
 				["max"] = 80, 
 				["min"] = 21, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7345,7 +6913,6 @@ return {
 				["max"] = 30, 
 				["min"] = 11, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7371,7 +6938,6 @@ return {
 				["max"] = 100, 
 				["min"] = 51, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7397,7 +6963,6 @@ return {
 				["max"] = 80, 
 				["min"] = 31, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7423,7 +6988,6 @@ return {
 				["max"] = 100, 
 				["min"] = 51, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7449,7 +7013,6 @@ return {
 				["max"] = 136, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7475,7 +7038,6 @@ return {
 				["max"] = 136, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7501,7 +7063,6 @@ return {
 				["max"] = 136, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7527,7 +7088,6 @@ return {
 				["max"] = 136, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7537,7 +7097,6 @@ return {
 			}, 
 		}, 
 		["984_LocalEvasionAndEnergyShieldAndStunThreshold"] = {
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7563,7 +7122,6 @@ return {
 				["max"] = 136, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7589,7 +7147,6 @@ return {
 				["max"] = 304, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7603,7 +7160,7 @@ return {
 				["max"] = -36, 
 				["min"] = -60, 
 			}, 
-			["inverse"] = true, 
+			["invertOnNegative"] = true, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7617,7 +7174,6 @@ return {
 				["max"] = 60, 
 				["min"] = 36, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7631,7 +7187,6 @@ return {
 				["max"] = 60, 
 				["min"] = 36, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7645,7 +7200,6 @@ return {
 				["max"] = 60, 
 				["min"] = 36, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7659,7 +7213,6 @@ return {
 				["max"] = 60, 
 				["min"] = 36, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7673,7 +7226,7 @@ return {
 				["max"] = -36, 
 				["min"] = -60, 
 			}, 
-			["inverse"] = true, 
+			["invertOnNegative"] = true, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7687,7 +7240,6 @@ return {
 				["max"] = 26, 
 				["min"] = 12, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7705,7 +7257,6 @@ return {
 				["max"] = 30, 
 				["min"] = 13, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7719,7 +7270,6 @@ return {
 				["max"] = 15, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7753,7 +7303,6 @@ return {
 				["max"] = 15, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7795,7 +7344,6 @@ return {
 				["max"] = 15, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7805,7 +7353,6 @@ return {
 			}, 
 		}, 
 		["994_FlaskChanceRechargeOnKill"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7815,7 +7362,6 @@ return {
 			}, 
 		}, 
 		["995_FlaskIncreasedChargesAdded"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7825,7 +7371,7 @@ return {
 			}, 
 		}, 
 		["996_FlaskChargesUsed"] = {
-			["inverse"] = true, 
+			["invertOnNegative"] = true, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7835,7 +7381,6 @@ return {
 			}, 
 		}, 
 		["998_FlaskIncreasedMaxCharges"] = {
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7846,7 +7391,7 @@ return {
 		}, 
 	}, 
 	["Implicit"] = {
-		["implicit.stat_1028592286_"] = {
+		["implicit.stat_1028592286"] = {
 			["2HWeapon"] = {
 				["max"] = 30, 
 				["min"] = 20, 
@@ -7855,7 +7400,6 @@ return {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7864,7 +7408,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1039380318_"] = {
+		["implicit.stat_1039380318"] = {
 			["2HWeapon"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -7877,12 +7421,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1050105434_"] = {
+		["implicit.stat_1050105434"] = {
 			["Ring"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7891,12 +7434,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1207554355_"] = {
+		["implicit.stat_1207554355"] = {
 			["Quiver"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7905,7 +7447,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1379411836_"] = {
+		["implicit.stat_1379411836"] = {
 			["Amulet"] = {
 				["max"] = 7, 
 				["min"] = 5, 
@@ -7918,7 +7460,6 @@ return {
 				["max"] = 12, 
 				["min"] = 8, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7927,12 +7468,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1389754388_"] = {
+		["implicit.stat_1389754388"] = {
 			["Belt"] = {
 				["max"] = 20, 
 				["min"] = 15, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7941,7 +7481,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1412682799_"] = {
+		["implicit.stat_1412682799"] = {
 			["Charm"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -7954,12 +7494,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1443060084_"] = {
+		["implicit.stat_1443060084"] = {
 			["Quiver"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7968,7 +7507,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1541903247_"] = {
+		["implicit.stat_1541903247"] = {
 			["2HMace"] = {
 				["max"] = 10, 
 				["min"] = 10, 
@@ -7977,7 +7516,6 @@ return {
 				["max"] = 10, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7986,7 +7524,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1559935218_"] = {
+		["implicit.stat_1559935218"] = {
 			["1HMace"] = {
 				["max"] = 100, 
 				["min"] = 100, 
@@ -7995,7 +7533,6 @@ return {
 				["max"] = 100, 
 				["min"] = 100, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8004,12 +7541,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1570770415_"] = {
+		["implicit.stat_1570770415"] = {
 			["Belt"] = {
 				["max"] = 15, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8018,12 +7554,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1573130764_"] = {
+		["implicit.stat_1573130764"] = {
 			["Quiver"] = {
 				["max"] = 4, 
 				["min"] = 4, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8032,7 +7567,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1671376347_"] = {
+		["implicit.stat_1671376347"] = {
 			["Chest"] = {
 				["max"] = 25, 
 				["min"] = 20, 
@@ -8041,7 +7576,6 @@ return {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8050,7 +7584,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1691862754_"] = {
+		["implicit.stat_1691862754"] = {
 			["Charm"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8063,7 +7597,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1702195217_"] = {
+		["implicit.stat_1702195217"] = {
 			["2HWeapon"] = {
 				["max"] = 15, 
 				["min"] = 10, 
@@ -8072,7 +7606,6 @@ return {
 				["max"] = 15, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8081,12 +7614,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1782086450_"] = {
+		["implicit.stat_1782086450"] = {
 			["Chest"] = {
 				["max"] = 50, 
 				["min"] = 40, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8095,12 +7627,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1803308202_"] = {
+		["implicit.stat_1803308202"] = {
 			["2HWeapon"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8109,7 +7640,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1810482573_"] = {
+		["implicit.stat_1810482573"] = {
 			["Charm"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8122,12 +7653,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1836676211_"] = {
+		["implicit.stat_1836676211"] = {
 			["Belt"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8136,12 +7666,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1978899297_"] = {
+		["implicit.stat_1978899297"] = {
 			["Chest"] = {
 				["max"] = 1, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8150,7 +7679,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_1980802737_"] = {
+		["implicit.stat_1980802737"] = {
 			["2HWeapon"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8163,7 +7692,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_2016937536_"] = {
+		["implicit.stat_2016937536"] = {
 			["Charm"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8176,12 +7705,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_2055966527_"] = {
+		["implicit.stat_2055966527"] = {
 			["Quiver"] = {
 				["max"] = 15, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8190,12 +7718,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_2194114101_"] = {
+		["implicit.stat_2194114101"] = {
 			["Quiver"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8204,12 +7731,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_2222186378_"] = {
+		["implicit.stat_2222186378"] = {
 			["Belt"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8218,12 +7744,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_2250533757_"] = {
+		["implicit.stat_2250533757"] = {
 			["Chest"] = {
 				["max"] = 5, 
 				["min"] = 5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8232,7 +7757,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_2321178454_"] = {
+		["implicit.stat_2321178454"] = {
 			["2HWeapon"] = {
 				["max"] = 30, 
 				["min"] = 20, 
@@ -8241,7 +7766,6 @@ return {
 				["max"] = 100, 
 				["min"] = 100, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8250,7 +7774,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_2694482655_"] = {
+		["implicit.stat_2694482655"] = {
 			["1HMace"] = {
 				["max"] = 40, 
 				["min"] = 30, 
@@ -8259,7 +7783,6 @@ return {
 				["max"] = 40, 
 				["min"] = 30, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8268,12 +7791,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_275498888_"] = {
+		["implicit.stat_275498888"] = {
 			["Ring"] = {
 				["max"] = 50, 
 				["min"] = 50, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8282,7 +7804,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_2778646494_"] = {
+		["implicit.stat_2778646494"] = {
 			["Charm"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8295,12 +7817,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_2797971005_"] = {
+		["implicit.stat_2797971005"] = {
 			["Quiver"] = {
 				["max"] = 3, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8309,12 +7830,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_2891184298_"] = {
+		["implicit.stat_2891184298"] = {
 			["Ring"] = {
 				["max"] = 10, 
 				["min"] = 7, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8323,7 +7843,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_2901986750_"] = {
+		["implicit.stat_2901986750"] = {
 			["Boots"] = {
 				["max"] = 16, 
 				["min"] = 8, 
@@ -8340,7 +7860,6 @@ return {
 				["max"] = 10, 
 				["min"] = 7, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8349,7 +7868,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_2923486259_"] = {
+		["implicit.stat_2923486259"] = {
 			["Chest"] = {
 				["max"] = 13, 
 				["min"] = 7, 
@@ -8362,7 +7881,6 @@ return {
 				["max"] = 19, 
 				["min"] = 11, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8371,7 +7889,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_2994271459_"] = {
+		["implicit.stat_2994271459"] = {
 			["Charm"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8384,7 +7902,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3032590688_"] = {
+		["implicit.stat_3032590688"] = {
 			["Quiver"] = {
 				["max"] = 2, 
 				["min"] = 2, 
@@ -8393,7 +7911,6 @@ return {
 				["max"] = 2.5, 
 				["min"] = 2.5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8402,12 +7919,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3261801346_"] = {
+		["implicit.stat_3261801346"] = {
 			["Amulet"] = {
 				["max"] = 15, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8416,12 +7932,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_328541901_"] = {
+		["implicit.stat_328541901"] = {
 			["Amulet"] = {
 				["max"] = 15, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8430,7 +7945,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3299347043_"] = {
+		["implicit.stat_3299347043"] = {
 			["Amulet"] = {
 				["max"] = 40, 
 				["min"] = 30, 
@@ -8443,7 +7958,6 @@ return {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8452,7 +7966,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3310778564_"] = {
+		["implicit.stat_3310778564"] = {
 			["Charm"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8465,12 +7979,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3325883026_"] = {
+		["implicit.stat_3325883026"] = {
 			["Amulet"] = {
 				["max"] = 4, 
 				["min"] = 2, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8479,12 +7992,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3372524247_"] = {
+		["implicit.stat_3372524247"] = {
 			["Ring"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8493,12 +8005,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3489782002_"] = {
+		["implicit.stat_3489782002"] = {
 			["Amulet"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8507,12 +8018,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3544800472_"] = {
+		["implicit.stat_3544800472"] = {
 			["Chest"] = {
 				["max"] = 40, 
 				["min"] = 30, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8521,12 +8031,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3585532255_"] = {
+		["implicit.stat_3585532255"] = {
 			["Belt"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8535,7 +8044,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3675300253_"] = {
+		["implicit.stat_3675300253"] = {
 			["2HMace"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8552,7 +8061,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3676540188_"] = {
+		["implicit.stat_3676540188"] = {
 			["Charm"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8565,7 +8074,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3699444296_"] = {
+		["implicit.stat_3699444296"] = {
 			["Charm"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8578,7 +8087,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3854901951_"] = {
+		["implicit.stat_3854901951"] = {
 			["Charm"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8591,7 +8100,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3885405204_"] = {
+		["implicit.stat_3885405204"] = {
 			["2HWeapon"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8600,7 +8109,6 @@ return {
 				["max"] = 1, 
 				["min"] = 1, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 				["overrideModLineSingular"] = "Bow Attacks fire an additional Arrow", 
 			}, 
@@ -8610,7 +8118,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3917489142_"] = {
+		["implicit.stat_3917489142"] = {
 			["Amulet"] = {
 				["max"] = 20, 
 				["min"] = 12, 
@@ -8623,7 +8131,6 @@ return {
 				["max"] = 15, 
 				["min"] = 6, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8632,12 +8139,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3954735777_"] = {
+		["implicit.stat_3954735777"] = {
 			["Quiver"] = {
 				["max"] = 15, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8646,7 +8152,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_3981240776_"] = {
+		["implicit.stat_3981240776"] = {
 			["Amulet"] = {
 				["max"] = 15, 
 				["min"] = 10, 
@@ -8655,7 +8161,6 @@ return {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8664,7 +8169,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_4010341289_"] = {
+		["implicit.stat_4010341289"] = {
 			["Charm"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8677,12 +8182,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_4080418644_"] = {
+		["implicit.stat_4080418644"] = {
 			["Amulet"] = {
 				["max"] = 15, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8691,12 +8195,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_4220027924_"] = {
+		["implicit.stat_4220027924"] = {
 			["Ring"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8705,12 +8208,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_462041840_"] = {
+		["implicit.stat_462041840"] = {
 			["Belt"] = {
 				["max"] = 20, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8719,7 +8221,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_548198834_"] = {
+		["implicit.stat_548198834"] = {
 			["2HWeapon"] = {
 				["max"] = 16, 
 				["min"] = 16, 
@@ -8728,7 +8230,6 @@ return {
 				["max"] = 16, 
 				["min"] = 16, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8737,7 +8238,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_585126960_"] = {
+		["implicit.stat_585126960"] = {
 			["Charm"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8750,12 +8251,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_624954515_"] = {
+		["implicit.stat_624954515"] = {
 			["Quiver"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8764,12 +8264,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_644456512_"] = {
+		["implicit.stat_644456512"] = {
 			["Belt"] = {
 				["max"] = 15, 
 				["min"] = 10, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8778,7 +8277,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_680068163_"] = {
+		["implicit.stat_680068163"] = {
 			["Belt"] = {
 				["max"] = 30, 
 				["min"] = 20, 
@@ -8787,7 +8286,6 @@ return {
 				["max"] = 40, 
 				["min"] = 30, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8796,12 +8294,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_681332047_"] = {
+		["implicit.stat_681332047"] = {
 			["Quiver"] = {
 				["max"] = 10, 
 				["min"] = 7, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8810,12 +8307,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_731781020_"] = {
+		["implicit.stat_731781020"] = {
 			["Belt"] = {
 				["max"] = 0.17, 
 				["min"] = 0.17, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8824,7 +8320,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_789117908_"] = {
+		["implicit.stat_789117908"] = {
 			["Amulet"] = {
 				["max"] = 30, 
 				["min"] = 20, 
@@ -8833,7 +8329,6 @@ return {
 				["max"] = 50, 
 				["min"] = 40, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8842,7 +8337,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_791928121_"] = {
+		["implicit.stat_791928121"] = {
 			["2HMace"] = {
 				["max"] = 50, 
 				["min"] = 30, 
@@ -8851,7 +8346,6 @@ return {
 				["max"] = 50, 
 				["min"] = 30, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8860,12 +8354,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_803737631_"] = {
+		["implicit.stat_803737631"] = {
 			["Ring"] = {
 				["max"] = 160, 
 				["min"] = 120, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8874,12 +8367,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_809229260_"] = {
+		["implicit.stat_809229260"] = {
 			["Belt"] = {
 				["max"] = 140, 
 				["min"] = 100, 
 			}, 
-			["sign"] = "+", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8888,12 +8380,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_821241191_"] = {
+		["implicit.stat_821241191"] = {
 			["Belt"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8902,12 +8393,11 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_836936635_"] = {
+		["implicit.stat_836936635"] = {
 			["Chest"] = {
 				["max"] = 2.5, 
 				["min"] = 1.5, 
 			}, 
-			["sign"] = "", 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8916,12 +8406,12 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_924253255_"] = {
+		["implicit.stat_924253255"] = {
 			["Chest"] = {
 				["max"] = -20, 
 				["min"] = -30, 
 			}, 
-			["inverse"] = true, 
+			["invertOnNegative"] = true, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8930,7 +8420,7 @@ return {
 				["type"] = "implicit", 
 			}, 
 		}, 
-		["implicit.stat_958696139_"] = {
+		["implicit.stat_958696139"] = {
 			["Ring"] = {
 				["max"] = 1, 
 				["min"] = 1, 

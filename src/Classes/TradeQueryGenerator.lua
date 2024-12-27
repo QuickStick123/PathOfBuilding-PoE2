@@ -138,20 +138,20 @@ local function canModSpawnForItemCategory(mod, category)
 	return false
 end
 
--- Swaps mod word for the inverse and sign
+-- Swaps mod word for its antonym
 local function swapInverse(modLine)
 	if modLine:match("increased") then
-		modLine = modLine:gsub("([^ ]+) increased", "-%1 reduced")
+		modLine = modLine:gsub("([^ ]+) increased", "%1 reduced")
 	elseif modLine:match("reduced") then
-		modLine = modLine:gsub("([^ ]+) reduced", "-%1 increased")
+		modLine = modLine:gsub("([^ ]+) reduced", "%1 increased")
 	elseif modLine:match("more") then
-		modLine = modLine:gsub("([^ ]+) more", "-%1 less")
+		modLine = modLine:gsub("([^ ]+) more", "%1 less")
 	elseif modLine:match("less") then
-		modLine = modLine:gsub("([^ ]+) less", "-%1 more")
+		modLine = modLine:gsub("([^ ]+) less", "%1 more")
 	elseif modLine:match("expires ([^ ]+) slower") then
-		modLine = modLine:gsub("([^ ]+) slower", "-%1 faster")
+		modLine = modLine:gsub("([^ ]+) slower", "%1 faster")
 	elseif modLine:match("expires ([^ ]+) faster") then
-		modLine = modLine:gsub("([^ ]+) faster", "-%1 slower")
+		modLine = modLine:gsub("([^ ]+) faster", "%1 slower")
 	end
 	return modLine
 end
@@ -183,6 +183,9 @@ function TradeQueryGeneratorClass.WeightedRatioOutputs(baseOutput, newOutput, st
 end
 
 function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCategoriesMask, itemCategoriesOverride)
+	if mod.statOrder == nil then mod.statOrder = { } end
+	if mod.group == nil then mod.group = "" end
+
 	for index, modLine in ipairs(mod) do
 		if modLine:find("Grants Level") or modLine:find("inflict Decay") then -- skip mods that grant skills / decay, as they will often be overwhelmingly powerful but don't actually fit into the build
 			goto nextModLine
@@ -192,7 +195,13 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 
 		-- Special cases
 		local specialCaseData = { }
-		if modLine == "You can apply an additional Curse" then
+		if mod.group and (mod.group:find("Local") or mod.group:find("Shield")) and modLine:gsub("[#()0-9%-%+%.]","") == "% Chance to Block" then
+			specialCaseData.overrideModLine = "+#% Chance to Block"
+			modLine = modLine .. " (Shields)"
+		elseif modType == "Implicit" and modLine:find("Chance to Block Attack Damage while wielding a Staff$") then
+			specialCaseData.overrideModLine = "+#% Chance to Block Attack Damage while wielding a Staff"
+			modLine = modLine .. " (Staves)"
+		elseif modLine == "You can apply an additional Curse" then
 			specialCaseData.overrideModLineSingular = "You can apply an additional Curse"
 			modLine = "You can apply 1 additional Curses"
 		elseif modLine == "Bow Attacks fire an additional Arrow" then
@@ -201,6 +210,12 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 		elseif modLine == "Projectiles Pierce an additional Target" then
 			specialCaseData.overrideModLineSingular = "Projectiles Pierce an additional Target"
 			modLine = "Projectiles Pierce 1 additional Targets"
+		elseif modLine == "Has 1 Abyssal Socket" then
+			specialCaseData.overrideModLineSingular = "Has 1 Abyssal Socket"
+			modLine = "Has 1 Abyssal Sockets"
+		elseif modLine:find("Modifiers allowed") then
+			specialCaseData.overrideModLinePlural = "+# "..modLine:match(" (%a+) Modifiers allowed").." Modifiers allowed"
+			modLine = modLine:gsub("Modifiers", "Modifier")
 		end
 
 		-- If this is the first tier for this mod, find matching trade mod and init the entry
@@ -210,17 +225,17 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 		end
 
 		-- iterate trade mod category to find mod with matching text.
-		local function getTradeMod(line, type)
-			-- try finding string
-			local matchStr = line:gsub("[#()0-9%-%+%.]","")
-			for _, entry in ipairs(tradeQueryStatsParsed.result[tradeStatCategoryIndices[type]].entries) do
+		local function getTradeMod()
+			-- try matching to global mods.
+			local matchStr = modLine:gsub("[#()0-9%-%+%.]","")
+			for _, entry in ipairs(tradeQueryStatsParsed.result[tradeStatCategoryIndices[modType]].entries) do
 				if entry.text:gsub("[#()0-9%-%+%.]","") == matchStr then
 					return entry
 				end
 			end
 			-- check reverse
-			local matchStr = swapInverse(line):gsub("[#()0-9%-%+%.]","")
-			for _, entry in ipairs(tradeQueryStatsParsed.result[tradeStatCategoryIndices[type]].entries) do
+			matchStr = swapInverse(matchStr)
+			for _, entry in ipairs(tradeQueryStatsParsed.result[tradeStatCategoryIndices[modType]].entries) do
 				if entry.text:gsub("[#()0-9%-%+%.]","") == matchStr then
 					return entry, true
 				end
@@ -230,46 +245,52 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 		end
 
 		local tradeMod = nil
-		local inverse
+		local invert
 
-		if mod.statOrder == nil then -- if there isn't a mod order we have to use the trade id instead e.g. implcits.
-			tradeMod, inverse = getTradeMod(modLine, modType)
+		if mod.statOrder[index] == nil then -- if there isn't a mod order we have to use the trade id instead e.g. implcits.
+			tradeMod, invert = getTradeMod()
 			if tradeMod == nil then
 				logToFile("Unable to match %s mod: %s", modType, modLine)
 				goto nextModLine
 			end
-
-			mod.statOrder = { tradeMod.id }
-			mod.group = ""
+			mod.statOrder[index] = tradeMod.id
 		end
 
 		local statOrder = modLine:find("Nearby Enemies have %-") ~= nil and mod.statOrder[index + 1] or mod.statOrder[index] -- hack to get minus res mods associated with the correct statOrder
-		local uniqueIndex = tostring(statOrder).."_"..mod.group
+		local uniqueIndex = mod.group ~= "" and tostring(statOrder).."_"..mod.group or tostring(statOrder)
 
 		if self.modData[modType][uniqueIndex] == nil then
 			if tradeMod == nil then
-				tradeMod, inverse = getTradeMod(modLine, modType)
+				tradeMod, invert = getTradeMod()
 			end
 			if tradeMod == nil then
 				logToFile("Unable to match %s mod: %s", modType, modLine)
 				goto nextModLine
 			end
-			self.modData[modType][uniqueIndex] = { tradeMod = tradeMod, specialCaseData = specialCaseData, inverse = inverse }
-		elseif self.modData[modType][uniqueIndex].inverse then
-			inverse = true
+			self.modData[modType][uniqueIndex] = { tradeMod = tradeMod, specialCaseData = { }, invertOnNegative = invert }
+		elseif self.modData[modType][uniqueIndex].tradeMod.text:gsub("[#()0-9%-%+%.]","") == swapInverse(modLine):gsub("[#()0-9%-%+%.]","") and swapInverse(modLine) ~= modLine then -- if the swaped mod matches the inverse then consider it inverted, provide it changed.
+			invert = true
+		end
+
+		-- this is safe as we go to next line if the mod can't be found.
+		for key, value in pairs(specialCaseData) do
+			self.modData[modType][uniqueIndex].specialCaseData[key] = value
+		end
+
+		if invert then
 			modLine = swapInverse(modLine)
 		end
 
 		-- tokenize the numerical variables for this mod and store the sign if there is one
 		local tokens = { }
-		local poundPos, tokenizeOffset = 0, 0
+		local poundStartPos, poundEndPos, tokenizeOffset = 0, 0, 0
 		while true do
-			poundPos = self.modData[modType][uniqueIndex].tradeMod.text:find("#", poundPos + 1)
-			if poundPos == nil then
+			poundStartPos, poundEndPos = self.modData[modType][uniqueIndex].tradeMod.text:find("[%+%-]?#", poundEndPos + 1)
+			if poundStartPos == nil then
 				break
 			end
 
-			local startPos, endPos, sign, min, max = modLine:find("([%+%-]?)%(?(%d+%.?%d*)%-?(%d*%.?%d*)%)?", poundPos + tokenizeOffset)
+			local startPos, endPos, sign, min, max = modLine:find("([%+%-]?)%(?(%d+%.?%d*)%-?(%d*%.?%d*)%)?", poundStartPos + tokenizeOffset)
 
 			if endPos == nil then
 				logToFile("[GMD] Error extracting tokens from '%s' for tradeMod '%s'", modLine, self.modData[modType][uniqueIndex].tradeMod.text)
@@ -280,26 +301,19 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 
 			tokenizeOffset = tokenizeOffset + (endPos - startPos)
 			
-			if inverse then
-				sign = nil
-				min = -min
-				max = -max
-				if min > max then
-					local temp = max
-					max = min
-					min = temp
-				end
+			-- the values are negative record its ranges as such.
+			if (invert or sign == "-") and not (invert and sign == "-") then
+				local temp = max
+				max = -min
+				min = -temp
 			end
 
 			t_insert(tokens, min)
 			t_insert(tokens, max)
-			if sign ~= nil then
-				self.modData[modType][uniqueIndex].sign = sign
-			end
 		end
 
 		if #tokens ~= 0 and #tokens ~= 2 and #tokens ~= 4 then
-			logToFile("Unexpected # of tokens found for mod: %s", mod[i])
+			logToFile("Unexpected # of tokens found for mod: %s", mod[index])
 			goto nextModLine
 		end
 
@@ -422,23 +436,30 @@ function TradeQueryGeneratorClass:GenerateModWeights(modsToTest)
 			end
 
 			-- Test with a value halfway (or configured default Item Affix Quality) between the min and max available for this mod in this slot. Note that this can generate slightly different values for the same mod as implicit vs explicit.
-			local modValue = math.ceil((entry[self.calcContext.itemCategory].max - entry[self.calcContext.itemCategory].min) * ( main.defaultItemAffixQuality or 0.5 ) + entry[self.calcContext.itemCategory].min)
-			local modValueStr = (entry.sign or "") .. tostring(modValue)
-
+			local tradeModValue = math.ceil((entry[self.calcContext.itemCategory].max - entry[self.calcContext.itemCategory].min) * ( main.defaultItemAffixQuality or 0.5 ) + entry[self.calcContext.itemCategory].min)
+			local modValue = tradeModValue
 			-- Apply override text for special cases
 			local modLine
-			if modValue == 1 and entry.specialCaseData.overrideModLineSingular ~= nil then
+			if (modValue == 1 or modValue == -1) and entry.specialCaseData.overrideModLineSingular ~= nil then
 				modLine = entry.specialCaseData.overrideModLineSingular
+			elseif (modValue ~= 1 and modValue ~= -1) and entry.specialCaseData.overrideModLinePlural ~= nil then
+				modLine = entry.specialCaseData.overrideModLinePlural
 			elseif entry.specialCaseData.overrideModLine ~= nil then
 				modLine = entry.specialCaseData.overrideModLine
 			else
 				modLine = entry.tradeMod.text
 			end
-			modLine = modLine:gsub("#",modValueStr)
 
-			-- swap lines here to avoid leading to modLine's that the Item parser can't handle.
-			if entry.inverse then
+			if entry.invertOnNegative and modValue < 0 then
 				modLine = swapInverse(modLine)
+				modValue = -1 * modValue
+			end
+
+			-- trade mod dictates a plus is used infront of postive values.
+			if modLine:find("+#") and modValue >= 0 then
+				modLine = modLine:gsub("#", modValue)
+			else
+				modLine = modLine:gsub("+?#", modValue)
 			end
 
 			self.calcContext.testItem.explicitModLines[1] = { line = modLine, custom = true }
@@ -451,7 +472,7 @@ function TradeQueryGeneratorClass:GenerateModWeights(modsToTest)
 			local output = self.calcContext.calcFunc({ repSlotName = self.calcContext.slot.slotName, repItem = self.calcContext.testItem })
 			local meanStatDiff = TradeQueryGeneratorClass.WeightedRatioOutputs(self.calcContext.baseOutput, output, self.calcContext.options.statWeights) * 1000 - (self.calcContext.baseStatValue or 0)
 			if meanStatDiff > 0.01 then
-				t_insert(self.modWeights, { tradeModId = entry.tradeMod.id, weight = meanStatDiff / modValue, meanStatDiff = meanStatDiff, invert = entry.sign == "-" and true or false })
+				t_insert(self.modWeights, { tradeModId = entry.tradeMod.id, weight = meanStatDiff / tradeModValue, meanStatDiff = meanStatDiff })
 			end
 			self.alreadyWeightedMods[entry.tradeMod.id] = true
 
