@@ -447,7 +447,6 @@ function TradeQueryRequestsClass:SearchWithURL(url, callback)
 		else
 			json_data.sort = { price = "asc"}
 		end
-		-- json_data.query.status = { option = json_data.query.status} -- works either way?
 		query = dkjson.encode(json_data)
 
 		self:SearchWithQuery(realm, league, query, callback)

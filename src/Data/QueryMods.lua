@@ -2168,7 +2168,7 @@ return {
 				["max"] = 79, 
 				["min"] = 15, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 79, 
 				["min"] = 15, 
 			}, 
@@ -2210,7 +2210,7 @@ return {
 				["max"] = 179, 
 				["min"] = 40, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 179, 
 				["min"] = 40, 
 			}, 
@@ -2266,7 +2266,7 @@ return {
 				["max"] = 52.5, 
 				["min"] = 2.5, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 74.5, 
 				["min"] = 3.5, 
 			}, 
@@ -2312,7 +2312,7 @@ return {
 				["max"] = 98.5, 
 				["min"] = 3, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 140.5, 
 				["min"] = 3.5, 
 			}, 
@@ -2354,7 +2354,7 @@ return {
 				["max"] = 79, 
 				["min"] = 2, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 112, 
 				["min"] = 3, 
 			}, 
@@ -2396,7 +2396,7 @@ return {
 				["max"] = 99, 
 				["min"] = 4, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 140.5, 
 				["min"] = 5, 
 			}, 
@@ -2444,7 +2444,7 @@ return {
 				["max"] = 550, 
 				["min"] = 11, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 550, 
 				["min"] = 11, 
 			}, 
@@ -2486,7 +2486,7 @@ return {
 				["max"] = 200, 
 				["min"] = 16, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 200, 
 				["min"] = 16, 
 			}, 
@@ -2528,7 +2528,7 @@ return {
 				["max"] = 60, 
 				["min"] = 10, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 60, 
 				["min"] = 10, 
 			}, 
@@ -4290,7 +4290,7 @@ return {
 				["max"] = 100, 
 				["min"] = 19, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 139, 
 				["min"] = 34, 
 			}, 
@@ -5597,7 +5597,7 @@ return {
 				["max"] = 5, 
 				["min"] = 1.01, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 5, 
 				["min"] = 1.01, 
 			}, 
@@ -5639,7 +5639,7 @@ return {
 				["max"] = 39, 
 				["min"] = 10, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 39, 
 				["min"] = 10, 
 			}, 
@@ -5681,7 +5681,7 @@ return {
 				["max"] = 28, 
 				["min"] = 5, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 28, 
 				["min"] = 5, 
 			}, 
@@ -5740,6 +5740,10 @@ return {
 				["min"] = -35, 
 			}, 
 			["Helmet"] = {
+				["max"] = -15, 
+				["min"] = -35, 
+			}, 
+			["Quarterstaff"] = {
 				["max"] = -15, 
 				["min"] = -35, 
 			}, 
@@ -6007,7 +6011,7 @@ return {
 				["max"] = 7, 
 				["min"] = 1, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 7, 
 				["min"] = 1, 
 			}, 
@@ -6465,15 +6469,15 @@ return {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
+			["Quarterstaff"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
 			["Quiver"] = {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
 			["Ring"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
-			["Staff"] = {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
@@ -6513,6 +6517,10 @@ return {
 			}, 
 			["Helmet"] = {
 				["max"] = 36, 
+				["min"] = 5, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 33, 
 				["min"] = 5, 
 			}, 
 			["Ring"] = {
@@ -6895,7 +6903,7 @@ return {
 				["max"] = 9.9, 
 				["min"] = 5, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 9.9, 
 				["min"] = 5, 
 			}, 
@@ -6951,7 +6959,7 @@ return {
 				["max"] = 5, 
 				["min"] = 2, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 5, 
 				["min"] = 2, 
 			}, 
@@ -6994,6 +7002,10 @@ return {
 				["min"] = 4, 
 			}, 
 			["Gloves"] = {
+				["max"] = 84, 
+				["min"] = 4, 
+			}, 
+			["Quarterstaff"] = {
 				["max"] = 84, 
 				["min"] = 4, 
 			}, 
@@ -7141,7 +7153,7 @@ return {
 				["max"] = 8.9, 
 				["min"] = 4, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 8.9, 
 				["min"] = 4, 
 			}, 
@@ -7202,6 +7214,10 @@ return {
 				["min"] = 2, 
 			}, 
 			["Gloves"] = {
+				["max"] = 45, 
+				["min"] = 2, 
+			}, 
+			["Quarterstaff"] = {
 				["max"] = 45, 
 				["min"] = 2, 
 			}, 
@@ -7279,7 +7295,7 @@ return {
 				["max"] = 80, 
 				["min"] = 21, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 80, 
 				["min"] = 21, 
 			}, 
@@ -7321,7 +7337,7 @@ return {
 				["max"] = 30, 
 				["min"] = 11, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 30, 
 				["min"] = 11, 
 			}, 
@@ -7771,7 +7787,7 @@ return {
 				["max"] = 15, 
 				["min"] = 5, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 15, 
 				["min"] = 5, 
 			}, 
@@ -7831,6 +7847,10 @@ return {
 	}, 
 	["Implicit"] = {
 		["implicit.stat_1028592286_"] = {
+			["2HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
 			["Bow"] = {
 				["max"] = 30, 
 				["min"] = 20, 
@@ -8048,7 +8068,7 @@ return {
 				["max"] = 15, 
 				["min"] = 10, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 15, 
 				["min"] = 10, 
 			}, 
@@ -8572,6 +8592,10 @@ return {
 			}, 
 		}, 
 		["implicit.stat_3885405204_"] = {
+			["2HWeapon"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
 			["Bow"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8700,7 +8724,7 @@ return {
 				["max"] = 16, 
 				["min"] = 16, 
 			}, 
-			["Staff"] = {
+			["Quarterstaff"] = {
 				["max"] = 16, 
 				["min"] = 16, 
 			}, 

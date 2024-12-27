@@ -22,7 +22,7 @@ local tradeCategoryTags = {
 	["Quiver"] = { ["quiver"] = true },
 	["Shield"] = { ["shield"] = true, ["focus"] = true, ["energy_shield"] = true, ["dex_shield"] = true, ["str_shield"] = true, ["str_int_shield"] = true, ["dex_int_shield"] = true, ["str_dex_shield"] = true, ["focus_can_roll_minion_modifiers"] = true },
 	["1HWeapon"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["mace"] = true, ["sceptre"] = true, ["wand"] = true, ["weapon_can_roll_minion_modifiers"] = true },
-	["2HWeapon"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["staff"] = true, ["attack_staff"] = true, ["warstaff"] = true, ["bow"] = true, ["mace"] = true, ["crossbow"] = true },
+	["2HWeapon"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["staff"] = true, ["warstaff"] = true, ["bow"] = true, ["mace"] = true, ["crossbow"] = true },
 	-- ["1HAxe"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["axe"] = true},
 	-- ["1HSword"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["sword"] = true, ["rapier"] = true },
 	["1HMace"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["mace"] = true },
@@ -30,7 +30,8 @@ local tradeCategoryTags = {
 	-- ["Dagger"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["attack_dagger"] = true, ["dagger"] = true, ["rune_dagger"] = true },
 	["Wand"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["wand"] = true, ["weapon_can_roll_minion_modifiers"] = true },
 	["Claw"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["claw"] = true },
-	["Staff"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["staff"] = true, ["attack_staff"] = true, ["warstaff"] = true },
+	["Staff"] = { ["twohand"] = true, ["staff"] = true, },
+	["Quarterstaff"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["warstaff"] = true  },
 	["Bow"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["bow"] = true },
 	-- ["2HAxe"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["axe"] = true },
 	-- ["2HSword"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["sword"] = true },
@@ -51,6 +52,7 @@ local tradeCategoryTags = {
 
 }
 
+-- string are an any type while tables require all fields to be matched with type and subType require both to be matched exactly. [1] type, [2] subType, subType is optional and must be nil if not present.
 local tradeCategoryNames = {
 	["Ring"] = { "Ring" },
 	["Amulet"] = { "Amulet" },
@@ -63,14 +65,16 @@ local tradeCategoryNames = {
 	["Shield"] = { "Shield" },
 	["Focus"] = { "Focus" },
 	["1HWeapon"] = { "One Handed Mace", "Wand", "Sceptre" },
-	["2HWeapon"] = { "Staff", { "Staff", "Warstaff" }, "Two Handed Mace", "Crossbow" },
+	["2HWeapon"] = { { "Staff" }, { "Staff", "Warstaff" }, "Two Handed Mace", "Crossbow", "Bow" },
 	-- ["1HAxe"] = { "One Handed Axe" },
 	-- ["1HSword"] = { "One Handed Sword", "Thrusting One Handed Sword" },
-	["1HMace"] = { "One Handed Mace", "Sceptre" },
+	["1HMace"] = { "One Handed Mace" },
+	["Sceptre"] = { "Sceptre" },
 	-- ["Dagger"] = { "Dagger" },
 	["Wand"] = { "Wand" },
 	-- ["Claw"] = { "Claw" },
-	["Staff"] = { "Staff", { "Staff", "Warstaff" } },
+	["Staff"] = { { "Staff" } },
+	["Quarterstaff"] = { { "Staff", "Warstaff" } },
 	["Bow"] = { "Bow" },
 	-- ["2HAxe"] = { "Two Handed Axe" },
 	-- ["2HSword"] = { "Two Handed Sword" },
@@ -79,7 +83,7 @@ local tradeCategoryNames = {
 	["RadiusJewel"] = { { "Jewel", "Radius"} },
 	["BaseJewel"] = { "Jewel" },
 	["AnyJewel"] = { "Jewel", { "Jewel", "Radius"} },
-	["Flask"] = { { "Flask", "Life" }, { "Flask", "Mana" } },
+	["Flask"] = { "Flask" },
 	["Charm"] = { "Charm" },
 	-- not in the game yet.
 	-- ["TrapTool"] = { "TrapTool"}, Unsure if correct
@@ -418,7 +422,7 @@ function TradeQueryGeneratorClass:GenerateModWeights(modsToTest)
 
 			-- Test with a value halfway (or configured default Item Affix Quality) between the min and max available for this mod in this slot. Note that this can generate slightly different values for the same mod as implicit vs explicit.
 			local modValue = math.ceil((entry[self.calcContext.itemCategory].max - entry[self.calcContext.itemCategory].min) * ( main.defaultItemAffixQuality or 0.5 ) + entry[self.calcContext.itemCategory].min)
-			local modValueStr = (entry.sign and entry.sign or "") .. tostring(modValue)
+			local modValueStr = (entry.sign or "") .. tostring(modValue)
 
 			-- Apply override text for special cases
 			local modLine
@@ -540,6 +544,9 @@ function TradeQueryGeneratorClass:StartQuery(slot, options)
 			elseif existingItem.type == "Crossbow" then
 				itemCategoryQueryStr = "weapon.crossbow"
 				itemCategory = "Crossbow"
+			elseif existingItem.type == "Staff" and existingItem.subType == "Warstaff" then
+				itemCategoryQueryStr = "weapon.warstaff"
+				itemCategory = "Quarterstaff"
 			elseif existingItem.type == "Staff" then
 				itemCategoryQueryStr = "weapon.staff"
 				itemCategory = "Staff"
