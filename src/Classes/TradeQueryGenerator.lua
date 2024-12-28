@@ -39,12 +39,13 @@ local tradeCategoryTags = {
 	-- ["FishingRod"] = { ["fishing_rod"] = true },
 	["Focus"] =  { ["focus"] = true },
 	["Crossbow"] = { ["crossbow"] = true},
-	-- missing weights
-	["AnyJewel"] = nil,
-	["BaseJewel"] = nil,
-	["RadiusJewel"] = nil,
-	["Flask"] = nil,
-	["Charm"] = nil,
+	["AnyJewel"] = { ["jewel"] = true, ["strjewel"] = true, ["dexjewel"] = true, ["intjewel"] = true },
+	["BaseJewel"] = { ["jewel"] = true, ["strjewel"] = true, ["dexjewel"] = true, ["intjewel"] = true },
+	["LifeFlask"] = { ["flask"] = true, ["life_flask"] = true },
+	["ManaFlask"] = { ["flask"] = true, ["mana_flask"] = true },
+	["Charm"] = { ["flask"] = true, ["utility_flask"] = true },
+	-- doesn't have trade mod and incorrect mod formatting
+	-- ["RadiusJewel"] = { ["jewel"] = true, ["radius_jewel"] = true, ["str_radius_jewel"] = true, ["dex_radius_jewel"] = true, ["int_radius_jewel"] = true },
 	-- not in the game yet.
 	-- ["TrapTool"] = { ["trap"] = true},
 	-- ["Flail"] = { ["flail"] = true},
@@ -80,11 +81,13 @@ local tradeCategoryNames = {
 	-- ["2HSword"] = { "Two Handed Sword" },
 	["2HMace"] = { "Two Handed Mace" },
 	-- ["FishingRod"] = { "Fishing Rod" },
-	["RadiusJewel"] = { { "Jewel", "Radius"} },
-	["BaseJewel"] = { "Jewel" },
-	["AnyJewel"] = { "Jewel", { "Jewel", "Radius"} },
-	["Flask"] = { "Flask" },
+	["BaseJewel"] = { { "Jewel" } },
+	["AnyJewel"] = { { "Jewel" } },
+	["LifeFlask"] = { { "Flask", "Life"} },
+	["ManaFlask"] = { { "Flask", "Mana"} },
 	["Charm"] = { "Charm" },
+	-- doesn't have trade mods
+	-- ["RadiusJewel"] = { { "Jewel", "Radius"} },
 	-- not in the game yet.
 	-- ["TrapTool"] = { "TrapTool"}, Unsure if correct
 	-- ["Flail"] = { "Flail" },
@@ -383,8 +386,9 @@ function TradeQueryGeneratorClass:InitMods()
 	end
 
 	self:GenerateModData(data.itemMods.Item, tradeQueryStatsParsed, regularItemMask)
-	self:GenerateModData(data.itemMods.Jewel, tradeQueryStatsParsed, { ["BaseJewel"] = true, ["RadiusJewel"] = true, ["AnyJewel"] = true })
-	self:GenerateModData(data.itemMods.Flask, tradeQueryStatsParsed, { ["Flask"] = true, ["Charm"] = true })
+	self:GenerateModData(data.itemMods.Jewel, tradeQueryStatsParsed, { ["BaseJewel"] = true, ["AnyJewel"] = true })
+	self:GenerateModData(data.itemMods.Flask, tradeQueryStatsParsed, { ["LifeFlask"] = true, ["ManaFlask"] = true })
+	self:GenerateModData(data.itemMods.Charm, tradeQueryStatsParsed, { ["Charm"] = true })
 
 	-- megalomaniac tbd
 	-- local clusterNotableMods = {}
@@ -664,9 +668,15 @@ function TradeQueryGeneratorClass:StartQuery(slot, options)
 		-- elseif itemCategory == "BaseJewel" then
 		-- 	itemCategoryQueryStr = "jewel.base"
 		-- end
-	elseif slot.slotName:find("Flask") ~= nil then
-		itemCategoryQueryStr = "flask"
-		itemCategory = "Flask"
+	elseif slot.slotName:find("Flask 1") ~= nil then
+		itemCategoryQueryStr = "flask.life"
+		itemCategory = "Life Flask"
+	elseif slot.slotName:find("Flask 2") ~= nil then
+		itemCategoryQueryStr = "flask.mana"
+		itemCategory = "Mana Flask"
+	elseif slot.slotName:find("Charm") ~= nil then
+		itemCategoryQueryStr = "flask" -- these don't have a unqiue string so overlapping mods of the same benefit could interfere. 
+		itemCategory = "Charm"
 	else
 		logToFile("'%s' is not supported for weighted trade query generation", existingItem and existingItem.type or "n/a")
 		return
