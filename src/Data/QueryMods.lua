@@ -1046,15 +1046,6 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["1227_ChaosDamage"] = {
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "explicit.stat_674553446", 
-				["text"] = "Adds # to # Chaos Damage to Attacks", 
-				["type"] = "explicit", 
-			}, 
-		}, 
 		["1258_StaffAttackSpeedForJewel"] = {
 			["AnyJewel"] = {
 				["max"] = 4, 
@@ -1540,15 +1531,6 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["2266_CurseEffectiveness"] = {
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "explicit.stat_2353576063", 
-				["text"] = "#% increased Effect of your Curses", 
-				["type"] = "explicit", 
-			}, 
-		}, 
 		["2266_CurseEffectivenessForJewel"] = {
 			["AnyJewel"] = {
 				["max"] = 5, 
@@ -1836,15 +1818,6 @@ return {
 			["tradeMod"] = {
 				["id"] = "explicit.stat_4159248054", 
 				["text"] = "#% increased Warcry Cooldown Recovery Rate", 
-				["type"] = "explicit", 
-			}, 
-		}, 
-		["2992_CannotBePoisoned"] = {
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "explicit.stat_3835551335", 
-				["text"] = "Cannot be Poisoned", 
 				["type"] = "explicit", 
 			}, 
 		}, 
