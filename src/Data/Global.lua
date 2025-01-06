@@ -96,29 +96,66 @@ end
 -- NOTE: the LuaJIT bitwise operations we have are not 64-bit
 -- so we need to implement them ourselves
 function OR64(a, b)
-	return bitoper(a, b, 1)
+    -- Split into high and low 32-bit parts
+    local ah = math.floor(a / 0x100000000)
+    local al = a % 0x100000000
+    local bh = math.floor(b / 0x100000000)
+    local bl = b % 0x100000000
+    
+    -- Perform OR operation on both parts
+    local high = bit.bor(ah, bh)
+    local low = bit.bor(al, bl)
+    
+    -- Combine the results
+    return high * 0x100000000 + low
 end
 
 function AND64(a, b)
-	return bitoper(a, b, 4)
+	-- Split into high and low 32-bit parts
+	local ah = math.floor(a / 0x100000000)
+	local al = a % 0x100000000
+	local bh = math.floor(b / 0x100000000)
+	local bl = b % 0x100000000
+	
+	-- Perform AND operation on both parts
+	local high = bit.band(ah, bh)
+	local low = bit.band(al, bl)
+	
+	-- Combine the results
+	return high * 0x100000000 + low
 end
 
 function XOR64(a, b)
-	return bitoper(a, b, 3)
+    -- Split into high and low 32-bit parts
+    local ah = math.floor(a / 0x100000000)
+    local al = a % 0x100000000
+    local bh = math.floor(b / 0x100000000)
+    local bl = b % 0x100000000
+    
+    -- Perform XOR operation on both parts
+    local high = bit.bxor(ah, bh)
+    local low = bit.bxor(al, bl)
+    
+    -- Combine the results
+    return high * 0x100000000 + low
 end
 
 function NOT64(a)
-    return XOR64(a, 0xFFFFFFFFFFFFFFFF)
+	-- Split into high and low 32-bit parts
+	local ah = math.floor(a / 0x100000000)
+	local al = a % 0x100000000
+	
+	-- Perform NOT operation on both parts
+	local high = bit.bnot(ah)
+	local low = bit.bnot(al)
+	
+	-- Since bit.bnot returns signed 32-bit integers, we need to handle negative numbers
+	if high < 0 then high = high + 0x100000000 end
+	if low < 0 then low = low + 0x100000000 end
+	
+	-- Combine the results
+	return high * 0x100000000 + low
 end
-
-function bitoper(a, b, oper)
-	local r, m, s = 0, 2^63
-	repeat
-	   s,a,b = a+b+m, a%m, b%m
-	   r,m = r + m*oper%(s-a-b), m/2
-	until m < 1
-	return r
- end
 
 ModFlag = { }
 -- Damage modes
