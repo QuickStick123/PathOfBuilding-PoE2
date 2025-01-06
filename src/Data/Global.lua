@@ -93,39 +93,68 @@ function hexToRGB(hex)
 	return {r, g, b}
 end
 
+-- NOTE: the LuaJIT bitwise operations we have are not 64-bit
+-- so we need to implement them ourselves
+function OR64(a, b)
+	return bitoper(a, b, 1)
+end
+
+function AND64(a, b)
+	return bitoper(a, b, 4)
+end
+
+function XOR64(a, b)
+	return bitoper(a, b, 3)
+end
+
+function NOT64(a)
+    return XOR64(a, 0xFFFFFFFFFFFFFFFF)
+end
+
+function bitoper(a, b, oper)
+	local r, m, s = 0, 2^63
+	repeat
+	   s,a,b = a+b+m, a%m, b%m
+	   r,m = r + m*oper%(s-a-b), m/2
+	until m < 1
+	return r
+ end
+
 ModFlag = { }
 -- Damage modes
-ModFlag.Attack =	 0x00000001
-ModFlag.Spell =		 0x00000002
-ModFlag.Hit =		 0x00000004
-ModFlag.Dot =		 0x00000008
-ModFlag.Cast =		 0x00000010
+ModFlag.Attack =	 0x0000000000000001
+ModFlag.Spell =		 0x0000000000000002
+ModFlag.Hit =		 0x0000000000000004
+ModFlag.Dot =		 0x0000000000000008
+ModFlag.Cast =		 0x0000000000000010
 -- Damage sources
-ModFlag.Melee =		 0x00000100
-ModFlag.Area =		 0x00000200
-ModFlag.Projectile = 0x00000400
-ModFlag.SourceMask = 0x00000600
-ModFlag.Ailment =	 0x00000800
-ModFlag.MeleeHit =	 0x00001000
-ModFlag.Weapon =	 0x00002000
+ModFlag.Melee =		 0x0000000000000100
+ModFlag.Area =		 0x0000000000000200
+ModFlag.Projectile = 0x0000000000000400
+ModFlag.SourceMask = 0x0000000000000600
+ModFlag.Ailment =	 0x0000000000000800
+ModFlag.MeleeHit =	 0x0000000000001000
+ModFlag.Weapon =	 0x0000000000002000
 -- Weapon types
-ModFlag.Axe =		 0x00010000
-ModFlag.Bow =		 0x00020000
-ModFlag.Claw =		 0x00040000
-ModFlag.Dagger =	 0x00080000
-ModFlag.Mace =		 0x00100000
-ModFlag.Staff =		 0x00200000
-ModFlag.Sword =		 0x00400000
-ModFlag.Wand =		 0x00800000
-ModFlag.Unarmed =	 0x01000000
-ModFlag.Fishing =	 0x02000000
-ModFlag.Crossbow =	 0x40000000
+ModFlag.Axe =		 0x0000000000010000
+ModFlag.Bow =		 0x0000000000020000
+ModFlag.Claw =		 0x0000000000040000
+ModFlag.Dagger =	 0x0000000000080000
+ModFlag.Mace =		 0x0000000000100000
+ModFlag.Staff =		 0x0000000000200000
+ModFlag.Sword =		 0x0000000000400000
+ModFlag.Wand =		 0x0000000000800000
+ModFlag.Unarmed =	 0x0000000001000000
+ModFlag.Fishing =	 0x0000000002000000
+ModFlag.Crossbow =	 0x0000000004000000
+ModFlag.Flail =		 0x0000000008000000
+ModFlag.Spear =		 0x0000000010000000
 -- Weapon classes
-ModFlag.WeaponMelee =0x04000000
-ModFlag.WeaponRanged=0x08000000
-ModFlag.Weapon1H =	 0x10000000
-ModFlag.Weapon2H =	 0x20000000
-ModFlag.WeaponMask = 0x7FFF0000
+ModFlag.WeaponMelee =0x0000000100000000
+ModFlag.WeaponRanged=0x0000000200000000
+ModFlag.Weapon1H =	 0x0000000400000000
+ModFlag.Weapon2H =	 0x0000000800000000
+ModFlag.WeaponMask = 0x0000000F1FFF0000
 
 KeywordFlag = { }
 -- Skill keywords

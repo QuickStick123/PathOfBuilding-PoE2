@@ -6,9 +6,9 @@
 local pairs = pairs
 local ipairs = ipairs
 local t_insert = table.insert
-local band = bit.band
-local bor = bit.bor
-local bnot = bit.bnot
+local band = AND64 --bit.band
+local bor = OR64 --bit.bor
+local bnot = NOT64 --bit.bnot
 local m_huge = math.huge
 local function firstToUpper(str)
 	return (str:gsub("^%l", string.upper))
@@ -859,6 +859,12 @@ local modFlagList = {
 	["with swords"] = { flags = bor(ModFlag.Sword, ModFlag.Hit) },
 	["to sword attacks"] = { flags = bor(ModFlag.Sword, ModFlag.Hit) },
 	["with sword attacks"] = { flags = bor(ModFlag.Sword, ModFlag.Hit) },
+	["with flails"] = { flags = bor(ModFlag.Flail, ModFlag.Hit) },
+	["to flail attacks"] = { flags = bor(ModFlag.Flail, ModFlag.Hit) },
+	["with flail attacks"] = { flags = bor(ModFlag.Flail, ModFlag.Hit) },
+	["with spears"] = { flags = bor(ModFlag.Spear, ModFlag.Hit) },
+	["to spear attacks"] = { flags = bor(ModFlag.Spear, ModFlag.Hit) },
+	["with spear attacks"] = { flags = bor(ModFlag.Spear, ModFlag.Hit) },
 	["with wands"] = { flags = bor(ModFlag.Wand, ModFlag.Hit) },
 	["to wand attacks"] = { flags = bor(ModFlag.Wand, ModFlag.Hit) },
 	["with wand attacks"] = { flags = bor(ModFlag.Wand, ModFlag.Hit) },
