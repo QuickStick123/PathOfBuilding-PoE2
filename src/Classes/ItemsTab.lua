@@ -2471,12 +2471,7 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 	else
 		tooltip:AddLine(20, rarityCode..item.namePrefix..item.baseName:gsub(" %(.+%)","")..item.nameSuffix)
 	end
-	if item.charmLimit then
-		tooltip:AddLine(16, s_format("^x7F7F7FCharm Slots: %d", item.charmLimit))
-	end
-	if item.spiritValue then
-		tooltip:AddLine(16, s_format("^x7F7F7FSpirit: %d", item.spiritValue))
-	end
+
 	tooltip:AddSeparator(10)
 
 	-- Special fields for database items
@@ -2508,13 +2503,22 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 	local base = item.base
 	local slotNum = slot and slot.slotNum or (IsKeyDown("SHIFT") and 2 or 1)
 	local modList = item.modList or item.slotModList[slotNum]
+
+	tooltip:AddLine(16, s_format("^x7F7F7F%s", base.weapon and self.build.data.weaponTypeInfo[base.type].label or base.type))
+	if item.quality and item.quality > 0 then
+		tooltip:AddLine(16, s_format("^x7F7F7FQuality: "..colorCodes.MAGIC.."+%d%%", item.quality))
+	end
+
+	if item.charmLimit then
+		tooltip:AddLine(16, s_format("^x7F7F7FCharm Slots: "..main:StatColor(item.charmLimit, base.charmLimit).."%d", item.charmLimit))
+	end
+	if item.spiritValue then
+		tooltip:AddLine(16, s_format("^x7F7F7FSpirit: "..main:StatColor(item.spiritValue, base.spirit).."%d", item.spiritValue))
+	end
+
 	if base.weapon then
 		-- Weapon-specific info
 		local weaponData = item.weaponData[slotNum]
-		tooltip:AddLine(16, s_format("^x7F7F7F%s", self.build.data.weaponTypeInfo[base.type].label or base.type))
-		if item.quality > 0 then
-			tooltip:AddLine(16, s_format("^x7F7F7FQuality: "..colorCodes.MAGIC.."+%d%%", item.quality))
-		end
 		local totalDamageTypes = 0
 		if weaponData.PhysicalDPS then
 			tooltip:AddLine(16, s_format("^x7F7F7FPhysical Damage: "..colorCodes.MAGIC.."%d-%d (%.1f DPS)", weaponData.PhysicalMin, weaponData.PhysicalMax, weaponData.PhysicalDPS))
@@ -2547,9 +2551,6 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 	elseif base.armour then
 		-- Armour-specific info
 		local armourData = item.armourData
-		if item.quality > 0 then
-			tooltip:AddLine(16, s_format("^x7F7F7FQuality: "..colorCodes.MAGIC.."+%d%%", item.quality))
-		end
 		if base.armour.BlockChance and armourData.BlockChance > 0 then
 			tooltip:AddLine(16, s_format("^x7F7F7FChance to Block: %s%d%%", main:StatColor(armourData.BlockChance, base.armour.BlockChance), armourData.BlockChance))
 		end
@@ -2568,9 +2569,6 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 	elseif base.flask then
 		-- Flask-specific info
 		local flaskData = item.flaskData
-		if item.quality > 0 then
-			tooltip:AddLine(16, s_format("^x7F7F7FQuality: "..colorCodes.MAGIC.."+%d%%", item.quality))
-		end
 		if flaskData.lifeTotal then
 			if flaskData.lifeGradual ~= 0 then
 				tooltip:AddLine(16, s_format("^x7F7F7FRecovers %s%d ^x7F7F7FLife over %s%.1f0 ^x7F7F7FSeconds",

@@ -5,6 +5,7 @@ local itemBases = ...
 
 itemBases["Clay Trap"] = {
 	type = "TrapTool",
+	quality = 20,
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -12,6 +13,7 @@ itemBases["Clay Trap"] = {
 }
 itemBases["Clamping Trap"] = {
 	type = "TrapTool",
+	quality = 20,
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -19,6 +21,7 @@ itemBases["Clamping Trap"] = {
 }
 itemBases["Shrapnel Trap"] = {
 	type = "TrapTool",
+	quality = 20,
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -26,6 +29,7 @@ itemBases["Shrapnel Trap"] = {
 }
 itemBases["Urn Trap"] = {
 	type = "TrapTool",
+	quality = 20,
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -33,6 +37,7 @@ itemBases["Urn Trap"] = {
 }
 itemBases["Incense Trap"] = {
 	type = "TrapTool",
+	quality = 20,
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	implicit = "(20-30)% increased Cooldown Recovery Rate for throwing Traps",
@@ -41,6 +46,7 @@ itemBases["Incense Trap"] = {
 }
 itemBases["Bladed Trap"] = {
 	type = "TrapTool",
+	quality = 20,
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -48,6 +54,7 @@ itemBases["Bladed Trap"] = {
 }
 itemBases["Dart Trap"] = {
 	type = "TrapTool",
+	quality = 20,
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -55,6 +62,7 @@ itemBases["Dart Trap"] = {
 }
 itemBases["Spike Trap"] = {
 	type = "TrapTool",
+	quality = 20,
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -62,6 +70,7 @@ itemBases["Spike Trap"] = {
 }
 itemBases["Coiled Trap"] = {
 	type = "TrapTool",
+	quality = 20,
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -69,6 +78,7 @@ itemBases["Coiled Trap"] = {
 }
 itemBases["Lead Trap"] = {
 	type = "TrapTool",
+	quality = 20,
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -76,6 +86,7 @@ itemBases["Lead Trap"] = {
 }
 itemBases["Medallion Trap"] = {
 	type = "TrapTool",
+	quality = 20,
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -83,6 +94,7 @@ itemBases["Medallion Trap"] = {
 }
 itemBases["Intricate Trap"] = {
 	type = "TrapTool",
+	quality = 20,
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -90,6 +102,7 @@ itemBases["Intricate Trap"] = {
 }
 itemBases["Refined Trap"] = {
 	type = "TrapTool",
+	quality = 20,
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
