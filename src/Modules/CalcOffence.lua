@@ -549,12 +549,6 @@ function calcs.offence(env, actor, activeSkill)
 	end
 	local weapon1info = env.data.weaponTypeInfo[actor.weaponData1.type]
 	local weapon2info = env.data.weaponTypeInfo[actor.weaponData2.type]
-	if actor.weaponData1.type == "Staff" and actor.weaponData1.subType == "Warstaff" then
-		weapon1info = env.data.weaponTypeInfo["Quarterstaff"]
-	end
-	if actor.weaponData2.type == "Staff" and actor.weaponData2.subType == "Warstaff" then
-		weapon2info = env.data.weaponTypeInfo["Quarterstaff"]
-	end
 	-- -- account for Spellblade
 	-- Note: we check conditions of Main Hand weapon using actor.itemList as actor.weaponData1 is populated with unarmed values when no weapon slotted.
 	local spellbladeMulti = skillModList:Max(skillCfg, "OneHandWeaponDamageAppliesToSpells")

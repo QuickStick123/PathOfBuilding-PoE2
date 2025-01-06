@@ -429,7 +429,6 @@ data.weaponTypeInfo = {
 	["Dagger"] = { oneHand = true, melee = true, flag = "Dagger" },
 	["Spear"] = { oneHand = true, melee = true, flag = "Spear" },
 	["Staff"] = { oneHand = false, melee = false, flag = "Staff" },
-	["Quarterstaff"] = { oneHand = false, melee = true, flag = "Quarterstaff" },
 	["Wand"] = { oneHand = true, melee = false, flag = "Wand" },
 	["One Handed Axe"] = { oneHand = true, melee = true, flag = "Axe" },
 	["One Handed Mace"] = { oneHand = true, melee = true, flag = "Mace" },

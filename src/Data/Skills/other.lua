@@ -1597,7 +1597,7 @@ skills["MeleeQuarterstaffPlayer"] = {
 	description = "Strike with your Quarterstaff.",
 	skillTypes = { [SkillType.Attack] = true, [SkillType.MeleeSingleTarget] = true, [SkillType.Multistrikeable] = true, [SkillType.Melee] = true, [SkillType.Area] = true, [SkillType.QuarterstaffSkill] = true, },
 	weaponTypes = {
-		["Quarterstaff"] = true,
+		["Staff"] = true,
 	},
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 1,

@@ -97,8 +97,8 @@ local function doActorAttribsConditions(env, actor)
 		end
 	else
 		local info = env.data.weaponTypeInfo[actor.weaponData1.type]
-		if actor.weaponData1.type == "Staff" and actor.weaponData1.subType == "Warstaff" then
-			info = env.data.weaponTypeInfo["Quarterstaff"]
+		if actor.weaponData1.type == "Staff" and actor.weaponData1.name:match("Warstaff") then
+			info.melee = true
 		end
 		condList["Using"..info.flag] = true
 		if actor.weaponData1.countsAsAll1H then
@@ -134,9 +134,6 @@ local function doActorAttribsConditions(env, actor)
 	end
 	if actor.weaponData2.type then
 		local info = env.data.weaponTypeInfo[actor.weaponData2.type]
-		if actor.weaponData2.type == "Staff" and actor.weaponData2.subType == "Warstaff" then
-			info = env.data.weaponTypeInfo["Quarterstaff"]
-		end
 		condList["Using"..info.flag] = true
 		if actor.weaponData2.countsAsAll1H then
 			actor.weaponData2["AddedUsingAxe"] = not condList["UsingAxe"]

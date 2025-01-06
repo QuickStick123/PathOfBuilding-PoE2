@@ -179,19 +179,12 @@ end
 
 -- Get weapon flags and info for given weapon
 local function getWeaponFlags(env, weaponData, weaponTypes)
-	if weaponData then
-		print("WeaponDataType: " .. tostring(weaponData.type))
-	else
-		print("No weaponData")
-	end
 	local info = env.data.weaponTypeInfo[weaponData.type]
-	if weaponData.type == "Staff" and weaponData.subType == "Warstaff" then
-		print("CHANGED TO QUARTERSTAFF")
-		info = env.data.weaponTypeInfo["Quarterstaff"]
-	end
 	if not info then
-		print("\nNO INFO\n")
 		return
+	end
+	if weaponData.type == "Staff" and weaponData.name:match("Warstaff") then
+		info.melee = true
 	end
 	if weaponTypes then
 		for _, types in ipairs(weaponTypes) do
@@ -284,13 +277,11 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 				t_insert(weaponTypes, skillEffect.grantedEffect.weaponTypes)
 			end
 		end
-		print("getWeaponFlags for Weapon 1")
 		local weapon1Flags, weapon1Info = getWeaponFlags(env, activeSkill.actor.weaponData1, weaponTypes)
 		if not weapon1Flags and activeSkill.summonSkill then
 			-- Minion skills seem to ignore weapon types
 			weapon1Flags, weapon1Info = ModFlag[env.data.weaponTypeInfo["None"].flag], env.data.weaponTypeInfo["None"]
 		end
-		print("WeaponFlags :: " .. tostring(weapon1Flags))
 		if weapon1Flags then
 			if skillFlags.attack or skillFlags.dotFromAttack then
 				activeSkill.weapon1Flags = weapon1Flags
@@ -307,7 +298,6 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 			activeSkill.disableReason = "Main Hand weapon is not usable with this skill"
 		end
 		if not skillTypes[SkillType.MainHandOnly] and not skillFlags.forceMainHand then
-			print("getWeaponFlags for Weapon 2")
 			local weapon2Flags, weapon2Info = getWeaponFlags(env, activeSkill.actor.weaponData2, weaponTypes)
 			if weapon2Flags then
 				if skillTypes[SkillType.DualWieldRequiresDifferentTypes] and (activeSkill.actor.weaponData1.type == activeSkill.actor.weaponData2.type) then
