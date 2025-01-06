@@ -71,7 +71,6 @@ directiveTable.base = function(state, args, out)
 		local file = getFile(baseItemType .. ".it")
 		if not file then return nil end
 		local text = convertUTF16to8(file)
-		local quality = 0
 		local superClassQuality
 		for line in text:gmatch("[^\r\n]+") do
 			local superClass = line:match("extends \"(.+)\"")
@@ -81,11 +80,7 @@ directiveTable.base = function(state, args, out)
 				return line:match("max_quality = (.+)")
 			end
 		end
-		if not superClassQuality then
-			return quality
-		else
-			return superClassQuality
-		end
+		return superClassQuality
 	end
 
 	local baseItemTags = getBaseItemTags(baseItemType.BaseType)
