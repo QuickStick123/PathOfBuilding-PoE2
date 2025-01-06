@@ -97,7 +97,7 @@ local function doActorAttribsConditions(env, actor)
 		end
 	else
 		local info = env.data.weaponTypeInfo[actor.weaponData1.type]
-		if actor.weaponData1.type == "Staff" and actor.weaponData1.name:match("Warstaff") then
+		if actor.weaponData1.type == "Staff" and actor.weaponData1.name:match("Quarterstaff") then
 			info.melee = true
 		end
 		condList["Using"..info.flag] = true

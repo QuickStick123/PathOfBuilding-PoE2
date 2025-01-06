@@ -884,7 +884,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 					local prevType = previousItem and previousItem.weaponData and previousItem.weaponData[1].type
 					local prevName = previousItem and previousItem.weaponData and previousItem.weaponData[1].name
 					local info = env.data.weaponTypeInfo[type]
-					if prevType == "Staff" and prevName:match("Warstaff") then
+					if prevType == "Staff" and prevName:match("Quarterstaff") then
 						info.melee = true
 					end
 					if info and prevType ~= "Bow" then
