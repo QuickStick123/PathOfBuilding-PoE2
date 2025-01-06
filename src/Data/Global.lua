@@ -149,12 +149,13 @@ ModFlag.Fishing =	 0x0000000002000000
 ModFlag.Crossbow =	 0x0000000004000000
 ModFlag.Flail =		 0x0000000008000000
 ModFlag.Spear =		 0x0000000010000000
+ModFlag.Quarterstaff=0x0000000020000000
 -- Weapon classes
 ModFlag.WeaponMelee =0x0000000100000000
 ModFlag.WeaponRanged=0x0000000200000000
 ModFlag.Weapon1H =	 0x0000000400000000
 ModFlag.Weapon2H =	 0x0000000800000000
-ModFlag.WeaponMask = 0x0000000F1FFF0000
+ModFlag.WeaponMask = 0x0000000F3FFF0000
 
 KeywordFlag = { }
 -- Skill keywords
@@ -194,8 +195,9 @@ KeywordFlag.ChaosDot =	0x10000000
 KeywordFlag.MatchAll =	0x40000000
 
 -- Helper function to compare KeywordFlags
-local band = bit.band
-local MatchAllMask = bit.bnot(KeywordFlag.MatchAll)
+local band = AND64
+local bnot = NOT64
+local MatchAllMask = bnot(KeywordFlag.MatchAll)
 ---@param keywordFlags number The KeywordFlags to be compared to.
 ---@param modKeywordFlags number The KeywordFlags stored in the mod.
 ---@return boolean Whether the KeywordFlags in the mod are satisfied.

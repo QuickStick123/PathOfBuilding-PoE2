@@ -16,9 +16,6 @@ local m_floor = math.floor
 local m_modf = math.modf
 local s_format = string.format
 local m_huge = math.huge
-local bor = bit.bor
-local band = bit.band
-local bnot = bit.bnot
 
 --- getCachedOutputValue
 ---  retrieves a value specified by key from a cached version of skill

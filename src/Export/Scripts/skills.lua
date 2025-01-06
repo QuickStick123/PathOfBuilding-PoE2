@@ -205,10 +205,13 @@ local weaponClassMap = {
 	["Crossbow"] = "Crossbow",
 	["Fishing Rod"] = "Fishing Rod",
 	["Staff"] = "Staff",
+	["Warstaff"] = "Quarterstaff",
 	["Two Hand Sword"] = "Two Handed Sword",
 	["Two Hand Axe"] = "Two Handed Axe",
 	["Two Hand Mace"] = "Two Handed Mace",
 	["Unarmed"] = "None",
+	["Flail"] = "Flail",
+	["Spear"] = "Spear",
 }
 
 --local skillStatScope = { }
