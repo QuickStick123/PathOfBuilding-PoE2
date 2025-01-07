@@ -2269,18 +2269,22 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			local control = controls["enchant"..i]
 			if control.selIndex > 1 then
 				local mod = control.list[control.selIndex].mod
-				for _, modLine in ipairs(mod) do
+				for i, modLine in ipairs(mod) do
 					if mod.modTags[1] then
-						t_insert(newEnchant, { line = "{tags:" .. table.concat(mod.modTags, ",") .. "}" .. modLine, enchant = true })
+						t_insert(newEnchant, { line = "{tags:" .. table.concat(mod.modTags, ",") .. "}" .. modLine, enchant = true, order = mod.statOrder[i] })
 					else
-						t_insert(newEnchant, { line = modLine, enchant = true })
+						t_insert(newEnchant, { line = modLine, enchant = true, order = mod.statOrder[i] })
 					end
 				end
 			end
 		end
 		if #newEnchant > 0 then
+			table.sort(newEnchant, function(a, b)
+				return a.order < b.order
+			end)
 			wipeTable(item.enchantModLines)
 			for i, enchant in ipairs(newEnchant) do
+				enchant.order = nil
 				t_insert( item.enchantModLines, i, enchant)
 			end
 		end
