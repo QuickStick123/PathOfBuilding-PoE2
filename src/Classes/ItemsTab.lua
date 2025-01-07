@@ -2214,17 +2214,23 @@ end
 function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outcomes this code is for poe 1
 	local controls = { } 
 	local enchantList = { }
-	local function buildEnchantList()
-		if enchantList["Corrupted"] then
+	local enchantNum = 1
+	local currentModType = "Corrupted"
+	local sourceList = { "Corrupted" }
+	if self.displayItem.base.type == "Helmet" then
+		t_insert(sourceList, "Glimpse of Chaos")
+	end
+	local function buildEnchantList(modType)
+		if enchantList[modType] then
 			return
 		end
-		enchantList["Corrupted"] = {}
+		enchantList[modType] = {}
 		for modId, mod in pairs(self.displayItem.affixes) do
-			if mod.type == "Corrupted" and self.displayItem:GetModSpawnWeight(mod) > 0 then
-				t_insert(enchantList["Corrupted"], mod)
+			if mod.type == modType and self.displayItem:GetModSpawnWeight(mod) > 0 then
+				t_insert(enchantList[modType], mod)
 			end
 		end
-		table.sort(enchantList["Corrupted"], function(a, b)
+		table.sort(enchantList[modType], function(a, b)
 			local an = a[1]:lower():gsub("%(.-%)","$"):gsub("[%+%-%%]",""):gsub("%d+","$")
 			local bn = b[1]:lower():gsub("%(.-%)","$"):gsub("[%+%-%%]",""):gsub("%d+","$")
 			if an ~= bn then
@@ -2234,14 +2240,21 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			end
 		end)
 	end
-	buildEnchantList()
-	local function buildList(control, other)
+	buildEnchantList("Corrupted")
+	buildEnchantList("SpecialCorrupted")
+	local function buildList(control, others, modType)
 		local selfMod = control.selIndex and control.selIndex > 1 and control.list[control.selIndex].mod
-		local otherMod = other and other.selIndex and other.selIndex > 1 and other.list[other.selIndex].mod
 		wipeTable(control.list)
 		t_insert(control.list, { label = "None" })
-		for _, mod in ipairs(enchantList["Corrupted"]) do
-			if not otherMod or mod.group ~= otherMod.group then
+		for _, mod in ipairs(enchantList[modType]) do
+			local alreadySelected = false
+			for _, other in ipairs(others) do
+				local otherMod = other and other.selIndex and other.selIndex > 1 and other.list[other.selIndex].mod
+				if otherMod and mod.group == otherMod.group then
+					alreadySelected = true
+				end
+			end
+			if not alreadySelected then
 				t_insert(control.list, { label = table.concat(mod, "/"), mod = mod })
 			end
 		end
@@ -2252,7 +2265,8 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 		item.id = self.displayItem.id
 		item.corrupted = true
 		local newEnchant = { }
-		for _, control in ipairs{controls.enchant, controls.enchant2 } do
+		for i = 1, enchantNum do
+			local control = controls["enchant"..i]
 			if control.selIndex > 1 then
 				local mod = control.list[control.selIndex].mod
 				for _, modLine in ipairs(mod) do
@@ -2273,35 +2287,93 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 		item:BuildAndParseRaw()
 		return item
 	end
-	controls.enchantLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {75, 45, 0, 16}, "^7Enchant #1:")
-	controls.enchant = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {80, 45, 440, 18}, nil, function()
-		buildList(controls.enchant2, controls.enchant)
-	end)
-	controls.enchant.tooltipFunc = function(tooltip, mode, index, value)
-		tooltip:Clear()
-		if mode ~= "OUT" and value and value.mod then
-			for _, line in ipairs(value.mod) do
-				tooltip:AddLine(16, "^7"..line)
+		controls.sourceLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {95, 20, 0, 16}, "^7Source:")
+		controls.source = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {100, 20, 150, 18}, sourceList, function(index, value)
+		if value == "Corrupted" then
+			currentModType = "Corrupted"
+			enchantNum = 1
+		elseif value == "Glimpse of Chaos" and self.displayItem.base.type == "Helmet" then -- special corruption enchants
+			currentModType = "SpecialCorrupted"
+			if self.displayItem.title == "Glimpse of Chaos" then -- glimpse of chaos can have all 7 special enchants
+				enchantNum = 7
+			else -- other helmets can have 2
+				enchantNum = 2
 			end
-			self:AddModComparisonTooltip(tooltip, value.mod)
+		end
+
+		for i = 1, 7 do
+			if i <= enchantNum then
+				controls["enchant"..i].shown = true
+				controls["enchant"..i.."Label"].shown = true
+				local others = { }
+				for j = 1, enchantNum do
+					if i ~= j then
+						t_insert(others, controls["enchant"..j])
+					end
+				end
+				buildList(controls["enchant"..i], others,  currentModType)
+			else
+				controls["enchant"..i].shown = false
+				controls["enchant"..i.."Label"].shown = false
+			end
+			controls["enchant"..i]:SetSel(1)
+		end
+
+		main.popups[1].height = 93 + 18 * enchantNum
+		controls.close.y = 63 + 18 * enchantNum
+		controls.save.y = 99 + 18 * enchantNum
+	end)
+	for i = 1, 7 do
+		if i == 1 then
+			controls.enchant1Label = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {75, 45, 0, 16}, function()
+				if enchantNum == 1 then -- update label so reduant 1 doesn't appear in case of 1 enchant.
+					return "^7Enchant:"
+				else
+					return "^7Enchant #1:"
+				end
+			end)
+		else
+			controls["enchant"..i.."Label"] = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {75, 25 + i * 20 , 0, 16}, "^7Enchant #"..i..":")
+		end
+		controls["enchant"..i] = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {80, 25 + i * 20, 440, 18}, nil, function()
+			local others = { }
+			if i <= enchantNum then
+				for j = 1, enchantNum do
+					if i ~= j then
+						t_insert(others, controls["enchant"..j])
+					end
+				end
+				buildList(controls["enchant"..i], others,  currentModType)
+			end
+		end)
+		controls["enchant"..i].tooltipFunc = function(tooltip, mode, index, value)
+			tooltip:Clear()
+			if mode ~= "OUT" and value and value.mod then
+				for _, line in ipairs(value.mod) do
+					tooltip:AddLine(16, "^7"..line)
+				end
+				self:AddModComparisonTooltip(tooltip, value.mod)
+			end
+		end
+		if i == 1 then
+			controls["enchant"..i].shown = true
+			controls["enchant"..i.."Label"].shown = true
+		else
+			controls["enchant"..i].shown = false
+			controls["enchant"..i.."Label"].shown = false
+		end
+
+		local others = { }
+		if i <= enchantNum then
+			for j = 1, enchantNum do
+				if i ~= j then
+					t_insert(others, controls["enchant"..j])
+				end
+			end
+			buildList(controls["enchant"..i], others,  currentModType)
 		end
 	end
-	controls.enchant2Label = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {75, 65, 0, 16}, "^7Enchant #2:")
-	controls.enchant2 = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {80, 65, 440, 18}, nil, function()
-		buildList(controls.enchant, controls.enchant2)
-	end)
-	controls.enchant2.tooltipFunc = function(tooltip, mode, index, value)
-		tooltip:Clear()
-		if mode ~= "OUT" and value and value.mod then
-			for _, line in ipairs(value.mod) do
-				tooltip:AddLine(16, "^7"..line)
-			end
-			self:AddModComparisonTooltip(tooltip, value.mod)
-		end
-	end
-	buildList(controls.enchant, controls.enchant2)
-	buildList(controls.enchant2, controls.enchant)
-	controls.save = new("ButtonControl", nil, {-45, 99, 80, 20}, "Corrupted", function()
+	controls.save = new("ButtonControl", nil, {-45, 59 + enchantNum * 20, 80, 20}, "Corrupted", function()
 		self:SetDisplayItem(corruptItem())
 		main:ClosePopup()
 	end)
@@ -2309,7 +2381,7 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 		tooltip:Clear()
 		self:AddItemTooltip(tooltip, corruptItem(), nil, true)
 	end	
-	controls.close = new("ButtonControl", nil, {45, 99, 80, 20}, "Cancel", function()
+	controls.close = new("ButtonControl", nil, {45, 59 + enchantNum * 20, 80, 20}, "Cancel", function()
 		main:ClosePopup()
 	end)
 	main:OpenPopup(540, 129, "Corrupted Item", controls)
