@@ -2321,11 +2321,11 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 
 		main.popups[1].height = 93 + 18 * enchantNum
 		controls.close.y = 63 + 18 * enchantNum
-		controls.save.y = 99 + 18 * enchantNum
+		controls.save.y = 63 + 18 * enchantNum
 	end)
 	for i = 1, 7 do
 		if i == 1 then
-			controls.enchant1Label = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {75, 45, 0, 16}, function()
+			controls.enchant1Label = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {95, 45, 0, 16}, function()
 				if enchantNum == 1 then -- update label so reduant 1 doesn't appear in case of 1 enchant.
 					return "^7Enchant:"
 				else
@@ -2333,9 +2333,9 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 				end
 			end)
 		else
-			controls["enchant"..i.."Label"] = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {75, 25 + i * 20 , 0, 16}, "^7Enchant #"..i..":")
+			controls["enchant"..i.."Label"] = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {95, 25 + i * 20 , 0, 16}, "^7Enchant #"..i..":")
 		end
-		controls["enchant"..i] = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {80, 25 + i * 20, 440, 18}, nil, function()
+		controls["enchant"..i] = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {100, 25 + i * 20, 440, 18}, nil, function()
 			local others = { }
 			if i <= enchantNum then
 				for j = 1, enchantNum do
@@ -2384,7 +2384,7 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 	controls.close = new("ButtonControl", nil, {45, 59 + enchantNum * 20, 80, 20}, "Cancel", function()
 		main:ClosePopup()
 	end)
-	main:OpenPopup(540, 129, "Corrupted Item", controls)
+	main:OpenPopup(560, 109, "Corrupted Item", controls)
 end
 
 -- Opens the custom modifier popup

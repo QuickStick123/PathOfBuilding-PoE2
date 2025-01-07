@@ -121,7 +121,7 @@ return {
             "CorruptionSlowPotency1",
 
         },
-        helemt = {
+        helmet = {
             "CorruptionMaximumColdResistance1",
             "CorruptionIncreasedSpirit1",
             "CorruptionMaximumPowerCharges1",
