@@ -2213,18 +2213,18 @@ end
 -- Opens the item corrupting popup
 function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outcomes this code is for poe 1
 	local controls = { } 
-	local implicitList = { }
-	local function buildImplicitList()
-		if implicitList["Corrupted"] then
+	local enchantList = { }
+	local function buildEnchantList()
+		if enchantList["Corrupted"] then
 			return
 		end
-		implicitList["Corrupted"] = {}
+		enchantList["Corrupted"] = {}
 		for modId, mod in pairs(self.displayItem.affixes) do
 			if mod.type == "Corrupted" and self.displayItem:GetModSpawnWeight(mod) > 0 then
-				t_insert(implicitList["Corrupted"], mod)
+				t_insert(enchantList["Corrupted"], mod)
 			end
 		end
-		table.sort(implicitList["Corrupted"], function(a, b)
+		table.sort(enchantList["Corrupted"], function(a, b)
 			local an = a[1]:lower():gsub("%(.-%)","$"):gsub("[%+%-%%]",""):gsub("%d+","$")
 			local bn = b[1]:lower():gsub("%(.-%)","$"):gsub("[%+%-%%]",""):gsub("%d+","$")
 			if an ~= bn then
@@ -2234,13 +2234,13 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			end
 		end)
 	end
-	buildImplicitList()
+	buildEnchantList()
 	local function buildList(control, other)
 		local selfMod = control.selIndex and control.selIndex > 1 and control.list[control.selIndex].mod
 		local otherMod = other and other.selIndex and other.selIndex > 1 and other.list[other.selIndex].mod
 		wipeTable(control.list)
 		t_insert(control.list, { label = "None" })
-		for _, mod in ipairs(implicitList["Corrupted"]) do
+		for _, mod in ipairs(enchantList["Corrupted"]) do
 			if not otherMod or mod.group ~= otherMod.group then
 				t_insert(control.list, { label = table.concat(mod, "/"), mod = mod })
 			end
@@ -2251,57 +2251,33 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 		local item = new("Item", self.displayItem:BuildRaw())
 		item.id = self.displayItem.id
 		item.corrupted = true
-		local newImplicit = { }
-		for _, control in ipairs{controls.implicit, controls.implicit2, controls.implicit3, controls.implicit4} do
+		local newEnchant = { }
+		for _, control in ipairs{controls.enchant, controls.enchant2 } do
 			if control.selIndex > 1 then
 				local mod = control.list[control.selIndex].mod
 				for _, modLine in ipairs(mod) do
 					if mod.modTags[1] then
-						t_insert(newImplicit, { line = "{tags:" .. table.concat(mod.modTags, ",") .. "}" .. modLine })
+						t_insert(newEnchant, { line = "{tags:" .. table.concat(mod.modTags, ",") .. "}" .. modLine, enchant = true })
 					else
-						t_insert(newImplicit, { line = modLine })
+						t_insert(newEnchant, { line = modLine, enchant = true })
 					end
 				end
 			end
 		end
-		if #newImplicit > 0 then
-			wipeTable(item.implicitModLines)
-			for i, implicit in ipairs(newImplicit) do
-				t_insert( item.implicitModLines, i, implicit)
+		if #newEnchant > 0 then
+			wipeTable(item.enchantModLines)
+			for i, enchant in ipairs(newEnchant) do
+				t_insert( item.enchantModLines, i, enchant)
 			end
 		end
 		item:BuildAndParseRaw()
 		return item
 	end
-	controls.sourceLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {95, 20, 0, 16}, "^7Source:")
-	controls.source = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {100, 20, 150, 18}, { "Corrupted" }, function(index, value)
-		controls.implicit.shown = not self.displayItem.implicitsCannotBeChanged
-		controls.implicitLabel.shown = not self.displayItem.implicitsCannotBeChanged
-		controls.implicit2.shown = not self.displayItem.implicitsCannotBeChanged
-		controls.implicit2Label.shown = not self.displayItem.implicitsCannotBeChanged
-		controls.implicit3Label.shown = false
-		controls.implicit3.shown = false
-		controls.implicit4Label.shown = false
-		controls.implicit4.shown = false
-		controls.implicitCannotBeChangedLabel.shown = self.displayItem.implicitsCannotBeChanged
-		controls.implicit2.y = 65
-		main.popups[1].height = 129
-		controls.close.y = 99
-		controls.save.y = 99
-		
-		buildList(controls.implicit, controls.implicit2)
-		buildList(controls.implicit2, controls.implicit)
-		controls.implicit:SetSel(1)
-		controls.implicit2:SetSel(1)
-		controls.implicit3:SetSel(1)
-		controls.implicit4:SetSel(1)
+	controls.enchantLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {75, 45, 0, 16}, "^7Enchant #1:")
+	controls.enchant = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {80, 45, 440, 18}, nil, function()
+		buildList(controls.enchant2, controls.enchant)
 	end)
-	controls.source.enabled = true
-	controls.implicitLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {75, 45, 0, 16}, "^7Implicit #1:")
-	controls.implicit = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {80, 45, 440, 18}, nil, function()
-		buildList(controls.implicit2, controls.implicit)
-	end)
-	controls.implicit.tooltipFunc = function(tooltip, mode, index, value)
+	controls.enchant.tooltipFunc = function(tooltip, mode, index, value)
 		tooltip:Clear()
 		if mode ~= "OUT" and value and value.mod then
 			for _, line in ipairs(value.mod) do
@@ -2310,13 +2286,11 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			self:AddModComparisonTooltip(tooltip, value.mod)
 		end
 	end
-	controls.implicit.shown = not self.displayItem.implicitsCannotBeChanged
-	controls.implicitLabel.shown = not self.displayItem.implicitsCannotBeChanged
-	controls.implicit2Label = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {75, 65, 0, 16}, "^7Implicit #2:")
-	controls.implicit2 = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {80, 65, 440, 18}, nil, function()
-		buildList(controls.implicit, controls.implicit2)
+	controls.enchant2Label = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {75, 65, 0, 16}, "^7Enchant #2:")
+	controls.enchant2 = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {80, 65, 440, 18}, nil, function()
+		buildList(controls.enchant, controls.enchant2)
 	end)
-	controls.implicit2.tooltipFunc = function(tooltip, mode, index, value)
+	controls.enchant2.tooltipFunc = function(tooltip, mode, index, value)
 		tooltip:Clear()
 		if mode ~= "OUT" and value and value.mod then
 			for _, line in ipairs(value.mod) do
@@ -2325,13 +2299,8 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			self:AddModComparisonTooltip(tooltip, value.mod)
 		end
 	end
-	controls.implicit2.shown = not self.displayItem.implicitsCannotBeChanged
-	controls.implicit2Label.shown = not self.displayItem.implicitsCannotBeChanged
-
-	controls.implicitCannotBeChangedLabel = new("LabelControl", {"TOPLEFT",nil,"TOPLEFT"}, {20, 45, 0, 20}, "^7This Items Implicits Cannot Be Changed")
-	controls.implicitCannotBeChangedLabel.shown = self.displayItem.implicitsCannotBeChanged
-	buildList(controls.implicit, controls.implicit2)
-	buildList(controls.implicit2, controls.implicit)
+	buildList(controls.enchant, controls.enchant2)
+	buildList(controls.enchant2, controls.enchant)
 	controls.save = new("ButtonControl", nil, {-45, 99, 80, 20}, "Corrupted", function()
 		self:SetDisplayItem(corruptItem())
 		main:ClosePopup()
