@@ -230,6 +230,19 @@ return {
             "CorruptionLocalChanceToMaim1",
             "CorruptionLocalChanceToBlind1",
             "CorruptionAdditionalAmmo1",
+        },
+        jewel = {
+            "CorruptionJewelStrength1",
+            "CorruptionJewelDexterity1",
+            "CorruptionJewelIntelligence1",
+            "CorruptionJewelFireResist1",
+            "CorruptionJewelColdResist1",
+            "CorruptionJewelLightningResist1",
+            "CorruptionJewelChaosResist1",
+            "CorruptionJewelMaimImmunity1",
+            "CorruptionJewelHinderImmunity1",
+            "CorruptionJewelCorruptedBloodImmunity1",
+            "CorruptionJewelBlindImmunity1",
         }
     }
 }

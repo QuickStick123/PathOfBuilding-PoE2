@@ -80,8 +80,22 @@ local function writeMods(outName, condFunc)
 						out:write('weightVal = { ', table.concat(GoldModPrices.SpawnWeights, ', '), ' }, ')
 					end
 				else
-					-- jewels
-					if mod.Domain == 11 then
+					if (mod.Domain == 1 or mod.Domain == 11) and (mod.GenerationType == 3 and mod.Id:match("SpecialCorruption") or mod.GenerationType == 5) then -- corrupted enchants
+						local weightVals = ""
+						for key, mods in pairs(corruptedModTypes.blackList) do
+							if isValueInArray(mods, mod.Id) then
+								out:write('"'..key..'", ')
+								weightVals = weightVals.."0, "
+							end
+						end
+						for key, mods in pairs(corruptedModTypes.whiteList) do
+							if isValueInArray(mods, mod.Id) then
+								out:write('"'..key..'", ')
+								weightVals = weightVals.."1, "
+							end
+						end
+						out:write('"default" }, weightVal = { '..weightVals..' 0 }, ')
+					elseif mod.Domain == 11 then -- jewels
 						local keysCount = 0
 						if mod.Id:match("JewelRadius") then
 							if isValueInArray(strJewelTypes, mod.Type.Id) then
@@ -117,21 +131,6 @@ local function writeMods(outName, condFunc)
 						end
 						out:write('"default" }, ')
 						out:write('weightVal = { ', string.rep("1, ", keysCount), '0 }, ')
-					elseif mod.Domain == 1 and (mod.GenerationType == 3 and mod.Id:match("SpecialCorruption") or mod.GenerationType == 5) then -- corrupted enchants
-						local weightVals = ""
-						for key, mods in pairs(corruptedModTypes.blackList) do
-							if isValueInArray(mods, mod.Id) then
-								out:write('"'..key..'", ')
-								weightVals = weightVals.."0, "
-							end
-						end
-						for key, mods in pairs(corruptedModTypes.whiteList) do
-							if isValueInArray(mods, mod.Id) then
-								out:write('"'..key..'", ')
-								weightVals = weightVals.."1, "
-							end
-						end
-						out:write('"default" }, weightVal = { '..weightVals..' 0 }, ')
 					else
 						out:write('}, ')
 						out:write('weightVal = { ', table.concat(mod.SpawnWeights, ', '), ' }, ')
@@ -191,7 +190,7 @@ writeMods("../Data/ModItem.lua", function(mod)
 	and (mod.Family[1] and mod.Family[1].Id ~= "AuraBonus" or not mod.Family[1]) and (not mod.Id:match("Cowards"))
 end)
 writeMods("../Data/ModCorrupted.lua", function(mod)
-	return mod.Domain == 1 and (mod.GenerationType == 3 and mod.Id:match("SpecialCorruption") or mod.GenerationType == 5)
+	return (mod.Domain == 11 or mod.Domain == 1) and (mod.GenerationType == 3 and mod.Id:match("SpecialCorruption") or mod.GenerationType == 5)
 end)
 writeMods("../Data/ModFlask.lua", function(mod)
 	return mod.Domain == 2 and (mod.GenerationType == 1 or mod.GenerationType == 2) and mod.Id:match("^Flask")
