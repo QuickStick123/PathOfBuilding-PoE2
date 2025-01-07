@@ -2225,7 +2225,7 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			return
 		end
 		enchantList[modType] = {}
-		for modId, mod in pairs(self.displayItem.affixes) do
+		for modId, mod in pairs(data.corruptions) do
 			if mod.type == modType and self.displayItem:GetModSpawnWeight(mod) > 0 then
 				t_insert(enchantList[modType], mod)
 			end
@@ -2294,14 +2294,14 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			enchantNum = 1
 		elseif value == "Glimpse of Chaos" and self.displayItem.base.type == "Helmet" then -- special corruption enchants
 			currentModType = "SpecialCorrupted"
-			if self.displayItem.title == "Glimpse of Chaos" then -- glimpse of chaos can have all 7 special enchants
-				enchantNum = 7
+			if self.displayItem.title == "Glimpse of Chaos" then -- glimpse of chaos can have all 8 special enchants
+				enchantNum = 8
 			else -- other helmets can have 2
 				enchantNum = 2
 			end
 		end
 
-		for i = 1, 7 do
+		for i = 1, 8 do
 			if i <= enchantNum then
 				controls["enchant"..i].shown = true
 				controls["enchant"..i.."Label"].shown = true
@@ -2323,7 +2323,7 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 		controls.close.y = 63 + 18 * enchantNum
 		controls.save.y = 63 + 18 * enchantNum
 	end)
-	for i = 1, 7 do
+	for i = 1, 8 do
 		if i == 1 then
 			controls.enchant1Label = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {95, 45, 0, 16}, function()
 				if enchantNum == 1 then -- update label so reduant 1 doesn't appear in case of 1 enchant.
@@ -2336,8 +2336,8 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			controls["enchant"..i.."Label"] = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {95, 25 + i * 20 , 0, 16}, "^7Enchant #"..i..":")
 		end
 		controls["enchant"..i] = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {100, 25 + i * 20, 440, 18}, nil, function()
-			local others = { }
-			if i <= enchantNum then
+			for i = 1, enchantNum do
+				local others = { }
 				for j = 1, enchantNum do
 					if i ~= j then
 						t_insert(others, controls["enchant"..j])
@@ -2363,8 +2363,8 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			controls["enchant"..i.."Label"].shown = false
 		end
 
-		local others = { }
 		if i <= enchantNum then
+			local others = { }
 			for j = 1, enchantNum do
 				if i ~= j then
 					t_insert(others, controls["enchant"..j])

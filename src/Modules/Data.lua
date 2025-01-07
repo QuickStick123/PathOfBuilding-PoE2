@@ -549,6 +549,8 @@ data.enchantments = {
 	["Weapon"] = LoadModule("Data/EnchantmentWeapon"),
 	["UtilityFlask"] = LoadModule("Data/EnchantmentFlask"),
 }
+data.corruptions = LoadModule("Data/ModCorrupted")
+
 do
 	data.enchantments["Flask"] = data.enchantments["UtilityFlask"]--["HARVEST"]
 	for baseType, _ in pairs(data.weaponTypeInfo) do

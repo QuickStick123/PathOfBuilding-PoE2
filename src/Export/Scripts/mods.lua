@@ -33,6 +33,8 @@ local function writeMods(outName, condFunc)
 						out:write('type = "Synthesis", ')
 					elseif mod.Domain == 16 then
 						out:write('type = "DelveImplicit", ')
+					elseif mod.Id:match("SpecialCorruption") then
+						out:write('type = "SpecialCorrupted", ')
 					end
 				elseif mod.GenerationType == 5 then
 					out:write('type = "Corrupted", ')
@@ -115,7 +117,7 @@ local function writeMods(outName, condFunc)
 						end
 						out:write('"default" }, ')
 						out:write('weightVal = { ', string.rep("1, ", keysCount), '0 }, ')
-					elseif mod.GenerationType == 5 then -- corrupted enchants
+					elseif mod.Domain == 1 and (mod.GenerationType == 3 and mod.Id:match("SpecialCorruption") or mod.GenerationType == 5) then -- corrupted enchants
 						local weightVals = ""
 						for key, mods in pairs(corruptedModTypes.blackList) do
 							if isValueInArray(mods, mod.Id) then
@@ -185,8 +187,11 @@ end
 
 
 writeMods("../Data/ModItem.lua", function(mod)
-	return mod.Domain == 1 and (mod.GenerationType == 1 or mod.GenerationType == 2 or mod.GenerationType == 3 or mod.GenerationType == 5)
+	return mod.Domain == 1 and (mod.GenerationType == 1 or mod.GenerationType == 2 or mod.GenerationType == 3)
 	and (mod.Family[1] and mod.Family[1].Id ~= "AuraBonus" or not mod.Family[1]) and (not mod.Id:match("Cowards"))
+end)
+writeMods("../Data/ModCorrupted.lua", function(mod)
+	return mod.Domain == 1 and (mod.GenerationType == 3 and mod.Id:match("SpecialCorruption") or mod.GenerationType == 5)
 end)
 writeMods("../Data/ModFlask.lua", function(mod)
 	return mod.Domain == 2 and (mod.GenerationType == 1 or mod.GenerationType == 2) and mod.Id:match("^Flask")
