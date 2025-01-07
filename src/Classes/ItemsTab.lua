@@ -2388,7 +2388,7 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 	controls.close = new("ButtonControl", nil, {45, 59 + enchantNum * 20, 80, 20}, "Cancel", function()
 		main:ClosePopup()
 	end)
-	main:OpenPopup(560, 109, "Corrupted Item", controls)
+	main:OpenPopup(560, 89 + enchantNum * 20, "Corrupted Item", controls)
 end
 
 -- Opens the custom modifier popup
