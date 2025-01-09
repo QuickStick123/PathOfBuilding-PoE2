@@ -2285,6 +2285,9 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 				t_insert( item.enchantModLines, i, enchant)
 			end
 		end
+		for i = 1, explicitNum do
+			item.explicitModLines[i].corruptedRange = corruptedRanges[i]
+		end
 		item:BuildAndParseRaw()
 		return item
 	end
@@ -2292,15 +2295,15 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 		local item = new("Item", self.displayItem:BuildRaw())
 		explicitNum = #item.explicitModLines
 		for i, mod in ipairs(item.explicitModLines) do
-			controls["rollRangeValue"..i] = new("LabelControl", {"TOPRIGHT",nil,"TOPRIGHT"}, {-10, 10 + i * 20, 200, 16}, "1.00")
-			controls["rollRangeSlider"..i] = new("SliderControl", { "RIGHT", controls["rollRangeValue"..i], "LEFT" }, {-5, 0, 40, 18}, function(val)
+			controls["rollRangeValue"..i] = new("LabelControl", {"TOPRIGHT",nil,"TOPRIGHT"}, {-10, 10 + i * 20, 200, 16}, "^71.00")
+			controls["rollRangeSlider"..i] = new("SliderControl", { "RIGHT", controls["rollRangeValue"..i], "LEFT" }, {-5, 0, 80, 18}, function(val)
 				corruptedRanges[i] = 0.78+round(0.44*val, 2) -- 0.78-1.22
-				controls["rollRangeValue"..i].label = string.format("%.2f", corruptedRanges[i])
-				controls["rollRangeLabel"..i].label = itemLib.applyRange(mod.line, mod.range or 0, mod.valueScalar, corruptedRanges[i])
+				controls["rollRangeValue"..i].label = "^7"..string.format("%.2f", corruptedRanges[i])
+				controls["rollRangeLabel"..i].label = "^7"..itemLib.applyRange(mod.line, mod.range or main.defaultItemAffixQuality, mod.valueScalar or 1, corruptedRanges[i])
 			end)
-			controls["rollRangeLabel"..i] = new("LabelControl", {"RIGHT", controls["rollRangeSlider"..i], "LEFT"}, {-5, 0 , 200, 16}, mod.line)
+			controls["rollRangeLabel"..i] = new("LabelControl", {"RIGHT", controls["rollRangeSlider"..i], "LEFT"}, {-5, 0 , 200, 16}, "^7"..itemLib.applyRange(mod.line, mod.range or main.defaultItemAffixQuality, mod.valueScalar or 1, corruptedRanges[i]))
 			controls["rollRangeSlider"..i].val = 0.5
-			controls["rollRangeValue"..i].label = string.format("%.2f", 1)
+			controls["rollRangeValue"..i].label = "^7"..string.format("%.2f", 1)
 			-- hide them by default as they are a secondary window
 			controls["rollRangeLabel"..i].shown = false
 			controls["rollRangeSlider"..i].shown = false
@@ -2323,6 +2326,9 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 		controls.close.y = 73 + 18 * enchantNum
 		controls.save.y = 73 + 18 * enchantNum
 	end)
+	controls.enchants.shown = function ()
+		return self.displayItem.rarity == "UNIQUE"
+	end
 	controls.rolls = new("ButtonControl", nil, {-150, 5, 80, 20}, "Roll Ranges", function()
 		for i = 1, 8 do
 			controls["enchant"..i].shown = false
@@ -2339,6 +2345,9 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 		controls.close.y = 73 + 18 * explicitNum
 		controls.save.y = 73 + 18 * explicitNum
 	end)
+	controls.rolls.shown = function ()
+		return self.displayItem.rarity == "UNIQUE"
+	end
 	controls.sourceLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {95, 30, 0, 16}, "^7Source:")
 	controls.source = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {100, 30, 150, 18}, sourceList, function(index, value)
 		if value == "Corrupted" then
