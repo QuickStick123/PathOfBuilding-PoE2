@@ -2294,17 +2294,35 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 	if self.displayItem.rarity == "UNIQUE" then
 		local item = new("Item", self.displayItem:BuildRaw())
 		explicitNum = #item.explicitModLines
+		local textLines = 0
 		for i, mod in ipairs(item.explicitModLines) do
-			controls["rollRangeValue"..i] = new("LabelControl", {"TOPRIGHT",nil,"TOPRIGHT"}, {-10, 10 + i * 20, 200, 16}, "^71.00")
+			local label = ""
+			controls["rollRangeValue"..i] = new("LabelControl", {"TOPRIGHT",nil,"TOPRIGHT"}, {-10, 10 + i * 20 + 16 * textLines, 200, 16}, "^71.00")
 			controls["rollRangeSlider"..i] = new("SliderControl", { "RIGHT", controls["rollRangeValue"..i], "LEFT" }, {-5, 0, 80, 18}, function(val)
 				corruptedRanges[i] = 0.78+round(0.44*val, 2) -- 0.78-1.22
 				controls["rollRangeValue"..i].label = "^7"..string.format("%.2f", corruptedRanges[i])
-				controls["rollRangeLabel"..i].label = "^7"..itemLib.applyRange(mod.line, mod.range or main.defaultItemAffixQuality, mod.valueScalar or 1, corruptedRanges[i])
+				local label = ""
+				for i, line in ipairs(main:WrapString("^7"..itemLib.applyRange(mod.line, mod.range or main.defaultItemAffixQuality, mod.valueScalar or 1, corruptedRanges[i]),16,370)) do
+					if i == 1 then
+						label = line
+					else
+						label = label.."\n"..line
+					end
+				end
+				controls["rollRangeLabel"..i].label = label
 			end)
 			corruptedRanges[i] = mod.corruptedRange or 1
 			controls["rollRangeSlider"..i].val = ((corruptedRanges[i])-0.78)/0.44
 			controls["rollRangeValue"..i].label = "^7"..string.format("%.2f", corruptedRanges[i])
-			controls["rollRangeLabel"..i] = new("LabelControl", {"RIGHT", controls["rollRangeSlider"..i], "LEFT"}, {-5, 0 , 200, 16}, "^7"..itemLib.applyRange(mod.line, mod.range or main.defaultItemAffixQuality, mod.valueScalar or 1, corruptedRanges[i]))
+			for i, line in ipairs(main:WrapString("^7"..itemLib.applyRange(mod.line, mod.range or main.defaultItemAffixQuality, mod.valueScalar or 1, corruptedRanges[i]),16,370)) do
+				if i == 1 then
+					label = line
+				else
+					textLines = textLines + 1
+					label = label.."\n"..line
+				end
+			end
+			controls["rollRangeLabel"..i] = new("LabelControl", {"RIGHT", controls["rollRangeSlider"..i], "LEFT"}, {-5, 0 , 200, 16}, label)
 			-- hide them by default as they are a secondary window
 			controls["rollRangeLabel"..i].shown = false
 			controls["rollRangeSlider"..i].shown = false
