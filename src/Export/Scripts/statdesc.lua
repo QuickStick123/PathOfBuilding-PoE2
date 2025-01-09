@@ -53,7 +53,7 @@ local function processStatFile(name, changeOutLocation)
 					if text and table_only then
 						text = text:gsub('@', ' ')
 					end
-					local desc = { text = escapeGGGString(text), limit = { } }
+					local desc = { text = escapeGGGString(text):gsub("\\([^nb])", "\\n%1"), limit = { } }
 					for statLimit in statLimits:gmatch("[!%d%-#|]+") do
 						local limit = { }
 						
