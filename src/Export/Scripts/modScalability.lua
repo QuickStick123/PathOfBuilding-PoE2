@@ -10,7 +10,14 @@ for line, scalability in pairs(describeScalability("stat_descriptions.csd")) do
     out:write('\t["', line, '"] = { ')
     for i, scalable in ipairs(scalability) do
         out:write("{ isScalable = "..tostring(scalable.isScalable))
-        if scalable.format then out:write(', format = "'..scalable.format..'"') end
+        if scalable.formats then 
+            out:write(', formats = { ')
+            for j, format in ipairs(scalable.formats) do
+                out:write('"'..format..'"')
+                if j < #scalable.formats then out:write(", ") end
+            end
+            out:write(" }")
+        end
         out:write(" }")
         if i < #scalability then out:write(", ") end
     end

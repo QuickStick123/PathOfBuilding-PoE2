@@ -421,11 +421,17 @@ function describeScalability(fileName)
 				local wordingFormats = {}
 				local inOrderScalability = { }
 				for _, format in ipairs(wordings) do
-					if type(format.v) == "number" then wordingFormats[tonumber(format.v)] = format.k end
+					if type(format.v) == "number" then
+						if wordingFormats[tonumber(format.v)] then
+							table.insert(wordingFormats[tonumber(format.v)],  format.k)
+						else
+							wordingFormats[tonumber(format.v)] = { format.k }
+						end
+					end
 				end
 				out[wordings.text:gsub("(%b{})", function(num)
 					local statNum = (num:match("%d") or 0) + 1
-					table.insert(inOrderScalability, { isScalable = scalability[statNum], format = wordingFormats[statNum] })
+					table.insert(inOrderScalability, { isScalable = scalability[statNum], formats = wordingFormats[statNum] })
 					return "#"
 				end)] = inOrderScalability
 			end
