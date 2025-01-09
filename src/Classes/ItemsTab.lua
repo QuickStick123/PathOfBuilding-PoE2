@@ -2286,7 +2286,7 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			end
 		end
 		for i = 1, explicitNum do
-			item.explicitModLines[i].corruptedRange = corruptedRanges[i]
+			if corruptedRanges[i] ~= 1 then item.explicitModLines[i].corruptedRange = corruptedRanges[i] end
 		end
 		item:BuildAndParseRaw()
 		return item
