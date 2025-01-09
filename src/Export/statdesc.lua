@@ -77,12 +77,19 @@ function loadStatFile(fileName)
 						end
 						table.insert(desc.limit, limit)
 					end
-					for k, v in special:gmatch("([%w%%_]+) (%w+)") do
+					for k, v in special:gmatch("([%w%%_]+) (%d+)") do
 						table.insert(desc, {
 							k = k,
 							v = tonumber(v) or v,
 						})
 						nk[k] = v
+					end
+					if special:match("canonical_line") then
+						table.insert(desc, {
+							k = "canonical_line",
+							v = true,
+						})
+						nk["canonical_line"] = true
 					end
 					table.insert(curLang, desc)
 				end
@@ -339,7 +346,7 @@ function describeStats(stats)
 				elseif spec.k == "plus_two_hundred" then
 					val[spec.v].min = val[spec.v].min + 200
 					val[spec.v].max = val[spec.v].max + 200
-				elseif spec.k == "reminderstring" or spec.k == "canonical_line" or spec.k == "_stat" then
+				elseif spec.k == "reminderstring" or spec.k == "canonical_line" or spec.k == "canonical_stat" then
 				elseif spec.k then
 					ConPrintf("Unknown description function: %s", spec.k)
 				end
@@ -399,4 +406,30 @@ function describeMod(mod)
 	local out, orders = describeStats(stats)
 	out.modTags = describeModTags(mod.ImplicitTags)
 	return out, orders
+end
+
+function describeScalability(fileName)
+	local out = { }
+	local stats = dat("stats")
+	for stat, statDescription in pairs(statDescriptors[fileName]) do
+		local scalability = { }
+		if statDescription.stats then
+			for i, stat in ipairs(statDescription.stats) do
+				table.insert(scalability, stats:GetRow("Id", stat).IsScalable)
+			end
+			for _, wordings in ipairs(statDescription[1]) do
+				local wordingFormats = {}
+				local inOrderScalability = { }
+				for _, format in ipairs(wordings) do
+					if type(format.v) == "number" then wordingFormats[tonumber(format.v)] = format.k end
+				end
+				out[wordings.text:gsub("(%b{})", function(num)
+					local statNum = (num:match("%d") or 0) + 1
+					table.insert(inOrderScalability, { isScalable = scalability[statNum], format = wordingFormats[statNum] })
+					return "#"
+				end)] = inOrderScalability
+			end
+		end
+	end
+	return out
 end
