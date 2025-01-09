@@ -2,6 +2,7 @@ name: Create new installer
 on:
   release:
     types: [published]
+  workflow_dispatch:
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
@@ -15,7 +16,7 @@ jobs:
                 ref: 'master'
                 ssh-key: '${{ secrets.POB_INSTALLER_KEY }}'
             - name: Create installer
-              run: 'python3 make_release.py'
+              run: 'python3 make_release.py --game-version 2'
             - name: Upload artifact
               run: >
                 gh release upload ${{ github.event.release.tag_name }} (Get-ChildItem Dist -File).FullName --clobber -R ${{ github.repository }};

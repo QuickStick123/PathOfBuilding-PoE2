@@ -18,9 +18,9 @@ local m_max = math.max
 local m_sqrt = math.sqrt
 local m_pow = math.pow
 local m_huge = math.huge
-local bor = bit.bor
-local band = bit.band
-local bnot = bit.bnot
+local bor = OR64 -- bit.bor
+local band = AND64 -- bit.band
+local bnot = NOT64 -- bit.bnot
 local s_format = string.format
 
 local tempTable1 = { }
@@ -324,7 +324,12 @@ function calcs.offence(env, actor, activeSkill)
 
 	local skillModList = activeSkill.skillModList
 	local skillData = activeSkill.skillData
-	local skillFlags = activeSkill.skillFlags
+	local skillFlags
+	if env.mode == "CALCS" then
+		skillFlags = activeSkill.activeEffect.srcInstance.statSetCalcs.skillFlags
+	else 
+		skillFlags = activeSkill.activeEffect.srcInstance.statSetMain.skillFlags
+	end
 	local skillCfg = activeSkill.skillCfg
 	if skillData.showAverage then
 		skillFlags.showAverage = true
@@ -1753,7 +1758,6 @@ function calcs.offence(env, actor, activeSkill)
 	-- Calculate damage conversion percentages
 	activeSkill.conversionTable = wipeTable(activeSkill.conversionTable)
 	activeSkill.gainTable = wipeTable(activeSkill.gainTable)
-	ConPrintf("CalOffenceRunning")
 	for damageTypeIndex = 1, 5 do
 		local damageType = dmgTypeList[damageTypeIndex]
 		local globalConv = wipeTable(tempTable1)
@@ -2881,12 +2885,11 @@ function calcs.offence(env, actor, activeSkill)
 			local damageTypeMin = damageType.."Min"
 			local damageTypeMax = damageType.."Max"
 			local baseMultiplier = activeSkill.activeEffect.grantedEffectLevel.baseMultiplier or skillData.baseMultiplier or 1
-			local damageEffectiveness = activeSkill.activeEffect.grantedEffectLevel.damageEffectiveness or skillData.damageEffectiveness or 1
 			local addedMin = skillModList:Sum("BASE", cfg, damageTypeMin) + enemyDB:Sum("BASE", cfg, "Self"..damageTypeMin)
 			local addedMax = skillModList:Sum("BASE", cfg, damageTypeMax) + enemyDB:Sum("BASE", cfg, "Self"..damageTypeMax)
 			local addedMult = calcLib.mod(skillModList, cfg, "Added"..damageType.."Damage", "AddedDamage")
-			local baseMin = (((source[damageTypeMin] or 0) + (source[damageType.."BonusMin"] or 0)) * baseMultiplier + addedMin) * damageEffectiveness * addedMult
-			local baseMax = (((source[damageTypeMax] or 0) + (source[damageType.."BonusMax"] or 0)) * baseMultiplier + addedMax) * damageEffectiveness * addedMult
+			local baseMin = ((source[damageTypeMin] or 0) + (source[damageType.."BonusMin"] or 0) + (addedMin * addedMult)) * baseMultiplier
+			local baseMax = ((source[damageTypeMax] or 0) + (source[damageType.."BonusMax"] or 0) + (addedMax * addedMult)) * baseMultiplier
 			output[damageTypeMin.."Base"] = baseMin
 			output[damageTypeMax.."Base"] = baseMax
 			if breakdown then
@@ -2895,19 +2898,16 @@ function calcs.offence(env, actor, activeSkill)
 					t_insert(breakdown[damageType], "Base damage:")
 					local plus = ""
 					if (source[damageTypeMin] or 0) ~= 0 or (source[damageTypeMax] or 0) ~= 0 then
-						t_insert(breakdown[damageType], s_format("%d to %d ^8(base damage from %s)", source[damageTypeMin], source[damageTypeMax], source.type and "weapon" or "skill"))
-						if baseMultiplier ~= 1 then
-							t_insert(breakdown[damageType], s_format("x %.2f ^8(base damage multiplier)", baseMultiplier))
-						end
+						t_insert(breakdown[damageType], s_format("%d to %d ^8(damage from %s)", source[damageTypeMin], source[damageTypeMax], source.type and "weapon" or "skill"))
 					end
 					if addedMin ~= 0 or addedMax ~= 0 then
 						t_insert(breakdown[damageType], s_format("%s%d to %d ^8(added damage)", plus, addedMin, addedMax))
-						if damageEffectiveness ~= 1 then
-							t_insert(breakdown[damageType], s_format("x %.2f ^8(damage effectiveness)", damageEffectiveness))
-						end
 						if addedMult ~= 1 then
 							t_insert(breakdown[damageType], s_format("x %.2f ^8(added damage multiplier)", addedMult))
 						end
+					end
+					if baseMultiplier ~= 1 then
+						t_insert(breakdown[damageType], s_format("x %.2f ^8(base damage multiplier)", baseMultiplier))
 					end
 				end
 			end
@@ -4163,7 +4163,7 @@ function calcs.offence(env, actor, activeSkill)
 			-- For poisons we will be using a weighted average calculation
 			local maxStacks = 1
 			if skillFlags.poisonCanStack then
-				maxStacks = skillModList:Override(cfg, "PoisonStacks") or (maxStacks + skillModList:Sum("BASE", cfg, "PoisonStacks"))
+				maxStacks = skillModList:Override(cfg, "PoisonStacks") or ((maxStacks + skillModList:Sum("BASE", cfg, "PoisonStacks")) * skillModList:More(cfg, "PoisonStacks"))
 			end
 			local overrideStackPotential = skillModList:Override(nil, "PoisonStackPotentialOverride") and skillModList:Override(nil, "PoisonStackPotentialOverride") / maxStacks
 			globalOutput.PoisonStacksMax = maxStacks
@@ -5431,7 +5431,9 @@ function calcs.offence(env, actor, activeSkill)
 					dmgType = string.gsub(" "..value.damageType, "%W%l", string.upper):sub(2)
 					break -- Only one mod of this kind is expected here
 				end
-				if activeSkill.skillFlags.ignite and dmgType and dmgVal then
+				local igniteFlag = env.mode == "CALCS" and activeSkill.activeEffect.srcInstance.statSetCalcs.skillFlags.ignite or
+									activeSkill.activeEffect.srcInstance.statSetMain.skillFlags.ignite
+				if igniteFlag and dmgType and dmgVal then
 					local dmgBreakdown, totalDmgTaken = calcs.applyDmgTakenConversion(activeSkill, output, breakdown, dmgType, dmgVal)
 					t_insert(dmgBreakdown, 1, s_format("Eye of Innocence base damage: %d", dmgVal))
 					t_insert(dmgBreakdown, 2, s_format(""))

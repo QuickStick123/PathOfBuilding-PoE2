@@ -513,6 +513,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 		modDB:NewMod("Speed", "INC", 3, "Base", ModFlag.Cast, { type = "Multiplier", var = "Tailwind", limit = 10 })
 		modDB:NewMod("MovementSpeed", "INC", 1, "Base", { type = "Multiplier", var = "Tailwind", limit = 10 })
 		modDB:NewMod("Evasion", "INC", 15, "Base", { type = "Multiplier", var = "Tailwind", limit = 10 })
+		modDB:NewMod("SkillSlots", "BASE", 9, "Base")
 
 		-- Initialise enemy modifier database
 		calcs.initModDB(env, enemyDB)
@@ -1425,6 +1426,12 @@ function calcs.initEnv(build, mode, override, specEnv)
 									srcInstance = gemInstance,
 									gemData = gemInstance.gemData,
 								}
+								if not activeEffect.srcInstance.statSetMain then
+									activeEffect.srcInstance.statSetMain = { statSet = grantedEffect.statSets[1] }
+								end
+								if not activeEffect.srcInstance.statSetCalcs then
+									activeEffect.srcInstance.statSetCalcs = { statSet = grantedEffect.statSets[1] }
+								end
 								if gemInstance.gemData then
 									local playerItems = env.player.itemList
 									local socketedIn = playerItems[groupCfg.slotName] and playerItems[groupCfg.slotName].sockets and playerItems[groupCfg.slotName].sockets[gemIndex]
@@ -1488,7 +1495,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 										end
 									end
 								end
-								local activeSkill = calcs.createActiveSkill(activeEffect, appliedSupportList, env.player, group)
+								local activeSkill = calcs.createActiveSkill(activeEffect, appliedSupportList, env, group)
 								if gemInstance.gemData then
 									activeSkill.slotName = groupCfg.slotName
 								end
@@ -1580,6 +1587,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 			end
 		end
 
+		-- UPDATE THIS TO ADD DEFAULT SKILLS FOR EACH WEAPON
 		if not env.player.mainSkill then
 			-- Add a default main skill if none are specified
 			local defaultEffect = {
@@ -1587,8 +1595,16 @@ function calcs.initEnv(build, mode, override, specEnv)
 				level = 1,
 				quality = 0,
 				enabled = true,
+				srcInstance = {
+					statSetMain = {
+						statSet = env.data.skills.MeleeUnarmedPlayer.statSets[1]
+					},
+					statSetCalcs = {
+						statSet = env.data.skills.MeleeUnarmedPlayer.statSets[1]
+					}
+				}
 			}
-			env.player.mainSkill = calcs.createActiveSkill(defaultEffect, { }, env.player)
+			env.player.mainSkill = calcs.createActiveSkill(defaultEffect, { }, env)
 			t_insert(env.player.activeSkillList, env.player.mainSkill)
 		end
 

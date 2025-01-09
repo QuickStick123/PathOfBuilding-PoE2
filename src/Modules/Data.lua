@@ -18,8 +18,6 @@ local skillTypes = {
 	"act_int",
 	"other",
 	"glove",
-	"minion",
-	"spectre",
 	"sup_str",
 	"sup_dex",
 	"sup_int",
@@ -428,7 +426,9 @@ data.weaponTypeInfo = {
 	["Crossbow"] = { oneHand = false, melee = false, flag = "Crossbow" },
 	["Claw"] = { oneHand = true, melee = true, flag = "Claw" },
 	["Dagger"] = { oneHand = true, melee = true, flag = "Dagger" },
+	["Spear"] = { oneHand = true, melee = true, flag = "Spear" },
 	["Staff"] = { oneHand = false, melee = true, flag = "Staff", label = "Quarterstaff" },
+	["Wand"] = { oneHand = true, melee = false, flag = "Wand" },
 	["One Handed Axe"] = { oneHand = true, melee = true, flag = "Axe" },
 	["One Handed Mace"] = { oneHand = true, melee = true, flag = "Mace" },
 	["One Handed Sword"] = { oneHand = true, melee = true, flag = "Sword" },
@@ -502,19 +502,19 @@ data.jewelRadii = {
 		{ inner = 2400, outer = 2880, col = "^x0B9300", label = "Variable" },
 	},
 	["4_0"] = {
-		{ inner = 0, outer = 1000, col = "^xFF0000", label = "Small" },
-		{ inner = 0, outer = 1150, col = "^xFF0000", label = "Medium" },
-		{ inner = 0, outer = 1300, col = "^xFF0000", label = "Large" },
-		{ inner = 0, outer = 1500, col = "^xFF0000", label = "Very Large" },
+		{ inner = 0, outer = 1000, col = "^xBB6600", label = "Small" },
+		{ inner = 0, outer = 1150, col = "^x66FFCC", label = "Medium" },
+		{ inner = 0, outer = 1300, col = "^x2222CC", label = "Large" },
+		{ inner = 0, outer = 1500, col = "^xC100FF", label = "Very Large" },
 
-		{ inner = 650, outer = 950, col = "^xFF0000", label = "Variable" },
-		{ inner = 800, outer = 1100, col = "^xFF0000", label = "Variable" },
-		{ inner = 950, outer = 1250, col = "^xFF0000", label = "Variable" },
-		{ inner = 1100, outer = 1400, col = "^xFF0000", label = "Variable" },
-		{ inner = 1250, outer = 1550, col = "^xFF0000", label = "Variable" },
-		{ inner = 1400, outer = 1700, col = "^xFF0000", label = "Variable" },
-		{ inner = 1650, outer = 1950, col = "^xFF0000", label = "Variable" },
-		{ inner = 1800, outer = 2100, col = "^xFF0000", label = "Variable" },
+		{ inner = 650, outer = 950, col = "^xD35400", label = "Variable" },
+		{ inner = 800, outer = 1100, col = "^x66FFCC", label = "Variable" },
+		{ inner = 950, outer = 1250, col = "^x2222CC", label = "Variable" },
+		{ inner = 1100, outer = 1400, col = "^xC100FF", label = "Variable" },
+		{ inner = 1250, outer = 1550, col = "^x0B9300", label = "Variable" },
+		{ inner = 1400, outer = 1700, col = "^xFFCC00", label = "Variable" },
+		{ inner = 1650, outer = 1950, col = "^xFF6600", label = "Variable" },
+		{ inner = 1800, outer = 2100, col = "^x0099FF", label = "Variable" },
 	}
 }
 
@@ -786,29 +786,33 @@ for skillId, grantedEffect in pairs(data.skills) do
 	grantedEffect.id = skillId
 	grantedEffect.modSource = "Skill:"..skillId
 	-- Add sources for skill mods, and check for global effects
-	for _, list in pairs({grantedEffect.baseMods, grantedEffect.qualityMods, grantedEffect.levelMods}) do
-		for _, mod in pairs(list) do
-			if mod.name then
-				processMod(grantedEffect, mod)
-			else
-				for _, mod in ipairs(mod) do
+	for _, skillPart in pairs(tableConcat({grantedEffect}, grantedEffect.statSets or {})) do
+		for _, list in pairs({skillPart.baseMods, skillPart.qualityMods, skillPart.levelMods}) do
+			for _, mod in pairs(list) do
+				if mod.name then
 					processMod(grantedEffect, mod)
+				else
+					for _, mod in ipairs(mod) do
+						processMod(grantedEffect, mod)
+					end
 				end
 			end
 		end
 	end
 	-- Install stat map metatable
-	grantedEffect.statMap = grantedEffect.statMap or { }
-	setmetatable(grantedEffect.statMap, data.skillStatMapMeta)
-	grantedEffect.statMap._grantedEffect = grantedEffect
-	for _, map in pairs(grantedEffect.statMap) do
-		-- Some mods need different scalars for different stats, but the same value.  Putting them in a group allows this
-		for _, modOrGroup in ipairs(map) do
-			if modOrGroup.name then
-				processMod(grantedEffect, modOrGroup)
-			else
-				for _, mod in ipairs(modOrGroup) do
-					processMod(grantedEffect, mod)
+	for _, statSet in pairs(tableConcat({grantedEffect}, grantedEffect.statSets or {})) do
+		statSet.statMap = statSet.statMap or { }
+		setmetatable(statSet.statMap, data.skillStatMapMeta)
+		statSet.statMap._grantedEffect = grantedEffect
+		for _, map in ipairs(statSet.statMap or {}) do
+			-- Some mods need different scalars for different stats, but the same value.  Putting them in a group allows this
+			for _, modOrGroup in ipairs(map) do
+				if modOrGroup.name then
+					processMod(grantedEffect, modOrGroup)
+				else
+					for _, mod in ipairs(modOrGroup) do
+						processMod(grantedEffect, mod)
+					end
 				end
 			end
 		end
@@ -865,28 +869,6 @@ for gemId, gem in pairs(data.gems) do
 			end
 		end
 	end
-    for _, alt in ipairs{"AltX", "AltY"} do
-        if loc and data.skills[gem.secondaryGrantedEffectId..alt] then
-			data.gemGrantedEffectIdForVaalGemId[gem.secondaryGrantedEffectId..alt] = gemId..alt
-			data.gemVaalGemIdForBaseGemId[gemId..alt] = data.gemVaalGemIdForBaseGemId[gemId]..alt
-            local newGem = { name, gameId, variantId, grantedEffectId, secondaryGrantedEffectId, vaalGem, tags = {}, tagString, reqStr, reqDex, reqInt, naturalMaxLevel }
-			-- Hybrid gems (e.g. Vaal gems) use the display name of the active skill e.g. Vaal Summon Skeletons of Sorcery
-            newGem.name = "Vaal " .. data.skills[gem.secondaryGrantedEffectId..alt].baseTypeName
-            newGem.gameId = gem.gameId
-            newGem.variantId = gem.variantId..alt
-            newGem.grantedEffectId = gem.grantedEffectId
-            newGem.secondaryGrantedEffectId = gem.secondaryGrantedEffectId..alt
-            newGem.vaalGem = gem.vaalGem
-            newGem.tags = copyTable(gem.tags)
-            newGem.tagString = gem.tagString
-            newGem.reqStr = gem.reqStr
-            newGem.reqDex = gem.reqDex
-            newGem.reqInt = gem.reqInt
-            newGem.naturalMaxLevel = gem.naturalMaxLevel
-            setupGem(newGem, gemId..alt)
-            toAddGems[gemId..alt] = newGem
-        end
-    end
 end
 for id, gem in pairs(toAddGems) do
     data.gems[id] = gem

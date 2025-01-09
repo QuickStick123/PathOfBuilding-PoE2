@@ -6,9 +6,9 @@
 local pairs = pairs
 local ipairs = ipairs
 local t_insert = table.insert
-local band = bit.band
-local bor = bit.bor
-local bnot = bit.bnot
+local band = AND64 --bit.band
+local bor = OR64 --bit.bor
+local bnot = NOT64 --bit.bnot
 local m_huge = math.huge
 local function firstToUpper(str)
 	return (str:gsub("^%l", string.upper))
@@ -83,6 +83,7 @@ local formList = {
 	["^lose ([%d%.]+)"] = "LOSE",
 	["^lose %+(%d+)%% to"] = "LOSE",
 	["^grants ([%d%.]+)"] = "GRANTS",    -- local
+	["^grants ([%d%.]+) additional"] = "GRANTS",
 	["^removes? ([%d%.]+) ?o?f? ?y?o?u?r?"] = "REMOVES", -- local
 	["^(%d+)"] = "BASE",
 	["^([%+%-]?%d+)%% chance"] = "CHANCE",
@@ -829,6 +830,8 @@ local modNameList = {
 	["lesser massive shrine buff"] = "Condition:LesserMassiveShrine",
 	["diamond shrine buff"] = "Condition:DiamondShrine",
 	["massive shrine buff"] = "Condition:MassiveShrine",
+	-- Count related
+	["skill slots"] = "SkillSlots",
 }
 
 -- List of modifier flags
@@ -857,9 +860,18 @@ local modFlagList = {
 	["with staves"] = { flags = bor(ModFlag.Staff, ModFlag.Hit) },
 	["to staff attacks"] = { flags = bor(ModFlag.Staff, ModFlag.Hit) },
 	["with staff attacks"] = { flags = bor(ModFlag.Staff, ModFlag.Hit) },
+	["with quarterstaves"] = { flags = bor(ModFlag.Staff, ModFlag.Hit) },
+	["to quarterstaff attacks"] = { flags = bor(ModFlag.Staff, ModFlag.Hit) },
+	["with quarterstaff attacks"] = { flags = bor(ModFlag.Staff, ModFlag.Hit) },
 	["with swords"] = { flags = bor(ModFlag.Sword, ModFlag.Hit) },
 	["to sword attacks"] = { flags = bor(ModFlag.Sword, ModFlag.Hit) },
 	["with sword attacks"] = { flags = bor(ModFlag.Sword, ModFlag.Hit) },
+	["with flails"] = { flags = bor(ModFlag.Flail, ModFlag.Hit) },
+	["to flail attacks"] = { flags = bor(ModFlag.Flail, ModFlag.Hit) },
+	["with flail attacks"] = { flags = bor(ModFlag.Flail, ModFlag.Hit) },
+	["with spears"] = { flags = bor(ModFlag.Spear, ModFlag.Hit) },
+	["to spear attacks"] = { flags = bor(ModFlag.Spear, ModFlag.Hit) },
+	["with spear attacks"] = { flags = bor(ModFlag.Spear, ModFlag.Hit) },
 	["with wands"] = { flags = bor(ModFlag.Wand, ModFlag.Hit) },
 	["to wand attacks"] = { flags = bor(ModFlag.Wand, ModFlag.Hit) },
 	["with wand attacks"] = { flags = bor(ModFlag.Wand, ModFlag.Hit) },
@@ -1382,10 +1394,8 @@ local modTagList = {
 	["per (%d+) evasion on boots"] = function(num) return { tag = { type = "PerStat", stat = "EvasionOnBoots", div = num } } end,
 	["per (%d+) armour on equipped gloves"] = function(num) return { tag = { type = "PerStat", stat = "ArmourOnGloves", div = num } } end,
 	["per (%d+) armour on gloves"] = function(num) return { tag = { type = "PerStat", stat = "ArmourOnGloves", div = num } } end,
-	["per (%d+)%% chaos resistance"] = function(num) return { tag = { type = "PerStat", stat = "ChaosResist", div = num } } end,
-	["per (%d+)%% cold resistance above 75%%"] = function(num) return { tag  = { type = "PerStat", stat = "ColdResistOver75", div = num } } end,
-	["per (%d+)%% lightning resistance above 75%%"] = function(num) return { tag  = { type = "PerStat", stat = "LightningResistOver75", div = num } } end,
-	["per (%d+)%% fire resistance above 75%%"] = function(num) return { tag  = { type = "PerStat", stat = "FireResistOver75", div = num } } end,
+	["per (%d+)%% (%a+) resistance"] = function(num, _, name) return { tag = { type = "PerStat", stat = firstToUpper(name).."Resist", div = num } } end,
+	["per (%d+)%% (%a+) resistance above 75%%"] = function(num, _, name) return { tag  = { type = "PerStat", stat = firstToUpper(name).."ResistOver75", div = num } } end,
 	["per (%d+) devotion"] = function(num) return { tag = { type = "PerStat", stat = "Devotion", actor = "parent", div = num } } end,
 	["per (%d+)%% missing fire resistance, up to a maximum of (%d+)%%"] = function(num, _, limit) return { tag = { type = "PerStat", stat = "MissingFireResist", div = num, globalLimit = tonumber(limit), globalLimitKey = "ReplicaNebulisFire" } } end,
 	["per (%d+)%% missing cold resistance, up to a maximum of (%d+)%%"] = function(num, _, limit) return { tag = { type = "PerStat", stat = "MissingColdResist", div = num, globalLimit = tonumber(limit), globalLimitKey = "ReplicaNebulisCold" } } end,
@@ -2656,6 +2666,7 @@ local specialModList = {
 	["if amethyst flask charges are consumed, (%d+)%% of physical damage as extra chaos damage"] = function (num) return {
 		mod("PhysicalDamageGainAsChaos", "BASE", num, { type = "SkillType", skillType = SkillType.Triggered, neg = true }, { type = "SkillType", skillType = SkillType.Channel, neg = true }, { type = "Condition", var = "UsingAmethystFlask" })
 	} end,
+	["double the number of your poisons that targets can be affected by at the same time"] =  function(num) return { flag("PoisonCanStack"), mod("PoisonStacks", "MORE", 100) } end,
 	-- Raider
 	["nearby enemies have (%d+)%% less accuracy rating while you have phasing"] = function(num) return { mod("EnemyModifier", "LIST", { mod = mod("Accuracy", "MORE", -num) }, { type = "Condition", var = "Phasing" }) } end,
 	["immun[ei]t?y? to elemental ailments while phasing"] = { flag("ElementalAilmentImmune", { type = "Condition", var = "Phasing" }), },
@@ -4331,7 +4342,7 @@ local specialModList = {
 	["(%a+) resistance cannot be penetrated"] = function(_, res) return { flag("EnemyCannotPen"..(res:gsub("^%l", string.upper)).."Resistance") } end,
 	-- Knockback
 	["cannot knock enemies back"] = { flag("CannotKnockback") },
-	["knocks back enemies if you get a critical hit with a staff"] = { mod("EnemyKnockbackChance", "BASE", 100, nil, ModFlag.Staff, { type = "Condition", var = "CriticalStrike" }) },
+	["knocks back enemies if you get a critical hit with a q?u?a?r?t?e?r?staff"] = { mod("EnemyKnockbackChance", "BASE", 100, nil, ModFlag.Staff, { type = "Condition", var = "CriticalStrike" }) },
 	["knocks back enemies if you get a critical hit with a bow"] = { mod("EnemyKnockbackChance", "BASE", 100, nil, ModFlag.Bow, { type = "Condition", var = "CriticalStrike" }) },
 	["bow knockback at close range"] = { mod("EnemyKnockbackChance", "BASE", 100, nil, ModFlag.Bow, { type = "Condition", var = "AtCloseRange" }) },
 	["adds knockback during f?l?a?s?k? ?effect"] = { mod("EnemyKnockbackChance", "BASE", 100, { type = "Condition", var = "UsingFlask" }) },
@@ -4475,20 +4486,23 @@ local specialModList = {
 	} end,
 	-- Jewels
 	["passives in radius of ([%a%s']+) can be allocated without being connected to your tree"] = function(_, name) return {
-		mod("JewelData", "LIST", { key = "impossibleEscapeKeystone", value = name }),
-		mod("ImpossibleEscapeKeystones", "LIST", { key = name, value = true }),
+		mod("JewelData", "LIST", { key = "fromNothingKeystone", value = name }),
+		mod("FromNothingKeystones", "LIST", { key = name, value = true }),
 	} end,
 	["passives in radius can be allocated without being connected to your tree"] = { mod("JewelData", "LIST", { key = "intuitiveLeapLike", value = true }) },
-	["affects passives in small ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 4 }) },
-	["affects passives in medium ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 5 }) },
-	["affects passives in large ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 6 }) },
-	["affects passives in very large ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 7 }) },
-	["affects passives in massive ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 8 }) },
-	["only affects passives in small ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 4 }) },
-	["only affects passives in medium ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 5 }) },
-	["only affects passives in large ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 6 }) },
-	["only affects passives in very large ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 7 }) },
-	["only affects passives in massive ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 8 }) },
+	["affects passives in small ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 6 }) },
+	["affects passives in medium ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 8 }) },
+	["affects passives in large ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 10 }) },
+	["affects passives in very large ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 11 }) },
+	["affects passives in massive ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 12 }) },
+	["only affects passives in very small ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 5 }) },
+	["only affects passives in small ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 6 }) },
+	["only affects passives in medium%-small ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 7 }) },
+	["only affects passives in medium ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 8 }) },
+	["only affects passives in medium%-large ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 9 }) },
+	["only affects passives in large ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 10 }) },
+	["only affects passives in very large ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 11 }) },
+	["only affects passives in massive ring"] = { mod("JewelData", "LIST", { key = "radiusIndex", value = 12 }) },
 	["primordial"] = { mod("Multiplier:PrimordialItem", "BASE", 1) },
 	["spectres have a base duration of (%d+) seconds"] = { mod("SkillData", "LIST", { key = "duration", value = 6 }, { type = "SkillName", skillName = "Raise Spectre", includeTransfigured = true }) },
 	["flasks applied to you have (%d+)%% increased effect"] = function(num) return { mod("FlaskEffect", "INC", num, { type = "ActorCondition", actor = "player"}) } end,
@@ -4609,8 +4623,9 @@ local specialModList = {
 		mod("PhysicalDamageFromHitsTakenAsCold", "BASE", num / 3),
 		mod("PhysicalDamageFromHitsTakenAsLightning", "BASE", num / 3),
 	} end,
-	["items and gems have (%d+)%% reduced attribute requirements"] = function(num) return { mod("GlobalAttributeRequirements", "INC", -num) } end,
-	["items and gems have (%d+)%% increased attribute requirements"] = function(num) return { mod("GlobalAttributeRequirements", "INC", num) } end,
+	["equipment and skill gems have (%d+)%% reduced attribute requirements"] = function(num) return { mod("GlobalAttributeRequirements", "INC", -num) } end,
+	["equipment and skill gems have (%d+)%% increased attribute requirements"] = function(num) return { mod("GlobalAttributeRequirements", "INC", num) } end,
+	["skill gems have (%d+)%% more attribute requirements"] = function(num) return { mod("GlobalGemAttributeRequirements", "MORE", num) } end,
 	["mana reservation of herald skills is always (%d+)%%"] = function(num) return { mod("SkillData", "LIST", { key = "ManaReservationPercentForced", value = num }, { type = "SkillType", skillType = SkillType.Herald }) } end,
 	["([%a%s]+) reserves no mana"] = function(_, name) return {
 		mod("SkillData", "LIST", { key = "manaReservationFlat", value = 0 }, { type = "SkillId", skillId = gemIdLookup[name] }, { type = "SkillType", skillType = SkillType.Blessing, neg = true }),
@@ -5222,7 +5237,14 @@ for gemId, gemData in pairs(data.gems) do
 			preSkillNameList["^"..skillName:lower().." totem deals "] = { tag = { type = "SkillName", skillName = skillName, includeTransfigured = true } }
 			preSkillNameList["^"..skillName:lower().." totem grants "] = { addToSkill = { type = "SkillName", skillName = skillName, includeTransfigured = true }, tag = { type = "GlobalEffect", effectType = "Buff" } }
 		end
-		if grantedEffect.skillTypes[SkillType.Buff] or grantedEffect.baseFlags.buff then
+		local hasBuffStatSet = false
+		for _, statSet in ipairs(grantedEffect.statSets) do
+			if statSet.baseFlags.buff then
+				hasBuffStatSet = true
+				break
+			end
+		end
+		if grantedEffect.skillTypes[SkillType.Buff] or hasBuffStatSet then
 			preSkillNameList["^"..skillName:lower().." grants "] = { addToSkill = { type = "SkillName", skillName = skillName, includeTransfigured = true }, tag = { type = "GlobalEffect", effectType = "Buff" } }
 			preSkillNameList["^"..skillName:lower().." grants a?n? ?additional "] = { addToSkill = { type = "SkillName", skillName = skillName, includeTransfigured = true }, tag = { type = "GlobalEffect", effectType = "Buff" } }
 		end

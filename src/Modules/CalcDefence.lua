@@ -114,22 +114,28 @@ function calcs.doActorLifeManaSpiritReservation(actor)
 	actor.reserved_LifePercent = modDB:Sum("BASE", nil, "ExtraLifeReserved")
 	actor.reserved_ManaBase = 0
 	actor.reserved_ManaPercent = 0
+	actor.reserved_SpiritBase = 0
+	actor.reserved_SpiritPercent = 0
 	actor.uncancellable_LifeReservation = modDB:Sum("BASE", nil, "ExtraLifeReserved")
 	actor.uncancellable_ManaReservation = modDB:Sum("BASE", nil, "ExtraManaReserved")
+	actor.uncancellable_SpiritReservation = modDB:Sum("BASE", nil, "ExtraSpiritReserved")
 	if breakdown then
 		breakdown.LifeReserved = { reservations = { } }
 		breakdown.ManaReserved = { reservations = { } }
+		breakdown.SpiritReserved = { reservations = { } }
 	end
 	for _, activeSkill in ipairs(actor.activeSkillList) do
 		if (activeSkill.skillTypes[SkillType.HasReservation] or activeSkill.skillData.SupportedByAutoexertion) and not activeSkill.skillTypes[SkillType.ReservationBecomesCost] then
 			local skillModList = activeSkill.skillModList
 			local skillCfg = activeSkill.skillCfg
 			local mult = floor(skillModList:More(skillCfg, "SupportManaMultiplier"), 4)
-			local pool = { ["Mana"] = { }, ["Life"] = { } }
+			local pool = { ["Mana"] = { }, ["Life"] = { }, ["Spirit"] = { } }
 			pool.Mana.baseFlat = activeSkill.skillData.manaReservationFlat or activeSkill.activeEffect.grantedEffectLevel.manaReservationFlat or 0
+			pool.Spirit.baseFlat = activeSkill.skillData.spiritReservationFlat or activeSkill.activeEffect.grantedEffectLevel.spiritReservationFlat or 0
 			if skillModList:Flag(skillCfg, "ManaCostGainAsReservation") and activeSkill.activeEffect.grantedEffectLevel.cost then
-				pool.Mana.baseFlat = skillModList:Sum("BASE", skillCfg, "ManaCostBase") + (activeSkill.activeEffect.grantedEffectLevel.cost.Mana or 0)
+				pool.Spirit.baseFlat = skillModList:Sum("BASE", skillCfg, "ManaCostBase") + (activeSkill.activeEffect.grantedEffectLevel.cost.Mana or 0)
 			end
+			pool.Spirit.basePercent = activeSkill.skillData.spiritReservationPercent or activeSkill.activeEffect.grantedEffectLevel.spiritReservationPercent or 0
 			pool.Mana.basePercent = activeSkill.skillData.manaReservationPercent or activeSkill.activeEffect.grantedEffectLevel.manaReservationPercent or 0
 			pool.Life.baseFlat = activeSkill.skillData.lifeReservationFlat or activeSkill.activeEffect.grantedEffectLevel.lifeReservationFlat or 0
 			if skillModList:Flag(skillCfg, "LifeCostGainAsReservation") and activeSkill.activeEffect.grantedEffectLevel.cost then
@@ -1671,7 +1677,7 @@ function calcs.buildDefenceEstimations(env, actor)
 		output["EnemyCritChance"] = enemyCritChance
 		local enemyCritDamage = m_max((env.configInput["enemyCritDamage"] or env.configPlaceholder["enemyCritDamage"] or 0) + enemyDB:Sum("BASE", nil, "CritMultiplier"), 0)
 		output["EnemyCritEffect"] = 1 + enemyCritChance / 100 * (enemyCritDamage / 100) * (1 - output.CritExtraDamageReduction / 100)
-		local enemyCfg = {keywordFlags = bit.bnot(KeywordFlag.MatchAll)} -- Match all keywordFlags parameter for enemy min-max damage mods
+		local enemyCfg = {keywordFlags = NOT64(KeywordFlag.MatchAll)} -- Match all keywordFlags parameter for enemy min-max damage mods
 		local enemyDamageConversion = {}
 		for _, damageType in ipairs(dmgTypeList) do
 			local enemyDamageMult = calcLib.mod(enemyDB, nil, "Damage", damageType.."Damage", isElemental[damageType] and "ElementalDamage" or nil) -- missing taunt from allies
@@ -2878,12 +2884,12 @@ function calcs.buildDefenceEstimations(env, actor)
 			output.enemySkillTime = (env.configInput.enemySpeed or env.configPlaceholder.enemySpeed or 700) / (1 + enemyDB:Sum("INC", nil, "Speed") / 100)
 			local enemyActionSpeed = calcs.actionSpeedMod(actor.enemy)
 			output.enemySkillTime = output.enemySkillTime / 1000 / enemyActionSpeed
-			output["EHPsurvivalTime"] = output["TotalNumberOfHits"] * output.enemySkillTime
+			output["EHPSurvivalTime"] = output["TotalNumberOfHits"] * output.enemySkillTime
 			if breakdown then
-				breakdown["EHPsurvivalTime"] = {
+				breakdown["EHPSurvivalTime"] = {
 					s_format("%.2f ^8(total average number of hits you can take)", output["TotalNumberOfHits"]),
 					s_format("x %.2f ^8enemy attack/cast time", output.enemySkillTime),
-					s_format("= %.2f seconds ^8(total time it would take to die)", output["EHPsurvivalTime"]),
+					s_format("= %.2f seconds ^8(total time it would take to die)", output["EHPSurvivalTime"]),
 				}
 			end
 		end
@@ -2915,7 +2921,7 @@ function calcs.buildDefenceEstimations(env, actor)
 			end
 			output["Total"..recoupType.."PseudoRecoup"] = (output["PhysicalDamageMitigated"..recoupType.."PseudoRecoup"] or 0) / 100 * totalPhysicalDamageMitigated
 			local PseudoRecoupDuration = (output["PhysicalDamageMitigated"..recoupType.."PseudoRecoupDuration"] or 4)
-			 -- Pious Path
+			-- Pious Path
 			if output["Total"..recoupType.."PseudoRecoup"] ~= 0 then
 				for j=i+1,#recoupTypeList do
 					if modDB:Flag(nil, recoupType.."RegenerationRecovers"..recoupTypeList[j]) and not modDB:Flag(nil, "UnaffectedBy"..recoupTypeList[j].."Regen") and not modDB:Flag(nil, "No"..recoupTypeList[j].."Regen") and not modDB:Flag(nil, "CannotGain"..recoupTypeList[j]) then
@@ -2925,7 +2931,7 @@ function calcs.buildDefenceEstimations(env, actor)
 			end
 			output["Total"..recoupType.."PseudoRecoup"] = ((not modDB:Flag(nil, "UnaffectedBy"..recoupType.."Regen")) and output["Total"..recoupType.."PseudoRecoup"] or 0)
 			output[recoupType.."RecoupRecoveryMax"] = output["Total"..recoupType.."RecoupRecovery"] / recoupTime + output["Total"..recoupType.."PseudoRecoup"] / PseudoRecoupDuration + (extraPseudoRecoup[recoupType] and (extraPseudoRecoup[recoupType][1] / extraPseudoRecoup[recoupType][2]) or 0)
-			output[recoupType.."RecoupRecoveryAvg"] = output["Total"..recoupType.."RecoupRecovery"] / (output["EHPsurvivalTime"] + recoupTime) + output["Total"..recoupType.."PseudoRecoup"] / (output["EHPsurvivalTime"] + PseudoRecoupDuration) + (extraPseudoRecoup[recoupType] and (extraPseudoRecoup[recoupType][1] / (output["EHPsurvivalTime"] + extraPseudoRecoup[recoupType][2])) or 0)
+			output[recoupType.."RecoupRecoveryAvg"] = output["Total"..recoupType.."RecoupRecovery"] / (output["EHPSurvivalTime"] + recoupTime) + output["Total"..recoupType.."PseudoRecoup"] / (output["EHPSurvivalTime"] + PseudoRecoupDuration) + (extraPseudoRecoup[recoupType] and (extraPseudoRecoup[recoupType][1] / (output["EHPSurvivalTime"] + extraPseudoRecoup[recoupType][2])) or 0)
 			if breakdown then
 				local multipleTypes = 0
 				breakdown[recoupType.."RecoupRecoveryMax"] = { }
@@ -2964,14 +2970,14 @@ function calcs.buildDefenceEstimations(env, actor)
 					t_insert(breakdown[recoupType.."RecoupRecoveryMax"], s_format("/ %.2f ^8(over %d seconds)", extraPseudoRecoup[recoupType][2], extraPseudoRecoup[recoupType][2]))
 				end
 				t_insert(breakdown[recoupType.."RecoupRecoveryMax"], s_format("= %.2f per second ^8", output[recoupType.."RecoupRecoveryMax"]))
-				t_insert(breakdown[recoupType.."RecoupRecoveryAvg"], s_format("/ %.2f ^8(total time of the recoup (survival time + %d seconds))", (output["EHPsurvivalTime"] + recoupTime), recoupTime))
+				t_insert(breakdown[recoupType.."RecoupRecoveryAvg"], s_format("/ %.2f ^8(total time of the recoup (survival time + %d seconds))", (output["EHPSurvivalTime"] + recoupTime), recoupTime))
 				if output["Total"..recoupType.."PseudoRecoup"] > 0 then
 					t_insert(breakdown[recoupType.."RecoupRecoveryAvg"], s_format("+ %.2f ^8(total damage mitigated pseudo recoup amount)", output["Total"..recoupType.."PseudoRecoup"]))
-					t_insert(breakdown[recoupType.."RecoupRecoveryAvg"], s_format("/ %.2f ^8(total time of the recoup (survival time + %d seconds)", (output["EHPsurvivalTime"] + PseudoRecoupDuration), PseudoRecoupDuration))
+					t_insert(breakdown[recoupType.."RecoupRecoveryAvg"], s_format("/ %.2f ^8(total time of the recoup (survival time + %d seconds)", (output["EHPSurvivalTime"] + PseudoRecoupDuration), PseudoRecoupDuration))
 				end
 				if extraPseudoRecoup[recoupType] then
 					t_insert(breakdown[recoupType.."RecoupRecoveryAvg"], s_format("+ %.2f ^8(total damage mitigated pseudo recoup amount)", extraPseudoRecoup[recoupType][1]))
-					t_insert(breakdown[recoupType.."RecoupRecoveryAvg"], s_format("/ %.2f ^8(total time of the recoup (survival time + %d seconds)", (output["EHPsurvivalTime"] + extraPseudoRecoup[recoupType][2]), extraPseudoRecoup[recoupType][2]))
+					t_insert(breakdown[recoupType.."RecoupRecoveryAvg"], s_format("/ %.2f ^8(total time of the recoup (survival time + %d seconds)", (output["EHPSurvivalTime"] + extraPseudoRecoup[recoupType][2]), extraPseudoRecoup[recoupType][2]))
 				end
 				t_insert(breakdown[recoupType.."RecoupRecoveryAvg"], s_format("= %.2f per second ^8", output[recoupType.."RecoupRecoveryAvg"]))
 			end
@@ -2982,7 +2988,7 @@ function calcs.buildDefenceEstimations(env, actor)
 	if output.preventedLifeLossTotal > 0 and (output["LifeLossLostOverTime"] and output["LifeBelowHalfLossLostOverTime"]) then
 		local LifeLossBelowHalfLost = modDB:Sum("BASE", nil, "LifeLossBelowHalfLost") / 100
 		output["LifeLossLostMax"] = (output["LifeLossLostOverTime"] + output["LifeBelowHalfLossLostOverTime"] * LifeLossBelowHalfLost) / 4
-		output["LifeLossLostAvg"] = (output["LifeLossLostOverTime"] + output["LifeBelowHalfLossLostOverTime"] * LifeLossBelowHalfLost) / (output["EHPsurvivalTime"] + 4)
+		output["LifeLossLostAvg"] = (output["LifeLossLostOverTime"] + output["LifeBelowHalfLossLostOverTime"] * LifeLossBelowHalfLost) / (output["EHPSurvivalTime"] + 4)
 		if breakdown then
 			breakdown["LifeLossLostMax"] = { }
 			if output["LifeLossLostOverTime"] ~= 0 then
@@ -3002,7 +3008,7 @@ function calcs.buildDefenceEstimations(env, actor)
 				t_insert(breakdown["LifeLossLostAvg"], s_format("%s %d ^8(total damage prevented by petrified blood)", output["LifeLossLostOverTime"] ~= 0 and "+" or "(", output["LifeBelowHalfLossLostOverTime"]))
 				t_insert(breakdown["LifeLossLostAvg"], s_format("* %.2f ^8(percent of damage taken from petrified blood)", LifeLossBelowHalfLost))
 			end
-			t_insert(breakdown["LifeLossLostAvg"], s_format(") / %.2f ^8(total time of the degen (survival time + 4 seconds))", (output["EHPsurvivalTime"] + 4)))
+			t_insert(breakdown["LifeLossLostAvg"], s_format(") / %.2f ^8(total time of the degen (survival time + 4 seconds))", (output["EHPSurvivalTime"] + 4)))
 			t_insert(breakdown["LifeLossLostAvg"], s_format("= %.2f per second", output["LifeLossLostAvg"]))
 		end
 	end
