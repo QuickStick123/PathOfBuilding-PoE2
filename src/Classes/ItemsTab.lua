@@ -2301,9 +2301,10 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 				controls["rollRangeValue"..i].label = "^7"..string.format("%.2f", corruptedRanges[i])
 				controls["rollRangeLabel"..i].label = "^7"..itemLib.applyRange(mod.line, mod.range or main.defaultItemAffixQuality, mod.valueScalar or 1, corruptedRanges[i])
 			end)
+			corruptedRanges[i] = mod.corruptedRange or 1
+			controls["rollRangeSlider"..i].val = ((corruptedRanges[i])-0.78)/0.44
+			controls["rollRangeValue"..i].label = "^7"..string.format("%.2f", corruptedRanges[i])
 			controls["rollRangeLabel"..i] = new("LabelControl", {"RIGHT", controls["rollRangeSlider"..i], "LEFT"}, {-5, 0 , 200, 16}, "^7"..itemLib.applyRange(mod.line, mod.range or main.defaultItemAffixQuality, mod.valueScalar or 1, corruptedRanges[i]))
-			controls["rollRangeSlider"..i].val = 0.5
-			controls["rollRangeValue"..i].label = "^7"..string.format("%.2f", 1)
 			-- hide them by default as they are a secondary window
 			controls["rollRangeLabel"..i].shown = false
 			controls["rollRangeSlider"..i].shown = false
