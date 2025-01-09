@@ -429,7 +429,7 @@ function describeScalability(fileName)
 						end
 					end
 				end
-				out[wordings.text:gsub("(%b{})", function(num)
+				out[wordings.text:gsub("[%+%-]?(%b{})", function(num)
 					local statNum = (num:match("%d") or 0) + 1
 					table.insert(inOrderScalability, { isScalable = scalability[statNum], formats = wordingFormats[statNum] })
 					return "#"
