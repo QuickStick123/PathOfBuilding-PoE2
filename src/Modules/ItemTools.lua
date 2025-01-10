@@ -11,7 +11,7 @@ local m_floor = math.floor
 
 itemLib = { }
 -- Apply a value scalar to the first n of any numbers present
-function itemLib.applyValueScalar(line, valueScalar, baseValueScalar)
+function itemLib.applyValueScalar(line, valueScalar, baseValueScalar, numbers, precision)
 	if not (valueScalar and type(valueScalar) == "number") then
 		valueScalar = 1
 	end
@@ -38,6 +38,23 @@ function itemLib.applyValueScalar(line, valueScalar, baseValueScalar)
 		end
 	end
 	return line
+end
+
+-- precision is express a multiplier/divide and displayPrecision is expresed as decimal precision on rounding.
+-- ifRequired determines whether trailing zeros are displayed or not.
+function itemLib.formatValue(value, baseValueScalar, valueScalar, precision, displayPrecision, ifRequired)
+	value = round(value * precision) -- resolve range to internal value
+	if baseValueScalar and baseValueScalar ~= 1 then value = round(value * baseValueScalar) end -- apply corrupted mult
+	if valueScalar and valueScalar ~= 1 then value = m_floor(value * valueScalar) end -- apply modifier magnitude
+	value = value / precision -- convert back to display space
+	if displayPrecision then value = round(value, displayPrecision) end -- presentation
+	if displayPrecision and not ifRequired then -- whitespace is needed
+		return string.format("%"..displayPrecision.."f", value)
+	elseif displayPrecision then
+		return tostring(round(value, displayPrecision))
+	else
+		return tostring(round(value,  precision and m_min(2, m_floor(math.log(precision, 10))) or 2)) -- max decimals ingame is 2 
+	end
 end
 
 local antonyms = {
@@ -87,9 +104,9 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 			end)
 		end
 
-		-- Helper function to generate combinations recursively largest to smallest
-		local function generateComb(i, subsitutions, indices)
-			if #indices == subsitutions then
+		-- check combinations recursively largest to smallest
+		local function checkSubsitutionCombinations(i, numSubsitutions, indices)
+			if #indices == numSubsitutions then
 				local modifiedLine = line
 				local subsituted = 0
 				for _, i in ipairs(indices) do
@@ -117,7 +134,7 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 			end
 			for j = i, #values do
 				table.insert(indices, j)
-				local modifiedLine, remainingValues = generateComb(j + 1, subsitutions, indices)
+				local modifiedLine, remainingValues = checkSubsitutionCombinations(j + 1, numSubsitutions, indices)
 				if modifiedLine then
 					return modifiedLine, remainingValues
 				end
@@ -126,7 +143,7 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 		end
 
 		for i = #values, 1, -1 do
-			local modifiedLine, remainingValues = generateComb(1, i, {})
+			local modifiedLine, remainingValues = checkSubsitutionCombinations(1, i, {})
 			if modifiedLine then
 				return modifiedLine, remainingValues
 			end
@@ -137,7 +154,7 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 		if data.modScalability[key] then
 			return line, values
 		end
-		
+
 		return
 	end
 
@@ -145,90 +162,101 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 
 	if scalableLine then -- found scalability data
 		for i, scalability in ipairs(data.modScalability[scalableLine:gsub("+#", "#")]) do
-			if scalability.isScalable and ((baseValueScalar and baseValueScalar ~= 1) or (valueScalar and valueScalar ~= 1))then
-				local formated = false
-				-- precision is express a multiplier/divide and displayPrecision is expresed as decimal precision on rounding.
-				local function scaleValue(value, precision, displayPrecision, ifRequired)
-					formated = true
-					value = round(value * precision) -- resolve range to internal value
-					if baseValueScalar then value = round(value * baseValueScalar) end -- apply corrupted mult
-					if valueScalar then value = m_floor(value * valueScalar) end -- apply modifier magnitude
-					value = value / precision -- convert back to display space
-					if displayPrecision then value = round(value, displayPrecision) end -- presentation
-					if displayPrecision and not ifRequired then -- whitespace is needed
-						return string.format("%"..displayPrecision.."f", value)
-					else -- format doesn't need white space
-						return tostring(round(value, 2)) -- max decimals ingame is 2 
+			local precision
+			local displayPrecision
+			local ifRequired
+			if scalability.formats then
+				for _, format in ipairs(scalability.formats) do
+					if format == "divide_by_two_0dp" then
+						precision = 2
+						displayPrecision = 0
+						ifRequired = true
+					elseif format == "divide_by_three" then
+						precision = 3
+					elseif format == "divide_by_four" then
+						precision = 4
+					elseif format == "divide_by_five" then
+						precision = 5
+					elseif format == "divide_by_six" then
+						precision = 6
+					elseif format == "divide_by_ten_0dp" then
+						precision = 10
+						displayPrecision = 0
+					elseif format == "divide_by_ten_1dp" then
+						precision = 10
+						displayPrecision = 1
+					elseif format == "divide_by_ten_1dp_if_required" then
+						precision = 10
+						displayPrecision = 1
+						ifRequired = true
+					elseif format == "divide_by_twelve" then
+						precision = 12
+					elseif format == "divide_by_fifteen_0dp" then
+						precision = 15
+						displayPrecision = 0
+					elseif format == "divide_by_twenty" then
+						precision = 20
+					elseif format == "divide_by_twenty_then_double_0dp" then -- might be incorrect?
+						precision = 10
+						displayPrecision = 0
+					elseif format == "divide_by_one_hundred" or format == "divide_by_one_hundred_and_negate" then
+						precision = 100
+					elseif format == "divide_by_one_hundred_0dp" then
+						precision = 100
+						displayPrecision = 0
+					elseif format == "divide_by_one_hundred_1dp" then
+						precision = 100
+						displayPrecision = 1
+					elseif format == "divide_by_one_hundred_2dp" then
+						precision = 100
+						displayPrecision = 2
+					elseif format == "divide_by_one_hundred_2dp_if_required" then
+						precision = 100
+						displayPrecision = 2
+						ifRequired = true
+					elseif format == "divide_by_one_thousand" then
+						precision = 1000
+					elseif format == "per_minute_to_per_second" then
+						precision = 60
+					elseif format == "per_minute_to_per_second_0dp" then
+						precision = 60
+						displayPrecision = 0
+					elseif format == "per_minute_to_per_second_1dp" then
+						precision = 60
+						displayPrecision = 1
+					elseif format == "per_minute_to_per_second_2dp" then
+						precision = 60
+						displayPrecision = 2
+					elseif format == "per_minute_to_per_second_2dp_if_required" then
+						precision = 60
+						displayPrecision = 2
+						ifRequired = true
+					elseif format == "milliseconds_to_seconds" then
+						precision = 1000
+					elseif format == "milliseconds_to_seconds_halved" then
+						precision = 1000
+					elseif format == "milliseconds_to_seconds_0dp" then
+						precision = 1000
+						displayPrecision = 0
+					elseif format == "milliseconds_to_seconds_1dp" then
+						precision = 1000
+						displayPrecision = 1
+					elseif format == "milliseconds_to_seconds_2dp" then
+						precision = 1000
+						displayPrecision = 2
+					elseif format == "milliseconds_to_seconds_2dp_if_required" then
+						precision = 1000
+						displayPrecision = 2
+						ifRequired = true
+					elseif format == "deciseconds_to_seconds" then
+						precision = 10
 					end
 				end
-				if scalability.formats then
-					for _, format in ipairs(scalability.formats) do
-						if format == "divide_by_two_0dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 2, 0)
-						elseif format == "divide_by_three" then
-							scalableValues[i] = scaleValue(scalableValues[i], 3)
-						elseif format == "divide_by_four" then
-							scalableValues[i] = scaleValue(scalableValues[i], 4)
-						elseif format == "divide_by_five" then
-							scalableValues[i] = scaleValue(scalableValues[i], 5)
-						elseif format == "divide_by_six" then
-							scalableValues[i] = scaleValue(scalableValues[i], 6)
-						elseif format == "divide_by_ten_0dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 10, 0)
-						elseif format == "divide_by_ten_1dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 10, 1)
-						elseif format == "divide_by_ten_1dp_if_required" then
-							scalableValues[i] = scaleValue(scalableValues[i], 10, 1 ,true)
-						elseif format == "divide_by_twelve" then
-							scalableValues[i] = scaleValue(scalableValues[i], 12)
-						elseif format == "divide_by_fifteen_0dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 15, 0)
-						elseif format == "divide_by_twenty" then
-							scalableValues[i] = scaleValue(scalableValues[i], 20)
-						elseif format == "divide_by_twenty_then_double_0dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 10, 0)
-						elseif format == "divide_by_one_hundred" or format == "divide_by_one_hundred_and_negate" then
-							scalableValues[i] = scaleValue(scalableValues[i], 100)
-						elseif format == "divide_by_one_hundred_0dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 100, 0)
-						elseif format == "divide_by_one_hundred_1dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 100, 1)
-						elseif format == "divide_by_one_hundred_2dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 100, 2)
-						elseif format == "divide_by_one_hundred_2dp_if_required" then
-							scalableValues[i] = scaleValue(scalableValues[i], 100, 2, true)
-						elseif format == "divide_by_one_thousand" then
-							scalableValues[i] = scaleValue(scalableValues[i], 1000)
-						elseif format == "per_minute_to_per_second" then
-							scalableValues[i] = scaleValue(scalableValues[i], 60)
-						elseif format == "per_minute_to_per_second_0dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 60, 0)
-						elseif format == "per_minute_to_per_second_1dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 60, 1)
-						elseif format == "per_minute_to_per_second_2dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 60, 2)
-						elseif format == "per_minute_to_per_second_2dp_if_required" then
-							scalableValues[i] = scaleValue(scalableValues[i], 60, 2, true)
-						elseif format == "milliseconds_to_seconds" then
-							scalableValues[i] = scaleValue(scalableValues[i], 1000)
-						elseif format == "milliseconds_to_seconds_halved" then
-							scalableValues[i] = scaleValue(scalableValues[i], 500)
-						elseif format == "milliseconds_to_seconds_0dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 1000, 0)
-						elseif format == "milliseconds_to_seconds_1dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 1000, 1)
-						elseif format == "milliseconds_to_seconds_2dp" then
-							scalableValues[i] = scaleValue(scalableValues[i], 1000, 2)
-						elseif format == "milliseconds_to_seconds_2dp_if_required" then
-							scalableValues[i] = scaleValue(scalableValues[i], 1000, 2, true)
-						elseif format == "deciseconds_to_seconds" then
-							scalableValues[i] = scaleValue(scalableValues[i], 10)
-						end
-					end
-				end
-				if not formated then
-					scalableValues[i] = scaleValue(scalableValues[i], 1, 0, true)
-				end
+			end
+			if scalability.isScalable and ((baseValueScalar and baseValueScalar ~= 1) or (valueScalar and valueScalar ~= 1)) then
+				scalableValues[i] = itemLib.formatValue(scalableValues[i], baseValueScalar, valueScalar, precision or 1, displayPrecision, ifRequired)
+			else
+				scalableValues[i] = itemLib.formatValue(scalableValues[i], 1, 1, precision or 1, displayPrecision, ifRequired)
 			end
 		end
 		for _, replacement in ipairs(scalableValues) do
