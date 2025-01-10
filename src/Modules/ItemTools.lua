@@ -141,169 +141,105 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 
 	local scalableLine, scalableValues = findScalableLine(strippedLine, values)
 
-	for _, scalability in ipairs(data.modScalability[scalableLine:gsub("+#", "#")]) do
-		if scalability.isScalable then
-			for _, format in ipairs(scalability.formats) do
-				if format == ""
-					-- if spec.k == "negate" then
-					-- 	val[spec.v].max, val[spec.v].min = -val[spec.v].min, -val[spec.v].max
-					-- elseif spec.k == "invert_chance" then
-					-- 	val[spec.v].max, val[spec.v].min = 100 - val[spec.v].min, 100 - val[spec.v].max
-					-- elseif spec.k == "negate_and_double" then
-					-- 	val[spec.v].max, val[spec.v].min = -2 * val[spec.v].min, -2 * val[spec.v].max
-					-- elseif spec.k == "divide_by_two_0dp" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 2)
-					-- 	val[spec.v].max = round(val[spec.v].max / 2)
-					-- elseif spec.k == "divide_by_three" then
-					-- 	val[spec.v].min = val[spec.v].min / 3
-					-- 	val[spec.v].max = val[spec.v].max / 3
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "divide_by_four" then
-					-- 	val[spec.v].min = val[spec.v].min / 4
-					-- 	val[spec.v].max = val[spec.v].max / 4
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "divide_by_five" then
-					-- 	val[spec.v].min = val[spec.v].min / 5
-					-- 	val[spec.v].max = val[spec.v].max / 5
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "divide_by_six" then
-					-- 	val[spec.v].min = val[spec.v].min / 6
-					-- 	val[spec.v].max = val[spec.v].max / 6
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "divide_by_ten_0dp" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 10)
-					-- 	val[spec.v].max = round(val[spec.v].max / 10)
-					-- elseif spec.k == "divide_by_ten_1dp" or spec.k == "divide_by_ten_1dp_if_required" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 10, 1)
-					-- 	val[spec.v].max = round(val[spec.v].max / 10, 1)
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "divide_by_twelve" then
-					-- 	val[spec.v].min = val[spec.v].min / 12
-					-- 	val[spec.v].max = val[spec.v].max / 12
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "divide_by_fifteen_0dp" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 15)
-					-- 	val[spec.v].max = round(val[spec.v].max / 15)
-					-- elseif spec.k == "divide_by_twenty" then
-					-- 	val[spec.v].min = val[spec.v].min / 20
-					-- 	val[spec.v].max = val[spec.v].max / 20
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "divide_by_twenty_then_double_0dp" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 20) * 2
-					-- 	val[spec.v].max = round(val[spec.v].max / 20) * 2
-					-- elseif spec.k == "divide_by_fifty" then
-					-- 	val[spec.v].min = val[spec.v].min / 50
-					-- 	val[spec.v].max = val[spec.v].max / 50
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "divide_by_one_hundred" then
-					-- 	val[spec.v].min = val[spec.v].min / 100
-					-- 	val[spec.v].max = val[spec.v].max / 100
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "divide_by_one_hundred_0dp" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 100)
-					-- 	val[spec.v].max = round(val[spec.v].max / 100)
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "divide_by_one_hundred_1dp" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 100, 1)
-					-- 	val[spec.v].max = round(val[spec.v].max / 100, 1)
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "divide_by_one_hundred_2dp_if_required" or spec.k == "divide_by_one_hundred_2dp" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 100, 2)
-					-- 	val[spec.v].max = round(val[spec.v].max / 100, 2)
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "divide_by_one_hundred_and_negate" then
-					-- 	val[spec.v].min = -val[spec.v].min / 100
-					-- 	val[spec.v].max = -val[spec.v].max / 100
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "divide_by_one_thousand" then
-					-- 	val[spec.v].min = val[spec.v].min / 1000
-					-- 	val[spec.v].max = val[spec.v].max / 1000
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "per_minute_to_per_second" then
-					-- 	val[spec.v].min = val[spec.v].min / 60
-					-- 	val[spec.v].max = val[spec.v].max / 60
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "per_minute_to_per_second_0dp" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 60)
-					-- 	val[spec.v].max = round(val[spec.v].max / 60)
-					-- elseif spec.k == "per_minute_to_per_second_1dp" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 60, 1)
-					-- 	val[spec.v].max = round(val[spec.v].max / 60, 1)
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "per_minute_to_per_second_2dp_if_required" or spec.k == "per_minute_to_per_second_2dp" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 60, 2)
-					-- 	val[spec.v].max = round(val[spec.v].max / 60, 2)
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "milliseconds_to_seconds" then
-					-- 	val[spec.v].min = val[spec.v].min / 1000
-					-- 	val[spec.v].max = val[spec.v].max / 1000
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "milliseconds_to_seconds_halved" then
-					-- 	val[spec.v].min = val[spec.v].min / 1000 / 2
-					-- 	val[spec.v].max = val[spec.v].max / 1000 / 2
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "milliseconds_to_seconds_0dp" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 1000)
-					-- 	val[spec.v].max = round(val[spec.v].max / 1000)
-					-- elseif spec.k == "milliseconds_to_seconds_1dp" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 1000, 1)
-					-- 	val[spec.v].max = round(val[spec.v].max / 1000, 1)
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "milliseconds_to_seconds_2dp" or spec.k == "milliseconds_to_seconds_2dp_if_required" then
-					-- 	val[spec.v].min = round(val[spec.v].min / 1000, 2)
-					-- 	val[spec.v].max = round(val[spec.v].max / 1000, 2)
-					-- 	val[spec.v].fmt = "g"									
-					-- elseif spec.k == "deciseconds_to_seconds" then
-					-- 	val[spec.v].min = val[spec.v].min / 10
-					-- 	val[spec.v].max = val[spec.v].max / 10
-					-- 	val[spec.v].fmt = ".2f"
-					-- elseif spec.k == "30%_of_value" then
-					-- 	val[spec.v].min = val[spec.v].min * 0.3
-					-- 	val[spec.v].max = val[spec.v].max * 0.3
-					-- elseif spec.k == "60%_of_value" then
-					-- 	val[spec.v].min = val[spec.v].min * 0.6
-					-- 	val[spec.v].max = val[spec.v].max * 0.6
-					-- elseif spec.k == "mod_value_to_item_class" then
-					-- 	val[spec.v].min = ItemClasses[val[spec.v].min].Name
-					-- 	val[spec.v].max = ItemClasses[val[spec.v].max].Name
-					-- 	val[spec.v].fmt = "s"
-					-- elseif spec.k == "multiplicative_damage_modifier" then
-					-- 	val[spec.v].min = 100 + val[spec.v].min
-					-- 	val[spec.v].max = 100 + val[spec.v].max
-					-- elseif spec.k == "multiplicative_permyriad_damage_modifier" then
-					-- 	val[spec.v].min = 100 + (val[spec.v].min / 100)
-					-- 	val[spec.v].max = 100 + (val[spec.v].max / 100)
-					-- 	val[spec.v].fmt = "g"
-					-- elseif spec.k == "times_one_point_five" then
-					-- 	val[spec.v].min = val[spec.v].min * 1.5
-					-- 	val[spec.v].max = val[spec.v].max * 1.5
-					-- elseif spec.k == "double" then
-					-- 	val[spec.v].min = val[spec.v].min * 2
-					-- 	val[spec.v].max = val[spec.v].max * 2
-					-- elseif spec.k == "multiply_by_four" then
-					-- 	val[spec.v].min = val[spec.v].min * 4
-					-- 	val[spec.v].max = val[spec.v].max * 4
-					-- elseif spec.k == "multiply_by_four_and_negate" then
-					-- 	val[spec.v].min = -val[spec.v].min * 4
-					-- 	val[spec.v].max = -val[spec.v].max * 4
-					-- elseif spec.k == "multiply_by_ten" then
-					-- 	val[spec.v].min = val[spec.v].min * 10
-					-- 	val[spec.v].max = val[spec.v].max * 10
-					-- elseif spec.k == "times_twenty" then
-					-- 	val[spec.v].min = val[spec.v].min * 20
-					-- 	val[spec.v].max = val[spec.v].max * 20
-					-- elseif spec.k == "multiply_by_one_hundred" then
-					-- 	val[spec.v].min = val[spec.v].min * 100
-					-- 	val[spec.v].max = val[spec.v].max * 100
-					-- elseif spec.k == "plus_two_hundred" then
-					-- 	val[spec.v].min = val[spec.v].min + 200
-					-- 	val[spec.v].max = val[spec.v].max + 200
-					-- elseif spec.k == "reminderstring" or spec.k == "canonical_line" or spec.k == "canonical_stat" then
-					-- elseif spec.k then
-					-- 	ConPrintf("Unknown description function: %s", spec.k)
-					-- end
+
+
+	if scalableLine then -- found scalability data
+		for i, scalability in ipairs(data.modScalability[scalableLine:gsub("+#", "#")]) do
+			if scalability.isScalable and ((baseValueScalar and baseValueScalar ~= 1) or (valueScalar and valueScalar ~= 1))then
+				local formated = false
+				-- precision is express a multiplier/divide and displayPrecision is expresed as decimal precision on rounding.
+				local function scaleValue(value, precision, displayPrecision, ifRequired)
+					formated = true
+					value = round(value * precision) -- resolve range to internal value
+					if baseValueScalar then value = round(value * baseValueScalar) end -- apply corrupted mult
+					if valueScalar then value = m_floor(value * valueScalar) end -- apply modifier magnitude
+					value = value / precision -- convert back to display space
+					if displayPrecision then value = round(value, displayPrecision) end -- presentation
+					if displayPrecision and not ifRequired then -- whitespace is needed
+						return string.format("%"..displayPrecision.."f", value)
+					else -- format doesn't need white space
+						return tostring(round(value, 2)) -- max decimals ingame is 2 
+					end
+				end
+				if scalability.formats then
+					for _, format in ipairs(scalability.formats) do
+						if format == "negate_and_double" or format == "double" then
+							scalableValues[i] = scaleValue(scalableValues[i], 0.5)
+						elseif format == "divide_by_two_0dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 2, 0)
+						elseif format == "divide_by_three" then
+							scalableValues[i] = scaleValue(scalableValues[i], 3)
+						elseif format == "divide_by_four" then
+							scalableValues[i] = scaleValue(scalableValues[i], 4)
+						elseif format == "divide_by_five" then
+							scalableValues[i] = scaleValue(scalableValues[i], 5)
+						elseif format == "divide_by_six" then
+							scalableValues[i] = scaleValue(scalableValues[i], 6)
+						elseif format == "divide_by_ten_0dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 10, 0)
+						elseif format == "divide_by_ten_1dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 10, 1)
+						elseif format == "divide_by_ten_1dp_if_required" then
+							scalableValues[i] = scaleValue(scalableValues[i], 10, 1 ,true)
+						elseif format == "divide_by_twelve" then
+							scalableValues[i] = scaleValue(scalableValues[i], 12)
+						elseif format == "divide_by_fifteen_0dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 15, 0)
+						elseif format == "divide_by_twenty" then
+							scalableValues[i] = scaleValue(scalableValues[i], 20)
+						elseif format == "divide_by_twenty_then_double_0dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 10, 0)
+						elseif format == "divide_by_one_hundred" or format == "divide_by_one_hundred_and_negate" then
+							scalableValues[i] = scaleValue(scalableValues[i], 100)
+						elseif format == "divide_by_one_hundred_0dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 100, 0)
+						elseif format == "divide_by_one_hundred_1dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 100, 1)
+						elseif format == "divide_by_one_hundred_2dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 100, 2)
+						elseif format == "divide_by_one_hundred_2dp_if_required" then
+							scalableValues[i] = scaleValue(scalableValues[i], 100, 2, true)
+						elseif format == "divide_by_one_thousand" then
+							scalableValues[i] = scaleValue(scalableValues[i], 1000)
+						elseif format == "per_minute_to_per_second" then
+							scalableValues[i] = scaleValue(scalableValues[i], 60)
+						elseif format == "per_minute_to_per_second_0dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 60, 0)
+						elseif format == "per_minute_to_per_second_1dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 60, 1)
+						elseif format == "per_minute_to_per_second_2dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 60, 2)
+						elseif format == "per_minute_to_per_second_2dp_if_required" then
+							scalableValues[i] = scaleValue(scalableValues[i], 60, 2, true)
+						elseif format == "milliseconds_to_seconds" then
+							scalableValues[i] = scaleValue(scalableValues[i], 1000)
+						elseif format == "milliseconds_to_seconds_halved" then
+							scalableValues[i] = scaleValue(scalableValues[i], 500)
+						elseif format == "milliseconds_to_seconds_0dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 1000, 0)
+						elseif format == "milliseconds_to_seconds_1dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 1000, 1)
+						elseif format == "milliseconds_to_seconds_2dp" then
+							scalableValues[i] = scaleValue(scalableValues[i], 1000, 2)
+						elseif format == "milliseconds_to_seconds_2dp_if_required" then
+							scalableValues[i] = scaleValue(scalableValues[i], 1000, 2, true)
+						elseif format == "deciseconds_to_seconds" then
+							scalableValues[i] = scaleValue(scalableValues[i], 10)
+						end
+					end
+				end
+				if not formated then
+					scalableValues[i] = scaleValue(scalableValues[i], 1, 0, true)
+				end
 			end
 		end
+		for _, replacement in ipairs(scalableValues) do
+			scalableLine = scalableLine:gsub("#", replacement)
+		end
+		return scalableLine
+	else
+		ConPrintf("Couldn't find scalability data falling back to old implementation: %s", strippedLine)
+
 	end
 
 	-- Create a line with ranges removed to check if the mod is a high precision mod.
