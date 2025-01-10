@@ -54,8 +54,6 @@ end
 
 -- Apply range value (0 to 1) to a modifier that has a range: "(x-x)" or "(x-x) to (x-x)"
 function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
-	-- local precisionSame = true
-	
 	-- stripLines down to # inplace of any number and store numbers inside values also remove all + signs are kept if value is positive
 	local values = { }
 	local strippedLine = line:gsub("([%+-]?)%((%-?%d+%.?%d*)%-(%-?%d+%.?%d*)%)", function(sign, min, max)
@@ -69,74 +67,71 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 		return "#"
 	end)
 
+	--- Takes a completely strippedLine where all values and ranges are replaced with a # + signs are kept for consistency upon resubsitution.
+	--- This will then subsitute back in the values until a line in scalabilityData is found this start with subsituting everything and until none.
+	--- This means if there is a more generic mod that might be scalable on both parameters but their is a narrower one that isn't it won't be scaled.
+	---@param line any
+	---@param values any
+	---@return unknown
+	---@return table|nil
 	local function findScalableLine(line, values)
-		for numSubs = 0, #values do -- Iterate over substitution counts
-			-- Function to replace a specific occurrence of a pattern
-			local function replaceNthInstance(input, pattern, replacement, n)
-				local count = 0
-				return input:gsub(pattern, function(match)
-					count = count + 1
-					if count == n then
-						return replacement
-					else
-						return match
-					end
-				end)
-			end
-	
-			local indices = {} -- Indices of the placeholders to replace
-			local function permute(start, replacements)
-				replacements = replacements or { }
-				if #replacements == numSubs then
-					-- Replace placeholders
-					local modifiedLine = line
-					local subsituted = 0
-					for i, replacement in ipairs(replacements) do
-						modifiedLine = replaceNthInstance(modifiedLine, "#", replacement, indices[i] - subsituted)
-						subsituted = subsituted + 1
-					end
-	
-					-- Check if the modified line matches any scalability data
-					local key = modifiedLine:gsub("+#", "#")
-					if data.modScalability[key] then
-						-- Return modified line and remaining values (those not substituted)
-						local remainingValues = {}
-						local substitutedSet = {}
-						for _, replacement in ipairs(replacements) do
-							substitutedSet[replacement] = true
-						end
-						for _, value in ipairs(values) do
-							if not substitutedSet[value] then
-								table.insert(remainingValues, value)
-							end
-						end
-						return modifiedLine, remainingValues
-					end
-					return
+		local function replaceNthInstance(input, pattern, replacement, n)
+			local count = 0
+			return input:gsub(pattern, function(match)
+				count = count + 1
+				if count == n then
+					return replacement
+				else
+					return match
+				end
+			end)
+		end
+
+		-- Helper function to generate combinations recursively largest to smallest
+		local function generateComb(i, subsitutions, indices)
+			if #indices == subsitutions then
+				local modifiedLine = line
+				local subsituted = 0
+				for _, i in ipairs(indices) do
+					modifiedLine = replaceNthInstance(modifiedLine, "#", values[i], i - subsituted)
+					subsituted = subsituted + 1
 				end
 	
-				-- Continue permuting for all combinations of replacements
-				for i = start, #values do
-					table.insert(indices, i)
-					local newReplacements = { }
-					for _, v in ipairs(replacements) do
-						table.insert(newReplacements, v)
+				-- Check if the modified line matches any scalability data
+				local key = modifiedLine:gsub("+#", "#")
+				if data.modScalability[key] then
+					-- Return modified line and remaining values (those not substituted)
+					local remainingValues = {}
+					local used = { }
+					for _, index in ipairs(indices) do
+						used[index] = true
 					end
-					table.insert(newReplacements, values[i])
-					local modifiedLine, remainingValues = permute(i + 1, newReplacements)
-					if modifiedLine then
-						return modifiedLine, remainingValues -- Return the first found modified line and the remaining values
+					for i, value in ipairs(values) do
+						if not used[i] then
+							table.insert(remainingValues, value)
+						end
 					end
-					table.remove(indices)
+					return modifiedLine, remainingValues
 				end
+				return
 			end
-	
-			-- Start permutation from index 1
-			local modifiedLine, remainingValues = permute(1, {})
-			if modifiedLine then
-				return modifiedLine, remainingValues -- Return the first found modified line and the remaining values
+			for j = i, #values do
+				table.insert(indices, j)
+				local modifiedLine, remainingValues = generateComb(j + 1, subsitutions, indices)
+				if modifiedLine then
+					return modifiedLine, remainingValues
+				end
+				table.remove(indices)
 			end
 		end
+
+		for i = #values, 1, -1 do
+			local modifiedLine, remainingValues = generateComb(1, i, {})
+			if modifiedLine then
+				return modifiedLine, remainingValues
+			end
+		end
+		return
 	end
 
 	local scalableLine, scalableValues = findScalableLine(strippedLine, values)
@@ -235,60 +230,59 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 			scalableLine = scalableLine:gsub("#", replacement)
 		end
 		return scalableLine
-	else
-		ConPrintf("Couldn't find scalability data falling back to old implementation: %s", strippedLine)
+	else -- fallback to old method for determining scalability
+		-- ConPrintf("Couldn't find scalability data falling back to old implementation: %s", strippedLine)
+		local precisionSame = true
+		-- Create a line with ranges removed to check if the mod is a high precision mod.
+		local testLine = not line:find("-", 1, true) and line or
+			line:gsub("(%+?)%((%-?%d+%.?%d*)%-(%-?%d+%.?%d*)%)",
+			function(plus, min, max)
+				min = tonumber(min)
+				local maxPrecision = min + range * (tonumber(max) - min)
+				local minPrecision = m_floor(maxPrecision + 0.5)
+				if minPrecision ~= maxPrecision then
+					precisionSame = false
+				end
+				return (minPrecision < 0 and "" or plus) .. tostring(minPrecision)
+			end)
+			:gsub("%-(%d+%%) (%a+)", antonymFunc)
 
+		if precisionSame and (not valueScalar or valueScalar == 1) and (not baseValueScalar or baseValueScalar == 1)then
+			return testLine
+		end
+
+		local precision = nil
+		local modList, extra = modLib.parseMod(testLine)
+		if modList and not extra then
+			for _, mod in pairs(modList) do
+				local subMod = mod
+				if type(mod.value) == "table" and mod.value.mod then
+					subMod = mod.value.mod
+				end
+				if type(subMod.value) == "number" and data.highPrecisionMods[subMod.name] and data.highPrecisionMods[subMod.name][subMod.type] then
+					precision = data.highPrecisionMods[subMod.name][subMod.type]
+				end
+			end
+		end
+		if not precision and line:match("(%d+%.%d*)") then
+			precision = data.defaultHighPrecision
+		end
+		local numbers = 0
+		line = line:gsub("(%+?)%((%-?%d+%.?%d*)%-(%-?%d+%.?%d*)%)",
+			function(plus, min, max)
+				numbers = numbers + 1
+				local power = 10 ^ (precision or 0)
+				local numVal = m_floor((tonumber(min) + range * (tonumber(max) - tonumber(min))) * power + 0.5) / power
+				return (numVal < 0 and "" or plus) .. tostring(numVal)
+			end)
+			:gsub("%-(%d+%%) (%a+)", antonymFunc)
+
+		if numbers == 0 and line:match("(%d+%.?%d*)%%? ") then --If a mod contains x or x% and is not already a ranged value, then only the first number will be scalable as any following numbers will always be conditions or unscalable values.
+			numbers = 1
+		end
+
+		return itemLib.applyValueScalar(line, valueScalar, baseValueScalar, numbers, precision)
 	end
-
-	-- Create a line with ranges removed to check if the mod is a high precision mod.
-	-- local testLine = not line:find("-", 1, true) and line or
-	-- 	line:gsub("(%+?)%((%-?%d+%.?%d*)%-(%-?%d+%.?%d*)%)",
-	-- 	function(plus, min, max)
-	-- 		min = tonumber(min)
-	-- 		local maxPrecision = min + range * (tonumber(max) - min)
-	-- 		local minPrecision = m_floor(maxPrecision + 0.5) -- round towards 0
-	-- 		if minPrecision ~= maxPrecision then
-	-- 			precisionSame = false
-	-- 		end
-	-- 		return (minPrecision < 0 and "" or plus) .. tostring(minPrecision)
-	-- 	end)
-
-	-- if precisionSame and (not valueScalar or valueScalar == 1) and (not baseValueScalar or baseValueScalar == 1)then
-	-- 	return testLine
-	-- end
-
-	-- local precision = nil
-	-- local modList, extra = modLib.parseMod(testLine)
-	-- if modList and not extra then
-	-- 	for _, mod in pairs(modList) do
-	-- 		local subMod = mod
-	-- 		if type(mod.value) == "table" and mod.value.mod then
-	-- 			subMod = mod.value.mod
-	-- 		end
-	-- 		if type(subMod.value) == "number" and data.highPrecisionMods[subMod.name] and data.highPrecisionMods[subMod.name][subMod.type] then
-	-- 			precision = data.highPrecisionMods[subMod.name][subMod.type]
-	-- 		end
-	-- 	end
-	-- end
-	-- if not precision and line:match("(%d+%.%d*)") then
-	-- 	precision = data.defaultHighPrecision
-	-- end
-
-	local numbers = 0
-	line = line:gsub("(%+?)%((%-?%d+%.?%d*)%-(%-?%d+%.?%d*)%)",
-		function(plus, min, max)
-			numbers = numbers + 1
-			local power = 10 ^ (precision or 0)
-			local numVal = m_floor((tonumber(min) + range * (tonumber(max) - tonumber(min))) * power + 0.5) / power
-			return (numVal < 0 and "" or plus) .. tostring(numVal)
-		end)
-		:gsub("%-(%d+%%) (%a+)", antonymFunc)
-
-	if numbers == 0 and line:match("(%d+%.?%d*)%%? ") then --If a mod contains x or x% and is not already a ranged value, then only the first number will be scalable as any following numbers will always be conditions or unscalable values.
-		numbers = 1
-	end
-
-	return itemLib.applyValueScalar(line, valueScalar, baseValueScalar, numbers, precision)
 end
 
 function itemLib.formatModLine(modLine, dbMode)
