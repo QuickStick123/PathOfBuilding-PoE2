@@ -163,9 +163,7 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 				end
 				if scalability.formats then
 					for _, format in ipairs(scalability.formats) do
-						if format == "negate_and_double" or format == "double" then
-							scalableValues[i] = scaleValue(scalableValues[i], 0.5)
-						elseif format == "divide_by_two_0dp" then
+						if format == "divide_by_two_0dp" then
 							scalableValues[i] = scaleValue(scalableValues[i], 2, 0)
 						elseif format == "divide_by_three" then
 							scalableValues[i] = scaleValue(scalableValues[i], 3)
