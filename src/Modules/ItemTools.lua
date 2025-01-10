@@ -70,10 +70,10 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 	--- Takes a completely strippedLine where all values and ranges are replaced with a # + signs are kept for consistency upon resubsitution.
 	--- This will then subsitute back in the values until a line in scalabilityData is found this start with subsituting everything and until none.
 	--- This means if there is a more generic mod that might be scalable on both parameters but their is a narrower one that isn't it won't be scaled.
-	---@param line any
-	---@param values any
-	---@return unknown
-	---@return table|nil
+	---@param line the modLine stripped of all values and ranges replaced by #
+	---@param values all values present in the modLine
+	---@return scalableLine line with only scalableValues replaced with #
+	---@return scalableValues values which can be scaled and added into scalableLine in place of a #
 	local function findScalableLine(line, values)
 		local function replaceNthInstance(input, pattern, replacement, n)
 			local count = 0
@@ -131,12 +131,17 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 				return modifiedLine, remainingValues
 			end
 		end
+
+		-- Check scalability with 0 substitutions
+		local key = line:gsub("+#", "#")
+		if data.modScalability[key] then
+			return line, values
+		end
+		
 		return
 	end
 
 	local scalableLine, scalableValues = findScalableLine(strippedLine, values)
-
-
 
 	if scalableLine then -- found scalability data
 		for i, scalability in ipairs(data.modScalability[scalableLine:gsub("+#", "#")]) do
@@ -277,7 +282,7 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 			end)
 			:gsub("%-(%d+%%) (%a+)", antonymFunc)
 
-		if numbers == 0 and line:match("(%d+%.?%d*)%%? ") then --If a mod contains x or x% and is not already a ranged value, then only the first number will be scalable as any following numbers will always be conditions or unscalable values.
+		if numbers == 0 and line:match("(%d+%.?%d*)%%? ") then --If a mod contains x or x% and is not already a ranged value, then assume only the first number will be scalable.
 			numbers = 1
 		end
 
