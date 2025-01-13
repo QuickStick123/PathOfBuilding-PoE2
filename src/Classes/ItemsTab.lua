@@ -2356,9 +2356,9 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 		end
 		controls.source.shown = true
 		controls.sourceLabel.shown = true
-		main.popups[1].height = 103 + 18 * enchantNum
-		controls.close.y = 73 + 18 * enchantNum
-		controls.save.y = 73 + 18 * enchantNum
+		main.popups[1].height = 103 + 20 * enchantNum
+		controls.close.y = 73 + 20 * enchantNum
+		controls.save.y = 73 + 20 * enchantNum
 	end)
 	controls.enchants.shown = function ()
 		return self.displayItem.rarity == "UNIQUE"
@@ -2413,9 +2413,9 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			end
 			controls["enchant"..i]:SetSel(1)
 		end
-		main.popups[1].height = 103 + 18 * enchantNum
-		controls.close.y = 73 + 18 * enchantNum
-		controls.save.y = 73 + 18 * enchantNum
+		main.popups[1].height = 103 + 20 * enchantNum
+		controls.close.y = 73 + 20 * enchantNum
+		controls.save.y = 73 + 20 * enchantNum
 	end)
 	for i = 1, 8 do
 		if i == 1 then
@@ -2478,7 +2478,7 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 	controls.close = new("ButtonControl", nil, {45, 69 + enchantNum * 20, 80, 20}, "Cancel", function()
 		main:ClosePopup()
 	end)
-	main:OpenPopup(620, 99 + enchantNum * 20, "Corrupted Item", controls)
+	main:OpenPopup(620, 103 + enchantNum * 20, "Corrupted Item", controls)
 end
 
 -- Opens the custom modifier popup
