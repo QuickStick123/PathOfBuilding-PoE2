@@ -735,7 +735,10 @@ function TradeQueryGeneratorClass:ExecuteQuery()
 	self:GenerateModWeights(self.modData["Explicit"])
 	self:GenerateModWeights(self.modData["Implicit"])
 	if self.calcContext.options.includeCorrupted then
-		-- self:GenerateModWeights(self.modData["Corrupted"]) tbd
+		self:GenerateModWeights(self.modData["Corrupted"])
+	end
+	if self.calcContext.options.includeRunes then
+		self:GenerateModWeights(self.modData["Rune"])
 	end
 end
 
@@ -874,7 +877,11 @@ function TradeQueryGeneratorClass:RequestQuery(slot, context, statWeights, callb
 	controls.includeCorrupted.state = not context.slotTbl.alreadyCorrupted and (self.lastIncludeCorrupted == nil or self.lastIncludeCorrupted == true)
 	controls.includeCorrupted.enabled = not context.slotTbl.alreadyCorrupted
 
-	local lastItemAnchor = controls.includeCorrupted
+	controls.includeRunes = new("CheckBoxControl", {"TOPRIGHT",controls.includeCorrupted,"BOTTOMRIGHT"}, {0, 5, 18}, "Rune Mods:", function(state) end)
+	controls.includeRunes.state = not context.slotTbl.alreadyCorrupted and (self.lastIncludeRunes == nil or self.lastIncludeRunes == true)
+	controls.includeRunes.enabled = not context.slotTbl.alreadyCorrupted
+
+	local lastItemAnchor = controls.includeRunes
 
 	local function updateLastAnchor(anchor, height)
 		lastItemAnchor = anchor
@@ -962,6 +969,9 @@ function TradeQueryGeneratorClass:RequestQuery(slot, context, statWeights, callb
 		end
 		if controls.includeCorrupted then
 			self.lastIncludeCorrupted, options.includeCorrupted = controls.includeCorrupted.state, controls.includeCorrupted.state
+		end
+		if controls.includeRunes  then
+			self.lastIncludeRunes, options.includeRunes = controls.includeRunes.state, controls.includeRunes.state
 		end
 		if controls.jewelType then
 			self.lastJewelType = controls.jewelType.selIndex
