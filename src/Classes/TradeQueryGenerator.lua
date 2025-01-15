@@ -98,7 +98,6 @@ local tradeCategoryNames = {
 local tradeStatCategoryIndices = {
 	["Explicit"] = 1,
 	["Implicit"] = 2,
-	["Enchant"] = 3,
 	["Corrupted"] = 3,
 	["Rune"] = 4,
 }
@@ -390,6 +389,7 @@ function TradeQueryGeneratorClass:InitMods()
 	end
 
 	self:GenerateModData(data.itemMods.Item, tradeQueryStatsParsed, regularItemMask)
+	self:GenerateModData(data.itemMods.Corruption, tradeQueryStatsParsed, regularItemMask)
 	self:GenerateModData(data.itemMods.Jewel, tradeQueryStatsParsed, { ["BaseJewel"] = true, ["AnyJewel"] = true })
 	self:GenerateModData(data.itemMods.Flask, tradeQueryStatsParsed, { ["LifeFlask"] = true, ["ManaFlask"] = true })
 	self:GenerateModData(data.itemMods.Charm, tradeQueryStatsParsed, { ["Charm"] = true })
