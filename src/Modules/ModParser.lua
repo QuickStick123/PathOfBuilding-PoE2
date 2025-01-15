@@ -388,6 +388,7 @@ local modNameList = {
 	["cold damage taken recouped as life"] = "ColdLifeRecoup",
 	["fire damage taken recouped as life"] = "FireLifeRecoup",
 	["chaos damage taken recouped as life"] = "ChaosLifeRecoup",
+	["elemental damage taken recouped as energy shield"] = "ElementalEnergyShieldRecoup",
 	["damage taken recouped as energy shield"] = "EnergyShieldRecoup",
 	["damage taken recouped as mana"] = "ManaRecoup",
 	["damage taken recouped as life, mana and energy shield"] = { "LifeRecoup", "EnergyShieldRecoup", "ManaRecoup" },
@@ -2753,6 +2754,7 @@ local specialModList = {
 	["you can inflict an additional scorch on each enemy"] = { flag("ScorchCanStack"), mod("ScorchStacksMax", "BASE", 1) },
 	["maximum effect of shock is (%d+)%% increased damage taken"] = function (num) return { mod("ShockMax", "OVERRIDE", num) } end,
 	["you can apply up to (%d+) shocks to each enemy"] = function(num) return { flag("ShockCanStack"), mod("ShockStacksMax", "OVERRIDE", num) } end,
+	["targets can be affected by two of your shocks at the same time"] = function(num) return { flag("ShockCanStack"), mod("ShockStacksMax", "OVERRIDE", 2) } end,
 	["hits that fail to freeze due to insufficient freeze duration inflict hoarfrost"] = { flag("HitsCanInflictHoarfrost") },
 	["your hits always inflict freeze, shock and ignite while unbound"] = {
 		mod("EnemyFreezeChance", "BASE", 100, { type = "Condition", var = "Unbound"}),

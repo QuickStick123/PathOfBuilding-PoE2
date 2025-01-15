@@ -1691,7 +1691,7 @@ c["40% less Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="
 c["40% less minimum Physical Attack Damage"]={{[1]={[1]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="MinPhysicalDamage",type="MORE",value=-40}},nil}
 c["40% more Damage against Heavy Stunned Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="HeavyStunned"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=40}},nil}
 c["40% more maximum Physical Attack Damage"]={{[1]={[1]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="MaxPhysicalDamage",type="MORE",value=40}},nil}
-c["40% of Elemental Damage taken Recouped as Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamageTaken",type="BASE",value=40}},"  Recouped as Energy Shield "}
+c["40% of Elemental Damage taken Recouped as Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="ElementalEnergyShieldRecoup",type="BASE",value=40}},nil}
 c["40% of Physical Damage taken as Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageTakenAsFire",type="BASE",value=40}},nil}
 c["40% reduced Chill Duration on you"]={{[1]={flags=0,keywordFlags=0,name="SelfChillDuration",type="INC",value=-40}},nil}
 c["40% reduced Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=-40}},nil}
@@ -2942,8 +2942,7 @@ c["Targets can be affected by +1 of your Poisons at the same time"]={{[1]={flags
 c["Targets can be affected by two of your Chills at the same time"]={nil,"Targets can be affected by two of your Chills at the same time "}
 c["Targets can be affected by two of your Chills at the same time Your Chills can Slow targets by up to a maximum of 35%"]={nil,"Targets can be affected by two of your Chills at the same time Your Chills can Slow targets by up to a maximum of 35% "}
 c["Targets can be affected by two of your Chills at the same time Your Chills can Slow targets by up to a maximum of 35% 25% less Magnitude of Chill you inflict"]={nil,"Targets can be affected by two of your Chills at the same time Your Chills can Slow targets by up to a maximum of 35% 25% less Magnitude of Chill you inflict "}
-c["Targets can be affected by two of your Shocks at the same time"]={nil,"Targets can be affected by two of your Shocks at the same time "}
-c["Targets can be affected by two of your Shocks at the same time 50% less Shock Duration"]={nil,"Targets can be affected by two of your Shocks at the same time 50% less Shock Duration "}
+c["Targets can be affected by two of your Shocks at the same time"]={{[1]={flags=0,keywordFlags=0,name="ShockCanStack",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="ShockStacksMax",type="OVERRIDE",value=2}},nil}
 c["The Effect of Chill on you is reversed"]={{[1]={flags=0,keywordFlags=0,name="SelfChillEffectIsReversed",type="FLAG",value=true}},nil}
 c["The most Damaging Poison on Enemies you Kill is Spread to other Enemies within 1.5 metres"]={nil,"The most Damaging Poison on Enemies you Kill is Spread to other Enemies within 1.5 metres "}
 c["This Weapon's Critical Hit Chance is 100%"]={{[1]={flags=0,keywordFlags=0,name="WeaponData",type="LIST",value={key="CritChance",value=100}}},nil}
