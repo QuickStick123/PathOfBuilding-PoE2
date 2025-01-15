@@ -66,10 +66,6 @@ return {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["Shield"] = {
-				["max"] = 30, 
-				["min"] = 20, 
-			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -168,6 +164,45 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
+		["1564_AreaOfEffect"] = {
+			["Helmet"] = {
+				["max"] = 25, 
+				["min"] = 15, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_280731498", 
+				["text"] = "#% increased Area of Effect", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["1579_SkillEffectDuration"] = {
+			["Helmet"] = {
+				["max"] = 25, 
+				["min"] = 15, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3377888098", 
+				["text"] = "#% increased Skill Effect Duration", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["1612_DamageGainedAsChaos"] = {
+			["Helmet"] = {
+				["max"] = 8, 
+				["min"] = 5, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_3398787959", 
+				["text"] = "Gain #% of Damage as Extra Chaos Damage", 
+				["type"] = "enchant", 
+			}, 
+		}, 
 		["1627_LifeRegenerationRatePercentage"] = {
 			["Helmet"] = {
 				["max"] = 2, 
@@ -241,6 +276,19 @@ return {
 			["tradeMod"] = {
 				["id"] = "enchant.stat_1519615863", 
 				["text"] = "#% chance to cause Bleeding on Hit", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["2266_CurseEffectiveness"] = {
+			["Helmet"] = {
+				["max"] = 10, 
+				["min"] = 5, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2353576063", 
+				["text"] = "#% increased Effect of your Curses", 
 				["type"] = "enchant", 
 			}, 
 		}, 
@@ -326,6 +374,19 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
+		["2907_WarcrySpeed"] = {
+			["Helmet"] = {
+				["max"] = 25, 
+				["min"] = 15, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1316278494", 
+				["text"] = "#% increased Warcry Speed", 
+				["type"] = "enchant", 
+			}, 
+		}, 
 		["4162_GlobalSkillGemLevel"] = {
 			["Amulet"] = {
 				["max"] = 1, 
@@ -349,6 +410,19 @@ return {
 			["tradeMod"] = {
 				["id"] = "enchant.stat_1776411443", 
 				["text"] = "Break #% increased Armour", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["4467_GlobalCooldownRecovery"] = {
+			["Helmet"] = {
+				["max"] = 12, 
+				["min"] = 8, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_1004011302", 
+				["text"] = "#% increased Cooldown Recovery Rate", 
 				["type"] = "enchant", 
 			}, 
 		}, 
@@ -393,6 +467,19 @@ return {
 			["tradeMod"] = {
 				["id"] = "enchant.stat_1658498488", 
 				["text"] = "Corrupted Blood cannot be inflicted on you", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["5708_EnergyGeneration"] = {
+			["Helmet"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_4236566306", 
+				["text"] = "Meta Skills gain #% increased Energy", 
 				["type"] = "enchant", 
 			}, 
 		}, 
@@ -932,10 +1019,6 @@ return {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
-			["Shield"] = {
-				["max"] = 30, 
-				["min"] = 20, 
-			}, 
 			["Staff"] = {
 				["max"] = 50, 
 				["min"] = 40, 
@@ -1076,10 +1159,6 @@ return {
 				["min"] = 20, 
 			}, 
 			["Ring"] = {
-				["max"] = 25, 
-				["min"] = 20, 
-			}, 
-			["Shield"] = {
 				["max"] = 25, 
 				["min"] = 20, 
 			}, 
@@ -2110,6 +2189,19 @@ return {
 			["tradeMod"] = {
 				["id"] = "enchant.stat_2321178454", 
 				["text"] = "#% chance to Pierce an Enemy", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["992_PresenceRadius"] = {
+			["Helmet"] = {
+				["max"] = 25, 
+				["min"] = 15, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_101878827", 
+				["text"] = "#% increased Presence Area of Effect", 
 				["type"] = "enchant", 
 			}, 
 		}, 
@@ -5767,10 +5859,6 @@ return {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
-			["Shield"] = {
-				["max"] = 119, 
-				["min"] = 25, 
-			}, 
 			["Staff"] = {
 				["max"] = 169, 
 				["min"] = 35, 
@@ -5846,10 +5934,6 @@ return {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
-			["Shield"] = {
-				["max"] = 119, 
-				["min"] = 25, 
-			}, 
 			["Staff"] = {
 				["max"] = 169, 
 				["min"] = 35, 
@@ -5897,10 +5981,6 @@ return {
 				["min"] = 35, 
 			}, 
 			["Focus"] = {
-				["max"] = 119, 
-				["min"] = 25, 
-			}, 
-			["Shield"] = {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
@@ -5954,10 +6034,6 @@ return {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
-			["Shield"] = {
-				["max"] = 119, 
-				["min"] = 25, 
-			}, 
 			["Staff"] = {
 				["max"] = 169, 
 				["min"] = 35, 
@@ -5984,10 +6060,6 @@ return {
 				["min"] = 35, 
 			}, 
 			["Focus"] = {
-				["max"] = 119, 
-				["min"] = 25, 
-			}, 
-			["Shield"] = {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
@@ -6088,10 +6160,6 @@ return {
 				["min"] = 35, 
 			}, 
 			["Focus"] = {
-				["max"] = 119, 
-				["min"] = 25, 
-			}, 
-			["Shield"] = {
 				["max"] = 119, 
 				["min"] = 25, 
 			}, 
@@ -6494,10 +6562,6 @@ return {
 				["min"] = 10, 
 			}, 
 			["Sceptre"] = {
-				["max"] = 179, 
-				["min"] = 10, 
-			}, 
-			["Shield"] = {
 				["max"] = 179, 
 				["min"] = 10, 
 			}, 
@@ -7672,10 +7736,6 @@ return {
 				["max"] = 2, 
 				["min"] = 1, 
 			}, 
-			["Shield"] = {
-				["max"] = 2, 
-				["min"] = 1, 
-			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8042,10 +8102,6 @@ return {
 				["max"] = 99, 
 				["min"] = 10, 
 			}, 
-			["Shield"] = {
-				["max"] = 99, 
-				["min"] = 10, 
-			}, 
 			["Staff"] = {
 				["max"] = 109, 
 				["min"] = 10, 
@@ -8138,10 +8194,6 @@ return {
 				["max"] = 34, 
 				["min"] = 10, 
 			}, 
-			["Shield"] = {
-				["max"] = 34, 
-				["min"] = 10, 
-			}, 
 			["Staff"] = {
 				["max"] = 39, 
 				["min"] = 10, 
@@ -8210,10 +8262,6 @@ return {
 			}, 
 			["Ring"] = {
 				["max"] = 24, 
-				["min"] = 9, 
-			}, 
-			["Shield"] = {
-				["max"] = 32, 
 				["min"] = 9, 
 			}, 
 			["Staff"] = {
@@ -8731,10 +8779,6 @@ return {
 				["max"] = 50, 
 				["min"] = 26, 
 			}, 
-			["Shield"] = {
-				["max"] = 50, 
-				["min"] = 26, 
-			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9055,10 +9099,6 @@ return {
 				["min"] = 10, 
 			}, 
 			["Sceptre"] = {
-				["max"] = 69, 
-				["min"] = 10, 
-			}, 
-			["Shield"] = {
 				["max"] = 69, 
 				["min"] = 10, 
 			}, 
@@ -10912,5 +10952,1829 @@ return {
 		}, 
 	}, 
 	["Rune"] = {
+		["1370"] = {
+			["Boots"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Chest"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Focus"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Gloves"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Helmet"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Shield"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_3523867985", 
+				["text"] = "#% increased Armour, Evasion and Energy Shield", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["1443"] = {
+			["1HMace"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["2HMace"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Bow"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Claw"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_2023107756", 
+				["text"] = "Recover #% of Life on Kill", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["1445"] = {
+			["1HMace"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["2HMace"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Bow"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Claw"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_1030153674", 
+				["text"] = "Recover #% of Mana on Kill", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["1627"] = {
+			["Boots"] = {
+				["max"] = 0.3, 
+				["min"] = 0.3, 
+			}, 
+			["Chest"] = {
+				["max"] = 0.3, 
+				["min"] = 0.3, 
+			}, 
+			["Focus"] = {
+				["max"] = 0.3, 
+				["min"] = 0.3, 
+			}, 
+			["Gloves"] = {
+				["max"] = 0.3, 
+				["min"] = 0.3, 
+			}, 
+			["Helmet"] = {
+				["max"] = 0.3, 
+				["min"] = 0.3, 
+			}, 
+			["Shield"] = {
+				["max"] = 0.3, 
+				["min"] = 0.3, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_836936635", 
+				["text"] = "Regenerate #% of Life per second", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["2156"] = {
+			["1HMace"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["2HMace"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Bow"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Claw"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_1519615863", 
+				["text"] = "#% chance to cause Bleeding on Hit", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["3369"] = {
+			["1HMace"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["2HMace"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Bow"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Claw"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_4064396395", 
+				["text"] = "Attacks with this Weapon Penetrate #% Elemental Resistances", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["4150"] = {
+			["Boots"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Chest"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Focus"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Gloves"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Helmet"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Shield"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_3544800472", 
+				["text"] = "#% increased Elemental Ailment Threshold", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["4506"] = {
+			["Boots"] = {
+				["max"] = -10, 
+				["min"] = -10, 
+			}, 
+			["Chest"] = {
+				["max"] = -10, 
+				["min"] = -10, 
+			}, 
+			["Focus"] = {
+				["max"] = -10, 
+				["min"] = -10, 
+			}, 
+			["Gloves"] = {
+				["max"] = -10, 
+				["min"] = -10, 
+			}, 
+			["Helmet"] = {
+				["max"] = -10, 
+				["min"] = -10, 
+			}, 
+			["Shield"] = {
+				["max"] = -10, 
+				["min"] = -10, 
+			}, 
+			["invertOnNegative"] = true, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_924253255", 
+				["text"] = "#% increased Slowing Potency of Debuffs on You", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["5066"] = {
+			["Boots"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Chest"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Focus"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Gloves"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Helmet"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Shield"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_3585532255", 
+				["text"] = "#% increased Charm Charges gained", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["5906"] = {
+			["Boots"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Chest"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Focus"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Gloves"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Helmet"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Shield"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_2310741722", 
+				["text"] = "#% increased Life and Mana Recovery from Flasks", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["6867"] = {
+			["1HMace"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["2HMace"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Bow"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Claw"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_3885634897", 
+				["text"] = "#% chance to Poison on Hit", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["6870"] = {
+			["1HMace"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["2HMace"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Boots"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Bow"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Chest"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Claw"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Focus"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Gloves"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Helmet"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Shield"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_1496740334", 
+				["text"] = "Convert #% of Requirements to Dexterity", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["6871"] = {
+			["1HMace"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["2HMace"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Boots"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Bow"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Chest"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Claw"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Focus"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Gloves"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Helmet"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Shield"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_2913012734", 
+				["text"] = "Convert #% of Requirements to Intelligence", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["6872"] = {
+			["1HMace"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["2HMace"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Boots"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Bow"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Chest"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Claw"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Focus"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Gloves"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Helmet"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Shield"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_1556124492", 
+				["text"] = "Convert #% of Requirements to Strength", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["822"] = {
+			["1HMace"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["2HMace"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Bow"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Claw"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_1509134228", 
+				["text"] = "#% increased Physical Damage", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["824"] = {
+			["1HMace"] = {
+				["max"] = 9, 
+				["min"] = 9, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 9, 
+				["min"] = 9, 
+			}, 
+			["2HMace"] = {
+				["max"] = 9, 
+				["min"] = 9, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 9, 
+				["min"] = 9, 
+			}, 
+			["Bow"] = {
+				["max"] = 9, 
+				["min"] = 9, 
+			}, 
+			["Claw"] = {
+				["max"] = 9, 
+				["min"] = 9, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 9, 
+				["min"] = 9, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 9, 
+				["min"] = 9, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_709508406", 
+				["text"] = "Adds # to # Fire Damage", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["825"] = {
+			["1HMace"] = {
+				["max"] = 8, 
+				["min"] = 8, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 8, 
+				["min"] = 8, 
+			}, 
+			["2HMace"] = {
+				["max"] = 8, 
+				["min"] = 8, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 8, 
+				["min"] = 8, 
+			}, 
+			["Bow"] = {
+				["max"] = 8, 
+				["min"] = 8, 
+			}, 
+			["Claw"] = {
+				["max"] = 8, 
+				["min"] = 8, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 8, 
+				["min"] = 8, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 8, 
+				["min"] = 8, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_1037193709", 
+				["text"] = "Adds # to # Cold Damage", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["826"] = {
+			["1HMace"] = {
+				["max"] = 10.5, 
+				["min"] = 10.5, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 10.5, 
+				["min"] = 10.5, 
+			}, 
+			["2HMace"] = {
+				["max"] = 10.5, 
+				["min"] = 10.5, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 10.5, 
+				["min"] = 10.5, 
+			}, 
+			["Bow"] = {
+				["max"] = 10.5, 
+				["min"] = 10.5, 
+			}, 
+			["Claw"] = {
+				["max"] = 10.5, 
+				["min"] = 10.5, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 10.5, 
+				["min"] = 10.5, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 10.5, 
+				["min"] = 10.5, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_3336890334", 
+				["text"] = "Adds # to # Lightning Damage", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["827"] = {
+			["1HMace"] = {
+				["max"] = 100, 
+				["min"] = 100, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 100, 
+				["min"] = 100, 
+			}, 
+			["2HMace"] = {
+				["max"] = 100, 
+				["min"] = 100, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 100, 
+				["min"] = 100, 
+			}, 
+			["Bow"] = {
+				["max"] = 100, 
+				["min"] = 100, 
+			}, 
+			["Claw"] = {
+				["max"] = 100, 
+				["min"] = 100, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 100, 
+				["min"] = 100, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 100, 
+				["min"] = 100, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_691932474", 
+				["text"] = "# to Accuracy Rating", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["860"] = {
+			["1HMace"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["2HMace"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["Bow"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["Claw"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_387439868", 
+				["text"] = "#% increased Elemental Damage with Attacks", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["871"] = {
+			["Boots"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["Chest"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["Focus"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["Gloves"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["Helmet"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["Shield"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_3299347043", 
+				["text"] = "# to maximum Life", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["872"] = {
+			["Boots"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Chest"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Focus"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Gloves"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Helmet"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Shield"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_983749596", 
+				["text"] = "#% increased maximum Life", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["873"] = {
+			["Boots"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Chest"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Focus"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Gloves"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Helmet"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Shield"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_1050105434", 
+				["text"] = "# to maximum Mana", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["874"] = {
+			["Boots"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Chest"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Focus"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Gloves"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Helmet"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Shield"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_2748665614", 
+				["text"] = "#% increased maximum Mana", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["876"] = {
+			["1HMace"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["2HMace"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Bow"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Claw"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_3981240776", 
+				["text"] = "# to Spirit", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["911"] = {
+			["Boots"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Chest"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Focus"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Gloves"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Helmet"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Shield"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_3917489142", 
+				["text"] = "#% increased Rarity of Items found", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["913"] = {
+			["1HMace"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["2HMace"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Bow"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Claw"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_2694482655", 
+				["text"] = "#% to Critical Damage Bonus", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["914"] = {
+			["1HMace"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["2HMace"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["Bow"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["Claw"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_210067635", 
+				["text"] = "#% increased Attack Speed", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["942"] = {
+			["Boots"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Chest"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Focus"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Gloves"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Helmet"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Shield"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_3855016469", 
+				["text"] = "Hits against you have #% reduced Critical Damage Bonus", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["945"] = {
+			["Boots"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Chest"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Focus"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Gloves"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Helmet"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Shield"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_4095671657", 
+				["text"] = "#% to Maximum Fire Resistance", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["946"] = {
+			["Boots"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Chest"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Focus"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Gloves"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Helmet"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Shield"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_3676141501", 
+				["text"] = "#% to Maximum Cold Resistance", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["947"] = {
+			["Boots"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Chest"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Focus"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Gloves"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Helmet"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Shield"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_1011760251", 
+				["text"] = "#% to Maximum Lightning Resistance", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["949"] = {
+			["Boots"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["Chest"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["Focus"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["Gloves"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["Helmet"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["Shield"] = {
+				["max"] = 5, 
+				["min"] = 5, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_2901986750", 
+				["text"] = "#% to all Elemental Resistances", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["950"] = {
+			["Boots"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Chest"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Focus"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Gloves"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Helmet"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Shield"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_3372524247", 
+				["text"] = "#% to Fire Resistance", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["951"] = {
+			["Boots"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Chest"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Focus"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Gloves"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Helmet"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Shield"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_4220027924", 
+				["text"] = "#% to Cold Resistance", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["952"] = {
+			["Boots"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Chest"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Focus"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Gloves"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Helmet"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["Shield"] = {
+				["max"] = 12, 
+				["min"] = 12, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_1671376347", 
+				["text"] = "#% to Lightning Resistance", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["953"] = {
+			["Boots"] = {
+				["max"] = 7, 
+				["min"] = 7, 
+			}, 
+			["Chest"] = {
+				["max"] = 7, 
+				["min"] = 7, 
+			}, 
+			["Focus"] = {
+				["max"] = 7, 
+				["min"] = 7, 
+			}, 
+			["Gloves"] = {
+				["max"] = 7, 
+				["min"] = 7, 
+			}, 
+			["Helmet"] = {
+				["max"] = 7, 
+				["min"] = 7, 
+			}, 
+			["Shield"] = {
+				["max"] = 7, 
+				["min"] = 7, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_2923486259", 
+				["text"] = "#% to Chaos Resistance", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["961"] = {
+			["1HMace"] = {
+				["max"] = 3, 
+				["min"] = 3, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 3, 
+				["min"] = 3, 
+			}, 
+			["2HMace"] = {
+				["max"] = 3, 
+				["min"] = 3, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 3, 
+				["min"] = 3, 
+			}, 
+			["Bow"] = {
+				["max"] = 3, 
+				["min"] = 3, 
+			}, 
+			["Claw"] = {
+				["max"] = 3, 
+				["min"] = 3, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 3, 
+				["min"] = 3, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 3, 
+				["min"] = 3, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_55876295", 
+				["text"] = "Leeches #% of Physical Damage as Life", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["964"] = {
+			["1HMace"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["2HMace"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Bow"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Claw"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_3695891184", 
+				["text"] = "Gain # Life per Enemy Killed", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["965"] = {
+			["Boots"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Chest"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Focus"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Gloves"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Helmet"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["Shield"] = {
+				["max"] = 15, 
+				["min"] = 15, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_789117908", 
+				["text"] = "#% increased Mana Regeneration Rate", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["967"] = {
+			["1HMace"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["2HMace"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Bow"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Claw"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 2, 
+				["min"] = 2, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_669069897", 
+				["text"] = "Leeches #% of Physical Damage as Mana", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["969"] = {
+			["1HMace"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["2HMace"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Bow"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Claw"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 10, 
+				["min"] = 10, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_1368271171", 
+				["text"] = "Gain # Mana per Enemy Killed", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["974"] = {
+			["1HMace"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["2HMace"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["Bow"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["Claw"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 25, 
+				["min"] = 25, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_791928121", 
+				["text"] = "Causes #% increased Stun Buildup", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["978"] = {
+			["1HMace"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["2HMace"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["Bow"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["Claw"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_2968503605", 
+				["text"] = "#% increased chance to Ignite", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["980"] = {
+			["1HMace"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["2HMace"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Bow"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Claw"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 20, 
+				["min"] = 20, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_473429811", 
+				["text"] = "#% increased Freeze Buildup", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["982"] = {
+			["1HMace"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["1HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["2HMace"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["2HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["Bow"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["Claw"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["Crossbow"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["Quarterstaff"] = {
+				["max"] = 30, 
+				["min"] = 30, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_293638271", 
+				["text"] = "#% increased chance to Shock", 
+				["type"] = "rune", 
+			}, 
+		}, 
+		["984"] = {
+			["Boots"] = {
+				["max"] = 40, 
+				["min"] = 40, 
+			}, 
+			["Chest"] = {
+				["max"] = 40, 
+				["min"] = 40, 
+			}, 
+			["Focus"] = {
+				["max"] = 40, 
+				["min"] = 40, 
+			}, 
+			["Gloves"] = {
+				["max"] = 40, 
+				["min"] = 40, 
+			}, 
+			["Helmet"] = {
+				["max"] = 40, 
+				["min"] = 40, 
+			}, 
+			["Shield"] = {
+				["max"] = 40, 
+				["min"] = 40, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "rune.stat_915769802", 
+				["text"] = "# to Stun Threshold", 
+				["type"] = "rune", 
+			}, 
+		}, 
 	}, 
 }
