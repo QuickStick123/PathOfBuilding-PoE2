@@ -918,15 +918,6 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["1089_AllDamage"] = {
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "explicit.stat_2154246560", 
-				["text"] = "#% increased Damage", 
-				["type"] = "explicit", 
-			}, 
-		}, 
 		["1091_TotemDamageForJewel"] = {
 			["AnyJewel"] = {
 				["max"] = 18, 
@@ -7044,10 +7035,11 @@ return {
 		}, 
 		["936_AdditionalCharm"] = {
 			["Belt"] = {
-				["max"] = 1, 
+				["max"] = 2, 
 				["min"] = 1, 
 			}, 
 			["specialCaseData"] = {
+				["overrideModLinePlural"] = "+# Charm Slots", 
 			}, 
 			["tradeMod"] = {
 				["id"] = "explicit.stat_1416292992", 

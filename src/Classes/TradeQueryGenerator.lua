@@ -219,6 +219,9 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 		elseif modLine:find("Modifiers allowed") then
 			specialCaseData.overrideModLinePlural = "+# "..modLine:match(" (%a+) Modifiers allowed").." Modifiers allowed"
 			modLine = modLine:gsub("Modifiers", "Modifier")
+		elseif modLine:find("Charm Slots") then
+			specialCaseData.overrideModLinePlural = "+# Charm Slots"
+			modLine = modLine:gsub("Slots", "Slot")
 		end
 
 		-- If this is the first tier for this mod, find matching trade mod and init the entry
@@ -270,7 +273,7 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 				logToFile("Unable to match %s mod: %s", modType, modLine)
 				goto nextModLine
 			end
-			self.modData[modType][uniqueIndex] = { tradeMod = tradeMod, specialCaseData = { }, invertOnNegative = invert }
+			self.modData[modType][uniqueIndex] = { tradeMod = tradeMod, specialCaseData = { } }
 		elseif self.modData[modType][uniqueIndex].tradeMod.text:gsub("[#()0-9%-%+%.]","") == swapInverse(modLine):gsub("[#()0-9%-%+%.]","") and swapInverse(modLine) ~= modLine then -- if the swapped mod matches the inverse then consider it inverted, provide it changed.
 			invert = true
 		end
@@ -281,6 +284,7 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 		end
 
 		if invert then
+			self.modData[modType][uniqueIndex].invertOnNegative = true
 			modLine = swapInverse(modLine)
 		end
 
