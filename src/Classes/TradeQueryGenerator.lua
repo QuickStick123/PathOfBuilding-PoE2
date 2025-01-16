@@ -34,6 +34,7 @@ local tradeCategoryNames = {
 	["Staff"] = { { "Staff" } },
 	["Quarterstaff"] = { { "Staff", "Warstaff" } },
 	["Bow"] = { "Bow" },
+	["Crossbow"] = { "Crossbow"},
 	-- ["2HAxe"] = { "Two Handed Axe" },
 	-- ["2HSword"] = { "Two Handed Sword" },
 	["2HMace"] = { "Two Handed Mace" },
@@ -134,7 +135,7 @@ local function canModSpawnForItemCategory(mod, names)
 				if mod.weightVal[i] > 0 then
 					return true
 				else
-					return false
+					break
 				end
 			end
 		end

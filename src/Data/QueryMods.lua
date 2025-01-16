@@ -243,6 +243,10 @@ return {
 				["max"] = 10, 
 				["min"] = 5, 
 			}, 
+			["Crossbow"] = {
+				["max"] = 10, 
+				["min"] = 5, 
+			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -601,6 +605,10 @@ return {
 				["min"] = 10, 
 			}, 
 			["Bow"] = {
+				["max"] = 15, 
+				["min"] = 10, 
+			}, 
+			["Crossbow"] = {
 				["max"] = 15, 
 				["min"] = 10, 
 			}, 
@@ -1615,6 +1623,10 @@ return {
 		}, 
 		["935_AdditionalAmmo"] = {
 			["2HWeapon"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Crossbow"] = {
 				["max"] = 1, 
 				["min"] = 1, 
 			}, 
@@ -4070,6 +4082,10 @@ return {
 				["max"] = 52.5, 
 				["min"] = 2.5, 
 			}, 
+			["Crossbow"] = {
+				["max"] = 52.5, 
+				["min"] = 2.5, 
+			}, 
 			["Quarterstaff"] = {
 				["max"] = 74.5, 
 				["min"] = 3.5, 
@@ -4101,9 +4117,13 @@ return {
 			}, 
 			["2HWeapon"] = {
 				["max"] = 140.5, 
-				["min"] = 3.5, 
+				["min"] = 3, 
 			}, 
 			["Bow"] = {
+				["max"] = 98.5, 
+				["min"] = 3, 
+			}, 
+			["Crossbow"] = {
 				["max"] = 98.5, 
 				["min"] = 3, 
 			}, 
@@ -4151,9 +4171,13 @@ return {
 			}, 
 			["2HWeapon"] = {
 				["max"] = 112, 
-				["min"] = 3, 
+				["min"] = 2, 
 			}, 
 			["Bow"] = {
+				["max"] = 79, 
+				["min"] = 2, 
+			}, 
+			["Crossbow"] = {
 				["max"] = 79, 
 				["min"] = 2, 
 			}, 
@@ -4184,9 +4208,13 @@ return {
 			}, 
 			["2HWeapon"] = {
 				["max"] = 140.5, 
-				["min"] = 5, 
+				["min"] = 4, 
 			}, 
 			["Bow"] = {
+				["max"] = 99, 
+				["min"] = 4, 
+			}, 
+			["Crossbow"] = {
 				["max"] = 99, 
 				["min"] = 4, 
 			}, 
@@ -7592,6 +7620,10 @@ return {
 				["max"] = 5, 
 				["min"] = 1, 
 			}, 
+			["Crossbow"] = {
+				["max"] = 7, 
+				["min"] = 1, 
+			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7887,6 +7919,10 @@ return {
 				["max"] = 1, 
 				["min"] = 1, 
 			}, 
+			["Crossbow"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -7979,6 +8015,10 @@ return {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
+			["Crossbow"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
 			["Gloves"] = {
 				["max"] = 33, 
 				["min"] = 5, 
@@ -8022,6 +8062,10 @@ return {
 				["min"] = 5, 
 			}, 
 			["Chest"] = {
+				["max"] = 33, 
+				["min"] = 5, 
+			}, 
+			["Crossbow"] = {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
@@ -9446,6 +9490,10 @@ return {
 				["max"] = 1, 
 				["min"] = 1, 
 			}, 
+			["Crossbow"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9669,6 +9717,10 @@ return {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
+			["Crossbow"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9719,6 +9771,10 @@ return {
 		}, 
 		["implicit.stat_1980802737"] = {
 			["2HWeapon"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Crossbow"] = {
 				["max"] = 1, 
 				["min"] = 1, 
 			}, 
@@ -9797,6 +9853,10 @@ return {
 		}, 
 		["implicit.stat_2321178454"] = {
 			["2HWeapon"] = {
+				["max"] = 30, 
+				["min"] = 20, 
+			}, 
+			["Crossbow"] = {
 				["max"] = 30, 
 				["min"] = 20, 
 			}, 
