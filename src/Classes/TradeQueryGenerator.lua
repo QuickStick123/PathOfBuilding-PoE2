@@ -886,9 +886,10 @@ function TradeQueryGeneratorClass:RequestQuery(slot, context, statWeights, callb
 	controls.includeCorrupted.state = not context.slotTbl.alreadyCorrupted and (self.lastIncludeCorrupted == nil or self.lastIncludeCorrupted == true)
 	controls.includeCorrupted.enabled = not context.slotTbl.alreadyCorrupted
 
+	local canHaveRunes = slot.slotName:find("Weapon 1") or slot.slotName:find("Weapon 2") or slot.slotName:find("Helmet") or slot.slotName:find("Body Armour") or slot.slotName:find("Gloves") or slot.slotName:find("Boots")
 	controls.includeRunes = new("CheckBoxControl", {"TOPRIGHT",controls.includeCorrupted,"BOTTOMRIGHT"}, {0, 5, 18}, "Rune Mods:", function(state) end)
-	controls.includeRunes.state = not context.slotTbl.alreadyCorrupted and (self.lastIncludeRunes == nil or self.lastIncludeRunes == true)
-	controls.includeRunes.enabled = not context.slotTbl.alreadyCorrupted
+	controls.includeRunes.state = canHaveRunes and (self.lastIncludeRunes == nil or self.lastIncludeRunes == true)
+	controls.includeRunes.enabled = canHaveRunes
 
 	local lastItemAnchor = controls.includeRunes
 
