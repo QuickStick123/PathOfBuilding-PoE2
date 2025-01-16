@@ -41,10 +41,6 @@ return {
 				["max"] = 20.5, 
 				["min"] = 9.5, 
 			}, 
-			["Claw"] = {
-				["max"] = 14.5, 
-				["min"] = 9.5, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 20.5, 
 				["min"] = 13.5, 
@@ -244,10 +240,6 @@ return {
 				["min"] = 5, 
 			}, 
 			["Bow"] = {
-				["max"] = 10, 
-				["min"] = 5, 
-			}, 
-			["Crossbow"] = {
 				["max"] = 10, 
 				["min"] = 5, 
 			}, 
@@ -612,10 +604,6 @@ return {
 				["max"] = 15, 
 				["min"] = 10, 
 			}, 
-			["Crossbow"] = {
-				["max"] = 15, 
-				["min"] = 10, 
-			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -662,10 +650,6 @@ return {
 				["max"] = 25, 
 				["min"] = 15, 
 			}, 
-			["Claw"] = {
-				["max"] = 25, 
-				["min"] = 15, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 25, 
 				["min"] = 15, 
@@ -701,10 +685,6 @@ return {
 			}, 
 			["Bow"] = {
 				["max"] = 25.5, 
-				["min"] = 12, 
-			}, 
-			["Claw"] = {
-				["max"] = 18, 
 				["min"] = 12, 
 			}, 
 			["Quarterstaff"] = {
@@ -744,10 +724,6 @@ return {
 				["max"] = 21.5, 
 				["min"] = 10.5, 
 			}, 
-			["Claw"] = {
-				["max"] = 15.5, 
-				["min"] = 10.5, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 21.5, 
 				["min"] = 14.5, 
@@ -783,10 +759,6 @@ return {
 			}, 
 			["Bow"] = {
 				["max"] = 32, 
-				["min"] = 15, 
-			}, 
-			["Claw"] = {
-				["max"] = 22.5, 
 				["min"] = 15, 
 			}, 
 			["Quarterstaff"] = {
@@ -1062,10 +1034,6 @@ return {
 				["max"] = 50, 
 				["min"] = 20, 
 			}, 
-			["Claw"] = {
-				["max"] = 30, 
-				["min"] = 20, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 50, 
 				["min"] = 40, 
@@ -1329,10 +1297,6 @@ return {
 				["max"] = 15, 
 				["min"] = 10, 
 			}, 
-			["Claw"] = {
-				["max"] = 15, 
-				["min"] = 10, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 15, 
 				["min"] = 10, 
@@ -1371,10 +1335,6 @@ return {
 				["max"] = 8, 
 				["min"] = 6, 
 			}, 
-			["Claw"] = {
-				["max"] = 8, 
-				["min"] = 6, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 8, 
 				["min"] = 6, 
@@ -1409,10 +1369,6 @@ return {
 				["min"] = -20, 
 			}, 
 			["Bow"] = {
-				["max"] = -10, 
-				["min"] = -20, 
-			}, 
-			["Claw"] = {
 				["max"] = -10, 
 				["min"] = -20, 
 			}, 
@@ -1659,10 +1615,6 @@ return {
 		}, 
 		["935_AdditionalAmmo"] = {
 			["2HWeapon"] = {
-				["max"] = 1, 
-				["min"] = 1, 
-			}, 
-			["Crossbow"] = {
 				["max"] = 1, 
 				["min"] = 1, 
 			}, 
@@ -4044,10 +3996,6 @@ return {
 				["max"] = 79, 
 				["min"] = 15, 
 			}, 
-			["Claw"] = {
-				["max"] = 79, 
-				["min"] = 15, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 79, 
 				["min"] = 15, 
@@ -4082,10 +4030,6 @@ return {
 				["min"] = 40, 
 			}, 
 			["Bow"] = {
-				["max"] = 179, 
-				["min"] = 40, 
-			}, 
-			["Claw"] = {
 				["max"] = 179, 
 				["min"] = 40, 
 			}, 
@@ -4126,14 +4070,6 @@ return {
 				["max"] = 74.5, 
 				["min"] = 2.5, 
 			}, 
-			["Claw"] = {
-				["max"] = 52.5, 
-				["min"] = 2.5, 
-			}, 
-			["Crossbow"] = {
-				["max"] = 52.5, 
-				["min"] = 2.5, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 74.5, 
 				["min"] = 3.5, 
@@ -4168,14 +4104,6 @@ return {
 				["min"] = 3, 
 			}, 
 			["Bow"] = {
-				["max"] = 98.5, 
-				["min"] = 3, 
-			}, 
-			["Claw"] = {
-				["max"] = 98.5, 
-				["min"] = 3, 
-			}, 
-			["Crossbow"] = {
 				["max"] = 98.5, 
 				["min"] = 3, 
 			}, 
@@ -4229,14 +4157,6 @@ return {
 				["max"] = 79, 
 				["min"] = 2, 
 			}, 
-			["Claw"] = {
-				["max"] = 79, 
-				["min"] = 2, 
-			}, 
-			["Crossbow"] = {
-				["max"] = 79, 
-				["min"] = 2, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 112, 
 				["min"] = 3, 
@@ -4270,14 +4190,6 @@ return {
 				["max"] = 99, 
 				["min"] = 4, 
 			}, 
-			["Claw"] = {
-				["max"] = 99, 
-				["min"] = 4, 
-			}, 
-			["Crossbow"] = {
-				["max"] = 99, 
-				["min"] = 4, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 140.5, 
 				["min"] = 5, 
@@ -4308,10 +4220,6 @@ return {
 				["min"] = 11, 
 			}, 
 			["Bow"] = {
-				["max"] = 550, 
-				["min"] = 11, 
-			}, 
-			["Claw"] = {
 				["max"] = 550, 
 				["min"] = 11, 
 			}, 
@@ -4353,10 +4261,6 @@ return {
 				["max"] = 200, 
 				["min"] = 16, 
 			}, 
-			["Claw"] = {
-				["max"] = 200, 
-				["min"] = 16, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 200, 
 				["min"] = 16, 
@@ -4392,10 +4296,6 @@ return {
 				["min"] = 10, 
 			}, 
 			["Bow"] = {
-				["max"] = 60, 
-				["min"] = 10, 
-			}, 
-			["Claw"] = {
 				["max"] = 60, 
 				["min"] = 10, 
 			}, 
@@ -6185,10 +6085,6 @@ return {
 				["max"] = 139, 
 				["min"] = 19, 
 			}, 
-			["Claw"] = {
-				["max"] = 100, 
-				["min"] = 19, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 139, 
 				["min"] = 34, 
@@ -7614,10 +7510,6 @@ return {
 				["max"] = 5, 
 				["min"] = 1.01, 
 			}, 
-			["Claw"] = {
-				["max"] = 5, 
-				["min"] = 1.01, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 5, 
 				["min"] = 1.01, 
@@ -7673,10 +7565,6 @@ return {
 				["max"] = 39, 
 				["min"] = 10, 
 			}, 
-			["Claw"] = {
-				["max"] = 39, 
-				["min"] = 10, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 39, 
 				["min"] = 10, 
@@ -7712,10 +7600,6 @@ return {
 				["min"] = 5, 
 			}, 
 			["Bow"] = {
-				["max"] = 28, 
-				["min"] = 5, 
-			}, 
-			["Claw"] = {
 				["max"] = 28, 
 				["min"] = 5, 
 			}, 
@@ -7761,10 +7645,6 @@ return {
 				["min"] = -35, 
 			}, 
 			["Chest"] = {
-				["max"] = -15, 
-				["min"] = -35, 
-			}, 
-			["Claw"] = {
 				["max"] = -15, 
 				["min"] = -35, 
 			}, 
@@ -8010,10 +7890,6 @@ return {
 				["max"] = 3, 
 				["min"] = 1, 
 			}, 
-			["Claw"] = {
-				["max"] = 5, 
-				["min"] = 1, 
-			}, 
 			["Gloves"] = {
 				["max"] = 2, 
 				["min"] = 1, 
@@ -8082,10 +7958,6 @@ return {
 			}, 
 			["Bow"] = {
 				["max"] = 5, 
-				["min"] = 1, 
-			}, 
-			["Crossbow"] = {
-				["max"] = 7, 
 				["min"] = 1, 
 			}, 
 			["specialCaseData"] = {
@@ -8383,10 +8255,6 @@ return {
 				["max"] = 1, 
 				["min"] = 1, 
 			}, 
-			["Crossbow"] = {
-				["max"] = 1, 
-				["min"] = 1, 
-			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8479,10 +8347,6 @@ return {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
-			["Crossbow"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
 			["Gloves"] = {
 				["max"] = 33, 
 				["min"] = 5, 
@@ -8526,14 +8390,6 @@ return {
 				["min"] = 5, 
 			}, 
 			["Chest"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
-			["Claw"] = {
-				["max"] = 33, 
-				["min"] = 5, 
-			}, 
-			["Crossbow"] = {
 				["max"] = 33, 
 				["min"] = 5, 
 			}, 
@@ -9018,10 +8874,6 @@ return {
 				["max"] = 9.9, 
 				["min"] = 5, 
 			}, 
-			["Claw"] = {
-				["max"] = 9.9, 
-				["min"] = 5, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 9.9, 
 				["min"] = 5, 
@@ -9072,10 +8924,6 @@ return {
 				["max"] = 5, 
 				["min"] = 2, 
 			}, 
-			["Claw"] = {
-				["max"] = 5, 
-				["min"] = 2, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 5, 
 				["min"] = 2, 
@@ -9110,10 +8958,6 @@ return {
 				["min"] = 4, 
 			}, 
 			["Bow"] = {
-				["max"] = 84, 
-				["min"] = 4, 
-			}, 
-			["Claw"] = {
 				["max"] = 84, 
 				["min"] = 4, 
 			}, 
@@ -9265,10 +9109,6 @@ return {
 				["max"] = 8.9, 
 				["min"] = 4, 
 			}, 
-			["Claw"] = {
-				["max"] = 8.9, 
-				["min"] = 4, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 8.9, 
 				["min"] = 4, 
@@ -9320,10 +9160,6 @@ return {
 				["min"] = 2, 
 			}, 
 			["Bow"] = {
-				["max"] = 45, 
-				["min"] = 2, 
-			}, 
-			["Claw"] = {
 				["max"] = 45, 
 				["min"] = 2, 
 			}, 
@@ -9410,10 +9246,6 @@ return {
 				["max"] = 80, 
 				["min"] = 21, 
 			}, 
-			["Claw"] = {
-				["max"] = 80, 
-				["min"] = 21, 
-			}, 
 			["Quarterstaff"] = {
 				["max"] = 80, 
 				["min"] = 21, 
@@ -9448,10 +9280,6 @@ return {
 				["min"] = 11, 
 			}, 
 			["Bow"] = {
-				["max"] = 30, 
-				["min"] = 11, 
-			}, 
-			["Claw"] = {
 				["max"] = 30, 
 				["min"] = 11, 
 			}, 
@@ -9918,10 +9746,6 @@ return {
 				["min"] = 5, 
 			}, 
 			["Bow"] = {
-				["max"] = 15, 
-				["min"] = 5, 
-			}, 
-			["Claw"] = {
 				["max"] = 15, 
 				["min"] = 5, 
 			}, 

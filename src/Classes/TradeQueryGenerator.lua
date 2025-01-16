@@ -10,49 +10,6 @@ local m_max = math.max
 local s_format = string.format
 local t_insert = table.insert
 
--- TODO generate these from data files
-local tradeCategoryTags = {
-	["Ring"] = { ["ring"] = true, ["ring_can_roll_minion_modifiers"] = true },
-	["Amulet"] = { ["amulet"] = true },
-	["Belt"] = { ["belt"] = true },
-	["Chest"] = { ["body_armour"] = true, ["str_armour"] = true, ["dex_armour"] = true, ["int_armour"] = true, ["str_int_armour"] = true, ["str_dex_armour"] = true, ["str_dex_int_armour"] = true },
-	["Helmet"] = { ["helmet"] = true, ["str_armour"] = true, ["dex_armour"] = true, ["int_armour"] = true, ["str_int_armour"] = true, ["str_dex_armour"] = true, ["str_dex_int_armour"] = true },
-	["Gloves"] = { ["gloves"] = true, ["str_armour"] = true, ["dex_armour"] = true, ["int_armour"] = true, ["str_int_armour"] = true, ["str_dex_armour"] = true, ["str_dex_int_armour"] = true },
-	["Boots"] = { ["boots"] = true, ["str_armour"] = true, ["dex_armour"] = true, ["int_armour"] = true, ["str_int_armour"] = true, ["str_dex_armour"] = true, ["str_dex_int_armour"] = true },
-	["Quiver"] = { ["quiver"] = true },
-	["Shield"] = { ["shield"] = true, ["energy_shield"] = true, ["dex_shield"] = true, ["str_shield"] = true, ["str_int_shield"] = true, ["dex_int_shield"] = true, ["str_dex_shield"] = true },
-	["1HWeapon"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["mace"] = true, ["sceptre"] = true, ["wand"] = true },
-	["2HWeapon"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["staff"] = true, ["warstaff"] = true, ["bow"] = true, ["mace"] = true, ["crossbow"] = true },
-	-- ["1HAxe"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["axe"] = true},
-	-- ["1HSword"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["sword"] = true, ["rapier"] = true },
-	["1HMace"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["mace"] = true },
-	["Sceptre"] = { ["onehand"] = true, ["sceptre"] = true },
-	-- ["Dagger"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["attack_dagger"] = true, ["dagger"] = true, ["rune_dagger"] = true },
-	["Wand"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["wand"] = true },
-	["Claw"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["claw"] = true },
-	["Staff"] = { ["twohand"] = true, ["staff"] = true, },
-	["Quarterstaff"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["warstaff"] = true  },
-	["Bow"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["bow"] = true },
-	-- ["2HAxe"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["axe"] = true },
-	-- ["2HSword"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["sword"] = true },
-	["2HMace"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["mace"] = true },
-	-- ["FishingRod"] = { ["fishing_rod"] = true },
-	["Focus"] =  { ["focus"] = true },
-	["Crossbow"] = { ["crossbow"] = true},
-	["AnyJewel"] = { ["jewel"] = true, ["strjewel"] = true, ["dexjewel"] = true, ["intjewel"] = true },
-	["BaseJewel"] = { ["jewel"] = true, ["strjewel"] = true, ["dexjewel"] = true, ["intjewel"] = true },
-	["LifeFlask"] = { ["flask"] = true, ["life_flask"] = true },
-	["ManaFlask"] = { ["flask"] = true, ["mana_flask"] = true },
-	["Charm"] = { ["flask"] = true, ["utility_flask"] = true },
-	-- doesn't have trade mod and incorrect mod formatting
-	-- ["RadiusJewel"] = { ["jewel"] = true, ["radius_jewel"] = true, ["str_radius_jewel"] = true, ["dex_radius_jewel"] = true, ["int_radius_jewel"] = true },
-	-- not in the game yet.
-	-- ["TrapTool"] = { ["trap"] = true},
-	-- ["Flail"] = { ["flail"] = true},
-	-- ["Spear"] = { ["spear"] = true}
-
-}
-
 -- string are an any type while tables require all fields to be matched with type and subType require both to be matched exactly. [1] type, [2] subType, subType is optional and must be nil if not present.
 local tradeCategoryNames = {
 	["Ring"] = { "Ring" },
@@ -94,6 +51,45 @@ local tradeCategoryNames = {
 	-- ["Spear"] = { "Spear" }
 }
 
+-- TODO generate these from data files
+local tradeCategoryTags = {
+	["Ring"] = { ["ring"] = true },
+	["Amulet"] = { ["amulet"] = true },
+	["Belt"] = { ["belt"] = true },
+	["Body Armour"] = { ["body_armour"] = true, ["str_armour"] = true, ["dex_armour"] = true, ["int_armour"] = true, ["str_int_armour"] = true, ["str_dex_armour"] = true, ["str_dex_int_armour"] = true },
+	["Helmet"] = { ["helmet"] = true, ["str_armour"] = true, ["dex_armour"] = true, ["int_armour"] = true, ["str_int_armour"] = true, ["str_dex_armour"] = true, ["str_dex_int_armour"] = true },
+	["Gloves"] = { ["gloves"] = true, ["str_armour"] = true, ["dex_armour"] = true, ["int_armour"] = true, ["str_int_armour"] = true, ["str_dex_armour"] = true, ["str_dex_int_armour"] = true },
+	["Boots"] = { ["boots"] = true, ["str_armour"] = true, ["dex_armour"] = true, ["int_armour"] = true, ["str_int_armour"] = true, ["str_dex_armour"] = true, ["str_dex_int_armour"] = true },
+	["Quiver"] = { ["quiver"] = true },
+	["Shield"] = { ["shield"] = true, ["energy_shield"] = true, ["dex_shield"] = true, ["str_shield"] = true, ["str_int_shield"] = true, ["dex_int_shield"] = true, ["str_dex_shield"] = true },
+	-- ["1HAxe"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["axe"] = true},
+	-- ["1HSword"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["sword"] = true, ["rapier"] = true },
+	["One Handed Mace"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["mace"] = true },
+	["Sceptre"] = { ["onehand"] = true, ["sceptre"] = true },
+	-- ["Dagger"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["attack_dagger"] = true, ["dagger"] = true, ["rune_dagger"] = true },
+	["Wand"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["wand"] = true },
+	-- ["Claw"] = { ["weapon"] = true, ["one_hand_weapon"] = true, ["onehand"] = true, ["claw"] = true },
+	[table.concat(tradeCategoryNames.Staff[1],'\0')] = { ["twohand"] = true, ["staff"] = true, },
+	[table.concat(tradeCategoryNames.Quarterstaff[1],'\0')] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["warstaff"] = true  },
+	["Bow"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["bow"] = true },
+	-- ["2HAxe"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["axe"] = true },
+	-- ["2HSword"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["sword"] = true },
+	["Two Handed Mace"] = { ["weapon"] = true, ["two_hand_weapon"] = true, ["twohand"] = true, ["mace"] = true },
+	-- ["FishingRod"] = { ["fishing_rod"] = true },
+	["Focus"] =  { ["focus"] = true },
+	["Crossbow"] = { ["crossbow"] = true},
+	[table.concat(tradeCategoryNames.BaseJewel[1],'\0')] = { ["jewel"] = true, ["strjewel"] = true, ["dexjewel"] = true, ["intjewel"] = true },
+	[table.concat(tradeCategoryNames.LifeFlask[1],'\0')] = { ["flask"] = true, ["life_flask"] = true },
+	[table.concat(tradeCategoryNames.ManaFlask[1],'\0')] = { ["flask"] = true, ["mana_flask"] = true },
+	["Charm"] = { ["flask"] = true, ["utility_flask"] = true },
+	-- doesn't have trade mod and incorrect mod formatting
+	-- ["RadiusJewel"] = { ["jewel"] = true, ["radius_jewel"] = true, ["str_radius_jewel"] = true, ["dex_radius_jewel"] = true, ["int_radius_jewel"] = true },
+	-- not in the game yet.
+	-- ["TrapTool"] = { ["trap"] = true},
+	-- ["Flail"] = { ["flail"] = true},
+	-- ["Spear"] = { ["spear"] = true}
+
+}
 
 local tradeStatCategoryIndices = {
 	["Explicit"] = 1,
@@ -130,11 +126,13 @@ local function fetchStats()
 	return tradeStats
 end
 
-local function canModSpawnForItemCategory(mod, category)
-	local tags = tradeCategoryTags[category]
-	for i, key in ipairs(mod.weightKey) do
-		if mod.weightVal[i] > 0 and tags[key] == true then
-			return true
+local function canModSpawnForItemCategory(mod, names)
+	for _, name in pairs(tradeCategoryNames[names]) do
+		local tags = tradeCategoryTags[type(name) == "table" and table.concat(name,'\0') or name]
+		for i, key in ipairs(mod.weightKey) do
+			if mod.weightVal[i] > 0 and tags[key] == true then
+				return true
+			end
 		end
 	end
 	return false
@@ -326,7 +324,7 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 		end
 
 		-- Update the min and max values available for each item category
-		for category, _ in pairs(itemCategoriesOverride or itemCategoriesMask or tradeCategoryTags) do
+		for category, _ in pairs(itemCategoriesOverride or itemCategoriesMask or tradeCategoryNames) do
 			if itemCategoriesOverride or canModSpawnForItemCategory(mod, category) then
 				if self.modData[modType][uniqueIndex][category] == nil then
 					self.modData[modType][uniqueIndex][category] = { min = 999999, max = -999999 }
@@ -386,7 +384,7 @@ function TradeQueryGeneratorClass:InitMods()
 
 	-- create mask for regular mods
 	local regularItemMask = { }
-	for category, _ in pairs(tradeCategoryTags) do
+	for category, _ in pairs(tradeCategoryNames) do
 		regularItemMask[category] = true
 	end
 
