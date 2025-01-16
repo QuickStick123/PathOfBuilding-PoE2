@@ -38,7 +38,7 @@ return {
 				["min"] = 9.5, 
 			}, 
 			["Bow"] = {
-				["max"] = 20.5, 
+				["max"] = 14.5, 
 				["min"] = 9.5, 
 			}, 
 			["Quarterstaff"] = {
@@ -684,7 +684,7 @@ return {
 				["min"] = 12, 
 			}, 
 			["Bow"] = {
-				["max"] = 25.5, 
+				["max"] = 18, 
 				["min"] = 12, 
 			}, 
 			["Quarterstaff"] = {
@@ -721,7 +721,7 @@ return {
 				["min"] = 10.5, 
 			}, 
 			["Bow"] = {
-				["max"] = 21.5, 
+				["max"] = 15.5, 
 				["min"] = 10.5, 
 			}, 
 			["Quarterstaff"] = {
@@ -758,7 +758,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Bow"] = {
-				["max"] = 32, 
+				["max"] = 22.5, 
 				["min"] = 15, 
 			}, 
 			["Quarterstaff"] = {
@@ -1031,7 +1031,7 @@ return {
 				["min"] = 20, 
 			}, 
 			["Bow"] = {
-				["max"] = 50, 
+				["max"] = 30, 
 				["min"] = 20, 
 			}, 
 			["Quarterstaff"] = {
@@ -4067,7 +4067,7 @@ return {
 				["min"] = 2.5, 
 			}, 
 			["Bow"] = {
-				["max"] = 74.5, 
+				["max"] = 52.5, 
 				["min"] = 2.5, 
 			}, 
 			["Quarterstaff"] = {
@@ -4088,20 +4088,20 @@ return {
 		}, 
 		["824_LocalFireDamage"] = {
 			["1HMace"] = {
-				["max"] = 140.5, 
+				["max"] = 98.5, 
 				["min"] = 3, 
 			}, 
 			["1HWeapon"] = {
-				["max"] = 140.5, 
+				["max"] = 98.5, 
 				["min"] = 3, 
 			}, 
 			["2HMace"] = {
 				["max"] = 140.5, 
-				["min"] = 3, 
+				["min"] = 3.5, 
 			}, 
 			["2HWeapon"] = {
 				["max"] = 140.5, 
-				["min"] = 3, 
+				["min"] = 3.5, 
 			}, 
 			["Bow"] = {
 				["max"] = 98.5, 
@@ -4138,20 +4138,20 @@ return {
 		}, 
 		["825_LocalColdDamage"] = {
 			["1HMace"] = {
-				["max"] = 112, 
+				["max"] = 79, 
 				["min"] = 2, 
 			}, 
 			["1HWeapon"] = {
-				["max"] = 112, 
+				["max"] = 79, 
 				["min"] = 2, 
 			}, 
 			["2HMace"] = {
 				["max"] = 112, 
-				["min"] = 2, 
+				["min"] = 3, 
 			}, 
 			["2HWeapon"] = {
 				["max"] = 112, 
-				["min"] = 2, 
+				["min"] = 3, 
 			}, 
 			["Bow"] = {
 				["max"] = 79, 
@@ -4171,20 +4171,20 @@ return {
 		}, 
 		["826_LocalLightningDamage"] = {
 			["1HMace"] = {
-				["max"] = 140.5, 
+				["max"] = 99, 
 				["min"] = 4, 
 			}, 
 			["1HWeapon"] = {
-				["max"] = 140.5, 
+				["max"] = 99, 
 				["min"] = 4, 
 			}, 
 			["2HMace"] = {
 				["max"] = 140.5, 
-				["min"] = 4, 
+				["min"] = 5, 
 			}, 
 			["2HWeapon"] = {
 				["max"] = 140.5, 
-				["min"] = 4, 
+				["min"] = 5, 
 			}, 
 			["Bow"] = {
 				["max"] = 99, 
@@ -4369,7 +4369,7 @@ return {
 		}, 
 		["833_LocalBaseArmourAndEnergyShield"] = {
 			["Boots"] = {
-				["max"] = 138, 
+				["max"] = 65, 
 				["min"] = 8, 
 			}, 
 			["Chest"] = {
@@ -4377,11 +4377,11 @@ return {
 				["min"] = 8, 
 			}, 
 			["Gloves"] = {
-				["max"] = 138, 
+				["max"] = 65, 
 				["min"] = 8, 
 			}, 
 			["Helmet"] = {
-				["max"] = 138, 
+				["max"] = 78, 
 				["min"] = 8, 
 			}, 
 			["specialCaseData"] = {
@@ -4395,7 +4395,7 @@ return {
 		}, 
 		["833_LocalBaseArmourAndEvasionRating"] = {
 			["Boots"] = {
-				["max"] = 138, 
+				["max"] = 65, 
 				["min"] = 8, 
 			}, 
 			["Chest"] = {
@@ -4403,11 +4403,11 @@ return {
 				["min"] = 8, 
 			}, 
 			["Gloves"] = {
-				["max"] = 138, 
+				["max"] = 65, 
 				["min"] = 8, 
 			}, 
 			["Helmet"] = {
-				["max"] = 138, 
+				["max"] = 78, 
 				["min"] = 8, 
 			}, 
 			["specialCaseData"] = {
@@ -4420,19 +4420,7 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["833_LocalIncreasedArmourAndBase"] = {
-			["Boots"] = {
-				["max"] = 86, 
-				["min"] = 7, 
-			}, 
 			["Chest"] = {
-				["max"] = 86, 
-				["min"] = 7, 
-			}, 
-			["Gloves"] = {
-				["max"] = 86, 
-				["min"] = 7, 
-			}, 
-			["Helmet"] = {
 				["max"] = 86, 
 				["min"] = 7, 
 			}, 
@@ -4446,19 +4434,7 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["833_LocalIncreasedArmourAndEnergyShieldAndBase"] = {
-			["Boots"] = {
-				["max"] = 43, 
-				["min"] = 4, 
-			}, 
 			["Chest"] = {
-				["max"] = 43, 
-				["min"] = 4, 
-			}, 
-			["Gloves"] = {
-				["max"] = 43, 
-				["min"] = 4, 
-			}, 
-			["Helmet"] = {
 				["max"] = 43, 
 				["min"] = 4, 
 			}, 
@@ -4472,19 +4448,7 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["833_LocalIncreasedArmourAndEvasionAndBase"] = {
-			["Boots"] = {
-				["max"] = 43, 
-				["min"] = 4, 
-			}, 
 			["Chest"] = {
-				["max"] = 43, 
-				["min"] = 4, 
-			}, 
-			["Gloves"] = {
-				["max"] = 43, 
-				["min"] = 4, 
-			}, 
-			["Helmet"] = {
 				["max"] = 43, 
 				["min"] = 4, 
 			}, 
@@ -4499,7 +4463,7 @@ return {
 		}, 
 		["833_LocalPhysicalDamageReductionRating"] = {
 			["Boots"] = {
-				["max"] = 276, 
+				["max"] = 160, 
 				["min"] = 16, 
 			}, 
 			["Chest"] = {
@@ -4507,11 +4471,11 @@ return {
 				["min"] = 16, 
 			}, 
 			["Gloves"] = {
-				["max"] = 276, 
+				["max"] = 160, 
 				["min"] = 16, 
 			}, 
 			["Helmet"] = {
-				["max"] = 276, 
+				["max"] = 202, 
 				["min"] = 16, 
 			}, 
 			["specialCaseData"] = {
@@ -4542,7 +4506,7 @@ return {
 		}, 
 		["834_LocalBaseArmourAndEvasionRating"] = {
 			["Boots"] = {
-				["max"] = 126, 
+				["max"] = 57, 
 				["min"] = 6, 
 			}, 
 			["Chest"] = {
@@ -4550,11 +4514,11 @@ return {
 				["min"] = 6, 
 			}, 
 			["Gloves"] = {
-				["max"] = 126, 
+				["max"] = 57, 
 				["min"] = 6, 
 			}, 
 			["Helmet"] = {
-				["max"] = 126, 
+				["max"] = 69, 
 				["min"] = 6, 
 			}, 
 			["specialCaseData"] = {
@@ -4568,7 +4532,7 @@ return {
 		}, 
 		["834_LocalBaseEvasionRatingAndEnergyShield"] = {
 			["Boots"] = {
-				["max"] = 126, 
+				["max"] = 57, 
 				["min"] = 6, 
 			}, 
 			["Chest"] = {
@@ -4576,11 +4540,11 @@ return {
 				["min"] = 6, 
 			}, 
 			["Gloves"] = {
-				["max"] = 126, 
+				["max"] = 57, 
 				["min"] = 6, 
 			}, 
 			["Helmet"] = {
-				["max"] = 126, 
+				["max"] = 69, 
 				["min"] = 6, 
 			}, 
 			["specialCaseData"] = {
@@ -4594,7 +4558,7 @@ return {
 		}, 
 		["834_LocalEvasionRating"] = {
 			["Boots"] = {
-				["max"] = 251, 
+				["max"] = 142, 
 				["min"] = 11, 
 			}, 
 			["Chest"] = {
@@ -4602,11 +4566,11 @@ return {
 				["min"] = 11, 
 			}, 
 			["Gloves"] = {
-				["max"] = 251, 
+				["max"] = 142, 
 				["min"] = 11, 
 			}, 
 			["Helmet"] = {
-				["max"] = 251, 
+				["max"] = 181, 
 				["min"] = 11, 
 			}, 
 			["specialCaseData"] = {
@@ -4619,19 +4583,7 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["834_LocalIncreasedArmourAndEvasionAndBase"] = {
-			["Boots"] = {
-				["max"] = 39, 
-				["min"] = 3, 
-			}, 
 			["Chest"] = {
-				["max"] = 39, 
-				["min"] = 3, 
-			}, 
-			["Gloves"] = {
-				["max"] = 39, 
-				["min"] = 3, 
-			}, 
-			["Helmet"] = {
 				["max"] = 39, 
 				["min"] = 3, 
 			}, 
@@ -4645,19 +4597,7 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["834_LocalIncreasedEvasionAndBase"] = {
-			["Boots"] = {
-				["max"] = 79, 
-				["min"] = 5, 
-			}, 
 			["Chest"] = {
-				["max"] = 79, 
-				["min"] = 5, 
-			}, 
-			["Gloves"] = {
-				["max"] = 79, 
-				["min"] = 5, 
-			}, 
-			["Helmet"] = {
 				["max"] = 79, 
 				["min"] = 5, 
 			}, 
@@ -4717,7 +4657,7 @@ return {
 		}, 
 		["835_LocalBaseArmourAndEnergyShield"] = {
 			["Boots"] = {
-				["max"] = 48, 
+				["max"] = 25, 
 				["min"] = 5, 
 			}, 
 			["Chest"] = {
@@ -4725,11 +4665,11 @@ return {
 				["min"] = 5, 
 			}, 
 			["Gloves"] = {
-				["max"] = 48, 
+				["max"] = 25, 
 				["min"] = 5, 
 			}, 
 			["Helmet"] = {
-				["max"] = 48, 
+				["max"] = 29, 
 				["min"] = 5, 
 			}, 
 			["specialCaseData"] = {
@@ -4743,7 +4683,7 @@ return {
 		}, 
 		["835_LocalBaseEvasionRatingAndEnergyShield"] = {
 			["Boots"] = {
-				["max"] = 48, 
+				["max"] = 25, 
 				["min"] = 5, 
 			}, 
 			["Chest"] = {
@@ -4751,11 +4691,11 @@ return {
 				["min"] = 5, 
 			}, 
 			["Gloves"] = {
-				["max"] = 48, 
+				["max"] = 25, 
 				["min"] = 5, 
 			}, 
 			["Helmet"] = {
-				["max"] = 48, 
+				["max"] = 29, 
 				["min"] = 5, 
 			}, 
 			["specialCaseData"] = {
@@ -4769,7 +4709,7 @@ return {
 		}, 
 		["835_LocalEnergyShield"] = {
 			["Boots"] = {
-				["max"] = 96, 
+				["max"] = 60, 
 				["min"] = 10, 
 			}, 
 			["Chest"] = {
@@ -4777,11 +4717,11 @@ return {
 				["min"] = 10, 
 			}, 
 			["Gloves"] = {
-				["max"] = 96, 
+				["max"] = 60, 
 				["min"] = 10, 
 			}, 
 			["Helmet"] = {
-				["max"] = 96, 
+				["max"] = 73, 
 				["min"] = 10, 
 			}, 
 			["specialCaseData"] = {
@@ -4794,19 +4734,7 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["835_LocalIncreasedArmourAndEnergyShieldAndBase"] = {
-			["Boots"] = {
-				["max"] = 15, 
-				["min"] = 2, 
-			}, 
 			["Chest"] = {
-				["max"] = 15, 
-				["min"] = 2, 
-			}, 
-			["Gloves"] = {
-				["max"] = 15, 
-				["min"] = 2, 
-			}, 
-			["Helmet"] = {
 				["max"] = 15, 
 				["min"] = 2, 
 			}, 
@@ -4820,19 +4748,7 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["835_LocalIncreasedEnergyShieldAndBase"] = {
-			["Boots"] = {
-				["max"] = 30, 
-				["min"] = 4, 
-			}, 
 			["Chest"] = {
-				["max"] = 30, 
-				["min"] = 4, 
-			}, 
-			["Gloves"] = {
-				["max"] = 30, 
-				["min"] = 4, 
-			}, 
-			["Helmet"] = {
 				["max"] = 30, 
 				["min"] = 4, 
 			}, 
@@ -4860,18 +4776,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Helmet"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -4881,19 +4785,7 @@ return {
 			}, 
 		}, 
 		["836_LocalIncreasedArmourAndBase"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Helmet"] = {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
@@ -4906,10 +4798,6 @@ return {
 			}, 
 		}, 
 		["836_LocalIncreasedArmourAndLife"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Chest"] = {
 				["max"] = 42, 
 				["min"] = 6, 
@@ -4931,18 +4819,6 @@ return {
 			}, 
 		}, 
 		["836_LocalIncreasedArmourAndMana"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Helmet"] = {
 				["max"] = 42, 
 				["min"] = 6, 
@@ -4961,7 +4837,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Chest"] = {
-				["max"] = 110, 
+				["max"] = 100, 
 				["min"] = 15, 
 			}, 
 			["Gloves"] = {
@@ -4989,18 +4865,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Helmet"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5015,7 +4879,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Chest"] = {
-				["max"] = 110, 
+				["max"] = 100, 
 				["min"] = 15, 
 			}, 
 			["Gloves"] = {
@@ -5039,19 +4903,7 @@ return {
 			}, 
 		}, 
 		["837_LocalIncreasedEvasionAndBase"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Helmet"] = {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
@@ -5064,10 +4916,6 @@ return {
 			}, 
 		}, 
 		["837_LocalIncreasedEvasionAndLife"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Chest"] = {
 				["max"] = 42, 
 				["min"] = 6, 
@@ -5089,18 +4937,6 @@ return {
 			}, 
 		}, 
 		["837_LocalIncreasedEvasionAndMana"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Helmet"] = {
 				["max"] = 42, 
 				["min"] = 6, 
@@ -5118,18 +4954,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Helmet"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5144,7 +4968,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Chest"] = {
-				["max"] = 110, 
+				["max"] = 100, 
 				["min"] = 15, 
 			}, 
 			["Gloves"] = {
@@ -5168,19 +4992,7 @@ return {
 			}, 
 		}, 
 		["838_LocalIncreasedEnergyShieldAndBase"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Helmet"] = {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
@@ -5193,10 +5005,6 @@ return {
 			}, 
 		}, 
 		["838_LocalIncreasedEnergyShieldAndLife"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Chest"] = {
 				["max"] = 42, 
 				["min"] = 6, 
@@ -5218,18 +5026,6 @@ return {
 			}, 
 		}, 
 		["838_LocalIncreasedEnergyShieldAndMana"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Helmet"] = {
 				["max"] = 42, 
 				["min"] = 6, 
@@ -5248,7 +5044,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Chest"] = {
-				["max"] = 110, 
+				["max"] = 100, 
 				["min"] = 15, 
 			}, 
 			["Gloves"] = {
@@ -5276,18 +5072,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Helmet"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5297,19 +5081,7 @@ return {
 			}, 
 		}, 
 		["839_LocalIncreasedArmourAndEvasionAndBase"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Helmet"] = {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
@@ -5322,10 +5094,6 @@ return {
 			}, 
 		}, 
 		["839_LocalIncreasedArmourAndEvasionAndLife"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Chest"] = {
 				["max"] = 42, 
 				["min"] = 6, 
@@ -5347,18 +5115,6 @@ return {
 			}, 
 		}, 
 		["839_LocalIncreasedArmourAndEvasionAndMana"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Helmet"] = {
 				["max"] = 42, 
 				["min"] = 6, 
@@ -5377,7 +5133,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Chest"] = {
-				["max"] = 110, 
+				["max"] = 100, 
 				["min"] = 15, 
 			}, 
 			["Gloves"] = {
@@ -5405,18 +5161,6 @@ return {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
-			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Helmet"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5426,19 +5170,7 @@ return {
 			}, 
 		}, 
 		["840_LocalIncreasedArmourAndEnergyShieldAndBase"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Helmet"] = {
 				["max"] = 42, 
 				["min"] = 6, 
 			}, 
@@ -5451,10 +5183,6 @@ return {
 			}, 
 		}, 
 		["840_LocalIncreasedArmourAndEnergyShieldAndLife"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Chest"] = {
 				["max"] = 42, 
 				["min"] = 6, 
@@ -5476,18 +5204,6 @@ return {
 			}, 
 		}, 
 		["840_LocalIncreasedArmourAndEnergyShieldAndMana"] = {
-			["Boots"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Chest"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 42, 
-				["min"] = 6, 
-			}, 
 			["Helmet"] = {
 				["max"] = 42, 
 				["min"] = 6, 
@@ -5501,10 +5217,6 @@ return {
 			}, 
 		}, 
 		["841_LocalEvasionAndEnergyShield"] = {
-			["Chest"] = {
-				["max"] = 110, 
-				["min"] = 101, 
-			}, 
 			["Shield"] = {
 				["max"] = 110, 
 				["min"] = 101, 
@@ -6082,7 +5794,7 @@ return {
 				["min"] = 19, 
 			}, 
 			["Bow"] = {
-				["max"] = 139, 
+				["max"] = 100, 
 				["min"] = 19, 
 			}, 
 			["Quarterstaff"] = {
@@ -6335,10 +6047,6 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["871_LocalIncreasedArmourAndEnergyShieldAndLife"] = {
-			["Boots"] = {
-				["max"] = 49, 
-				["min"] = 7, 
-			}, 
 			["Chest"] = {
 				["max"] = 49, 
 				["min"] = 7, 
@@ -6361,10 +6069,6 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["871_LocalIncreasedArmourAndEvasionAndLife"] = {
-			["Boots"] = {
-				["max"] = 49, 
-				["min"] = 7, 
-			}, 
 			["Chest"] = {
 				["max"] = 49, 
 				["min"] = 7, 
@@ -6387,10 +6091,6 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["871_LocalIncreasedArmourAndLife"] = {
-			["Boots"] = {
-				["max"] = 49, 
-				["min"] = 7, 
-			}, 
 			["Chest"] = {
 				["max"] = 49, 
 				["min"] = 7, 
@@ -6413,10 +6113,6 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["871_LocalIncreasedEnergyShieldAndLife"] = {
-			["Boots"] = {
-				["max"] = 49, 
-				["min"] = 7, 
-			}, 
 			["Chest"] = {
 				["max"] = 49, 
 				["min"] = 7, 
@@ -6449,10 +6145,6 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["871_LocalIncreasedEvasionAndLife"] = {
-			["Boots"] = {
-				["max"] = 49, 
-				["min"] = 7, 
-			}, 
 			["Chest"] = {
 				["max"] = 49, 
 				["min"] = 7, 
@@ -6546,18 +6238,6 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["873_LocalIncreasedArmourAndEnergyShieldAndMana"] = {
-			["Boots"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
-			["Chest"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
 			["Helmet"] = {
 				["max"] = 39, 
 				["min"] = 6, 
@@ -6572,18 +6252,6 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["873_LocalIncreasedArmourAndEvasionAndMana"] = {
-			["Boots"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
-			["Chest"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
 			["Helmet"] = {
 				["max"] = 39, 
 				["min"] = 6, 
@@ -6598,18 +6266,6 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["873_LocalIncreasedArmourAndMana"] = {
-			["Boots"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
-			["Chest"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
 			["Helmet"] = {
 				["max"] = 39, 
 				["min"] = 6, 
@@ -6624,18 +6280,6 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["873_LocalIncreasedEnergyShieldAndMana"] = {
-			["Boots"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
-			["Chest"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
 			["Helmet"] = {
 				["max"] = 39, 
 				["min"] = 6, 
@@ -6660,18 +6304,6 @@ return {
 			["usePositiveSign"] = true, 
 		}, 
 		["873_LocalIncreasedEvasionAndMana"] = {
-			["Boots"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
-			["Chest"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
-			["Gloves"] = {
-				["max"] = 39, 
-				["min"] = 6, 
-			}, 
 			["Helmet"] = {
 				["max"] = 39, 
 				["min"] = 6, 
@@ -9403,18 +9035,6 @@ return {
 				["max"] = 136, 
 				["min"] = 8, 
 			}, 
-			["Chest"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
-			["Gloves"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
-			["Helmet"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9426,18 +9046,6 @@ return {
 		}, 
 		["984_LocalArmourAndEvasionAndStunThreshold"] = {
 			["Boots"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
-			["Chest"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
-			["Gloves"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
-			["Helmet"] = {
 				["max"] = 136, 
 				["min"] = 8, 
 			}, 
@@ -9455,18 +9063,6 @@ return {
 				["max"] = 136, 
 				["min"] = 8, 
 			}, 
-			["Chest"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
-			["Gloves"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
-			["Helmet"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9478,18 +9074,6 @@ return {
 		}, 
 		["984_LocalEnergyShieldAndStunThreshold"] = {
 			["Boots"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
-			["Chest"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
-			["Gloves"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
-			["Helmet"] = {
 				["max"] = 136, 
 				["min"] = 8, 
 			}, 
@@ -9514,18 +9098,6 @@ return {
 		}, 
 		["984_LocalEvasionAndStunThreshold"] = {
 			["Boots"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
-			["Chest"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
-			["Gloves"] = {
-				["max"] = 136, 
-				["min"] = 8, 
-			}, 
-			["Helmet"] = {
 				["max"] = 136, 
 				["min"] = 8, 
 			}, 

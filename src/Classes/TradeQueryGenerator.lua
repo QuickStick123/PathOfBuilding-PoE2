@@ -130,8 +130,12 @@ local function canModSpawnForItemCategory(mod, names)
 	for _, name in pairs(tradeCategoryNames[names]) do
 		local tags = tradeCategoryTags[type(name) == "table" and table.concat(name,'\0') or name]
 		for i, key in ipairs(mod.weightKey) do
-			if mod.weightVal[i] > 0 and tags[key] == true then
-				return true
+			if tags[key] == true then
+				if mod.weightVal[i] > 0 then
+					return true
+				else
+					return false
+				end
 			end
 		end
 	end
