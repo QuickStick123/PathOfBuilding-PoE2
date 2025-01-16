@@ -98,6 +98,7 @@ return {
 				["text"] = "# to Level of all Physical Spell Skills", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["1451_GainLifeOnBlock"] = {
 			["Shield"] = {
@@ -137,6 +138,7 @@ return {
 				["text"] = "# to Maximum Endurance Charges", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["1498_MaximumFrenzyCharges"] = {
 			["Gloves"] = {
@@ -150,6 +152,7 @@ return {
 				["text"] = "# to Maximum Frenzy Charges", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["1503_MaximumPowerCharges"] = {
 			["Helmet"] = {
@@ -163,6 +166,7 @@ return {
 				["text"] = "# to Maximum Power Charges", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["1564_AreaOfEffect"] = {
 			["Helmet"] = {
@@ -232,6 +236,7 @@ return {
 				["text"] = "#% to maximum Block chance", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["1944_BlindingHit"] = {
 			["2HWeapon"] = {
@@ -399,6 +404,7 @@ return {
 				["text"] = "# to Level of all Skills", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["4254_ArmourBreak"] = {
 			["Gloves"] = {
@@ -1092,6 +1098,7 @@ return {
 				["text"] = "# to Accuracy Rating", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["866_GlobalPhysicalDamageReductionRatingPercent"] = {
 			["Belt"] = {
@@ -1148,6 +1155,7 @@ return {
 				["text"] = "# to maximum Life", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["873_IncreasedMana"] = {
 			["Focus"] = {
@@ -1169,6 +1177,7 @@ return {
 				["text"] = "# to maximum Mana", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["876_BaseSpirit"] = {
 			["Helmet"] = {
@@ -1182,6 +1191,7 @@ return {
 				["text"] = "# to Spirit", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["883_AlliesInPresenceAllDamage"] = {
 			["1HWeapon"] = {
@@ -1338,6 +1348,7 @@ return {
 				["text"] = "#% to Critical Damage Bonus", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["914_LocalIncreasedAttackSpeed"] = {
 			["1HMace"] = {
@@ -1471,6 +1482,7 @@ return {
 				["text"] = "# to Level of all Fire Spell Skills", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["918_GlobalIncreaseColdSpellSkillGemLevel"] = {
 			["1HWeapon"] = {
@@ -1496,6 +1508,7 @@ return {
 				["text"] = "# to Level of all Cold Spell Skills", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["919_GlobalIncreaseLightningSpellSkillGemLevel"] = {
 			["1HWeapon"] = {
@@ -1521,6 +1534,7 @@ return {
 				["text"] = "# to Level of all Lightning Spell Skills", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["920_GlobalIncreaseChaosSpellSkillGemLevel"] = {
 			["1HWeapon"] = {
@@ -1546,6 +1560,7 @@ return {
 				["text"] = "# to Level of all Chaos Spell Skills", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["921_GlobalIncreaseMeleeSkillGemLevel"] = {
 			["Gloves"] = {
@@ -1559,6 +1574,7 @@ return {
 				["text"] = "# to Level of all Melee Skills", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["923_GlobalIncreaseMinionSpellSkillGemLevel"] = {
 			["Helmet"] = {
@@ -1572,6 +1588,7 @@ return {
 				["text"] = "# to Level of all Minion Skills", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["927_SpellCriticalStrikeChance"] = {
 			["1HWeapon"] = {
@@ -1703,6 +1720,7 @@ return {
 				["text"] = "# to Strength", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["940_Dexterity"] = {
 			["Amulet"] = {
@@ -1732,6 +1750,7 @@ return {
 				["text"] = "# to Dexterity", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["941_Intelligence"] = {
 			["Amulet"] = {
@@ -1761,6 +1780,7 @@ return {
 				["text"] = "# to Intelligence", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["943_ReducedPhysicalDamageTaken"] = {
 			["Chest"] = {
@@ -1791,6 +1811,7 @@ return {
 				["text"] = "#% to all Maximum Elemental Resistances", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["945_MaximumFireResist"] = {
 			["Belt"] = {
@@ -1804,6 +1825,7 @@ return {
 				["text"] = "#% to Maximum Fire Resistance", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["946_MaximumColdResist"] = {
 			["Helmet"] = {
@@ -1817,6 +1839,7 @@ return {
 				["text"] = "#% to Maximum Cold Resistance", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["947_MaximumLightningResistance"] = {
 			["Boots"] = {
@@ -1830,6 +1853,7 @@ return {
 				["text"] = "#% to Maximum Lightning Resistance", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["949_AllResistances"] = {
 			["Amulet"] = {
@@ -1847,6 +1871,7 @@ return {
 				["text"] = "#% to all Elemental Resistances", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["950_FireResistance"] = {
 			["AnyJewel"] = {
@@ -1872,6 +1897,7 @@ return {
 				["text"] = "#% to Fire Resistance", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["951_ColdResistance"] = {
 			["AnyJewel"] = {
@@ -1897,6 +1923,7 @@ return {
 				["text"] = "#% to Cold Resistance", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["952_LightningResistance"] = {
 			["AnyJewel"] = {
@@ -1922,6 +1949,7 @@ return {
 				["text"] = "#% to Lightning Resistance", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["953_ChaosResistance"] = {
 			["AnyJewel"] = {
@@ -1947,6 +1975,7 @@ return {
 				["text"] = "#% to Chaos Resistance", 
 				["type"] = "enchant", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["959_DamageTakenGainedAsLife"] = {
 			["Chest"] = {
@@ -2438,6 +2467,7 @@ return {
 				["text"] = "# to Level of all Physical Spell Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["1409_GlobalIncreasePhysicalSpellSkillGemLevelWeapon"] = {
 			["1HWeapon"] = {
@@ -2463,6 +2493,7 @@ return {
 				["text"] = "# to Level of all Physical Spell Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["1443_MaximumLifeOnKillPercent"] = {
 			["AnyJewel"] = {
@@ -2906,6 +2937,7 @@ return {
 				["text"] = "Minions have #% to all Elemental Resistances", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["2563_MinionChaosResistance"] = {
 			["AnyJewel"] = {
@@ -2923,6 +2955,7 @@ return {
 				["text"] = "Minions have #% to Chaos Resistance", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["2627_FireResistancePenetration"] = {
 			["AnyJewel"] = {
@@ -4297,6 +4330,7 @@ return {
 				["text"] = "# to Accuracy Rating", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["827_LocalIncreasedPhysicalDamagePercentAndAccuracyRating"] = {
 			["1HMace"] = {
@@ -4338,6 +4372,7 @@ return {
 				["text"] = "# to Accuracy Rating", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["827_LocalLightRadiusAndAccuracy"] = {
 			["1HMace"] = {
@@ -4379,6 +4414,7 @@ return {
 				["text"] = "# to Accuracy Rating", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["828_MovementVelocity"] = {
 			["AnyJewel"] = {
@@ -4455,6 +4491,7 @@ return {
 				["text"] = "# to Armour", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["833_LocalBaseArmourAndEvasionRating"] = {
 			["Boots"] = {
@@ -4480,6 +4517,7 @@ return {
 				["text"] = "# to Armour", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["833_LocalIncreasedArmourAndBase"] = {
 			["Boots"] = {
@@ -4505,6 +4543,7 @@ return {
 				["text"] = "# to Armour", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["833_LocalIncreasedArmourAndEnergyShieldAndBase"] = {
 			["Boots"] = {
@@ -4530,6 +4569,7 @@ return {
 				["text"] = "# to Armour", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["833_LocalIncreasedArmourAndEvasionAndBase"] = {
 			["Boots"] = {
@@ -4555,6 +4595,7 @@ return {
 				["text"] = "# to Armour", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["833_LocalPhysicalDamageReductionRating"] = {
 			["Boots"] = {
@@ -4580,6 +4621,7 @@ return {
 				["text"] = "# to Armour", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["8342_QuarterstaffFreezeBuildup"] = {
 			["AnyJewel"] = {
@@ -4622,6 +4664,7 @@ return {
 				["text"] = "# to Evasion Rating", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["834_LocalBaseEvasionRatingAndEnergyShield"] = {
 			["Boots"] = {
@@ -4647,6 +4690,7 @@ return {
 				["text"] = "# to Evasion Rating", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["834_LocalEvasionRating"] = {
 			["Boots"] = {
@@ -4672,6 +4716,7 @@ return {
 				["text"] = "# to Evasion Rating", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["834_LocalIncreasedArmourAndEvasionAndBase"] = {
 			["Boots"] = {
@@ -4697,6 +4742,7 @@ return {
 				["text"] = "# to Evasion Rating", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["834_LocalIncreasedEvasionAndBase"] = {
 			["Boots"] = {
@@ -4722,6 +4768,7 @@ return {
 				["text"] = "# to Evasion Rating", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["834_LocalIncreasedEvasionAndEnergyShieldAndBase"] = {
 			["specialCaseData"] = {
@@ -4731,6 +4778,7 @@ return {
 				["text"] = "# to Evasion Rating", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["8350_QuiverModifierEffect"] = {
 			["AnyJewel"] = {
@@ -4765,6 +4813,7 @@ return {
 				["text"] = "# to Maximum Rage", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["835_LocalBaseArmourAndEnergyShield"] = {
 			["Boots"] = {
@@ -4790,6 +4839,7 @@ return {
 				["text"] = "# to maximum Energy Shield", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["835_LocalBaseEvasionRatingAndEnergyShield"] = {
 			["Boots"] = {
@@ -4815,6 +4865,7 @@ return {
 				["text"] = "# to maximum Energy Shield", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["835_LocalEnergyShield"] = {
 			["Boots"] = {
@@ -4840,6 +4891,7 @@ return {
 				["text"] = "# to maximum Energy Shield", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["835_LocalIncreasedArmourAndEnergyShieldAndBase"] = {
 			["Boots"] = {
@@ -4865,6 +4917,7 @@ return {
 				["text"] = "# to maximum Energy Shield", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["835_LocalIncreasedEnergyShieldAndBase"] = {
 			["Boots"] = {
@@ -4890,6 +4943,7 @@ return {
 				["text"] = "# to maximum Energy Shield", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["835_LocalIncreasedEvasionAndEnergyShieldAndBase"] = {
 			["specialCaseData"] = {
@@ -4899,6 +4953,7 @@ return {
 				["text"] = "# to maximum Energy Shield", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["836_LocalArmourAndStunThreshold"] = {
 			["Boots"] = {
@@ -6220,6 +6275,7 @@ return {
 				["text"] = "# to Accuracy Rating", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["863_LightRadiusAndAccuracy"] = {
 			["Helmet"] = {
@@ -6233,6 +6289,7 @@ return {
 				["text"] = "# to Accuracy Rating", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["865_PhysicalDamageReductionRating"] = {
 			["Belt"] = {
@@ -6246,6 +6303,7 @@ return {
 				["text"] = "# to Armour", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["866_GlobalPhysicalDamageReductionRatingPercent"] = {
 			["Amulet"] = {
@@ -6280,6 +6338,7 @@ return {
 				["text"] = "# to Evasion Rating", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["868_GlobalEvasionRatingPercent"] = {
 			["Amulet"] = {
@@ -6314,6 +6373,7 @@ return {
 				["text"] = "# to maximum Energy Shield", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["870_GlobalEnergyShieldPercent"] = {
 			["Amulet"] = {
@@ -6376,6 +6436,7 @@ return {
 				["text"] = "# to maximum Life", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["871_LocalIncreasedArmourAndEnergyShieldAndLife"] = {
 			["Boots"] = {
@@ -6401,6 +6462,7 @@ return {
 				["text"] = "# to maximum Life", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["871_LocalIncreasedArmourAndEvasionAndLife"] = {
 			["Boots"] = {
@@ -6426,6 +6488,7 @@ return {
 				["text"] = "# to maximum Life", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["871_LocalIncreasedArmourAndLife"] = {
 			["Boots"] = {
@@ -6451,6 +6514,7 @@ return {
 				["text"] = "# to maximum Life", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["871_LocalIncreasedEnergyShieldAndLife"] = {
 			["Boots"] = {
@@ -6476,6 +6540,7 @@ return {
 				["text"] = "# to maximum Life", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["871_LocalIncreasedEvasionAndEnergyShieldAndLife"] = {
 			["specialCaseData"] = {
@@ -6485,6 +6550,7 @@ return {
 				["text"] = "# to maximum Life", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["871_LocalIncreasedEvasionAndLife"] = {
 			["Boots"] = {
@@ -6510,6 +6576,7 @@ return {
 				["text"] = "# to maximum Life", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["872_MaximumLifeIncreasePercent"] = {
 			["Amulet"] = {
@@ -6580,6 +6647,7 @@ return {
 				["text"] = "# to maximum Mana", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["873_LocalIncreasedArmourAndEnergyShieldAndMana"] = {
 			["Boots"] = {
@@ -6605,6 +6673,7 @@ return {
 				["text"] = "# to maximum Mana", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["873_LocalIncreasedArmourAndEvasionAndMana"] = {
 			["Boots"] = {
@@ -6630,6 +6699,7 @@ return {
 				["text"] = "# to maximum Mana", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["873_LocalIncreasedArmourAndMana"] = {
 			["Boots"] = {
@@ -6655,6 +6725,7 @@ return {
 				["text"] = "# to maximum Mana", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["873_LocalIncreasedEnergyShieldAndMana"] = {
 			["Boots"] = {
@@ -6680,6 +6751,7 @@ return {
 				["text"] = "# to maximum Mana", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["873_LocalIncreasedEvasionAndEnergyShieldAndMana"] = {
 			["specialCaseData"] = {
@@ -6689,6 +6761,7 @@ return {
 				["text"] = "# to maximum Mana", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["873_LocalIncreasedEvasionAndMana"] = {
 			["Boots"] = {
@@ -6714,6 +6787,7 @@ return {
 				["text"] = "# to maximum Mana", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["873_LocalIncreasedSpiritAndMana"] = {
 			["1HWeapon"] = {
@@ -6731,6 +6805,7 @@ return {
 				["text"] = "# to maximum Mana", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["873_WeaponSpellDamageAndMana"] = {
 			["1HWeapon"] = {
@@ -6756,6 +6831,7 @@ return {
 				["text"] = "# to maximum Mana", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["873_WeaponTrapDamageAndMana"] = {
 			["specialCaseData"] = {
@@ -6765,6 +6841,7 @@ return {
 				["text"] = "# to maximum Mana", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["874_MaximumManaIncreasePercent"] = {
 			["Amulet"] = {
@@ -6795,6 +6872,7 @@ return {
 				["text"] = "# to Spirit", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["877_ProjectileSpeed"] = {
 			["AnyJewel"] = {
@@ -7025,6 +7103,7 @@ return {
 				["text"] = "Allies in your Presence have # to Accuracy Rating", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["889_AlliesInPresenceCriticalStrikeChance"] = {
 			["1HWeapon"] = {
@@ -7148,6 +7227,7 @@ return {
 				["text"] = "Allies in your Presence have #% to all Elemental Resistances", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["894_AlliesInPresenceLifeRegeneration"] = {
 			["1HWeapon"] = {
@@ -7553,6 +7633,7 @@ return {
 				["text"] = "#% to Critical Hit Chance", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["9138_WitheredEffect"] = {
 			["AnyJewel"] = {
@@ -7611,6 +7692,7 @@ return {
 				["text"] = "#% to Critical Damage Bonus", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["914_LocalIncreasedAttackSpeed"] = {
 			["1HMace"] = {
@@ -7743,6 +7825,7 @@ return {
 				["text"] = "# to Level of all Spell Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["916_GlobalIncreaseSpellSkillGemLevelWeapon"] = {
 			["1HWeapon"] = {
@@ -7768,6 +7851,7 @@ return {
 				["text"] = "# to Level of all Spell Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["917_GlobalIncreaseFireSpellSkillGemLevel"] = {
 			["specialCaseData"] = {
@@ -7777,6 +7861,7 @@ return {
 				["text"] = "# to Level of all Fire Spell Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["917_GlobalIncreaseFireSpellSkillGemLevelWeapon"] = {
 			["1HWeapon"] = {
@@ -7802,6 +7887,7 @@ return {
 				["text"] = "# to Level of all Fire Spell Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["918_GlobalIncreaseColdSpellSkillGemLevel"] = {
 			["specialCaseData"] = {
@@ -7811,6 +7897,7 @@ return {
 				["text"] = "# to Level of all Cold Spell Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["918_GlobalIncreaseColdSpellSkillGemLevelWeapon"] = {
 			["1HWeapon"] = {
@@ -7836,6 +7923,7 @@ return {
 				["text"] = "# to Level of all Cold Spell Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["919_GlobalIncreaseLightningSpellSkillGemLevel"] = {
 			["specialCaseData"] = {
@@ -7845,6 +7933,7 @@ return {
 				["text"] = "# to Level of all Lightning Spell Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["919_GlobalIncreaseLightningSpellSkillGemLevelWeapon"] = {
 			["1HWeapon"] = {
@@ -7870,6 +7959,7 @@ return {
 				["text"] = "# to Level of all Lightning Spell Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["920_GlobalIncreaseChaosSpellSkillGemLevel"] = {
 			["specialCaseData"] = {
@@ -7879,6 +7969,7 @@ return {
 				["text"] = "# to Level of all Chaos Spell Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["920_GlobalIncreaseChaosSpellSkillGemLevelWeapon"] = {
 			["1HWeapon"] = {
@@ -7904,6 +7995,7 @@ return {
 				["text"] = "# to Level of all Chaos Spell Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["921_GlobalIncreaseMeleeSkillGemLevel"] = {
 			["1HMace"] = {
@@ -7937,6 +8029,7 @@ return {
 				["text"] = "# to Level of all Melee Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["921_GlobalIncreaseMeleeSkillGemLevelWeapon"] = {
 			["2HMace"] = {
@@ -7962,6 +8055,7 @@ return {
 				["text"] = "# to Level of all Melee Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["922_GlobalIncreaseProjectileSkillGemLevel"] = {
 			["Amulet"] = {
@@ -7979,6 +8073,7 @@ return {
 				["text"] = "# to Level of all Projectile Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["922_GlobalIncreaseProjectileSkillGemLevelWeapon"] = {
 			["2HWeapon"] = {
@@ -8000,6 +8095,7 @@ return {
 				["text"] = "# to Level of all Projectile Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["923_GlobalIncreaseMinionSpellSkillGemLevel"] = {
 			["Amulet"] = {
@@ -8017,6 +8113,7 @@ return {
 				["text"] = "# to Level of all Minion Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["923_GlobalIncreaseMinionSpellSkillGemLevelWeapon"] = {
 			["1HWeapon"] = {
@@ -8034,6 +8131,7 @@ return {
 				["text"] = "# to Level of all Minion Skills", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["925_CriticalStrikeChance"] = {
 			["Amulet"] = {
@@ -8310,6 +8408,7 @@ return {
 				["text"] = "# Charm Slot", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["937_AdditionalArrows"] = {
 			["2HWeapon"] = {
@@ -8345,6 +8444,7 @@ return {
 				["text"] = "# to all Attributes", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["939_Strength"] = {
 			["1HMace"] = {
@@ -8406,6 +8506,7 @@ return {
 				["text"] = "# to Strength", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["940_Dexterity"] = {
 			["2HWeapon"] = {
@@ -8463,6 +8564,7 @@ return {
 				["text"] = "# to Dexterity", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["941_Intelligence"] = {
 			["1HWeapon"] = {
@@ -8520,6 +8622,7 @@ return {
 				["text"] = "# to Intelligence", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["942_ReducedExtraDamageFromCrits"] = {
 			["Shield"] = {
@@ -8559,6 +8662,7 @@ return {
 				["text"] = "#% to all Maximum Elemental Resistances", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["945_MaximumFireResist"] = {
 			["AnyJewel"] = {
@@ -8580,6 +8684,7 @@ return {
 				["text"] = "#% to Maximum Fire Resistance", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["946_MaximumColdResist"] = {
 			["AnyJewel"] = {
@@ -8601,6 +8706,7 @@ return {
 				["text"] = "#% to Maximum Cold Resistance", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["947_MaximumLightningResistance"] = {
 			["AnyJewel"] = {
@@ -8622,6 +8728,7 @@ return {
 				["text"] = "#% to Maximum Lightning Resistance", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["948_MaximumChaosResistance"] = {
 			["Shield"] = {
@@ -8635,6 +8742,7 @@ return {
 				["text"] = "#% to Maximum Chaos Resistance", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["949_AllResistances"] = {
 			["Amulet"] = {
@@ -8656,6 +8764,7 @@ return {
 				["text"] = "#% to all Elemental Resistances", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["950_FireResistance"] = {
 			["Amulet"] = {
@@ -8677,6 +8786,7 @@ return {
 				["text"] = "#% to Fire Resistance", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["951_ColdResistance"] = {
 			["Amulet"] = {
@@ -8698,6 +8808,7 @@ return {
 				["text"] = "#% to Cold Resistance", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["952_LightningResistance"] = {
 			["Amulet"] = {
@@ -8719,6 +8830,7 @@ return {
 				["text"] = "#% to Lightning Resistance", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["953_ChaosResistance"] = {
 			["Amulet"] = {
@@ -8740,6 +8852,7 @@ return {
 				["text"] = "#% to Chaos Resistance", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["955_MinionLife"] = {
 			["1HWeapon"] = {
@@ -9481,6 +9594,7 @@ return {
 				["text"] = "# to Stun Threshold", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["984_LocalArmourAndEvasionAndStunThreshold"] = {
 			["Boots"] = {
@@ -9506,6 +9620,7 @@ return {
 				["text"] = "# to Stun Threshold", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["984_LocalArmourAndStunThreshold"] = {
 			["Boots"] = {
@@ -9531,6 +9646,7 @@ return {
 				["text"] = "# to Stun Threshold", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["984_LocalEnergyShieldAndStunThreshold"] = {
 			["Boots"] = {
@@ -9556,6 +9672,7 @@ return {
 				["text"] = "# to Stun Threshold", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["984_LocalEvasionAndEnergyShieldAndStunThreshold"] = {
 			["specialCaseData"] = {
@@ -9565,6 +9682,7 @@ return {
 				["text"] = "# to Stun Threshold", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["984_LocalEvasionAndStunThreshold"] = {
 			["Boots"] = {
@@ -9590,6 +9708,7 @@ return {
 				["text"] = "# to Stun Threshold", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["984_StunThreshold"] = {
 			["Belt"] = {
@@ -9615,6 +9734,7 @@ return {
 				["text"] = "# to Stun Threshold", 
 				["type"] = "explicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["985_ReducedBleedDuration"] = {
 			["Chest"] = {
@@ -9950,6 +10070,7 @@ return {
 				["text"] = "# to maximum Mana", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_1207554355"] = {
 			["Quiver"] = {
@@ -9984,6 +10105,7 @@ return {
 				["text"] = "# to all Attributes", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_1389754388"] = {
 			["Belt"] = {
@@ -10100,6 +10222,7 @@ return {
 				["text"] = "#% to Lightning Resistance", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_1691862754"] = {
 			["Charm"] = {
@@ -10130,6 +10253,7 @@ return {
 				["text"] = "#% to Block chance", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_1782086450"] = {
 			["Chest"] = {
@@ -10195,6 +10319,7 @@ return {
 				["text"] = "#% to all Maximum Elemental Resistances", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_1980802737"] = {
 			["2HWeapon"] = {
@@ -10307,6 +10432,7 @@ return {
 				["text"] = "#% to Critical Damage Bonus", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_275498888"] = {
 			["Ring"] = {
@@ -10384,6 +10510,7 @@ return {
 				["text"] = "#% to all Elemental Resistances", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_2923486259"] = {
 			["Chest"] = {
@@ -10405,6 +10532,7 @@ return {
 				["text"] = "#% to Chaos Resistance", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_2994271459"] = {
 			["Charm"] = {
@@ -10448,6 +10576,7 @@ return {
 				["text"] = "# to Dexterity", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_328541901"] = {
 			["Amulet"] = {
@@ -10461,6 +10590,7 @@ return {
 				["text"] = "# to Intelligence", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_3299347043"] = {
 			["Amulet"] = {
@@ -10482,6 +10612,7 @@ return {
 				["text"] = "# to maximum Life", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_3310778564"] = {
 			["Charm"] = {
@@ -10521,6 +10652,7 @@ return {
 				["text"] = "#% to Fire Resistance", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_3489782002"] = {
 			["Amulet"] = {
@@ -10534,6 +10666,7 @@ return {
 				["text"] = "# to maximum Energy Shield", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_3544800472"] = {
 			["Chest"] = {
@@ -10685,6 +10818,7 @@ return {
 				["text"] = "# to Spirit", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_4010341289"] = {
 			["Charm"] = {
@@ -10711,6 +10845,7 @@ return {
 				["text"] = "# to Strength", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_4220027924"] = {
 			["Ring"] = {
@@ -10724,6 +10859,7 @@ return {
 				["text"] = "#% to Cold Resistance", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_462041840"] = {
 			["Belt"] = {
@@ -10883,6 +11019,7 @@ return {
 				["text"] = "# to Accuracy Rating", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_809229260"] = {
 			["Belt"] = {
@@ -10896,6 +11033,7 @@ return {
 				["text"] = "# to Armour", 
 				["type"] = "implicit", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["implicit.stat_821241191"] = {
 			["Belt"] = {
@@ -11755,6 +11893,7 @@ return {
 				["text"] = "# to Accuracy Rating", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["860"] = {
 			["1HMace"] = {
@@ -11829,6 +11968,7 @@ return {
 				["text"] = "# to maximum Life", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["872"] = {
 			["Boots"] = {
@@ -11895,6 +12035,7 @@ return {
 				["text"] = "# to maximum Mana", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["874"] = {
 			["Boots"] = {
@@ -11969,6 +12110,7 @@ return {
 				["text"] = "# to Spirit", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["911"] = {
 			["Boots"] = {
@@ -12043,6 +12185,7 @@ return {
 				["text"] = "#% to Critical Damage Bonus", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["914"] = {
 			["1HMace"] = {
@@ -12150,6 +12293,7 @@ return {
 				["text"] = "#% to Maximum Fire Resistance", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["946"] = {
 			["Boots"] = {
@@ -12183,6 +12327,7 @@ return {
 				["text"] = "#% to Maximum Cold Resistance", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["947"] = {
 			["Boots"] = {
@@ -12216,6 +12361,7 @@ return {
 				["text"] = "#% to Maximum Lightning Resistance", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["949"] = {
 			["Boots"] = {
@@ -12249,6 +12395,7 @@ return {
 				["text"] = "#% to all Elemental Resistances", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["950"] = {
 			["Boots"] = {
@@ -12282,6 +12429,7 @@ return {
 				["text"] = "#% to Fire Resistance", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["951"] = {
 			["Boots"] = {
@@ -12315,6 +12463,7 @@ return {
 				["text"] = "#% to Cold Resistance", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["952"] = {
 			["Boots"] = {
@@ -12348,6 +12497,7 @@ return {
 				["text"] = "#% to Lightning Resistance", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["953"] = {
 			["Boots"] = {
@@ -12381,6 +12531,7 @@ return {
 				["text"] = "#% to Chaos Resistance", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 		["961"] = {
 			["1HMace"] = {
@@ -12775,6 +12926,7 @@ return {
 				["text"] = "# to Stun Threshold", 
 				["type"] = "rune", 
 			}, 
+			["usePositiveSign"] = true, 
 		}, 
 	}, 
 }

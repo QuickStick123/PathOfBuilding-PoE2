@@ -314,6 +314,8 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 				min = -temp
 			end
 
+			if sign == "+" then self.modData[modType][uniqueIndex].usePositiveSign = true end
+			
 			t_insert(tokens, min)
 			t_insert(tokens, max)
 		end
@@ -473,7 +475,11 @@ function TradeQueryGeneratorClass:GenerateModWeights(modsToTest)
 			if modLine:find("+#") and modValue >= 0 then
 				modLine = modLine:gsub("#", modValue)
 			else
-				modLine = modLine:gsub("+?#", modValue)
+				if entry.usePositiveSign and modValue >= 0 then
+					modLine = modLine:gsub("#", "+"..tostring(modValue))
+				else
+					modLine = modLine:gsub("+?#", modValue)
+				end
 			end
 
 			self.calcContext.testItem.explicitModLines[1] = { line = modLine, custom = true }
