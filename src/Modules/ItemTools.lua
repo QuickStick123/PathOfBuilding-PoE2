@@ -69,8 +69,8 @@ local function antonymFunc(num, word)
 	return antonym and (num.." "..antonym) or ("-"..num.." "..word)
 end
 
--- Apply range value (0 to 1) to a modifier that has a range: "(x-x)" or "(x-x) to (x-x)"
-function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
+-- takes a line and a given ranges and returns the given line with the values that refer to given stats and a string where these values have been replace by #, it will return nothing if it can find a valid match.
+function itemLib.getStrippedLine(line, range)
 	-- stripLines down to # inplace of any number and store numbers inside values also remove all + signs are kept if value is positive
 	local values = { }
 	local strippedLine = line:gsub("([%+-]?)%((%-?%d+%.?%d*)%-(%-?%d+%.?%d*)%)", function(sign, min, max)
@@ -158,7 +158,13 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 		return
 	end
 
-	local scalableLine, scalableValues = findScalableLine(strippedLine, values)
+	return findScalableLine(strippedLine, values)
+end
+
+
+-- Apply range value (0 to 1) to a modifier that has a range: "(x-x)" or "(x-x) to (x-x)"
+function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
+	local scalableLine, scalableValues = itemLib.getStrippedLine(line, range)
 
 	if scalableLine then -- found scalability data
 		for i, scalability in ipairs(data.modScalability[scalableLine:gsub("+#", "#")]) do
