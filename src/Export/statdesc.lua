@@ -407,21 +407,29 @@ function describeMod(mod)
 	out.modTags = describeModTags(mod.ImplicitTags)
 	return out, orders
 end
-
--- stats placed in statDesc order, order gives order in mods, and sign gives which use a postive sign.
---[Mod] = { { order = { 1, 2 }, sign = { 1 }, formats = { general = { "cononicalLine" }, [1] = { "formatA", "formatB", "formatC", etc }, [2] = {#2 stat formats}, }, "statA", "statB" }, { }, { }}
-function describeStatOnMod(fileName)
+function describeModLineStats(fileName)
 	local out = { }
+	local stats = dat("stats")
 	local uniqueStatDescriptors = {}
 	for _, statDescription in pairs(statDescriptors[fileName]) do
 		uniqueStatDescriptors[statDescription] = true
 	end
 	for statDescription, _ in pairs(uniqueStatDescriptors) do
 		if statDescription.stats then
+			local isLocal = { }
+			local isScalable = { }
+			local partial = ""
+			for _, stat in ipairs(statDescription.stats) do
+				local stat = stats:GetRow("Id", stat)
+				partial = partial..intToBytes(stat.Hash)
+				table.insert(isScalable, stat.IsScalable)
+				table.insert(isLocal, stat.Local)
+			end
+			local tradeHash = murmurHash2(partial, 0x02312233)
 			for _, wordings in ipairs(statDescription[1]) do
 				local formats = {}
-				local order = { }
-				local signs = { }
+				local subsituions = { }
+				local hasSign = { }
 				for _, format in ipairs(wordings) do
 					if type(format.v) == "number" then
 						if formats[tonumber(format.v)] then
@@ -439,15 +447,15 @@ function describeStatOnMod(fileName)
 				end
 				local strippedLine = wordings.text:gsub("([%+%-]?)(%b{})", function(sign, num)
 					local statNum = (num:match("%d") or 0) + 1
-					if sign == "+" or num:match("%+") then table.insert(signs, statNum) end
-					table.insert(order, statNum)
+					if sign == "+" or num:match("%+") then table.insert(hasSign, statNum) end
+					table.insert(subsituions, statNum)
 					return "#"
 				end)
-				-- find values that are set and no present on the item.
+				-- find values that are set and not present on the item.
 				local values = { }
 				for i, limit in ipairs(wordings.limit) do
 					local present
-					for _, statNum in ipairs(order) do
+					for _, statNum in ipairs(subsituions) do
 						if statNum == i then
 							present = true
 						end
@@ -509,9 +517,9 @@ function describeStatOnMod(fileName)
 					end
 				end
 				if out[strippedLine] then
-					table.insert(out[strippedLine], { order = order, signs = signs, formats = formats, values = values, unpack(statDescription.stats)})
+					table.insert(out[strippedLine], { subsituions = subsituions, hasSign = hasSign, formats = formats, values = values, order = statDescription.order, tradeHash = tradeHash, isLocal = isLocal, isScalable = isScalable, unpack(statDescription.stats)})
 				else
-					out[strippedLine] = { { order = order, signs = signs, formats = formats, values = values, unpack(statDescription.stats)} }
+					out[strippedLine] = { { subsituions = subsituions, hasSign = hasSign, formats = formats, values = values, order = statDescription.order, tradeHash = tradeHash, isLocal = isLocal, isScalable = isScalable, unpack(statDescription.stats)} }
 				end
 			end
 		end
