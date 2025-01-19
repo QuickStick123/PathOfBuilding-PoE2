@@ -341,6 +341,21 @@ function itemLib.formatModLine(modLine, dbMode)
 	return colorCode..line
 end
 
+function itemLib.calculateTradeHash(stats, nodeType)
+	local partial = ""
+	for _, stat in ipairs(stats) do
+		partial = partial..intToBytes(murmurHash2(stat, 0xC58F1A7B))
+	end
+	if nodeType then
+		if nodeType == 1 then 
+			partial = partial..intToBytes(murmurHash2("local_jewel_mod_stats_added_to_small_passives", 0xC58F1A7B))
+		elseif nodeType == 2 then 
+			partial = partial..intToBytes(murmurHash2("local_jewel_mod_stats_added_to_notable_passives", 0xC58F1A7B))
+		end
+	end
+	return murmurHash2(partial, 0x02312233)
+end
+
 itemLib.wiki = {
 	key = "F1",
 	openGem = function(gemData)

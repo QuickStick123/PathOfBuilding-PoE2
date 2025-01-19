@@ -42,7 +42,6 @@ for _, modLine in ipairs(modLines) do
             out:write('}, ')
         end
         out:write('order = ', statRepresentation.order, ', ')
-        out:write('tradeHash = ', statRepresentation.tradeHash, ', ')
          -- can't use concat with booleans
         if #statRepresentation.isLocal > 0 then
             out:write('isLocal = { ')

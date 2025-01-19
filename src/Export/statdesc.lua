@@ -418,14 +418,11 @@ function describeModLineStats(fileName)
 		if statDescription.stats then
 			local isLocal = { }
 			local isScalable = { }
-			local partial = ""
 			for _, stat in ipairs(statDescription.stats) do
 				local stat = stats:GetRow("Id", stat)
-				partial = partial..intToBytes(stat.Hash)
 				table.insert(isScalable, stat.IsScalable)
 				table.insert(isLocal, stat.Local)
 			end
-			local tradeHash = murmurHash2(partial, 0x02312233)
 			for _, wordings in ipairs(statDescription[1]) do
 				local formats = {}
 				local subsituions = { }
@@ -517,9 +514,9 @@ function describeModLineStats(fileName)
 					end
 				end
 				if out[strippedLine] then
-					table.insert(out[strippedLine], { subsituions = subsituions, hasSign = hasSign, formats = formats, values = values, order = statDescription.order, tradeHash = tradeHash, isLocal = isLocal, isScalable = isScalable, unpack(statDescription.stats)})
+					table.insert(out[strippedLine], { subsituions = subsituions, hasSign = hasSign, formats = formats, values = values, order = statDescription.order, isLocal = isLocal, isScalable = isScalable, unpack(statDescription.stats)})
 				else
-					out[strippedLine] = { { subsituions = subsituions, hasSign = hasSign, formats = formats, values = values, order = statDescription.order, tradeHash = tradeHash, isLocal = isLocal, isScalable = isScalable, unpack(statDescription.stats)} }
+					out[strippedLine] = { { subsituions = subsituions, hasSign = hasSign, formats = formats, values = values, order = statDescription.order, isLocal = isLocal, isScalable = isScalable, unpack(statDescription.stats)} }
 				end
 			end
 		end
