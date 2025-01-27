@@ -115,6 +115,9 @@ directiveTable.base = function(state, args, out)
 	out:write('itemBases["', displayName, '"] = {\n')
 	out:write('\tclass = "', class, '",\n')
 	out:write('\tcategory = "', category, '",\n')
+	if state.label and #state.label > 0 then
+		out:write('\tlabel = "', state.label, '",\n')
+	end
 	if maximumQuality ~= 0 then
 		out:write('\tquality = ', maximumQuality, ',\n')
 	end

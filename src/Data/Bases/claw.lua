@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Crude Claw"] = {
 	class = "Claw",
 	category = "Claw",
+	label = "Claw",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, ezomyte_basetype = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },
@@ -15,6 +16,7 @@ itemBases["Crude Claw"] = {
 itemBases["Pict Claw"] = {
 	class = "Claw",
 	category = "Claw",
+	label = "Claw",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, ezomyte_basetype = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },
@@ -25,6 +27,7 @@ itemBases["Pict Claw"] = {
 itemBases["Wolfbone Claw"] = {
 	class = "Claw",
 	category = "Claw",
+	label = "Claw",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, ezomyte_basetype = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },
@@ -36,6 +39,7 @@ itemBases["Wolfbone Claw"] = {
 itemBases["Forked Claw"] = {
 	class = "Claw",
 	category = "Claw",
+	label = "Claw",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },
@@ -46,6 +50,7 @@ itemBases["Forked Claw"] = {
 itemBases["Plated Claw"] = {
 	class = "Claw",
 	category = "Claw",
+	label = "Claw",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },
@@ -56,6 +61,7 @@ itemBases["Plated Claw"] = {
 itemBases["Edged Claw"] = {
 	class = "Claw",
 	category = "Claw",
+	label = "Claw",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },
@@ -67,6 +73,7 @@ itemBases["Edged Claw"] = {
 itemBases["Arced Claw"] = {
 	class = "Claw",
 	category = "Claw",
+	label = "Claw",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, vaal_basetype = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },
@@ -77,6 +84,7 @@ itemBases["Arced Claw"] = {
 itemBases["Hooked Claw"] = {
 	class = "Claw",
 	category = "Claw",
+	label = "Claw",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, vaal_basetype = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },
@@ -87,6 +95,7 @@ itemBases["Hooked Claw"] = {
 itemBases["Razorglass Claw"] = {
 	class = "Claw",
 	category = "Claw",
+	label = "Claw",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },
@@ -97,6 +106,7 @@ itemBases["Razorglass Claw"] = {
 itemBases["Sharktooth Claw"] = {
 	class = "Claw",
 	category = "Claw",
+	label = "Claw",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },
@@ -107,6 +117,7 @@ itemBases["Sharktooth Claw"] = {
 itemBases["Armoured Claw"] = {
 	class = "Claw",
 	category = "Claw",
+	label = "Claw",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },
@@ -117,6 +128,7 @@ itemBases["Armoured Claw"] = {
 itemBases["Piercing Claw"] = {
 	class = "Claw",
 	category = "Claw",
+	label = "Claw",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },
@@ -127,6 +139,7 @@ itemBases["Piercing Claw"] = {
 itemBases["Talon Claw"] = {
 	class = "Claw",
 	category = "Claw",
+	label = "Claw",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },

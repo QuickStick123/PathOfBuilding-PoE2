@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Crude Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ezomyte_basetype = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -15,6 +16,7 @@ itemBases["Crude Bow"] = {
 itemBases["Shortbow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ezomyte_basetype = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -25,6 +27,7 @@ itemBases["Shortbow"] = {
 itemBases["Warden Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ezomyte_basetype = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -36,6 +39,7 @@ itemBases["Warden Bow"] = {
 itemBases["Recurve Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, maraketh_basetype = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -46,6 +50,7 @@ itemBases["Recurve Bow"] = {
 itemBases["Composite Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, maraketh_basetype = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -56,6 +61,7 @@ itemBases["Composite Bow"] = {
 itemBases["Dualstring Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, maraketh_basetype = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -67,6 +73,7 @@ itemBases["Dualstring Bow"] = {
 itemBases["Cultist Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, vaal_basetype = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -77,6 +84,7 @@ itemBases["Cultist Bow"] = {
 itemBases["Zealot Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, vaal_basetype = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -87,6 +95,7 @@ itemBases["Zealot Bow"] = {
 itemBases["Artillery Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -98,6 +107,7 @@ itemBases["Artillery Bow"] = {
 itemBases["Tribal Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -108,6 +118,7 @@ itemBases["Tribal Bow"] = {
 itemBases["Greatbow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -118,6 +129,7 @@ itemBases["Greatbow"] = {
 itemBases["Double Limb Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -128,6 +140,7 @@ itemBases["Double Limb Bow"] = {
 itemBases["Heavy Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -138,6 +151,7 @@ itemBases["Heavy Bow"] = {
 itemBases["Advanced Shortbow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -148,6 +162,7 @@ itemBases["Advanced Shortbow"] = {
 itemBases["Advanced Warden Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -159,6 +174,7 @@ itemBases["Advanced Warden Bow"] = {
 itemBases["Advanced Composite Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -169,6 +185,7 @@ itemBases["Advanced Composite Bow"] = {
 itemBases["Advanced Dualstring Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -180,6 +197,7 @@ itemBases["Advanced Dualstring Bow"] = {
 itemBases["Advanced Cultist Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -190,6 +208,7 @@ itemBases["Advanced Cultist Bow"] = {
 itemBases["Advanced Zealot Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -200,6 +219,7 @@ itemBases["Advanced Zealot Bow"] = {
 itemBases["Expert Shortbow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -210,6 +230,7 @@ itemBases["Expert Shortbow"] = {
 itemBases["Expert Composite Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -220,6 +241,7 @@ itemBases["Expert Composite Bow"] = {
 itemBases["Expert Warden Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -231,6 +253,7 @@ itemBases["Expert Warden Bow"] = {
 itemBases["Expert Dualstring Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -242,6 +265,7 @@ itemBases["Expert Dualstring Bow"] = {
 itemBases["Expert Cultist Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },
@@ -252,6 +276,7 @@ itemBases["Expert Cultist Bow"] = {
 itemBases["Expert Zealot Bow"] = {
 	class = "Bow",
 	category = "Bow",
+	label = "Bow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, default = true, twohand = true, bow = true, },

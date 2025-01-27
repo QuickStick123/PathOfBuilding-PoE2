@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Golden Mantle"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_dex_int_armour = true, demigods = true, armour = true, not_for_sale = true, default = true, },
@@ -17,6 +18,7 @@ itemBases["Golden Mantle"] = {
 itemBases["Rusted Cuirass"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_armour = true, armour = true, ezomyte_basetype = true, default = true, },
@@ -28,6 +30,7 @@ itemBases["Rusted Cuirass"] = {
 itemBases["Fur Plate"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_armour = true, armour = true, ezomyte_basetype = true, default = true, },
@@ -39,6 +42,7 @@ itemBases["Fur Plate"] = {
 itemBases["Iron Cuirass"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_armour = true, armour = true, ezomyte_basetype = true, default = true, },
@@ -50,6 +54,7 @@ itemBases["Iron Cuirass"] = {
 itemBases["Raider Plate"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_armour = true, armour = true, maraketh_basetype = true, default = true, },
@@ -61,6 +66,7 @@ itemBases["Raider Plate"] = {
 itemBases["Maraketh Cuirass"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_armour = true, armour = true, maraketh_basetype = true, default = true, },
@@ -72,6 +78,7 @@ itemBases["Maraketh Cuirass"] = {
 itemBases["Steel Plate"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_armour = true, armour = true, maraketh_basetype = true, default = true, },
@@ -83,6 +90,7 @@ itemBases["Steel Plate"] = {
 itemBases["Full Plate"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -94,6 +102,7 @@ itemBases["Full Plate"] = {
 itemBases["Vaal Cuirass"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -105,6 +114,7 @@ itemBases["Vaal Cuirass"] = {
 itemBases["Juggernaut Plate"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -116,6 +126,7 @@ itemBases["Juggernaut Plate"] = {
 itemBases["Chieftain Cuirass"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -127,6 +138,7 @@ itemBases["Chieftain Cuirass"] = {
 itemBases["Colosseum Plate"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -138,6 +150,7 @@ itemBases["Colosseum Plate"] = {
 itemBases["Champion Cuirass"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -149,6 +162,7 @@ itemBases["Champion Cuirass"] = {
 itemBases["Glorious Plate"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -160,6 +174,7 @@ itemBases["Glorious Plate"] = {
 itemBases["Conqueror Plate"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -172,6 +187,7 @@ itemBases["Conqueror Plate"] = {
 itemBases["Abyssal Cuirass"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -184,6 +200,7 @@ itemBases["Abyssal Cuirass"] = {
 itemBases["Leather Vest"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, ezomyte_basetype = true, dex_armour = true, armour = true, default = true, },
@@ -195,6 +212,7 @@ itemBases["Leather Vest"] = {
 itemBases["Quilted Vest"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, ezomyte_basetype = true, dex_armour = true, armour = true, default = true, },
@@ -206,6 +224,7 @@ itemBases["Quilted Vest"] = {
 itemBases["Pathfinder Coat"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, ezomyte_basetype = true, dex_armour = true, armour = true, default = true, },
@@ -217,6 +236,7 @@ itemBases["Pathfinder Coat"] = {
 itemBases["Shrouded Vest"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, dex_armour = true, armour = true, maraketh_basetype = true, default = true, },
@@ -228,6 +248,7 @@ itemBases["Shrouded Vest"] = {
 itemBases["Rhoahide Coat"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, dex_armour = true, armour = true, maraketh_basetype = true, default = true, },
@@ -239,6 +260,7 @@ itemBases["Rhoahide Coat"] = {
 itemBases["Studded Vest"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, dex_armour = true, armour = true, maraketh_basetype = true, default = true, },
@@ -250,6 +272,7 @@ itemBases["Studded Vest"] = {
 itemBases["Scout's Vest"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, dex_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -261,6 +284,7 @@ itemBases["Scout's Vest"] = {
 itemBases["Serpentscale Coat"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, dex_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -272,6 +296,7 @@ itemBases["Serpentscale Coat"] = {
 itemBases["Corsair Vest"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -283,6 +308,7 @@ itemBases["Corsair Vest"] = {
 itemBases["Smuggler Coat"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -294,6 +320,7 @@ itemBases["Smuggler Coat"] = {
 itemBases["Strider Vest"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -305,6 +332,7 @@ itemBases["Strider Vest"] = {
 itemBases["Hardleather Coat"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -316,6 +344,7 @@ itemBases["Hardleather Coat"] = {
 itemBases["Exquisite Vest"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -327,6 +356,7 @@ itemBases["Exquisite Vest"] = {
 itemBases["Mail Coat"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -339,6 +369,7 @@ itemBases["Mail Coat"] = {
 itemBases["Armoured Vest"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -351,6 +382,7 @@ itemBases["Armoured Vest"] = {
 itemBases["Tattered Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, ezomyte_basetype = true, int_armour = true, armour = true, default = true, },
@@ -362,6 +394,7 @@ itemBases["Tattered Robe"] = {
 itemBases["Feathered Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, ezomyte_basetype = true, int_armour = true, armour = true, default = true, },
@@ -373,6 +406,7 @@ itemBases["Feathered Robe"] = {
 itemBases["Hexer's Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, ezomyte_basetype = true, int_armour = true, armour = true, default = true, },
@@ -384,6 +418,7 @@ itemBases["Hexer's Robe"] = {
 itemBases["Bone Raiment"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, int_armour = true, armour = true, maraketh_basetype = true, default = true, },
@@ -395,6 +430,7 @@ itemBases["Bone Raiment"] = {
 itemBases["Silk Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, int_armour = true, armour = true, maraketh_basetype = true, default = true, },
@@ -406,6 +442,7 @@ itemBases["Silk Robe"] = {
 itemBases["Keth Raiment"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, int_armour = true, armour = true, maraketh_basetype = true, default = true, },
@@ -417,6 +454,7 @@ itemBases["Keth Raiment"] = {
 itemBases["Votive Raiment"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, int_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -428,6 +466,7 @@ itemBases["Votive Raiment"] = {
 itemBases["Altar Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, int_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -439,6 +478,7 @@ itemBases["Altar Robe"] = {
 itemBases["Elementalist Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -450,6 +490,7 @@ itemBases["Elementalist Robe"] = {
 itemBases["Mystic Raiment"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -461,6 +502,7 @@ itemBases["Mystic Raiment"] = {
 itemBases["Imperial Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -472,6 +514,7 @@ itemBases["Imperial Robe"] = {
 itemBases["Plated Raiment"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -483,6 +526,7 @@ itemBases["Plated Raiment"] = {
 itemBases["Havoc Raiment"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -494,6 +538,7 @@ itemBases["Havoc Raiment"] = {
 itemBases["Enlightened Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -506,6 +551,7 @@ itemBases["Enlightened Robe"] = {
 itemBases["Arcane Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -518,6 +564,7 @@ itemBases["Arcane Robe"] = {
 itemBases["Chain Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_dex_armour = true, ezomyte_basetype = true, armour = true, default = true, },
@@ -529,6 +576,7 @@ itemBases["Chain Mail"] = {
 itemBases["Rogue Armour"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_dex_armour = true, ezomyte_basetype = true, armour = true, default = true, },
@@ -540,6 +588,7 @@ itemBases["Rogue Armour"] = {
 itemBases["Vagabond Armour"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_dex_armour = true, armour = true, maraketh_basetype = true, default = true, },
@@ -551,6 +600,7 @@ itemBases["Vagabond Armour"] = {
 itemBases["Cloaked Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_dex_armour = true, armour = true, maraketh_basetype = true, default = true, },
@@ -562,6 +612,7 @@ itemBases["Cloaked Mail"] = {
 itemBases["Explorer Armour"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_dex_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -573,6 +624,7 @@ itemBases["Explorer Armour"] = {
 itemBases["Scale Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_dex_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -584,6 +636,7 @@ itemBases["Scale Mail"] = {
 itemBases["Knight Armour"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -595,6 +648,7 @@ itemBases["Knight Armour"] = {
 itemBases["Ancestral Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -606,6 +660,7 @@ itemBases["Ancestral Mail"] = {
 itemBases["Lamellar Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -617,6 +672,7 @@ itemBases["Lamellar Mail"] = {
 itemBases["Gladiator Armour"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -628,6 +684,7 @@ itemBases["Gladiator Armour"] = {
 itemBases["Heroic Armour"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -640,6 +697,7 @@ itemBases["Heroic Armour"] = {
 itemBases["Tournament Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -652,6 +710,7 @@ itemBases["Tournament Mail"] = {
 itemBases["Tournament Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -664,6 +723,7 @@ itemBases["Tournament Mail"] = {
 itemBases["Tournament Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -676,6 +736,7 @@ itemBases["Tournament Mail"] = {
 itemBases["Slayer Armour"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -687,6 +748,7 @@ itemBases["Slayer Armour"] = {
 itemBases["Pilgrim Vestments"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_int_armour = true, ezomyte_basetype = true, armour = true, default = true, },
@@ -698,6 +760,7 @@ itemBases["Pilgrim Vestments"] = {
 itemBases["Pelt Mantle"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_int_armour = true, ezomyte_basetype = true, armour = true, default = true, },
@@ -709,6 +772,7 @@ itemBases["Pelt Mantle"] = {
 itemBases["Mail Vestments"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_int_armour = true, armour = true, maraketh_basetype = true, default = true, },
@@ -720,6 +784,7 @@ itemBases["Mail Vestments"] = {
 itemBases["Shaman Mantle"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_int_armour = true, armour = true, maraketh_basetype = true, default = true, },
@@ -731,6 +796,7 @@ itemBases["Shaman Mantle"] = {
 itemBases["Ironclad Vestments"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_int_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -742,6 +808,7 @@ itemBases["Ironclad Vestments"] = {
 itemBases["Sacrificial Mantle"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, str_int_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -753,6 +820,7 @@ itemBases["Sacrificial Mantle"] = {
 itemBases["Cleric Vestments"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -764,6 +832,7 @@ itemBases["Cleric Vestments"] = {
 itemBases["Tideseer Mantle"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -775,6 +844,7 @@ itemBases["Tideseer Mantle"] = {
 itemBases["Gilded Vestments"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -786,6 +856,7 @@ itemBases["Gilded Vestments"] = {
 itemBases["Venerated Mantle"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -797,6 +868,7 @@ itemBases["Venerated Mantle"] = {
 itemBases["Revered Vestments"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -809,6 +881,7 @@ itemBases["Revered Vestments"] = {
 itemBases["Corvus Mantle"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -821,6 +894,7 @@ itemBases["Corvus Mantle"] = {
 itemBases["Zenith Vestments"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -832,6 +906,7 @@ itemBases["Zenith Vestments"] = {
 itemBases["Hermit Garb"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, ezomyte_basetype = true, armour = true, default = true, dex_int_armour = true, },
@@ -843,6 +918,7 @@ itemBases["Hermit Garb"] = {
 itemBases["Waxed Jacket"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, ezomyte_basetype = true, armour = true, default = true, dex_int_armour = true, },
@@ -854,6 +930,7 @@ itemBases["Waxed Jacket"] = {
 itemBases["Marabout Garb"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, maraketh_basetype = true, armour = true, default = true, dex_int_armour = true, },
@@ -865,6 +942,7 @@ itemBases["Marabout Garb"] = {
 itemBases["Wayfarer Jacket"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, maraketh_basetype = true, armour = true, default = true, dex_int_armour = true, },
@@ -876,6 +954,7 @@ itemBases["Wayfarer Jacket"] = {
 itemBases["Anchorite Garb"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, vaal_basetype = true, armour = true, default = true, dex_int_armour = true, },
@@ -887,6 +966,7 @@ itemBases["Anchorite Garb"] = {
 itemBases["Scalper's Jacket"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, vaal_basetype = true, armour = true, default = true, dex_int_armour = true, },
@@ -898,6 +978,7 @@ itemBases["Scalper's Jacket"] = {
 itemBases["Scoundrel Jacket"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -909,6 +990,7 @@ itemBases["Scoundrel Jacket"] = {
 itemBases["Ascetic Garb"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -920,6 +1002,7 @@ itemBases["Ascetic Garb"] = {
 itemBases["Clandestine Jacket"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -931,6 +1014,7 @@ itemBases["Clandestine Jacket"] = {
 itemBases["Monastic Garb"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -942,6 +1026,7 @@ itemBases["Monastic Garb"] = {
 itemBases["Torment Jacket"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -953,6 +1038,7 @@ itemBases["Torment Jacket"] = {
 itemBases["Devout Garb"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -965,6 +1051,7 @@ itemBases["Devout Garb"] = {
 itemBases["Assassin Garb"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -977,6 +1064,7 @@ itemBases["Assassin Garb"] = {
 itemBases["Garment"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_int_armour = true, default = true, },
@@ -987,6 +1075,7 @@ itemBases["Garment"] = {
 itemBases["Grand Regalia"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_int_armour = true, default = true, },
@@ -998,6 +1087,7 @@ itemBases["Grand Regalia"] = {
 itemBases["Advanced Fur Plate"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -1009,6 +1099,7 @@ itemBases["Advanced Fur Plate"] = {
 itemBases["Advanced Iron Cuirass"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -1020,6 +1111,7 @@ itemBases["Advanced Iron Cuirass"] = {
 itemBases["Advanced Maraketh Cuirass"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -1031,6 +1123,7 @@ itemBases["Advanced Maraketh Cuirass"] = {
 itemBases["Advanced Steel Plate"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -1042,6 +1135,7 @@ itemBases["Advanced Steel Plate"] = {
 itemBases["Advanced Full Plate"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -1053,6 +1147,7 @@ itemBases["Advanced Full Plate"] = {
 itemBases["Advanced Vaal Cuirass"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -1064,6 +1159,7 @@ itemBases["Advanced Vaal Cuirass"] = {
 itemBases["Advanced Quilted Vest"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -1075,6 +1171,7 @@ itemBases["Advanced Quilted Vest"] = {
 itemBases["Advanced Pathfinder Coat"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -1086,6 +1183,7 @@ itemBases["Advanced Pathfinder Coat"] = {
 itemBases["Advanced Rhoahide Coat"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -1097,6 +1195,7 @@ itemBases["Advanced Rhoahide Coat"] = {
 itemBases["Advanced Studded Vest"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -1108,6 +1207,7 @@ itemBases["Advanced Studded Vest"] = {
 itemBases["Advanced Scout's Vest"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -1119,6 +1219,7 @@ itemBases["Advanced Scout's Vest"] = {
 itemBases["Advanced Serpentscale Coat"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -1130,6 +1231,7 @@ itemBases["Advanced Serpentscale Coat"] = {
 itemBases["Advanced Feathered Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -1141,6 +1243,7 @@ itemBases["Advanced Feathered Robe"] = {
 itemBases["Advanced Hexer's Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -1152,6 +1255,7 @@ itemBases["Advanced Hexer's Robe"] = {
 itemBases["Advanced Silk Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -1163,6 +1267,7 @@ itemBases["Advanced Silk Robe"] = {
 itemBases["Advanced Keth Raiment"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -1174,6 +1279,7 @@ itemBases["Advanced Keth Raiment"] = {
 itemBases["Advanced Votive Raiment"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -1185,6 +1291,7 @@ itemBases["Advanced Votive Raiment"] = {
 itemBases["Advanced Altar Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -1196,6 +1303,7 @@ itemBases["Advanced Altar Robe"] = {
 itemBases["Advanced Chain Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -1207,6 +1315,7 @@ itemBases["Advanced Chain Mail"] = {
 itemBases["Advanced Rogue Armour"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -1218,6 +1327,7 @@ itemBases["Advanced Rogue Armour"] = {
 itemBases["Advanced Vagabond Armour"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -1229,6 +1339,7 @@ itemBases["Advanced Vagabond Armour"] = {
 itemBases["Advanced Cloaked Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -1240,6 +1351,7 @@ itemBases["Advanced Cloaked Mail"] = {
 itemBases["Advanced Explorer Armour"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -1251,6 +1363,7 @@ itemBases["Advanced Explorer Armour"] = {
 itemBases["Advanced Scale Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -1262,6 +1375,7 @@ itemBases["Advanced Scale Mail"] = {
 itemBases["Advanced Pilgrim Vestments"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -1273,6 +1387,7 @@ itemBases["Advanced Pilgrim Vestments"] = {
 itemBases["Advanced Pelt Mantle"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -1284,6 +1399,7 @@ itemBases["Advanced Pelt Mantle"] = {
 itemBases["Advanced Mail Vestments"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -1295,6 +1411,7 @@ itemBases["Advanced Mail Vestments"] = {
 itemBases["Advanced Shaman Mantle"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -1306,6 +1423,7 @@ itemBases["Advanced Shaman Mantle"] = {
 itemBases["Advanced Ironclad Vestments"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -1317,6 +1435,7 @@ itemBases["Advanced Ironclad Vestments"] = {
 itemBases["Advanced Sacrificial Mantle"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -1328,6 +1447,7 @@ itemBases["Advanced Sacrificial Mantle"] = {
 itemBases["Advanced Hermit Garb"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -1339,6 +1459,7 @@ itemBases["Advanced Hermit Garb"] = {
 itemBases["Advanced Waxed Jacket"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -1350,6 +1471,7 @@ itemBases["Advanced Waxed Jacket"] = {
 itemBases["Advanced Marabout Garb"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -1361,6 +1483,7 @@ itemBases["Advanced Marabout Garb"] = {
 itemBases["Advanced Wayfarer Jacket"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -1372,6 +1495,7 @@ itemBases["Advanced Wayfarer Jacket"] = {
 itemBases["Advanced Anchorite Garb"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -1383,6 +1507,7 @@ itemBases["Advanced Anchorite Garb"] = {
 itemBases["Advanced Scalper's Jacket"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -1394,6 +1519,7 @@ itemBases["Advanced Scalper's Jacket"] = {
 itemBases["Expert Iron Cuirass"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -1405,6 +1531,7 @@ itemBases["Expert Iron Cuirass"] = {
 itemBases["Expert Steel Plate"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -1417,6 +1544,7 @@ itemBases["Expert Steel Plate"] = {
 itemBases["Expert Vaal Cuirass"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_armour = true, default = true, },
@@ -1429,6 +1557,7 @@ itemBases["Expert Vaal Cuirass"] = {
 itemBases["Expert Pathfinder Coat"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -1441,6 +1570,7 @@ itemBases["Expert Pathfinder Coat"] = {
 itemBases["Expert Studded Vest"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -1452,6 +1582,7 @@ itemBases["Expert Studded Vest"] = {
 itemBases["Expert Serpentscale Coat"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_armour = true, default = true, },
@@ -1464,6 +1595,7 @@ itemBases["Expert Serpentscale Coat"] = {
 itemBases["Expert Hexer's Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -1475,6 +1607,7 @@ itemBases["Expert Hexer's Robe"] = {
 itemBases["Expert Keth Raiment"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -1487,6 +1620,7 @@ itemBases["Expert Keth Raiment"] = {
 itemBases["Expert Altar Robe"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, int_armour = true, default = true, },
@@ -1499,6 +1633,7 @@ itemBases["Expert Altar Robe"] = {
 itemBases["Expert Rogue Armour"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -1511,6 +1646,7 @@ itemBases["Expert Rogue Armour"] = {
 itemBases["Expert Cloaked Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -1523,6 +1659,7 @@ itemBases["Expert Cloaked Mail"] = {
 itemBases["Expert Cloaked Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -1535,6 +1672,7 @@ itemBases["Expert Cloaked Mail"] = {
 itemBases["Expert Cloaked Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -1547,6 +1685,7 @@ itemBases["Expert Cloaked Mail"] = {
 itemBases["Expert Scale Mail"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_dex_armour = true, default = true, },
@@ -1558,6 +1697,7 @@ itemBases["Expert Scale Mail"] = {
 itemBases["Expert Pelt Mantle"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -1569,6 +1709,7 @@ itemBases["Expert Pelt Mantle"] = {
 itemBases["Expert Shaman Mantle"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -1581,6 +1722,7 @@ itemBases["Expert Shaman Mantle"] = {
 itemBases["Expert Sacrificial Mantle"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, str_int_armour = true, default = true, },
@@ -1593,6 +1735,7 @@ itemBases["Expert Sacrificial Mantle"] = {
 itemBases["Expert Waxed Jacket"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -1604,6 +1747,7 @@ itemBases["Expert Waxed Jacket"] = {
 itemBases["Expert Wayfarer Jacket"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },
@@ -1616,6 +1760,7 @@ itemBases["Expert Wayfarer Jacket"] = {
 itemBases["Expert Scalper's Jacket"] = {
 	class = "Body Armour",
 	category = "Body Armour",
+	label = "Body Armour",
 	quality = 20,
 	socketLimit = 3,
 	tags = { body_armour = true, armour = true, dex_int_armour = true, default = true, },

@@ -2,10 +2,10 @@
 -- Item data (c) Grinding Gear Games
 local itemBases = ...
 
-
 itemBases["Clay Trap"] = {
 	class = "TrapTool",
 	category = "TrapTool",
+	label = "Trap",
 	quality = 20,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -14,6 +14,7 @@ itemBases["Clay Trap"] = {
 itemBases["Clamping Trap"] = {
 	class = "TrapTool",
 	category = "TrapTool",
+	label = "Trap",
 	quality = 20,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -22,6 +23,7 @@ itemBases["Clamping Trap"] = {
 itemBases["Shrapnel Trap"] = {
 	class = "TrapTool",
 	category = "TrapTool",
+	label = "Trap",
 	quality = 20,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -30,6 +32,7 @@ itemBases["Shrapnel Trap"] = {
 itemBases["Urn Trap"] = {
 	class = "TrapTool",
 	category = "TrapTool",
+	label = "Trap",
 	quality = 20,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -38,6 +41,7 @@ itemBases["Urn Trap"] = {
 itemBases["Incense Trap"] = {
 	class = "TrapTool",
 	category = "TrapTool",
+	label = "Trap",
 	quality = 20,
 	tags = { twohand = true, trap = true, default = true, },
 	implicit = "(20-30)% increased Cooldown Recovery Rate for throwing Traps",
@@ -47,6 +51,7 @@ itemBases["Incense Trap"] = {
 itemBases["Bladed Trap"] = {
 	class = "TrapTool",
 	category = "TrapTool",
+	label = "Trap",
 	quality = 20,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -55,6 +60,7 @@ itemBases["Bladed Trap"] = {
 itemBases["Dart Trap"] = {
 	class = "TrapTool",
 	category = "TrapTool",
+	label = "Trap",
 	quality = 20,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -63,6 +69,7 @@ itemBases["Dart Trap"] = {
 itemBases["Spike Trap"] = {
 	class = "TrapTool",
 	category = "TrapTool",
+	label = "Trap",
 	quality = 20,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -71,6 +78,7 @@ itemBases["Spike Trap"] = {
 itemBases["Coiled Trap"] = {
 	class = "TrapTool",
 	category = "TrapTool",
+	label = "Trap",
 	quality = 20,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -79,6 +87,7 @@ itemBases["Coiled Trap"] = {
 itemBases["Lead Trap"] = {
 	class = "TrapTool",
 	category = "TrapTool",
+	label = "Trap",
 	quality = 20,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -87,6 +96,7 @@ itemBases["Lead Trap"] = {
 itemBases["Medallion Trap"] = {
 	class = "TrapTool",
 	category = "TrapTool",
+	label = "Trap",
 	quality = 20,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -95,6 +105,7 @@ itemBases["Medallion Trap"] = {
 itemBases["Intricate Trap"] = {
 	class = "TrapTool",
 	category = "TrapTool",
+	label = "Trap",
 	quality = 20,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },
@@ -103,6 +114,7 @@ itemBases["Intricate Trap"] = {
 itemBases["Refined Trap"] = {
 	class = "TrapTool",
 	category = "TrapTool",
+	label = "Trap",
 	quality = 20,
 	tags = { twohand = true, trap = true, default = true, },
 	implicitModTypes = { },

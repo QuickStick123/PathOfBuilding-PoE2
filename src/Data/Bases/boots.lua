@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Golden Caligae"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, not_for_sale = true, armour = true, demigods = true, default = true, },
@@ -16,6 +17,7 @@ itemBases["Golden Caligae"] = {
 itemBases["Rough Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, str_armour = true, armour = true, ezomyte_basetype = true, default = true, },
@@ -27,6 +29,7 @@ itemBases["Rough Greaves"] = {
 itemBases["Iron Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, str_armour = true, armour = true, ezomyte_basetype = true, default = true, },
@@ -38,6 +41,7 @@ itemBases["Iron Greaves"] = {
 itemBases["Bronze Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, boots = true, str_armour = true, armour = true, default = true, },
@@ -49,6 +53,7 @@ itemBases["Bronze Greaves"] = {
 itemBases["Trimmed Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, boots = true, str_armour = true, armour = true, default = true, },
@@ -60,6 +65,7 @@ itemBases["Trimmed Greaves"] = {
 itemBases["Stone Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, str_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -71,6 +77,7 @@ itemBases["Stone Greaves"] = {
 itemBases["Reefsteel Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, armour = true, str_armour = true, default = true, },
@@ -82,6 +89,7 @@ itemBases["Reefsteel Greaves"] = {
 itemBases["Monument Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, armour = true, str_armour = true, default = true, },
@@ -93,6 +101,7 @@ itemBases["Monument Greaves"] = {
 itemBases["Totemic Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, armour = true, str_armour = true, default = true, },
@@ -104,6 +113,7 @@ itemBases["Totemic Greaves"] = {
 itemBases["Rawhide Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, ezomyte_basetype = true, dex_armour = true, armour = true, default = true, },
@@ -115,6 +125,7 @@ itemBases["Rawhide Boots"] = {
 itemBases["Laced Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, ezomyte_basetype = true, dex_armour = true, armour = true, default = true, },
@@ -126,6 +137,7 @@ itemBases["Laced Boots"] = {
 itemBases["Embossed Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, boots = true, dex_armour = true, armour = true, default = true, },
@@ -137,6 +149,7 @@ itemBases["Embossed Boots"] = {
 itemBases["Steeltoe Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, boots = true, dex_armour = true, armour = true, default = true, },
@@ -148,6 +161,7 @@ itemBases["Steeltoe Boots"] = {
 itemBases["Lizardscale Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, dex_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -159,6 +173,7 @@ itemBases["Lizardscale Boots"] = {
 itemBases["Flared Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_armour = true, armour = true, boots = true, default = true, },
@@ -170,6 +185,7 @@ itemBases["Flared Boots"] = {
 itemBases["Leatherplate Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_armour = true, armour = true, boots = true, default = true, },
@@ -181,6 +197,7 @@ itemBases["Leatherplate Boots"] = {
 itemBases["Embroidered Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_armour = true, armour = true, boots = true, default = true, },
@@ -192,6 +209,7 @@ itemBases["Embroidered Boots"] = {
 itemBases["Straw Sandals"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, ezomyte_basetype = true, int_armour = true, armour = true, default = true, },
@@ -203,6 +221,7 @@ itemBases["Straw Sandals"] = {
 itemBases["Wrapped Sandals"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, ezomyte_basetype = true, int_armour = true, armour = true, default = true, },
@@ -214,6 +233,7 @@ itemBases["Wrapped Sandals"] = {
 itemBases["Lattice Sandals"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, boots = true, int_armour = true, armour = true, default = true, },
@@ -225,6 +245,7 @@ itemBases["Lattice Sandals"] = {
 itemBases["Silk Slippers"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, boots = true, int_armour = true, armour = true, default = true, },
@@ -236,6 +257,7 @@ itemBases["Silk Slippers"] = {
 itemBases["Feathered Sandals"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, int_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -247,6 +269,7 @@ itemBases["Feathered Sandals"] = {
 itemBases["Flax Sandals"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, boots = true, default = true, },
@@ -258,6 +281,7 @@ itemBases["Flax Sandals"] = {
 itemBases["Studded Sandals"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, boots = true, default = true, },
@@ -269,6 +293,7 @@ itemBases["Studded Sandals"] = {
 itemBases["Elaborate Sandals"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, boots = true, default = true, },
@@ -280,6 +305,7 @@ itemBases["Elaborate Sandals"] = {
 itemBases["Mail Sabatons"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, ezomyte_basetype = true, armour = true, boots = true, default = true, },
@@ -291,6 +317,7 @@ itemBases["Mail Sabatons"] = {
 itemBases["Braced Sabatons"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_dex_armour = true, armour = true, boots = true, default = true, },
@@ -302,6 +329,7 @@ itemBases["Braced Sabatons"] = {
 itemBases["Stacked Sabatons"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, vaal_basetype = true, armour = true, boots = true, default = true, },
@@ -313,6 +341,7 @@ itemBases["Stacked Sabatons"] = {
 itemBases["Covered Sabatons"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, armour = true, boots = true, default = true, },
@@ -324,6 +353,7 @@ itemBases["Covered Sabatons"] = {
 itemBases["Flexile Sabatons"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, armour = true, boots = true, default = true, },
@@ -335,6 +365,7 @@ itemBases["Flexile Sabatons"] = {
 itemBases["Bold Sabatons"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, armour = true, boots = true, default = true, },
@@ -346,6 +377,7 @@ itemBases["Bold Sabatons"] = {
 itemBases["Padded Leggings"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, ezomyte_basetype = true, armour = true, boots = true, default = true, },
@@ -357,6 +389,7 @@ itemBases["Padded Leggings"] = {
 itemBases["Secured Leggings"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_int_armour = true, armour = true, boots = true, default = true, },
@@ -368,6 +401,7 @@ itemBases["Secured Leggings"] = {
 itemBases["Pelt Leggings"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, vaal_basetype = true, armour = true, boots = true, default = true, },
@@ -379,6 +413,7 @@ itemBases["Pelt Leggings"] = {
 itemBases["Weaver Leggings"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, armour = true, boots = true, default = true, },
@@ -390,6 +425,7 @@ itemBases["Weaver Leggings"] = {
 itemBases["Gilt Leggings"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, armour = true, boots = true, default = true, },
@@ -401,6 +437,7 @@ itemBases["Gilt Leggings"] = {
 itemBases["Pious Leggings"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, armour = true, boots = true, default = true, },
@@ -412,6 +449,7 @@ itemBases["Pious Leggings"] = {
 itemBases["Frayed Shoes"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, ezomyte_basetype = true, armour = true, default = true, dex_int_armour = true, },
@@ -423,6 +461,7 @@ itemBases["Frayed Shoes"] = {
 itemBases["Threaded Shoes"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, boots = true, armour = true, default = true, dex_int_armour = true, },
@@ -434,6 +473,7 @@ itemBases["Threaded Shoes"] = {
 itemBases["Hunting Shoes"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, vaal_basetype = true, armour = true, default = true, dex_int_armour = true, },
@@ -445,6 +485,7 @@ itemBases["Hunting Shoes"] = {
 itemBases["Steelpoint Shoes"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_int_armour = true, armour = true, boots = true, default = true, },
@@ -456,6 +497,7 @@ itemBases["Steelpoint Shoes"] = {
 itemBases["Velour Shoes"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_int_armour = true, armour = true, boots = true, default = true, },
@@ -467,6 +509,7 @@ itemBases["Velour Shoes"] = {
 itemBases["Bladed Shoes"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_int_armour = true, armour = true, boots = true, default = true, },
@@ -478,6 +521,7 @@ itemBases["Bladed Shoes"] = {
 itemBases["Grand Cuisses"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_int_armour = true, armour = true, boots = true, default = true, },
@@ -489,6 +533,7 @@ itemBases["Grand Cuisses"] = {
 itemBases["Advanced Iron Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, armour = true, str_armour = true, default = true, },
@@ -500,6 +545,7 @@ itemBases["Advanced Iron Greaves"] = {
 itemBases["Advanced Bronze Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, armour = true, str_armour = true, default = true, },
@@ -511,6 +557,7 @@ itemBases["Advanced Bronze Greaves"] = {
 itemBases["Advanced Trimmed Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, armour = true, str_armour = true, default = true, },
@@ -522,6 +569,7 @@ itemBases["Advanced Trimmed Greaves"] = {
 itemBases["Advanced Stone Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, armour = true, str_armour = true, default = true, },
@@ -533,6 +581,7 @@ itemBases["Advanced Stone Greaves"] = {
 itemBases["Advanced Laced Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_armour = true, armour = true, boots = true, default = true, },
@@ -544,6 +593,7 @@ itemBases["Advanced Laced Boots"] = {
 itemBases["Advanced Embossed Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_armour = true, armour = true, boots = true, default = true, },
@@ -555,6 +605,7 @@ itemBases["Advanced Embossed Boots"] = {
 itemBases["Advanced Steeltoe Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_armour = true, armour = true, boots = true, default = true, },
@@ -566,6 +617,7 @@ itemBases["Advanced Steeltoe Boots"] = {
 itemBases["Advanced Lizardscale Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_armour = true, armour = true, boots = true, default = true, },
@@ -577,6 +629,7 @@ itemBases["Advanced Lizardscale Boots"] = {
 itemBases["Advanced Wrapped Sandals"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, boots = true, default = true, },
@@ -588,6 +641,7 @@ itemBases["Advanced Wrapped Sandals"] = {
 itemBases["Advanced Lattice Sandals"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, boots = true, default = true, },
@@ -599,6 +653,7 @@ itemBases["Advanced Lattice Sandals"] = {
 itemBases["Advanced Silk Slippers"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, boots = true, default = true, },
@@ -610,6 +665,7 @@ itemBases["Advanced Silk Slippers"] = {
 itemBases["Advanced Feathered Sandals"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, boots = true, default = true, },
@@ -621,6 +677,7 @@ itemBases["Advanced Feathered Sandals"] = {
 itemBases["Advanced Mail Sabatons"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, armour = true, boots = true, default = true, },
@@ -632,6 +689,7 @@ itemBases["Advanced Mail Sabatons"] = {
 itemBases["Advanced Braced Sabatons"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, armour = true, boots = true, default = true, },
@@ -643,6 +701,7 @@ itemBases["Advanced Braced Sabatons"] = {
 itemBases["Advanced Stacked Sabatons"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, armour = true, boots = true, default = true, },
@@ -654,6 +713,7 @@ itemBases["Advanced Stacked Sabatons"] = {
 itemBases["Advanced Padded Leggings"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, armour = true, boots = true, default = true, },
@@ -665,6 +725,7 @@ itemBases["Advanced Padded Leggings"] = {
 itemBases["Advanced Secured Leggings"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, armour = true, boots = true, default = true, },
@@ -676,6 +737,7 @@ itemBases["Advanced Secured Leggings"] = {
 itemBases["Advanced Pelt Leggings"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, armour = true, boots = true, default = true, },
@@ -687,6 +749,7 @@ itemBases["Advanced Pelt Leggings"] = {
 itemBases["Advanced Frayed Shoes"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_int_armour = true, armour = true, boots = true, default = true, },
@@ -698,6 +761,7 @@ itemBases["Advanced Frayed Shoes"] = {
 itemBases["Advanced Threaded Shoes"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_int_armour = true, armour = true, boots = true, default = true, },
@@ -709,6 +773,7 @@ itemBases["Advanced Threaded Shoes"] = {
 itemBases["Advanced Hunting Shoes"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_int_armour = true, armour = true, boots = true, default = true, },
@@ -720,6 +785,7 @@ itemBases["Advanced Hunting Shoes"] = {
 itemBases["Expert Iron Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, armour = true, str_armour = true, default = true, },
@@ -731,6 +797,7 @@ itemBases["Expert Iron Greaves"] = {
 itemBases["Expert Trimmed Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, armour = true, str_armour = true, default = true, },
@@ -742,6 +809,7 @@ itemBases["Expert Trimmed Greaves"] = {
 itemBases["Expert Stone Greaves"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { boots = true, armour = true, str_armour = true, default = true, },
@@ -753,6 +821,7 @@ itemBases["Expert Stone Greaves"] = {
 itemBases["Expert Laced Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_armour = true, armour = true, boots = true, default = true, },
@@ -764,6 +833,7 @@ itemBases["Expert Laced Boots"] = {
 itemBases["Expert Steeltoe Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_armour = true, armour = true, boots = true, default = true, },
@@ -775,6 +845,7 @@ itemBases["Expert Steeltoe Boots"] = {
 itemBases["Expert Lizardscale Boots"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_armour = true, armour = true, boots = true, default = true, },
@@ -786,6 +857,7 @@ itemBases["Expert Lizardscale Boots"] = {
 itemBases["Expert Wrapped Sandals"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, boots = true, default = true, },
@@ -797,6 +869,7 @@ itemBases["Expert Wrapped Sandals"] = {
 itemBases["Expert Silk Slippers"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, boots = true, default = true, },
@@ -808,6 +881,7 @@ itemBases["Expert Silk Slippers"] = {
 itemBases["Expert Feathered Sandals"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, boots = true, default = true, },
@@ -819,6 +893,7 @@ itemBases["Expert Feathered Sandals"] = {
 itemBases["Expert Mail Sabatons"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, armour = true, boots = true, default = true, },
@@ -830,6 +905,7 @@ itemBases["Expert Mail Sabatons"] = {
 itemBases["Expert Braced Sabatons"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, armour = true, boots = true, default = true, },
@@ -841,6 +917,7 @@ itemBases["Expert Braced Sabatons"] = {
 itemBases["Expert Stacked Sabatons"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, armour = true, boots = true, default = true, },
@@ -852,6 +929,7 @@ itemBases["Expert Stacked Sabatons"] = {
 itemBases["Expert Padded Leggings"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, armour = true, boots = true, default = true, },
@@ -863,6 +941,7 @@ itemBases["Expert Padded Leggings"] = {
 itemBases["Expert Secured Leggings"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, armour = true, boots = true, default = true, },
@@ -874,6 +953,7 @@ itemBases["Expert Secured Leggings"] = {
 itemBases["Expert Pelt Leggings"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, armour = true, boots = true, default = true, },
@@ -885,6 +965,7 @@ itemBases["Expert Pelt Leggings"] = {
 itemBases["Expert Frayed Shoes"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_int_armour = true, armour = true, boots = true, default = true, },
@@ -896,6 +977,7 @@ itemBases["Expert Frayed Shoes"] = {
 itemBases["Expert Threaded Shoes"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_int_armour = true, armour = true, boots = true, default = true, },
@@ -907,6 +989,7 @@ itemBases["Expert Threaded Shoes"] = {
 itemBases["Expert Hunting Shoes"] = {
 	class = "Boots",
 	category = "Boots",
+	label = "Boots",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_int_armour = true, armour = true, boots = true, default = true, },

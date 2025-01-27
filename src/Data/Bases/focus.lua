@@ -2,10 +2,10 @@
 -- Item data (c) Grinding Gear Games
 local itemBases = ...
 
-
 itemBases["Twig Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { focus = true, ezomyte_basetype = true, int_armour = true, armour = true, default = true, },
@@ -17,6 +17,7 @@ itemBases["Twig Focus"] = {
 itemBases["Woven Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { focus = true, ezomyte_basetype = true, int_armour = true, armour = true, default = true, },
@@ -28,6 +29,7 @@ itemBases["Woven Focus"] = {
 itemBases["Antler Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { focus = true, ezomyte_basetype = true, int_armour = true, armour = true, default = true, },
@@ -39,6 +41,7 @@ itemBases["Antler Focus"] = {
 itemBases["Engraved Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, focus = true, int_armour = true, armour = true, default = true, },
@@ -50,6 +53,7 @@ itemBases["Engraved Focus"] = {
 itemBases["Tonal Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, focus = true, int_armour = true, armour = true, default = true, },
@@ -61,6 +65,7 @@ itemBases["Tonal Focus"] = {
 itemBases["Crystal Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, focus = true, int_armour = true, armour = true, default = true, },
@@ -72,6 +77,7 @@ itemBases["Crystal Focus"] = {
 itemBases["Voodoo Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { focus = true, int_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -83,6 +89,7 @@ itemBases["Voodoo Focus"] = {
 itemBases["Plumed Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { focus = true, int_armour = true, armour = true, vaal_basetype = true, default = true, },
@@ -94,6 +101,7 @@ itemBases["Plumed Focus"] = {
 itemBases["Jade Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },
@@ -105,6 +113,7 @@ itemBases["Jade Focus"] = {
 itemBases["Paua Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },
@@ -116,6 +125,7 @@ itemBases["Paua Focus"] = {
 itemBases["Elegant Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },
@@ -127,6 +137,7 @@ itemBases["Elegant Focus"] = {
 itemBases["Attuned Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },
@@ -138,6 +149,7 @@ itemBases["Attuned Focus"] = {
 itemBases["Magus Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },
@@ -149,6 +161,7 @@ itemBases["Magus Focus"] = {
 itemBases["Advanced Woven Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },
@@ -160,6 +173,7 @@ itemBases["Advanced Woven Focus"] = {
 itemBases["Advanced Antler Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },
@@ -171,6 +185,7 @@ itemBases["Advanced Antler Focus"] = {
 itemBases["Advanced Tonal Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },
@@ -182,6 +197,7 @@ itemBases["Advanced Tonal Focus"] = {
 itemBases["Advanced Crystal Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },
@@ -193,6 +209,7 @@ itemBases["Advanced Crystal Focus"] = {
 itemBases["Advanced Voodoo Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },
@@ -204,6 +221,7 @@ itemBases["Advanced Voodoo Focus"] = {
 itemBases["Advanced Plumed Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },
@@ -215,6 +233,7 @@ itemBases["Advanced Plumed Focus"] = {
 itemBases["Expert Antler Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },
@@ -226,6 +245,7 @@ itemBases["Expert Antler Focus"] = {
 itemBases["Expert Crystal Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },
@@ -237,6 +257,7 @@ itemBases["Expert Crystal Focus"] = {
 itemBases["Expert Plumed Focus"] = {
 	class = "Focus",
 	category = "Focus",
+	label = "Focus",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, armour = true, focus = true, default = true, },

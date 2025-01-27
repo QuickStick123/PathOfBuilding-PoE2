@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Makeshift Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ezomyte_basetype = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -15,6 +16,7 @@ itemBases["Makeshift Crossbow"] = {
 itemBases["Tense Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ezomyte_basetype = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -26,6 +28,7 @@ itemBases["Tense Crossbow"] = {
 itemBases["Sturdy Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ezomyte_basetype = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -36,6 +39,7 @@ itemBases["Sturdy Crossbow"] = {
 itemBases["Varnished Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, maraketh_basetype = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -46,6 +50,7 @@ itemBases["Varnished Crossbow"] = {
 itemBases["Dyad Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, maraketh_basetype = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -57,6 +62,7 @@ itemBases["Dyad Crossbow"] = {
 itemBases["Alloy Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, maraketh_basetype = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -67,6 +73,7 @@ itemBases["Alloy Crossbow"] = {
 itemBases["Bombard Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, vaal_basetype = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -78,6 +85,7 @@ itemBases["Bombard Crossbow"] = {
 itemBases["Construct Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, vaal_basetype = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -88,6 +96,7 @@ itemBases["Construct Crossbow"] = {
 itemBases["Blackfire Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -98,6 +107,7 @@ itemBases["Blackfire Crossbow"] = {
 itemBases["Piercing Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -109,6 +119,7 @@ itemBases["Piercing Crossbow"] = {
 itemBases["Cumbrous Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -120,6 +131,7 @@ itemBases["Cumbrous Crossbow"] = {
 itemBases["Dedalian Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -130,6 +142,7 @@ itemBases["Dedalian Crossbow"] = {
 itemBases["Esoteric Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -140,6 +153,7 @@ itemBases["Esoteric Crossbow"] = {
 itemBases["Advanced Tense Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -151,6 +165,7 @@ itemBases["Advanced Tense Crossbow"] = {
 itemBases["Advanced Sturdy Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -161,6 +176,7 @@ itemBases["Advanced Sturdy Crossbow"] = {
 itemBases["Advanced Varnished Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -171,6 +187,7 @@ itemBases["Advanced Varnished Crossbow"] = {
 itemBases["Advanced Dyad Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -182,6 +199,7 @@ itemBases["Advanced Dyad Crossbow"] = {
 itemBases["Advanced Bombard Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -193,6 +211,7 @@ itemBases["Advanced Bombard Crossbow"] = {
 itemBases["Advanced Forlorn Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -203,6 +222,7 @@ itemBases["Advanced Forlorn Crossbow"] = {
 itemBases["Expert Sturdy Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -213,6 +233,7 @@ itemBases["Expert Sturdy Crossbow"] = {
 itemBases["Expert Varnished Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -223,6 +244,7 @@ itemBases["Expert Varnished Crossbow"] = {
 itemBases["Expert Tense Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -234,6 +256,7 @@ itemBases["Expert Tense Crossbow"] = {
 itemBases["Expert Dyad Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -245,6 +268,7 @@ itemBases["Expert Dyad Crossbow"] = {
 itemBases["Expert Bombard Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },
@@ -256,6 +280,7 @@ itemBases["Expert Bombard Crossbow"] = {
 itemBases["Expert Forlorn Crossbow"] = {
 	class = "Crossbow",
 	category = "Crossbow",
+	label = "Crossbow",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, ranged = true, weapon = true, twohand = true, crossbow = true, default = true, },

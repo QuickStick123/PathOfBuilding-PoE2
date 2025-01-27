@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Ashen Staff"] = {
 	class = "Staff",
 	category = "Staff",
+	label = "Staff",
 	quality = 20,
 	tags = { no_physical_spell_mods = true, no_lightning_spell_mods = true, no_cold_spell_mods = true, no_chaos_spell_mods = true, staff = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Firebolt",
@@ -14,6 +15,7 @@ itemBases["Ashen Staff"] = {
 itemBases["Gelid Staff"] = {
 	class = "Staff",
 	category = "Staff",
+	label = "Staff",
 	quality = 20,
 	tags = { no_fire_spell_mods = true, no_lightning_spell_mods = true, staff = true, no_physical_spell_mods = true, no_chaos_spell_mods = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Freezing Shards",
@@ -23,6 +25,7 @@ itemBases["Gelid Staff"] = {
 itemBases["Voltaic Staff"] = {
 	class = "Staff",
 	category = "Staff",
+	label = "Staff",
 	quality = 20,
 	tags = { no_fire_spell_mods = true, no_physical_spell_mods = true, staff = true, no_chaos_spell_mods = true, no_cold_spell_mods = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Lightning Bolt",
@@ -32,6 +35,7 @@ itemBases["Voltaic Staff"] = {
 itemBases["Spriggan Staff"] = {
 	class = "Staff",
 	category = "Staff",
+	label = "Staff",
 	quality = 20,
 	tags = { default = true, twohand = true, staff = true, },
 	implicit = "Grants Skill: Level (1-20) Firebolt",
@@ -41,6 +45,7 @@ itemBases["Spriggan Staff"] = {
 itemBases["Pyrophyte Staff"] = {
 	class = "Staff",
 	category = "Staff",
+	label = "Staff",
 	quality = 20,
 	tags = { no_physical_spell_mods = true, no_lightning_spell_mods = true, no_cold_spell_mods = true, no_chaos_spell_mods = true, staff = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Living Bomb",
@@ -50,6 +55,7 @@ itemBases["Pyrophyte Staff"] = {
 itemBases["Chiming Staff"] = {
 	class = "Staff",
 	category = "Staff",
+	label = "Staff",
 	quality = 20,
 	tags = { default = true, twohand = true, staff = true, },
 	implicit = "Grants Skill: Level (1-20) Sigil of Power",
@@ -59,6 +65,7 @@ itemBases["Chiming Staff"] = {
 itemBases["Rending Staff"] = {
 	class = "Staff",
 	category = "Staff",
+	label = "Staff",
 	quality = 20,
 	tags = { no_fire_spell_mods = true, no_lightning_spell_mods = true, staff = true, no_physical_spell_mods = true, no_cold_spell_mods = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Soulrend",
@@ -68,6 +75,7 @@ itemBases["Rending Staff"] = {
 itemBases["Reaping Staff"] = {
 	class = "Staff",
 	category = "Staff",
+	label = "Staff",
 	quality = 20,
 	tags = { no_fire_spell_mods = true, no_lightning_spell_mods = true, staff = true, no_chaos_spell_mods = true, no_cold_spell_mods = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Reap",
@@ -77,6 +85,7 @@ itemBases["Reaping Staff"] = {
 itemBases["Icicle Staff"] = {
 	class = "Staff",
 	category = "Staff",
+	label = "Staff",
 	quality = 20,
 	tags = { no_fire_spell_mods = true, no_lightning_spell_mods = true, staff = true, no_physical_spell_mods = true, no_chaos_spell_mods = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Firebolt",
@@ -86,6 +95,7 @@ itemBases["Icicle Staff"] = {
 itemBases["Roaring Staff"] = {
 	class = "Staff",
 	category = "Staff",
+	label = "Staff",
 	quality = 20,
 	tags = { default = true, twohand = true, staff = true, },
 	implicit = "Grants Skill: Level (1-20) Unleash",
@@ -95,6 +105,7 @@ itemBases["Roaring Staff"] = {
 itemBases["Paralysing Staff"] = {
 	class = "Staff",
 	category = "Staff",
+	label = "Staff",
 	quality = 20,
 	tags = { no_fire_spell_mods = true, no_physical_spell_mods = true, staff = true, no_chaos_spell_mods = true, no_cold_spell_mods = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Shock Nova",
@@ -104,6 +115,7 @@ itemBases["Paralysing Staff"] = {
 itemBases["Cleric Staff"] = {
 	class = "Staff",
 	category = "Staff",
+	label = "Staff",
 	quality = 20,
 	tags = { default = true, twohand = true, staff = true, },
 	implicit = "Grants Skill: Level (1-20) Consecrate",
@@ -113,6 +125,7 @@ itemBases["Cleric Staff"] = {
 itemBases["Dark Staff"] = {
 	class = "Staff",
 	category = "Staff",
+	label = "Staff",
 	quality = 20,
 	tags = { default = true, twohand = true, staff = true, },
 	implicit = "Grants Skill: Level (1-20) Dark Pact",
@@ -123,6 +136,7 @@ itemBases["Dark Staff"] = {
 itemBases["Wrapped Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, ezomyte_basetype = true, weapon = true, twohand = true, default = true, },
@@ -133,6 +147,7 @@ itemBases["Wrapped Quarterstaff"] = {
 itemBases["Long Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, ezomyte_basetype = true, weapon = true, twohand = true, default = true, },
@@ -144,6 +159,7 @@ itemBases["Long Quarterstaff"] = {
 itemBases["Gothic Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, ezomyte_basetype = true, weapon = true, twohand = true, default = true, },
@@ -154,6 +170,7 @@ itemBases["Gothic Quarterstaff"] = {
 itemBases["Crackling Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, maraketh_basetype = true, weapon = true, twohand = true, default = true, },
@@ -164,6 +181,7 @@ itemBases["Crackling Quarterstaff"] = {
 itemBases["Crescent Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, maraketh_basetype = true, weapon = true, twohand = true, default = true, },
@@ -174,6 +192,7 @@ itemBases["Crescent Quarterstaff"] = {
 itemBases["Steelpoint Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, maraketh_basetype = true, weapon = true, twohand = true, default = true, },
@@ -184,6 +203,7 @@ itemBases["Steelpoint Quarterstaff"] = {
 itemBases["Slicing Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, vaal_basetype = true, weapon = true, twohand = true, default = true, },
@@ -194,6 +214,7 @@ itemBases["Slicing Quarterstaff"] = {
 itemBases["Barrier Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, vaal_basetype = true, weapon = true, twohand = true, default = true, },
@@ -205,6 +226,7 @@ itemBases["Barrier Quarterstaff"] = {
 itemBases["Hefty Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -215,6 +237,7 @@ itemBases["Hefty Quarterstaff"] = {
 itemBases["Smooth Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -225,6 +248,7 @@ itemBases["Smooth Quarterstaff"] = {
 itemBases["Anima Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -235,6 +259,7 @@ itemBases["Anima Quarterstaff"] = {
 itemBases["Graceful Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -245,6 +270,7 @@ itemBases["Graceful Quarterstaff"] = {
 itemBases["Wyrm Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -255,6 +281,7 @@ itemBases["Wyrm Quarterstaff"] = {
 itemBases["Advanced Long Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -266,6 +293,7 @@ itemBases["Advanced Long Quarterstaff"] = {
 itemBases["Advanced Gothic Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -276,6 +304,7 @@ itemBases["Advanced Gothic Quarterstaff"] = {
 itemBases["Advanced Crackling Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -286,6 +315,7 @@ itemBases["Advanced Crackling Quarterstaff"] = {
 itemBases["Advanced Crescent Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -296,6 +326,7 @@ itemBases["Advanced Crescent Quarterstaff"] = {
 itemBases["Advanced Slicing Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -306,6 +337,7 @@ itemBases["Advanced Slicing Quarterstaff"] = {
 itemBases["Advanced Barrier Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -317,6 +349,7 @@ itemBases["Advanced Barrier Quarterstaff"] = {
 itemBases["Expert Gothic Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -327,6 +360,7 @@ itemBases["Expert Gothic Quarterstaff"] = {
 itemBases["Expert Crescent Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -337,6 +371,7 @@ itemBases["Expert Crescent Quarterstaff"] = {
 itemBases["Expert Long Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -348,6 +383,7 @@ itemBases["Expert Long Quarterstaff"] = {
 itemBases["Expert Crackling Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -358,6 +394,7 @@ itemBases["Expert Crackling Quarterstaff"] = {
 itemBases["Expert Barrier Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },
@@ -369,6 +406,7 @@ itemBases["Expert Barrier Quarterstaff"] = {
 itemBases["Expert Slicing Quarterstaff"] = {
 	class = "Warstaff",
 	category = "Warstaff",
+	label = "Quarterstaff",
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, warstaff = true, weapon = true, twohand = true, default = true, },

@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Golden Obi"] = {
 	class = "Belt",
 	category = "Belt",
+	label = "Belt",
 	tags = { demigods = true, not_for_sale = true, default = true, belt = true, },
 	implicit = "(20-30)% increased Rarity of Items found",
 	implicitModTypes = { {  }, },
@@ -13,6 +14,7 @@ itemBases["Golden Obi"] = {
 itemBases["Rawhide Belt"] = {
 	class = "Belt",
 	category = "Belt",
+	label = "Belt",
 	charmLimit = 1,
 	tags = { belt = true, default = true, },
 	implicit = "(20-30)% increased Life Recovery from Flasks",
@@ -22,6 +24,7 @@ itemBases["Rawhide Belt"] = {
 itemBases["Linen Belt"] = {
 	class = "Belt",
 	category = "Belt",
+	label = "Belt",
 	charmLimit = 1,
 	tags = { belt = true, default = true, },
 	implicit = "(20-30)% increased Mana Recovery from Flasks",
@@ -31,6 +34,7 @@ itemBases["Linen Belt"] = {
 itemBases["Wide Belt"] = {
 	class = "Belt",
 	category = "Belt",
+	label = "Belt",
 	charmLimit = 1,
 	tags = { belt = true, default = true, },
 	implicit = "(20-30)% increased Flask Charges gained",
@@ -40,6 +44,7 @@ itemBases["Wide Belt"] = {
 itemBases["Long Belt"] = {
 	class = "Belt",
 	category = "Belt",
+	label = "Belt",
 	charmLimit = 1,
 	tags = { belt = true, default = true, },
 	implicit = "(15-20)% increased Charm Effect Duration",
@@ -49,6 +54,7 @@ itemBases["Long Belt"] = {
 itemBases["Plate Belt"] = {
 	class = "Belt",
 	category = "Belt",
+	label = "Belt",
 	charmLimit = 1,
 	tags = { belt = true, default = true, },
 	implicit = "+(100-140) to Armour",
@@ -58,6 +64,7 @@ itemBases["Plate Belt"] = {
 itemBases["Ornate Belt"] = {
 	class = "Belt",
 	category = "Belt",
+	label = "Belt",
 	charmLimit = 1,
 	tags = { belt = true, default = true, },
 	implicit = "(10-15)% reduced Charm Charges used",
@@ -67,6 +74,7 @@ itemBases["Ornate Belt"] = {
 itemBases["Mail Belt"] = {
 	class = "Belt",
 	category = "Belt",
+	label = "Belt",
 	charmLimit = 1,
 	tags = { belt = true, default = true, },
 	implicit = "(10-15)% reduced Flask Charges used",
@@ -76,6 +84,7 @@ itemBases["Mail Belt"] = {
 itemBases["Double Belt"] = {
 	class = "Belt",
 	category = "Belt",
+	label = "Belt",
 	charmLimit = 1,
 	tags = { belt = true, default = true, },
 	implicit = "(20-30)% increased Charm Charges gained",
@@ -85,6 +94,7 @@ itemBases["Double Belt"] = {
 itemBases["Heavy Belt"] = {
 	class = "Belt",
 	category = "Belt",
+	label = "Belt",
 	charmLimit = 1,
 	tags = { belt = true, default = true, },
 	implicit = "(20-30)% increased Stun Threshold",
@@ -94,6 +104,7 @@ itemBases["Heavy Belt"] = {
 itemBases["Utility Belt"] = {
 	class = "Belt",
 	category = "Belt",
+	label = "Belt",
 	charmLimit = 1,
 	tags = { belt = true, default = true, },
 	implicit = "20% of Flask Recovery applied Instantly",
@@ -103,6 +114,7 @@ itemBases["Utility Belt"] = {
 itemBases["Fine Belt"] = {
 	class = "Belt",
 	category = "Belt",
+	label = "Belt",
 	charmLimit = 1,
 	tags = { belt = true, default = true, },
 	implicit = "Flasks gain 0.17 charges per Second",

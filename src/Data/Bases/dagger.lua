@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Ethereal Blade"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	hidden = true,
 	socketLimit = 2,
@@ -16,6 +17,7 @@ itemBases["Ethereal Blade"] = {
 itemBases["Glass Shank"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, ezomyte_basetype = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -26,6 +28,7 @@ itemBases["Glass Shank"] = {
 itemBases["Crone Knife"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, ezomyte_basetype = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -37,6 +40,7 @@ itemBases["Crone Knife"] = {
 itemBases["Simple Dagger"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, ezomyte_basetype = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -47,6 +51,7 @@ itemBases["Simple Dagger"] = {
 itemBases["Skinning Knife"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -57,6 +62,7 @@ itemBases["Skinning Knife"] = {
 itemBases["Moon Dagger"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -67,6 +73,7 @@ itemBases["Moon Dagger"] = {
 itemBases["Engraved Knife"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -77,6 +84,7 @@ itemBases["Engraved Knife"] = {
 itemBases["Obsidian Dagger"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, vaal_basetype = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -87,6 +95,7 @@ itemBases["Obsidian Dagger"] = {
 itemBases["Bloodletting Dagger"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, vaal_basetype = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -98,6 +107,7 @@ itemBases["Bloodletting Dagger"] = {
 itemBases["Mail Breaker"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -109,6 +119,7 @@ itemBases["Mail Breaker"] = {
 itemBases["Kris Knife"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -119,6 +130,7 @@ itemBases["Kris Knife"] = {
 itemBases["Parrying Dagger"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -129,6 +141,7 @@ itemBases["Parrying Dagger"] = {
 itemBases["Arcane Dirk"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -139,6 +152,7 @@ itemBases["Arcane Dirk"] = {
 itemBases["Cinquedea"] = {
 	class = "Dagger",
 	category = "Dagger",
+	label = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },

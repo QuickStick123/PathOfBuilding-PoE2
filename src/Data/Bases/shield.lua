@@ -2,10 +2,10 @@
 -- Item data (c) Grinding Gear Games
 local itemBases = ...
 
-
 itemBases["Golden Flame"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { not_for_sale = true, demigods = true, armour = true, default = true, shield = true, },
@@ -17,6 +17,7 @@ itemBases["Golden Flame"] = {
 itemBases["Splintered Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, ezomyte_basetype = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -29,6 +30,7 @@ itemBases["Splintered Tower Shield"] = {
 itemBases["Painted Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, ezomyte_basetype = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -41,6 +43,7 @@ itemBases["Painted Tower Shield"] = {
 itemBases["Braced Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, ezomyte_basetype = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -53,6 +56,7 @@ itemBases["Braced Tower Shield"] = {
 itemBases["Barricade Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -65,6 +69,7 @@ itemBases["Barricade Tower Shield"] = {
 itemBases["Effigial Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -77,6 +82,7 @@ itemBases["Effigial Tower Shield"] = {
 itemBases["Rampart Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -89,6 +95,7 @@ itemBases["Rampart Tower Shield"] = {
 itemBases["Heraldric Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, vaal_basetype = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -101,6 +108,7 @@ itemBases["Heraldric Tower Shield"] = {
 itemBases["Stone Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, vaal_basetype = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -113,6 +121,7 @@ itemBases["Stone Tower Shield"] = {
 itemBases["Crucible Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -125,6 +134,7 @@ itemBases["Crucible Tower Shield"] = {
 itemBases["Ancestor Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -137,6 +147,7 @@ itemBases["Ancestor Tower Shield"] = {
 itemBases["Phalanx Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -149,6 +160,7 @@ itemBases["Phalanx Tower Shield"] = {
 itemBases["Defiant Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -161,6 +173,7 @@ itemBases["Defiant Tower Shield"] = {
 itemBases["Blacksteel Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -173,6 +186,7 @@ itemBases["Blacksteel Tower Shield"] = {
 itemBases["Hardwood Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, ezomyte_basetype = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -185,6 +199,7 @@ itemBases["Hardwood Targe"] = {
 itemBases["Pelage Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, ezomyte_basetype = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -197,6 +212,7 @@ itemBases["Pelage Targe"] = {
 itemBases["Studded Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -209,6 +225,7 @@ itemBases["Studded Targe"] = {
 itemBases["Crescent Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -221,6 +238,7 @@ itemBases["Crescent Targe"] = {
 itemBases["Chiseled Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, vaal_basetype = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -233,6 +251,7 @@ itemBases["Chiseled Targe"] = {
 itemBases["Feathered Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, vaal_basetype = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -245,6 +264,7 @@ itemBases["Feathered Targe"] = {
 itemBases["Stratified Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -257,6 +277,7 @@ itemBases["Stratified Targe"] = {
 itemBases["Carved Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -269,6 +290,7 @@ itemBases["Carved Targe"] = {
 itemBases["Mosaic Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -281,6 +303,7 @@ itemBases["Mosaic Targe"] = {
 itemBases["Aureate Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -293,6 +316,7 @@ itemBases["Aureate Targe"] = {
 itemBases["Grand Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -305,6 +329,7 @@ itemBases["Grand Targe"] = {
 itemBases["Blazon Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, ezomyte_basetype = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -317,6 +342,7 @@ itemBases["Blazon Crest Shield"] = {
 itemBases["Sigil Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, ezomyte_basetype = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -329,6 +355,7 @@ itemBases["Sigil Crest Shield"] = {
 itemBases["Emblem Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -341,6 +368,7 @@ itemBases["Emblem Crest Shield"] = {
 itemBases["Jingling Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -353,6 +381,7 @@ itemBases["Jingling Crest Shield"] = {
 itemBases["Sectarian Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, vaal_basetype = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -365,6 +394,7 @@ itemBases["Sectarian Crest Shield"] = {
 itemBases["Omen Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, vaal_basetype = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -377,6 +407,7 @@ itemBases["Omen Crest Shield"] = {
 itemBases["Wayward Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -389,6 +420,7 @@ itemBases["Wayward Crest Shield"] = {
 itemBases["Seer Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -401,6 +433,7 @@ itemBases["Seer Crest Shield"] = {
 itemBases["Stoic Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -413,6 +446,7 @@ itemBases["Stoic Crest Shield"] = {
 itemBases["Empyreal Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -425,6 +459,7 @@ itemBases["Empyreal Crest Shield"] = {
 itemBases["Deified Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -437,6 +472,7 @@ itemBases["Deified Crest Shield"] = {
 itemBases["Leather Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, ezomyte_basetype = true, armour = true, default = true, shield = true, },
@@ -448,6 +484,7 @@ itemBases["Leather Buckler"] = {
 itemBases["Wooden Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, ezomyte_basetype = true, armour = true, default = true, shield = true, },
@@ -459,6 +496,7 @@ itemBases["Wooden Buckler"] = {
 itemBases["Plated Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, ezomyte_basetype = true, armour = true, default = true, shield = true, },
@@ -470,6 +508,7 @@ itemBases["Plated Buckler"] = {
 itemBases["Iron Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -481,6 +520,7 @@ itemBases["Iron Buckler"] = {
 itemBases["Ridged Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -492,6 +532,7 @@ itemBases["Ridged Buckler"] = {
 itemBases["Spiked Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -503,6 +544,7 @@ itemBases["Spiked Buckler"] = {
 itemBases["Ringed Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, vaal_basetype = true, armour = true, default = true, shield = true, },
@@ -514,6 +556,7 @@ itemBases["Ringed Buckler"] = {
 itemBases["Edged Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, vaal_basetype = true, armour = true, default = true, shield = true, },
@@ -525,6 +568,7 @@ itemBases["Edged Buckler"] = {
 itemBases["Laminate Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -536,6 +580,7 @@ itemBases["Laminate Buckler"] = {
 itemBases["Pearl Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -547,6 +592,7 @@ itemBases["Pearl Buckler"] = {
 itemBases["Ornate Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -558,6 +604,7 @@ itemBases["Ornate Buckler"] = {
 itemBases["Array Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -569,6 +616,7 @@ itemBases["Array Buckler"] = {
 itemBases["Aegis Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -580,6 +628,7 @@ itemBases["Aegis Buckler"] = {
 itemBases["Advanced Painted Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -592,6 +641,7 @@ itemBases["Advanced Painted Tower Shield"] = {
 itemBases["Advanced Braced Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -604,6 +654,7 @@ itemBases["Advanced Braced Tower Shield"] = {
 itemBases["Advanced Effigial Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -616,6 +667,7 @@ itemBases["Advanced Effigial Tower Shield"] = {
 itemBases["Advanced Rampart Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -628,6 +680,7 @@ itemBases["Advanced Rampart Tower Shield"] = {
 itemBases["Advanced Heraldric Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -640,6 +693,7 @@ itemBases["Advanced Heraldric Tower Shield"] = {
 itemBases["Advanced Stone Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -652,6 +706,7 @@ itemBases["Advanced Stone Tower Shield"] = {
 itemBases["Advanced Hardwood Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -664,6 +719,7 @@ itemBases["Advanced Hardwood Targe"] = {
 itemBases["Advanced Pelage Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -676,6 +732,7 @@ itemBases["Advanced Pelage Targe"] = {
 itemBases["Advanced Studded Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -688,6 +745,7 @@ itemBases["Advanced Studded Targe"] = {
 itemBases["Advanced Crescent Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -700,6 +758,7 @@ itemBases["Advanced Crescent Targe"] = {
 itemBases["Advanced Chiseled Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -712,6 +771,7 @@ itemBases["Advanced Chiseled Targe"] = {
 itemBases["Advanced Feathered Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -724,6 +784,7 @@ itemBases["Advanced Feathered Targe"] = {
 itemBases["Advanced Blazon Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -736,6 +797,7 @@ itemBases["Advanced Blazon Crest Shield"] = {
 itemBases["Advanced Sigil Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -748,6 +810,7 @@ itemBases["Advanced Sigil Crest Shield"] = {
 itemBases["Advanced Emblem Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -760,6 +823,7 @@ itemBases["Advanced Emblem Crest Shield"] = {
 itemBases["Advanced Jingling Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -772,6 +836,7 @@ itemBases["Advanced Jingling Crest Shield"] = {
 itemBases["Advanced Sectarian Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -784,6 +849,7 @@ itemBases["Advanced Sectarian Crest Shield"] = {
 itemBases["Advanced Omen Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -796,6 +862,7 @@ itemBases["Advanced Omen Crest Shield"] = {
 itemBases["Advanced Wooden Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -807,6 +874,7 @@ itemBases["Advanced Wooden Buckler"] = {
 itemBases["Advanced Plated Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -818,6 +886,7 @@ itemBases["Advanced Plated Buckler"] = {
 itemBases["Advanced Ridged Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -829,6 +898,7 @@ itemBases["Advanced Ridged Buckler"] = {
 itemBases["Advanced Spiked Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -840,6 +910,7 @@ itemBases["Advanced Spiked Buckler"] = {
 itemBases["Advanced Ringed Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -851,6 +922,7 @@ itemBases["Advanced Ringed Buckler"] = {
 itemBases["Advanced Edged Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -862,6 +934,7 @@ itemBases["Advanced Edged Buckler"] = {
 itemBases["Expert Braced Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -874,6 +947,7 @@ itemBases["Expert Braced Tower Shield"] = {
 itemBases["Expert Rampart Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -886,6 +960,7 @@ itemBases["Expert Rampart Tower Shield"] = {
 itemBases["Expert Stone Tower Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, str_shield = true, armour = true, default = true, shield = true, },
@@ -898,6 +973,7 @@ itemBases["Expert Stone Tower Shield"] = {
 itemBases["Expert Pelage Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -910,6 +986,7 @@ itemBases["Expert Pelage Targe"] = {
 itemBases["Expert Crescent Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -922,6 +999,7 @@ itemBases["Expert Crescent Targe"] = {
 itemBases["Expert Feathered Targe"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, str_dex_shield = true, armour = true, default = true, shield = true, },
@@ -934,6 +1012,7 @@ itemBases["Expert Feathered Targe"] = {
 itemBases["Expert Sigil Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -946,6 +1025,7 @@ itemBases["Expert Sigil Crest Shield"] = {
 itemBases["Expert Jingling Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -958,6 +1038,7 @@ itemBases["Expert Jingling Crest Shield"] = {
 itemBases["Expert Omen Crest Shield"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, str_int_shield = true, armour = true, default = true, shield = true, },
@@ -970,6 +1051,7 @@ itemBases["Expert Omen Crest Shield"] = {
 itemBases["Expert Plated Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -981,6 +1063,7 @@ itemBases["Expert Plated Buckler"] = {
 itemBases["Expert Spiked Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },
@@ -992,6 +1075,7 @@ itemBases["Expert Spiked Buckler"] = {
 itemBases["Expert Edged Buckler"] = {
 	class = "Shield",
 	category = "Shield",
+	label = "Shield",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_shield = true, dex_armour = true, armour = true, default = true, shield = true, },

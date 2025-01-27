@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Rattling Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -15,6 +16,7 @@ itemBases["Rattling Sceptre"] = {
 itemBases["Stoic Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -25,6 +27,7 @@ itemBases["Stoic Sceptre"] = {
 itemBases["Lupine Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -35,6 +38,7 @@ itemBases["Lupine Sceptre"] = {
 itemBases["Omen Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -45,6 +49,7 @@ itemBases["Omen Sceptre"] = {
 itemBases["Ochre Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -55,6 +60,7 @@ itemBases["Ochre Sceptre"] = {
 itemBases["Shrine Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -65,6 +71,7 @@ itemBases["Shrine Sceptre"] = {
 itemBases["Shrine Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -75,6 +82,7 @@ itemBases["Shrine Sceptre"] = {
 itemBases["Shrine Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -85,6 +93,7 @@ itemBases["Shrine Sceptre"] = {
 itemBases["Devouring Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -95,6 +104,7 @@ itemBases["Devouring Sceptre"] = {
 itemBases["Clasped Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -105,6 +115,7 @@ itemBases["Clasped Sceptre"] = {
 itemBases["Devotional Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -115,6 +126,7 @@ itemBases["Devotional Sceptre"] = {
 itemBases["Wrath Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -125,6 +137,7 @@ itemBases["Wrath Sceptre"] = {
 itemBases["Aromatic Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -135,6 +148,7 @@ itemBases["Aromatic Sceptre"] = {
 itemBases["Pious Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },
@@ -145,6 +159,7 @@ itemBases["Pious Sceptre"] = {
 itemBases["Hallowed Sceptre"] = {
 	class = "Sceptre",
 	category = "Sceptre",
+	label = "Sceptre",
 	quality = 20,
 	spirit = 100,
 	tags = { default = true, onehand = true, sceptre = true, },

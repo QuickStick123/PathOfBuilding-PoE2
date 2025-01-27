@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Broadhead Quiver"] = {
 	class = "Quiver",
 	category = "Quiver",
+	label = "Quiver",
 	tags = { quiver = true, default = true, },
 	implicit = "Adds 1 to 3 Physical Damage to Attacks",
 	implicitModTypes = { { "physical_damage", "damage", "physical", "attack" }, },
@@ -13,6 +14,7 @@ itemBases["Broadhead Quiver"] = {
 itemBases["Fire Quiver"] = {
 	class = "Quiver",
 	category = "Quiver",
+	label = "Quiver",
 	tags = { quiver = true, default = true, },
 	implicit = "Adds 3 to 5 Fire damage to Attacks",
 	implicitModTypes = { { "elemental_damage", "damage", "elemental", "fire", "attack" }, },
@@ -21,6 +23,7 @@ itemBases["Fire Quiver"] = {
 itemBases["Sacral Quiver"] = {
 	class = "Quiver",
 	category = "Quiver",
+	label = "Quiver",
 	tags = { quiver = true, default = true, },
 	implicit = "Gain (2-3) Life per Enemy Hit with Attacks",
 	implicitModTypes = { { "resource", "life", "attack" }, },
@@ -29,6 +32,7 @@ itemBases["Sacral Quiver"] = {
 itemBases["Two-Point Quiver"] = {
 	class = "Quiver",
 	category = "Quiver",
+	label = "Quiver",
 	tags = { quiver = true, default = true, },
 	implicit = "(20-30)% increased Accuracy Rating",
 	implicitModTypes = { { "attack" }, },
@@ -37,6 +41,7 @@ itemBases["Two-Point Quiver"] = {
 itemBases["Blunt Quiver"] = {
 	class = "Quiver",
 	category = "Quiver",
+	label = "Quiver",
 	tags = { quiver = true, default = true, },
 	implicit = "(20-30)% reduced Enemy Stun Threshold",
 	implicitModTypes = { {  }, },
@@ -45,6 +50,7 @@ itemBases["Blunt Quiver"] = {
 itemBases["Toxic Quiver"] = {
 	class = "Quiver",
 	category = "Quiver",
+	label = "Quiver",
 	tags = { quiver = true, default = true, },
 	implicit = "(10-15)% chance to Poison on Hit with Attacks",
 	implicitModTypes = { { "poison", "chaos", "attack", "ailment" }, },
@@ -53,6 +59,7 @@ itemBases["Toxic Quiver"] = {
 itemBases["Serrated Quiver"] = {
 	class = "Quiver",
 	category = "Quiver",
+	label = "Quiver",
 	tags = { quiver = true, default = true, },
 	implicit = "Attacks have (10-15)% chance to cause Bleeding",
 	implicitModTypes = { { "bleed", "physical", "attack", "ailment" }, },
@@ -61,6 +68,7 @@ itemBases["Serrated Quiver"] = {
 itemBases["Primed Quiver"] = {
 	class = "Quiver",
 	category = "Quiver",
+	label = "Quiver",
 	tags = { quiver = true, default = true, },
 	implicit = "(7-10)% increased Attack Speed",
 	implicitModTypes = { { "attack", "speed" }, },
@@ -69,6 +77,7 @@ itemBases["Primed Quiver"] = {
 itemBases["Penetrating Quiver"] = {
 	class = "Quiver",
 	category = "Quiver",
+	label = "Quiver",
 	tags = { quiver = true, default = true, },
 	implicit = "100% chance to Pierce an Enemy",
 	implicitModTypes = { {  }, },
@@ -77,6 +86,7 @@ itemBases["Penetrating Quiver"] = {
 itemBases["Volant Quiver"] = {
 	class = "Quiver",
 	category = "Quiver",
+	label = "Quiver",
 	tags = { quiver = true, default = true, },
 	implicit = "(20-30)% increased Arrow Speed",
 	implicitModTypes = { { "attack", "speed" }, },
@@ -85,6 +95,7 @@ itemBases["Volant Quiver"] = {
 itemBases["Visceral Quiver"] = {
 	class = "Quiver",
 	category = "Quiver",
+	label = "Quiver",
 	tags = { quiver = true, default = true, },
 	implicit = "(20-30)% increased Critical Hit Chance for Attacks",
 	implicitModTypes = { { "attack", "critical" }, },

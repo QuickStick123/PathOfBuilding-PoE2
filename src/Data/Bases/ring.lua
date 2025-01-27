@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Golden Hoop"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, demigods = true, not_for_sale = true, default = true, },
 	implicit = "+(8-12) to all Attributes",
 	implicitModTypes = { { "attribute" }, },
@@ -13,6 +14,7 @@ itemBases["Golden Hoop"] = {
 itemBases["Iron Ring"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, default = true, },
 	implicit = "Adds 1 to 4 Physical Damage to Attacks",
 	implicitModTypes = { { "physical_damage", "damage", "physical", "attack" }, },
@@ -21,6 +23,7 @@ itemBases["Iron Ring"] = {
 itemBases["Lazuli Ring"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, default = true, },
 	implicit = "+(20-30) to maximum Mana",
 	implicitModTypes = { { "resource", "mana" }, },
@@ -29,6 +32,7 @@ itemBases["Lazuli Ring"] = {
 itemBases["Ruby Ring"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, default = true, },
 	implicit = "+(20-30)% to Fire Resistance",
 	implicitModTypes = { { "elemental", "fire", "resistance" }, },
@@ -37,6 +41,7 @@ itemBases["Ruby Ring"] = {
 itemBases["Sapphire Ring"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, default = true, },
 	implicit = "+(20-30)% to Cold Resistance",
 	implicitModTypes = { { "elemental", "cold", "resistance" }, },
@@ -45,6 +50,7 @@ itemBases["Sapphire Ring"] = {
 itemBases["Topaz Ring"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, default = true, },
 	implicit = "+(20-30)% to Lightning Resistance",
 	implicitModTypes = { { "elemental", "lightning", "resistance" }, },
@@ -53,6 +59,7 @@ itemBases["Topaz Ring"] = {
 itemBases["Amethyst Ring"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, default = true, },
 	implicit = "+(7-13)% to Chaos Resistance",
 	implicitModTypes = { { "chaos", "resistance" }, },
@@ -61,6 +68,7 @@ itemBases["Amethyst Ring"] = {
 itemBases["Emerald Ring"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, default = true, },
 	implicit = "+(120-160) to Accuracy Rating",
 	implicitModTypes = { { "attack" }, },
@@ -69,6 +77,7 @@ itemBases["Emerald Ring"] = {
 itemBases["Pearl Ring"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, default = true, },
 	implicit = "(7-10)% increased Cast Speed",
 	implicitModTypes = { { "caster", "speed" }, },
@@ -77,6 +86,7 @@ itemBases["Pearl Ring"] = {
 itemBases["Prismatic Ring"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, default = true, },
 	implicit = "+(7-10)% to all Elemental Resistances",
 	implicitModTypes = { { "elemental", "fire", "cold", "lightning", "resistance" }, },
@@ -85,6 +95,7 @@ itemBases["Prismatic Ring"] = {
 itemBases["Gold Ring"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, default = true, },
 	implicit = "(6-15)% increased Rarity of Items found",
 	implicitModTypes = { {  }, },
@@ -93,6 +104,7 @@ itemBases["Gold Ring"] = {
 itemBases["Unset Ring"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, default = true, },
 	implicit = "Grants 1 additional Skill Slot",
 	implicitModTypes = { {  }, },
@@ -101,6 +113,7 @@ itemBases["Unset Ring"] = {
 itemBases["Ring"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, default = true, },
 	implicitModTypes = { },
 	req = { },
@@ -108,6 +121,7 @@ itemBases["Ring"] = {
 itemBases["Breach Ring"] = {
 	class = "Ring",
 	category = "Ring",
+	label = "Ring",
 	tags = { ring = true, default = true, },
 	implicit = "Maximum Quality is 50%",
 	implicitModTypes = { {  }, },

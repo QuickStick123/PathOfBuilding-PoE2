@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Ruby"] = {
 	class = "Jewel",
 	category = "Jewel",
+	label = "Jewel",
 	tags = { strjewel = true, jewel = true, default = true, },
 	implicitModTypes = { },
 	req = { },
@@ -12,6 +13,7 @@ itemBases["Ruby"] = {
 itemBases["Emerald"] = {
 	class = "Jewel",
 	category = "Jewel",
+	label = "Jewel",
 	tags = { dexjewel = true, jewel = true, default = true, },
 	implicitModTypes = { },
 	req = { },
@@ -19,6 +21,7 @@ itemBases["Emerald"] = {
 itemBases["Sapphire"] = {
 	class = "Jewel",
 	category = "Jewel",
+	label = "Jewel",
 	tags = { jewel = true, intjewel = true, default = true, },
 	implicitModTypes = { },
 	req = { },
@@ -26,6 +29,7 @@ itemBases["Sapphire"] = {
 itemBases["Diamond"] = {
 	class = "Jewel",
 	category = "Jewel",
+	label = "Jewel",
 	tags = { jewel = true, not_for_sale = true, default = true, },
 	implicitModTypes = { },
 	req = { },
@@ -34,6 +38,7 @@ itemBases["Diamond"] = {
 itemBases["Time-Lost Ruby"] = {
 	class = "Jewel",
 	category = "Jewel",
+	label = "Jewel",
 	tags = { str_radius_jewel = true, not_for_sale = true, jewel = true, radius_jewel = true, default = true, },
 	implicitModTypes = { },
 	req = { },
@@ -41,6 +46,7 @@ itemBases["Time-Lost Ruby"] = {
 itemBases["Time-Lost Emerald"] = {
 	class = "Jewel",
 	category = "Jewel",
+	label = "Jewel",
 	tags = { not_for_sale = true, jewel = true, dex_radius_jewel = true, radius_jewel = true, default = true, },
 	implicitModTypes = { },
 	req = { },
@@ -48,6 +54,7 @@ itemBases["Time-Lost Emerald"] = {
 itemBases["Time-Lost Sapphire"] = {
 	class = "Jewel",
 	category = "Jewel",
+	label = "Jewel",
 	tags = { not_for_sale = true, radius_jewel = true, jewel = true, int_radius_jewel = true, default = true, },
 	implicitModTypes = { },
 	req = { },
@@ -55,6 +62,7 @@ itemBases["Time-Lost Sapphire"] = {
 itemBases["Time-Lost Diamond"] = {
 	class = "Jewel",
 	category = "Jewel",
+	label = "Jewel",
 	tags = { not_for_sale = true, jewel = true, radius_jewel = true, default = true, },
 	implicitModTypes = { },
 	req = { },
@@ -63,6 +71,7 @@ itemBases["Time-Lost Diamond"] = {
 itemBases["Timeless Jewel"] = {
 	class = "Jewel",
 	category = "Jewel",
+	label = "Jewel",
 	tags = { dexjewel = true, not_for_sale = true, strjewel = true, jewel = true, default = true, intjewel = true, },
 	implicitModTypes = { },
 	req = { },

@@ -1,6 +1,7 @@
 -- Item data (c) Grinding Gear Games
 local itemBases = ...
 
+#label Body Armour
 #socketLimit 3
 #baseMatch BaseType Metadata/Items/Armours/BodyArmours/AbstractBodyArmour
 #baseMatch BaseType Metadata/Items/Armours/BodyArmours/BodyArmourDemigods

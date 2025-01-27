@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Thawing Charm"] = {
 	class = "UtilityFlask",
 	category = "Charm",
+	label = "Charm",
 	quality = 20,
 	tags = { flask = true, utility_flask = true, default = true, },
 	implicit = "Used when you become Frozen",
@@ -15,6 +16,7 @@ itemBases["Thawing Charm"] = {
 itemBases["Staunching Charm"] = {
 	class = "UtilityFlask",
 	category = "Charm",
+	label = "Charm",
 	quality = 20,
 	tags = { flask = true, utility_flask = true, default = true, },
 	implicit = "Used when you start Bleeding",
@@ -25,6 +27,7 @@ itemBases["Staunching Charm"] = {
 itemBases["Antidote Charm"] = {
 	class = "UtilityFlask",
 	category = "Charm",
+	label = "Charm",
 	quality = 20,
 	tags = { flask = true, utility_flask = true, default = true, },
 	implicit = "Used when you become Poisoned",
@@ -35,6 +38,7 @@ itemBases["Antidote Charm"] = {
 itemBases["Dousing Charm"] = {
 	class = "UtilityFlask",
 	category = "Charm",
+	label = "Charm",
 	quality = 20,
 	tags = { flask = true, utility_flask = true, default = true, },
 	implicit = "Used when you become Ignited",
@@ -45,6 +49,7 @@ itemBases["Dousing Charm"] = {
 itemBases["Grounding Charm"] = {
 	class = "UtilityFlask",
 	category = "Charm",
+	label = "Charm",
 	quality = 20,
 	tags = { flask = true, utility_flask = true, default = true, },
 	implicit = "Used when you become Shocked",
@@ -55,6 +60,7 @@ itemBases["Grounding Charm"] = {
 itemBases["Stone Charm"] = {
 	class = "UtilityFlask",
 	category = "Charm",
+	label = "Charm",
 	quality = 20,
 	tags = { flask = true, utility_flask = true, default = true, },
 	implicit = "Used when you become Stunned",
@@ -65,6 +71,7 @@ itemBases["Stone Charm"] = {
 itemBases["Silver Charm"] = {
 	class = "UtilityFlask",
 	category = "Charm",
+	label = "Charm",
 	quality = 20,
 	tags = { flask = true, utility_flask = true, default = true, },
 	implicit = "Used when you are affected by a Slow",
@@ -75,6 +82,7 @@ itemBases["Silver Charm"] = {
 itemBases["Ruby Charm"] = {
 	class = "UtilityFlask",
 	category = "Charm",
+	label = "Charm",
 	quality = 20,
 	tags = { flask = true, utility_flask = true, default = true, },
 	implicit = "Used when you take Fire damage from a Hit",
@@ -85,6 +93,7 @@ itemBases["Ruby Charm"] = {
 itemBases["Sapphire Charm"] = {
 	class = "UtilityFlask",
 	category = "Charm",
+	label = "Charm",
 	quality = 20,
 	tags = { flask = true, utility_flask = true, default = true, },
 	implicit = "Used when you take Cold damage from a Hit",
@@ -95,6 +104,7 @@ itemBases["Sapphire Charm"] = {
 itemBases["Topaz Charm"] = {
 	class = "UtilityFlask",
 	category = "Charm",
+	label = "Charm",
 	quality = 20,
 	tags = { flask = true, utility_flask = true, default = true, },
 	implicit = "Used when you take Lightning damage from a Hit",
@@ -105,6 +115,7 @@ itemBases["Topaz Charm"] = {
 itemBases["Amethyst Charm"] = {
 	class = "UtilityFlask",
 	category = "Charm",
+	label = "Charm",
 	quality = 20,
 	tags = { flask = true, utility_flask = true, default = true, },
 	implicit = "Used when you take Chaos damage from a Hit",
@@ -115,6 +126,7 @@ itemBases["Amethyst Charm"] = {
 itemBases["Golden Charm"] = {
 	class = "UtilityFlask",
 	category = "Charm",
+	label = "Charm",
 	quality = 20,
 	tags = { flask = true, utility_flask = true, default = true, },
 	implicit = "Used when you Kill a Rare or Unique Enemy",
@@ -126,6 +138,7 @@ itemBases["Golden Charm"] = {
 itemBases["Lesser Life Flask"] = {
 	class = "LifeFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, life_flask = true, default = true, },
 	implicitModTypes = { },
@@ -135,6 +148,7 @@ itemBases["Lesser Life Flask"] = {
 itemBases["Medium Life Flask"] = {
 	class = "LifeFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, life_flask = true, default = true, },
 	implicitModTypes = { },
@@ -144,6 +158,7 @@ itemBases["Medium Life Flask"] = {
 itemBases["Greater Life Flask"] = {
 	class = "LifeFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, life_flask = true, default = true, },
 	implicitModTypes = { },
@@ -153,6 +168,7 @@ itemBases["Greater Life Flask"] = {
 itemBases["Grand Life Flask"] = {
 	class = "LifeFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, life_flask = true, default = true, },
 	implicitModTypes = { },
@@ -162,6 +178,7 @@ itemBases["Grand Life Flask"] = {
 itemBases["Giant Life Flask"] = {
 	class = "LifeFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, life_flask = true, default = true, },
 	implicitModTypes = { },
@@ -171,6 +188,7 @@ itemBases["Giant Life Flask"] = {
 itemBases["Colossal Life Flask"] = {
 	class = "LifeFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, life_flask = true, default = true, },
 	implicitModTypes = { },
@@ -180,6 +198,7 @@ itemBases["Colossal Life Flask"] = {
 itemBases["Gargantuan Life Flask"] = {
 	class = "LifeFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, life_flask = true, default = true, },
 	implicitModTypes = { },
@@ -189,6 +208,7 @@ itemBases["Gargantuan Life Flask"] = {
 itemBases["Transcendent Life Flask"] = {
 	class = "LifeFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, life_flask = true, default = true, },
 	implicitModTypes = { },
@@ -198,6 +218,7 @@ itemBases["Transcendent Life Flask"] = {
 itemBases["Ultimate Life Flask"] = {
 	class = "LifeFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, life_flask = true, default = true, },
 	implicitModTypes = { },
@@ -208,6 +229,7 @@ itemBases["Ultimate Life Flask"] = {
 itemBases["Lesser Mana Flask"] = {
 	class = "ManaFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, mana_flask = true, default = true, },
 	implicitModTypes = { },
@@ -217,6 +239,7 @@ itemBases["Lesser Mana Flask"] = {
 itemBases["Medium Mana Flask"] = {
 	class = "ManaFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, mana_flask = true, default = true, },
 	implicitModTypes = { },
@@ -226,6 +249,7 @@ itemBases["Medium Mana Flask"] = {
 itemBases["Greater Mana Flask"] = {
 	class = "ManaFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, mana_flask = true, default = true, },
 	implicitModTypes = { },
@@ -235,6 +259,7 @@ itemBases["Greater Mana Flask"] = {
 itemBases["Grand Mana Flask"] = {
 	class = "ManaFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, mana_flask = true, default = true, },
 	implicitModTypes = { },
@@ -244,6 +269,7 @@ itemBases["Grand Mana Flask"] = {
 itemBases["Giant Mana Flask"] = {
 	class = "ManaFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, mana_flask = true, default = true, },
 	implicitModTypes = { },
@@ -253,6 +279,7 @@ itemBases["Giant Mana Flask"] = {
 itemBases["Colossal Mana Flask"] = {
 	class = "ManaFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, mana_flask = true, default = true, },
 	implicitModTypes = { },
@@ -262,6 +289,7 @@ itemBases["Colossal Mana Flask"] = {
 itemBases["Gargantuan Mana Flask"] = {
 	class = "ManaFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, mana_flask = true, default = true, },
 	implicitModTypes = { },
@@ -271,6 +299,7 @@ itemBases["Gargantuan Mana Flask"] = {
 itemBases["Transcendent Mana Flask"] = {
 	class = "ManaFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, mana_flask = true, default = true, },
 	implicitModTypes = { },
@@ -280,6 +309,7 @@ itemBases["Transcendent Mana Flask"] = {
 itemBases["Ultimate Mana Flask"] = {
 	class = "ManaFlask",
 	category = "Flask",
+	label = "Flask",
 	quality = 20,
 	tags = { flask = true, mana_flask = true, default = true, },
 	implicitModTypes = { },

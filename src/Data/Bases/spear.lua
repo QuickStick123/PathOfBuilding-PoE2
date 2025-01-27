@@ -5,6 +5,7 @@ local itemBases = ...
 itemBases["Hardwood Spear"] = {
 	class = "Spear",
 	category = "Spear",
+	label = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, ezomyte_basetype = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -15,6 +16,7 @@ itemBases["Hardwood Spear"] = {
 itemBases["Ironhead Spear"] = {
 	class = "Spear",
 	category = "Spear",
+	label = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, ezomyte_basetype = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -25,6 +27,7 @@ itemBases["Ironhead Spear"] = {
 itemBases["Hunting Spear"] = {
 	class = "Spear",
 	category = "Spear",
+	label = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, ezomyte_basetype = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -36,6 +39,7 @@ itemBases["Hunting Spear"] = {
 itemBases["Winged Spear"] = {
 	class = "Spear",
 	category = "Spear",
+	label = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -46,6 +50,7 @@ itemBases["Winged Spear"] = {
 itemBases["War Spear"] = {
 	class = "Spear",
 	category = "Spear",
+	label = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -57,6 +62,7 @@ itemBases["War Spear"] = {
 itemBases["Forked Spear"] = {
 	class = "Spear",
 	category = "Spear",
+	label = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -67,6 +73,7 @@ itemBases["Forked Spear"] = {
 itemBases["Barbed Spear"] = {
 	class = "Spear",
 	category = "Spear",
+	label = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, vaal_basetype = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -77,6 +84,7 @@ itemBases["Barbed Spear"] = {
 itemBases["Broad Spear"] = {
 	class = "Spear",
 	category = "Spear",
+	label = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, vaal_basetype = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -88,6 +96,7 @@ itemBases["Broad Spear"] = {
 itemBases["Crossblade Spear"] = {
 	class = "Spear",
 	category = "Spear",
+	label = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -98,6 +107,7 @@ itemBases["Crossblade Spear"] = {
 itemBases["Seaglass Spear"] = {
 	class = "Spear",
 	category = "Spear",
+	label = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -108,6 +118,7 @@ itemBases["Seaglass Spear"] = {
 itemBases["Sword Spear"] = {
 	class = "Spear",
 	category = "Spear",
+	label = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -118,6 +129,7 @@ itemBases["Sword Spear"] = {
 itemBases["Striking Spear"] = {
 	class = "Spear",
 	category = "Spear",
+	label = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -128,6 +140,7 @@ itemBases["Striking Spear"] = {
 itemBases["Helix Spear"] = {
 	class = "Spear",
 	category = "Spear",
+	label = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },

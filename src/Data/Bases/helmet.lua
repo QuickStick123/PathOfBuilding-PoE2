@@ -2,10 +2,10 @@
 -- Item data (c) Grinding Gear Games
 local itemBases = ...
 
-
 itemBases["Golden Wreath"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { not_for_sale = true, helmet = true, armour = true, demigods = true, default = true, },
@@ -17,6 +17,7 @@ itemBases["Golden Wreath"] = {
 itemBases["Golden Visage"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { not_for_sale = true, helmet = true, armour = true, demigods = true, default = true, },
@@ -28,6 +29,7 @@ itemBases["Golden Visage"] = {
 itemBases["Rusted Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, helmet = true, armour = true, ezomyte_basetype = true, default = true, },
@@ -39,6 +41,7 @@ itemBases["Rusted Greathelm"] = {
 itemBases["Soldier Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, helmet = true, armour = true, ezomyte_basetype = true, default = true, },
@@ -50,6 +53,7 @@ itemBases["Soldier Greathelm"] = {
 itemBases["Wrapped Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_armour = true, helmet = true, armour = true, default = true, },
@@ -61,6 +65,7 @@ itemBases["Wrapped Greathelm"] = {
 itemBases["Spired Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_armour = true, helmet = true, armour = true, default = true, },
@@ -72,6 +77,7 @@ itemBases["Spired Greathelm"] = {
 itemBases["Elite Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, helmet = true, armour = true, vaal_basetype = true, default = true, },
@@ -83,6 +89,7 @@ itemBases["Elite Greathelm"] = {
 itemBases["Warrior Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_armour = true, helmet = true, armour = true, vaal_basetype = true, default = true, },
@@ -94,6 +101,7 @@ itemBases["Warrior Greathelm"] = {
 itemBases["Commander Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_armour = true, default = true, },
@@ -105,6 +113,7 @@ itemBases["Commander Greathelm"] = {
 itemBases["Fierce Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_armour = true, default = true, },
@@ -116,6 +125,7 @@ itemBases["Fierce Greathelm"] = {
 itemBases["Dueling Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_armour = true, default = true, },
@@ -127,6 +137,7 @@ itemBases["Dueling Greathelm"] = {
 itemBases["Goliath Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_armour = true, default = true, },
@@ -138,6 +149,7 @@ itemBases["Goliath Greathelm"] = {
 itemBases["Guardian Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_armour = true, default = true, },
@@ -149,6 +161,7 @@ itemBases["Guardian Greathelm"] = {
 itemBases["Shabby Hood"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { ezomyte_basetype = true, dex_armour = true, helmet = true, armour = true, default = true, },
@@ -160,6 +173,7 @@ itemBases["Shabby Hood"] = {
 itemBases["Felt Cap"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { ezomyte_basetype = true, dex_armour = true, helmet = true, armour = true, default = true, },
@@ -171,6 +185,7 @@ itemBases["Felt Cap"] = {
 itemBases["Lace Hood"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, dex_armour = true, helmet = true, armour = true, default = true, },
@@ -182,6 +197,7 @@ itemBases["Lace Hood"] = {
 itemBases["Swathed Cap"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, dex_armour = true, helmet = true, armour = true, default = true, },
@@ -193,6 +209,7 @@ itemBases["Swathed Cap"] = {
 itemBases["Hunter Hood"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_armour = true, helmet = true, armour = true, vaal_basetype = true, default = true, },
@@ -204,6 +221,7 @@ itemBases["Hunter Hood"] = {
 itemBases["Viper Cap"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { dex_armour = true, helmet = true, armour = true, vaal_basetype = true, default = true, },
@@ -215,6 +233,7 @@ itemBases["Viper Cap"] = {
 itemBases["Corsair Cap"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_armour = true, default = true, },
@@ -226,6 +245,7 @@ itemBases["Corsair Cap"] = {
 itemBases["Leatherbound Hood"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_armour = true, default = true, },
@@ -237,6 +257,7 @@ itemBases["Leatherbound Hood"] = {
 itemBases["Velvet Cap"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_armour = true, default = true, },
@@ -248,6 +269,7 @@ itemBases["Velvet Cap"] = {
 itemBases["Covert Hood"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_armour = true, default = true, },
@@ -259,6 +281,7 @@ itemBases["Covert Hood"] = {
 itemBases["Armoured Cap"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_armour = true, default = true, },
@@ -270,6 +293,7 @@ itemBases["Armoured Cap"] = {
 itemBases["Twig Circlet"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { ezomyte_basetype = true, int_armour = true, helmet = true, armour = true, default = true, },
@@ -281,6 +305,7 @@ itemBases["Twig Circlet"] = {
 itemBases["Wicker Tiara"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { ezomyte_basetype = true, int_armour = true, helmet = true, armour = true, default = true, },
@@ -292,6 +317,7 @@ itemBases["Wicker Tiara"] = {
 itemBases["Beaded Circlet"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, int_armour = true, helmet = true, armour = true, default = true, },
@@ -303,6 +329,7 @@ itemBases["Beaded Circlet"] = {
 itemBases["Chain Tiara"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, int_armour = true, helmet = true, armour = true, default = true, },
@@ -314,6 +341,7 @@ itemBases["Chain Tiara"] = {
 itemBases["Feathered Tiara"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, helmet = true, armour = true, vaal_basetype = true, default = true, },
@@ -325,6 +353,7 @@ itemBases["Feathered Tiara"] = {
 itemBases["Gold Circlet"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { int_armour = true, helmet = true, armour = true, vaal_basetype = true, default = true, },
@@ -336,6 +365,7 @@ itemBases["Gold Circlet"] = {
 itemBases["Coral Circlet"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, int_armour = true, default = true, },
@@ -347,6 +377,7 @@ itemBases["Coral Circlet"] = {
 itemBases["Jade Tiara"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, int_armour = true, default = true, },
@@ -358,6 +389,7 @@ itemBases["Jade Tiara"] = {
 itemBases["Noble Circlet"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, int_armour = true, default = true, },
@@ -369,6 +401,7 @@ itemBases["Noble Circlet"] = {
 itemBases["Twilight Tiara"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, int_armour = true, default = true, },
@@ -380,6 +413,7 @@ itemBases["Twilight Tiara"] = {
 itemBases["Magus Tiara"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, int_armour = true, default = true, },
@@ -391,6 +425,7 @@ itemBases["Magus Tiara"] = {
 itemBases["Brimmed Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, ezomyte_basetype = true, helmet = true, armour = true, default = true, },
@@ -402,6 +437,7 @@ itemBases["Brimmed Helm"] = {
 itemBases["Guarded Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, ezomyte_basetype = true, helmet = true, armour = true, default = true, },
@@ -413,6 +449,7 @@ itemBases["Guarded Helm"] = {
 itemBases["Visored Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_dex_armour = true, helmet = true, armour = true, default = true, },
@@ -424,6 +461,7 @@ itemBases["Visored Helm"] = {
 itemBases["Cowled Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_dex_armour = true, helmet = true, armour = true, default = true, },
@@ -435,6 +473,7 @@ itemBases["Cowled Helm"] = {
 itemBases["Shielded Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_dex_armour = true, helmet = true, armour = true, vaal_basetype = true, default = true, },
@@ -446,6 +485,7 @@ itemBases["Shielded Helm"] = {
 itemBases["Closed Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_dex_armour = true, default = true, },
@@ -457,6 +497,7 @@ itemBases["Closed Helm"] = {
 itemBases["Decorated Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_dex_armour = true, default = true, },
@@ -468,6 +509,7 @@ itemBases["Decorated Helm"] = {
 itemBases["Gallant Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_dex_armour = true, default = true, },
@@ -479,6 +521,7 @@ itemBases["Gallant Helm"] = {
 itemBases["Iron Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, ezomyte_basetype = true, helmet = true, armour = true, default = true, },
@@ -490,6 +533,7 @@ itemBases["Iron Crown"] = {
 itemBases["Horned Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, ezomyte_basetype = true, helmet = true, armour = true, default = true, },
@@ -501,6 +545,7 @@ itemBases["Horned Crown"] = {
 itemBases["Cultist Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_int_armour = true, helmet = true, armour = true, default = true, },
@@ -512,6 +557,7 @@ itemBases["Cultist Crown"] = {
 itemBases["Martyr Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, str_int_armour = true, helmet = true, armour = true, default = true, },
@@ -523,6 +569,7 @@ itemBases["Martyr Crown"] = {
 itemBases["Heavy Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { str_int_armour = true, helmet = true, armour = true, vaal_basetype = true, default = true, },
@@ -534,6 +581,7 @@ itemBases["Heavy Crown"] = {
 itemBases["Spiritbone Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_int_armour = true, default = true, },
@@ -545,6 +593,7 @@ itemBases["Spiritbone Crown"] = {
 itemBases["Lavish Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_int_armour = true, default = true, },
@@ -556,6 +605,7 @@ itemBases["Lavish Crown"] = {
 itemBases["Templar Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_int_armour = true, default = true, },
@@ -567,6 +617,7 @@ itemBases["Templar Crown"] = {
 itemBases["Hewn Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { ezomyte_basetype = true, helmet = true, armour = true, default = true, dex_int_armour = true, },
@@ -578,6 +629,7 @@ itemBases["Hewn Mask"] = {
 itemBases["Face Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { ezomyte_basetype = true, helmet = true, armour = true, default = true, dex_int_armour = true, },
@@ -589,6 +641,7 @@ itemBases["Face Mask"] = {
 itemBases["Hooded Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, helmet = true, armour = true, default = true, dex_int_armour = true, },
@@ -600,6 +653,7 @@ itemBases["Hooded Mask"] = {
 itemBases["Veiled Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, helmet = true, armour = true, default = true, dex_int_armour = true, },
@@ -611,6 +665,7 @@ itemBases["Veiled Mask"] = {
 itemBases["Tribal Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { vaal_basetype = true, helmet = true, armour = true, default = true, dex_int_armour = true, },
@@ -622,6 +677,7 @@ itemBases["Tribal Mask"] = {
 itemBases["Solid Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_int_armour = true, default = true, },
@@ -633,6 +689,7 @@ itemBases["Solid Mask"] = {
 itemBases["Shaded Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_int_armour = true, default = true, },
@@ -644,6 +701,7 @@ itemBases["Shaded Mask"] = {
 itemBases["Death Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_int_armour = true, default = true, },
@@ -655,6 +713,7 @@ itemBases["Death Mask"] = {
 itemBases["Grand Visage"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_dex_int_armour = true, default = true, },
@@ -666,6 +725,7 @@ itemBases["Grand Visage"] = {
 itemBases["Advanced Rusted Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_armour = true, default = true, },
@@ -677,6 +737,7 @@ itemBases["Advanced Rusted Greathelm"] = {
 itemBases["Advanced Soldier Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_armour = true, default = true, },
@@ -688,6 +749,7 @@ itemBases["Advanced Soldier Greathelm"] = {
 itemBases["Advanced Wrapped Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_armour = true, default = true, },
@@ -699,6 +761,7 @@ itemBases["Advanced Wrapped Greathelm"] = {
 itemBases["Advanced Spired Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_armour = true, default = true, },
@@ -710,6 +773,7 @@ itemBases["Advanced Spired Greathelm"] = {
 itemBases["Advanced Elite Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_armour = true, default = true, },
@@ -721,6 +785,7 @@ itemBases["Advanced Elite Greathelm"] = {
 itemBases["Advanced Shabby Hood"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_armour = true, default = true, },
@@ -732,6 +797,7 @@ itemBases["Advanced Shabby Hood"] = {
 itemBases["Advanced Felt Cap"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_armour = true, default = true, },
@@ -743,6 +809,7 @@ itemBases["Advanced Felt Cap"] = {
 itemBases["Advanced Lace Hood"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_armour = true, default = true, },
@@ -754,6 +821,7 @@ itemBases["Advanced Lace Hood"] = {
 itemBases["Advanced Swathed Cap"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_armour = true, default = true, },
@@ -765,6 +833,7 @@ itemBases["Advanced Swathed Cap"] = {
 itemBases["Advanced Hunter Hood"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_armour = true, default = true, },
@@ -776,6 +845,7 @@ itemBases["Advanced Hunter Hood"] = {
 itemBases["Advanced Twig Circlet"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, int_armour = true, default = true, },
@@ -787,6 +857,7 @@ itemBases["Advanced Twig Circlet"] = {
 itemBases["Advanced Wicker Tiara"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, int_armour = true, default = true, },
@@ -798,6 +869,7 @@ itemBases["Advanced Wicker Tiara"] = {
 itemBases["Advanced Beaded Circlet"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, int_armour = true, default = true, },
@@ -809,6 +881,7 @@ itemBases["Advanced Beaded Circlet"] = {
 itemBases["Advanced Chain Tiara"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, int_armour = true, default = true, },
@@ -820,6 +893,7 @@ itemBases["Advanced Chain Tiara"] = {
 itemBases["Advanced Feathered Tiara"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, int_armour = true, default = true, },
@@ -831,6 +905,7 @@ itemBases["Advanced Feathered Tiara"] = {
 itemBases["Advanced Brimmed Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_dex_armour = true, default = true, },
@@ -842,6 +917,7 @@ itemBases["Advanced Brimmed Helm"] = {
 itemBases["Advanced Guarded Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_dex_armour = true, default = true, },
@@ -853,6 +929,7 @@ itemBases["Advanced Guarded Helm"] = {
 itemBases["Advanced Visored Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_dex_armour = true, default = true, },
@@ -864,6 +941,7 @@ itemBases["Advanced Visored Helm"] = {
 itemBases["Advanced Cowled Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_dex_armour = true, default = true, },
@@ -875,6 +953,7 @@ itemBases["Advanced Cowled Helm"] = {
 itemBases["Advanced Shielded Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_dex_armour = true, default = true, },
@@ -886,6 +965,7 @@ itemBases["Advanced Shielded Helm"] = {
 itemBases["Advanced Iron Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_int_armour = true, default = true, },
@@ -897,6 +977,7 @@ itemBases["Advanced Iron Crown"] = {
 itemBases["Advanced Horned Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_int_armour = true, default = true, },
@@ -908,6 +989,7 @@ itemBases["Advanced Horned Crown"] = {
 itemBases["Advanced Cultist Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_int_armour = true, default = true, },
@@ -919,6 +1001,7 @@ itemBases["Advanced Cultist Crown"] = {
 itemBases["Advanced Martyr Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_int_armour = true, default = true, },
@@ -930,6 +1013,7 @@ itemBases["Advanced Martyr Crown"] = {
 itemBases["Advanced Heavy Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_int_armour = true, default = true, },
@@ -941,6 +1025,7 @@ itemBases["Advanced Heavy Crown"] = {
 itemBases["Advanced Hewn Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_int_armour = true, default = true, },
@@ -952,6 +1037,7 @@ itemBases["Advanced Hewn Mask"] = {
 itemBases["Advanced Face Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_int_armour = true, default = true, },
@@ -963,6 +1049,7 @@ itemBases["Advanced Face Mask"] = {
 itemBases["Advanced Hooded Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_int_armour = true, default = true, },
@@ -974,6 +1061,7 @@ itemBases["Advanced Hooded Mask"] = {
 itemBases["Advanced Veiled Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_int_armour = true, default = true, },
@@ -985,6 +1073,7 @@ itemBases["Advanced Veiled Mask"] = {
 itemBases["Advanced Tribal Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_int_armour = true, default = true, },
@@ -996,6 +1085,7 @@ itemBases["Advanced Tribal Mask"] = {
 itemBases["Expert Soldier Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_armour = true, default = true, },
@@ -1007,6 +1097,7 @@ itemBases["Expert Soldier Greathelm"] = {
 itemBases["Expert Spired Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_armour = true, default = true, },
@@ -1018,6 +1109,7 @@ itemBases["Expert Spired Greathelm"] = {
 itemBases["Expert Elite Greathelm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_armour = true, default = true, },
@@ -1029,6 +1121,7 @@ itemBases["Expert Elite Greathelm"] = {
 itemBases["Expert Felt Cap"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_armour = true, default = true, },
@@ -1040,6 +1133,7 @@ itemBases["Expert Felt Cap"] = {
 itemBases["Expert Swathed Cap"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_armour = true, default = true, },
@@ -1051,6 +1145,7 @@ itemBases["Expert Swathed Cap"] = {
 itemBases["Expert Hunter Hood"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_armour = true, default = true, },
@@ -1062,6 +1157,7 @@ itemBases["Expert Hunter Hood"] = {
 itemBases["Expert Wicker Tiara"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, int_armour = true, default = true, },
@@ -1073,6 +1169,7 @@ itemBases["Expert Wicker Tiara"] = {
 itemBases["Expert Chain Tiara"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, int_armour = true, default = true, },
@@ -1084,6 +1181,7 @@ itemBases["Expert Chain Tiara"] = {
 itemBases["Expert Feathered Tiara"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, int_armour = true, default = true, },
@@ -1095,6 +1193,7 @@ itemBases["Expert Feathered Tiara"] = {
 itemBases["Expert Guarded Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_dex_armour = true, default = true, },
@@ -1106,6 +1205,7 @@ itemBases["Expert Guarded Helm"] = {
 itemBases["Expert Cowled Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_dex_armour = true, default = true, },
@@ -1117,6 +1217,7 @@ itemBases["Expert Cowled Helm"] = {
 itemBases["Expert Shielded Helm"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_dex_armour = true, default = true, },
@@ -1128,6 +1229,7 @@ itemBases["Expert Shielded Helm"] = {
 itemBases["Expert Horned Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_int_armour = true, default = true, },
@@ -1139,6 +1241,7 @@ itemBases["Expert Horned Crown"] = {
 itemBases["Expert Martyr Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_int_armour = true, default = true, },
@@ -1150,6 +1253,7 @@ itemBases["Expert Martyr Crown"] = {
 itemBases["Expert Heavy Crown"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, str_int_armour = true, default = true, },
@@ -1161,6 +1265,7 @@ itemBases["Expert Heavy Crown"] = {
 itemBases["Expert Face Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_int_armour = true, default = true, },
@@ -1172,6 +1277,7 @@ itemBases["Expert Face Mask"] = {
 itemBases["Expert Veiled Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_int_armour = true, default = true, },
@@ -1183,6 +1289,7 @@ itemBases["Expert Veiled Mask"] = {
 itemBases["Expert Tribal Mask"] = {
 	class = "Helmet",
 	category = "Helmet",
+	label = "Helmet",
 	quality = 20,
 	socketLimit = 2,
 	tags = { helmet = true, armour = true, dex_int_armour = true, default = true, },
