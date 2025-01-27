@@ -3,7 +3,8 @@
 local itemBases = ...
 
 itemBases["Hardwood Spear"] = {
-	type = "Spear",
+	class = "Spear",
+	category = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, ezomyte_basetype = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -12,7 +13,8 @@ itemBases["Hardwood Spear"] = {
 	req = { },
 }
 itemBases["Ironhead Spear"] = {
-	type = "Spear",
+	class = "Spear",
+	category = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, ezomyte_basetype = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -21,7 +23,8 @@ itemBases["Ironhead Spear"] = {
 	req = { level = 5, dex = 11, },
 }
 itemBases["Hunting Spear"] = {
-	type = "Spear",
+	class = "Spear",
+	category = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, ezomyte_basetype = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -31,7 +34,8 @@ itemBases["Hunting Spear"] = {
 	req = { level = 10, str = 10, dex = 20, },
 }
 itemBases["Winged Spear"] = {
-	type = "Spear",
+	class = "Spear",
+	category = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -40,7 +44,8 @@ itemBases["Winged Spear"] = {
 	req = { level = 16, str = 14, dex = 30, },
 }
 itemBases["War Spear"] = {
-	type = "Spear",
+	class = "Spear",
+	category = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -50,7 +55,8 @@ itemBases["War Spear"] = {
 	req = { level = 21, str = 17, dex = 39, },
 }
 itemBases["Forked Spear"] = {
-	type = "Spear",
+	class = "Spear",
+	category = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -59,7 +65,8 @@ itemBases["Forked Spear"] = {
 	req = { level = 26, str = 20, dex = 48, },
 }
 itemBases["Barbed Spear"] = {
-	type = "Spear",
+	class = "Spear",
+	category = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, vaal_basetype = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -68,7 +75,8 @@ itemBases["Barbed Spear"] = {
 	req = { level = 33, str = 25, dex = 60, },
 }
 itemBases["Broad Spear"] = {
-	type = "Spear",
+	class = "Spear",
+	category = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, vaal_basetype = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -78,7 +86,8 @@ itemBases["Broad Spear"] = {
 	req = { level = 40, str = 29, dex = 72, },
 }
 itemBases["Crossblade Spear"] = {
-	type = "Spear",
+	class = "Spear",
+	category = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -87,7 +96,8 @@ itemBases["Crossblade Spear"] = {
 	req = { level = 45, str = 33, dex = 81, },
 }
 itemBases["Seaglass Spear"] = {
-	type = "Spear",
+	class = "Spear",
+	category = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -96,7 +106,8 @@ itemBases["Seaglass Spear"] = {
 	req = { level = 51, str = 36, dex = 91, int = 65, },
 }
 itemBases["Sword Spear"] = {
-	type = "Spear",
+	class = "Spear",
+	category = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -105,7 +116,8 @@ itemBases["Sword Spear"] = {
 	req = { level = 52, str = 37, dex = 93, },
 }
 itemBases["Striking Spear"] = {
-	type = "Spear",
+	class = "Spear",
+	category = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },
@@ -114,7 +126,8 @@ itemBases["Striking Spear"] = {
 	req = { level = 55, str = 39, dex = 98, },
 }
 itemBases["Helix Spear"] = {
-	type = "Spear",
+	class = "Spear",
+	category = "Spear",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, spear = true, weapon = true, one_hand_weapon = true, default = true, },

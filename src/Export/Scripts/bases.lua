@@ -29,10 +29,6 @@ for influenceTag in dat("InfluenceTags"):Rows() do
 	end
 end
 
-directiveTable.type = function(state, args, out)
-	state.type = args
-end
-
 directiveTable.forceShow = function(state, args, out)
 	state.forceShow = (args == "true")
 end
@@ -61,7 +57,8 @@ directiveTable.base = function(state, args, out)
 	end
 
 	local class = baseItemType.ItemClass.Id
-	local category = dat("ItemClasses"):GetRow("Id", class).ItemClassCategory.Id
+	local itemClass = dat("ItemClasses"):GetRow("Id", class)
+	local category = itemClass.ItemClassCategory and itemClass.ItemClassCategory.Id or ""
 	local function getBaseItemTags(baseItemType)
 		if baseItemType == "nothing" then -- base case
 			return {}
@@ -116,11 +113,8 @@ directiveTable.base = function(state, args, out)
 	displayName = displayName:gsub("^%s*(.-)%s*$", "%1") -- trim spaces GGG might leave in by accident
 	displayName = displayName ~= "Energy Blade" and displayName or (category == "One Handed Sword" and "Energy Blade One Handed" or "Energy Blade Two Handed")
 	out:write('itemBases["', displayName, '"] = {\n')
-	if state.type then
-		out:write('\ttype = "', state.type, '",\n')
-	end
-	out:write('\tclass = "', baseItemType.ItemClass.Id, '",\n')
-	out:write('\tcategory = "', , '",\n')
+	out:write('\tclass = "', class, '",\n')
+	out:write('\tcategory = "', category, '",\n')
 	if maximumQuality ~= 0 then
 		out:write('\tquality = ', maximumQuality, ',\n')
 	end
@@ -231,6 +225,7 @@ directiveTable.base = function(state, args, out)
 		out:write('},\n')
 		itemValueSum = weaponType.DamageMin + weaponType.DamageMax
 	end
+	local type = "" -- used to store armour types.
 	local armourType = dat("ArmourTypes"):GetRow("BaseItemType", baseItemType)
 	if armourType then
 		out:write('\tarmour = { ')
@@ -240,20 +235,26 @@ directiveTable.base = function(state, args, out)
 		end
 		if armourType.Armour > 0 then
 			out:write('Armour = ', armourType.Armour, ', ')
+			type = #type > 0 and type.."/Armour" or "Armour"
 			itemValueSum = itemValueSum + armourType.Armour
 		end
 		if armourType.Evasion > 0 then
 			out:write('Evasion = ', armourType.Evasion, ', ')
+			type = #type > 0 and type.."/Evasion" or "Evasion"
 			itemValueSum = itemValueSum + armourType.Evasion
 		end
 		if armourType.EnergyShield > 0 then
 			out:write('EnergyShield = ', armourType.EnergyShield, ', ')
+			type = #type > 0 and type.."/Energy Shield" or "EnergyShield"
 			itemValueSum = itemValueSum + armourType.EnergyShield
 		end
 		if armourType.MovementPenalty ~= 0 then
 			out:write('MovementPenalty = ', -armourType.MovementPenalty / 10000, ', ')
 		end
 		out:write('},\n')
+	end
+	if type and #type > 0 then
+		out:write('\ttype = "', type, '",\n')
 	end
 	if category == "Flask" or category == "Charm" then
 		local flask = dat("Flasks"):GetRow("BaseItemType", baseItemType)
@@ -341,12 +342,11 @@ directiveTable.base = function(state, args, out)
 	out:write('},\n}\n')
 	
 	if not ((baseItemType.Hidden == 0 or state.forceHide) and not baseTypeId:match("Talisman") and not state.forceShow) then
-		bases[state.type] = bases[state.type] or {}
-		local subtype = state.subType and #state.subType and state.subType or ""
-		if not bases[state.type][subtype] or itemValueSum > bases[state.type][subtype][2] then
-			bases[state.type][subtype] = { displayName, itemValueSum }
+		bases[class] = bases[class] or {}
+		if not bases[class][type] or itemValueSum > bases[class][type][2] then
+			bases[class][type] = { displayName, itemValueSum }
 		end
-		bases["All"][displayName] = { state.type, state.subType }
+		bases["All"][displayName] = { class, type }
 	end
 end
 

@@ -3,7 +3,8 @@
 local itemBases = ...
 
 itemBases["Ethereal Blade"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	hidden = true,
 	socketLimit = 2,
@@ -13,7 +14,8 @@ itemBases["Ethereal Blade"] = {
 	req = { },
 }
 itemBases["Glass Shank"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, ezomyte_basetype = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -22,7 +24,8 @@ itemBases["Glass Shank"] = {
 	req = { },
 }
 itemBases["Crone Knife"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, ezomyte_basetype = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -32,7 +35,8 @@ itemBases["Crone Knife"] = {
 	req = { level = 6, dex = 10, int = 10, },
 }
 itemBases["Simple Dagger"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, ezomyte_basetype = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -41,7 +45,8 @@ itemBases["Simple Dagger"] = {
 	req = { level = 12, dex = 18, int = 18, },
 }
 itemBases["Skinning Knife"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -50,7 +55,8 @@ itemBases["Skinning Knife"] = {
 	req = { level = 16, dex = 22, int = 22, },
 }
 itemBases["Moon Dagger"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -59,7 +65,8 @@ itemBases["Moon Dagger"] = {
 	req = { level = 20, dex = 27, int = 27, },
 }
 itemBases["Engraved Knife"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -68,7 +75,8 @@ itemBases["Engraved Knife"] = {
 	req = { level = 27, dex = 36, int = 36, },
 }
 itemBases["Obsidian Dagger"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, vaal_basetype = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -77,7 +85,8 @@ itemBases["Obsidian Dagger"] = {
 	req = { level = 33, dex = 43, int = 43, },
 }
 itemBases["Bloodletting Dagger"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, vaal_basetype = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -87,7 +96,8 @@ itemBases["Bloodletting Dagger"] = {
 	req = { level = 39, dex = 50, int = 50, },
 }
 itemBases["Mail Breaker"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -97,7 +107,8 @@ itemBases["Mail Breaker"] = {
 	req = { level = 45, dex = 57, int = 57, },
 }
 itemBases["Kris Knife"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -106,7 +117,8 @@ itemBases["Kris Knife"] = {
 	req = { level = 49, dex = 62, int = 62, },
 }
 itemBases["Parrying Dagger"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -115,7 +127,8 @@ itemBases["Parrying Dagger"] = {
 	req = { level = 52, dex = 66, int = 66, },
 }
 itemBases["Arcane Dirk"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
@@ -124,7 +137,8 @@ itemBases["Arcane Dirk"] = {
 	req = { level = 56, dex = 71, int = 71, },
 }
 itemBases["Cinquedea"] = {
-	type = "Dagger",
+	class = "Dagger",
+	category = "Dagger",
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, one_hand_weapon = true, weapon = true, dagger = true, default = true, },
