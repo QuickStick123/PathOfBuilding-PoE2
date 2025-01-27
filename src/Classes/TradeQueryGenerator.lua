@@ -52,7 +52,7 @@ local tradeCategoryNames = {
 	-- ["Spear"] = { "Spear" }
 }
 
--- Build lists of tags present on a given item catergory
+-- Build lists of tags present on a given item category
 local tradeCategoryTags = { }
 for type, bases in pairs(data.itemBaseLists) do
 	for _, base in ipairs(bases) do
