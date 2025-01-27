@@ -60,11 +60,20 @@ for type, bases in pairs(data.itemBaseLists) do
 			if not tradeCategoryTags[type] then
 				tradeCategoryTags[type] = { }
 			end
+			local baseTags = { }
 			for tag, _ in pairs(base.base.tags) do
-				-- filter black list tags inside a baseType, and fluff tags not used on mods.
-				if tag ~= "default" and not tag:match("not_") and not tag:match("no_") and tag ~= "demigods" and not tag:match("_basetype") then
-					tradeCategoryTags[type][tag] = true
+				if tag ~= "default" and tag ~= "demigods" and not tag:match("_basetype") and tag ~= "not_for_sale" then -- filter fluff tags not used on mods.
+					baseTags[tag] = true
 				end
+			end
+			local present = false
+			for i, tags in ipairs(tradeCategoryTags[type]) do
+				if tableDeepEquals(baseTags, tags) then
+					present = true
+				end
+			end
+			if not present then
+				t_insert(tradeCategoryTags[type], baseTags)
 			end
 		end
 	end
@@ -107,13 +116,14 @@ end
 
 local function canModSpawnForItemCategory(mod, names)
 	for _, name in pairs(tradeCategoryNames[names]) do
-		local tags = tradeCategoryTags[name]
-		for i, key in ipairs(mod.weightKey) do
-			if tags[key] then
-				if mod.weightVal[i] > 0 then
-					return true
-				else
-					break
+		for _, tags in ipairs(tradeCategoryTags[name]) do
+			for i, key in ipairs(mod.weightKey) do
+				if tags[key] then
+					if mod.weightVal[i] > 0 then
+						return true
+					else
+						break
+					end
 				end
 			end
 		end

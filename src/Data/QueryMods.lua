@@ -4948,7 +4948,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Chest"] = {
-				["max"] = 100, 
+				["max"] = 110, 
 				["min"] = 15, 
 			}, 
 			["Gloves"] = {
@@ -4960,7 +4960,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Shield"] = {
-				["max"] = 100, 
+				["max"] = 110, 
 				["min"] = 15, 
 			}, 
 			["specialCaseData"] = {
@@ -4994,7 +4994,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Chest"] = {
-				["max"] = 100, 
+				["max"] = 110, 
 				["min"] = 15, 
 			}, 
 			["Gloves"] = {
@@ -5006,7 +5006,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Shield"] = {
-				["max"] = 100, 
+				["max"] = 110, 
 				["min"] = 15, 
 			}, 
 			["specialCaseData"] = {
@@ -5083,7 +5083,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Chest"] = {
-				["max"] = 100, 
+				["max"] = 110, 
 				["min"] = 15, 
 			}, 
 			["Focus"] = {
@@ -5163,7 +5163,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Chest"] = {
-				["max"] = 100, 
+				["max"] = 110, 
 				["min"] = 15, 
 			}, 
 			["Gloves"] = {
@@ -5175,7 +5175,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Shield"] = {
-				["max"] = 100, 
+				["max"] = 110, 
 				["min"] = 15, 
 			}, 
 			["specialCaseData"] = {
@@ -5256,7 +5256,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Chest"] = {
-				["max"] = 100, 
+				["max"] = 110, 
 				["min"] = 15, 
 			}, 
 			["Gloves"] = {
@@ -5268,7 +5268,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Shield"] = {
-				["max"] = 100, 
+				["max"] = 110, 
 				["min"] = 15, 
 			}, 
 			["specialCaseData"] = {
@@ -5349,7 +5349,7 @@ return {
 				["min"] = 15, 
 			}, 
 			["Chest"] = {
-				["max"] = 100, 
+				["max"] = 110, 
 				["min"] = 15, 
 			}, 
 			["Gloves"] = {
