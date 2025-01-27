@@ -6853,7 +6853,7 @@ return {
 		},
 		[3]={
 			list=false,
-			name="tags",
+			name="Tags",
 			refTo="Tags",
 			type="Key",
 			width=150

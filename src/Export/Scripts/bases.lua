@@ -8,16 +8,37 @@ local s_format = string.format
 local directiveTable = { }
 local bases = { All = { } }
 
+local influenceTags = { }
+
+local influenceTypes = {
+	"shaper",
+	"elder",
+	"crusader",
+	"eyrie",
+	"basilisk",
+	"adjudicator",
+}
+
+for influenceTag in dat("InfluenceTags"):Rows() do
+	if not influenceTags[influenceTag.ItemClass] then
+		influenceTags[influenceTag.ItemClass] = { }
+	end
+	for _, tag in ipairs(influenceTag.Tags) do
+		influenceTags[influenceTag.ItemClass][influenceTypes[influenceTag.InfluenceType]] = tag.Id
+		break
+	end
+end
+
 directiveTable.type = function(state, args, out)
 	state.type = args
 end
 
-directiveTable.subType = function(state, args, out)
-	state.subType = args
-end
-
 directiveTable.forceShow = function(state, args, out)
 	state.forceShow = (args == "true")
+end
+
+directiveTable.label = function(state, args, out)
+	state.label = args
 end
 
 directiveTable.forceHide = function(state, args, out)
@@ -38,6 +59,9 @@ directiveTable.base = function(state, args, out)
 		printf("Invalid Id %s", baseTypeId)
 		return
 	end
+
+	local class = baseItemType.ItemClass.Id
+	local category = dat("ItemClasses"):GetRow("Id", class).ItemClassCategory.Id
 	local function getBaseItemTags(baseItemType)
 		if baseItemType == "nothing" then -- base case
 			return {}
@@ -90,16 +114,17 @@ directiveTable.base = function(state, args, out)
 	end
 	displayName = displayName:gsub("\195\182","o")
 	displayName = displayName:gsub("^%s*(.-)%s*$", "%1") -- trim spaces GGG might leave in by accident
-	displayName = displayName ~= "Energy Blade" and displayName or (state.type == "One Handed Sword" and "Energy Blade One Handed" or "Energy Blade Two Handed")
+	displayName = displayName ~= "Energy Blade" and displayName or (category == "One Handed Sword" and "Energy Blade One Handed" or "Energy Blade Two Handed")
 	out:write('itemBases["', displayName, '"] = {\n')
-	out:write('\ttype = "', state.type, '",\n')
-	if state.subType and #state.subType > 0 then
-		out:write('\tsubType = "', state.subType, '",\n')
+	if state.type then
+		out:write('\ttype = "', state.type, '",\n')
 	end
+	out:write('\tclass = "', baseItemType.ItemClass.Id, '",\n')
+	out:write('\tcategory = "', , '",\n')
 	if maximumQuality ~= 0 then
 		out:write('\tquality = ', maximumQuality, ',\n')
 	end
-	if state.type == "Belt" then
+	if category == "Belt" then
 		local beltType = dat("BeltTypes"):GetRow("BaseItemType", baseItemType)
 		if beltType then
 			out:write('\tcharmLimit = ', beltType.CharmCount, ',\n')
@@ -127,6 +152,13 @@ directiveTable.base = function(state, args, out)
 		out:write(tag, ' = true, ')
 	end
 	out:write('},\n')
+	if influenceTags[baseItemType.ItemClass] and #influenceTags[baseItemType.ItemClass] > 0 then
+		out:write('\tinfluenceTags = { ')
+		for influence, influenceTags in pairs(influenceTags[baseItemType.ItemClass]) do
+			out:write(influence, ' = "', influenceTags, '", ')
+		end
+		out:write(' },\n')
+	end
 	local implicitLines = { }
 	local implicitModTypes = { }
 	for _, mod in ipairs(baseItemType.ImplicitMods) do
@@ -223,11 +255,11 @@ directiveTable.base = function(state, args, out)
 		end
 		out:write('},\n')
 	end
-	if state.type == "Flask" or state.type == "Charm" then
+	if category == "Flask" or category == "Charm" then
 		local flask = dat("Flasks"):GetRow("BaseItemType", baseItemType)
 		if flask then
 			local compCharges = dat("ComponentCharges"):GetRow("BaseItemType", baseItemType.Id)
-			if state.type == "Charm" then
+			if category == "Charm" then
 				out:write('\tcharm = { ')
 			else
 				out:write('\tflask = { ')
@@ -257,7 +289,7 @@ directiveTable.base = function(state, args, out)
 		end
 	end
 	-- Special handling of Runes and SoulCores
-	if state.type == "Rune" or state.type == "SoulCore" then
+	if category == "SoulCore" then
 		local soulcore = dat("SoulCores"):GetRow("BaseItemTypes", baseItemType)
 		if soulcore then
 			out:write('\timplicit = ')
@@ -283,7 +315,7 @@ directiveTable.base = function(state, args, out)
 			reqLevel = baseItemType.DropLevel
 		end
 	end
-	if state.type == "Flask" or state.type == "SoulCore" or state.type == "Rune" or state.type == "Charm" then
+	if category == "Flask" or category == "SoulCore" or category == "Charm" then
 		if baseItemType.DropLevel > 2 then
 			reqLevel = baseItemType.DropLevel
 		end
