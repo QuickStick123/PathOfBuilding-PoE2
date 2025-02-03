@@ -185,7 +185,7 @@ function NotableDBClass:ListBuilder()
 		local infinites = { }
 		local start = GetTime()
 		local calcFunc = self.itemsTab.build.calcsTab:GetMiscCalculator()
-		local itemClass = self.itemsTab.displayItem.base.class -- this needs checking to make sure it works pressumably it was setup to handle annoints on any item type.
+		local itemClass = self.itemsTab.displayItem.base.class -- this needs checking to make sure it works presumably it was setup to handle anoints on any item type.
 		local calcBase = calcFunc({ repSlotName = itemClass, repItem = self.itemsTab:anointItem(nil) })
 		self.sortMaxPower = 0
 		for nodeIndex, node in ipairs(list) do
