@@ -10,8 +10,8 @@ local m_max = math.max
 local s_format = string.format
 local t_insert = table.insert
 
--- string are an any type while tables require all fields to be matched with type and subType require both to be matched exactly. [1] type, [2] subType, subType is optional and must be nil if not present.
-local tradeCategoryNames = {
+-- strings are from GGPK itemClass used internally this aims to make them in an always consistent format.
+local tradeClasses = {
 	["Ring"] = { "Ring" },
 	["Amulet"] = { "Amulet" },
 	["Belt"] = { "Belt" },
@@ -23,7 +23,7 @@ local tradeCategoryNames = {
 	["Shield"] = { "Shield" },
 	["Focus"] = { "Focus" },
 	["1HWeapon"] = { "One Handed Mace", "Wand", "Sceptre" },
-	["2HWeapon"] = { "Staff", "Staff: Warstaff", "Two Handed Mace", "Crossbow", "Bow" },
+	["2HWeapon"] = { "Staff", "Warstaff", "Two Handed Mace", "Crossbow", "Bow" },
 	-- ["1HAxe"] = { "One Handed Axe" },
 	-- ["1HSword"] = { "One Handed Sword", "Thrusting One Handed Sword" },
 	["1HMace"] = { "One Handed Mace" },
@@ -32,7 +32,7 @@ local tradeCategoryNames = {
 	["Wand"] = { "Wand" },
 	-- ["Claw"] = { "Claw" },
 	["Staff"] = { "Staff" },
-	["Quarterstaff"] = { "Staff: Warstaff" },
+	["Quarterstaff"] = { "Warstaff" },
 	["Bow"] = { "Bow" },
 	["Crossbow"] = { "Crossbow"},
 	-- ["2HAxe"] = { "Two Handed Axe" },
@@ -41,9 +41,9 @@ local tradeCategoryNames = {
 	-- ["FishingRod"] = { "Fishing Rod" },
 	["BaseJewel"] = { "Jewel" },
 	["AnyJewel"] = { "Jewel" },
-	["LifeFlask"] = { "Flask: Life" },
-	["ManaFlask"] = { "Flask: Mana" },
-	["Charm"] = { "Charm" },
+	["LifeFlask"] = { "LifeFlask" },
+	["ManaFlask"] = { "ManaFlask" },
+	["Charm"] = { "UtilityFlask" },
 	-- doesn't have trade mods
 	-- ["RadiusJewel"] = { "Jewel: Radius" },
 	-- not in the game yet.
@@ -52,13 +52,13 @@ local tradeCategoryNames = {
 	-- ["Spear"] = { "Spear" }
 }
 
--- Build lists of tags present on a given item category
+-- Build lists of tags present on a given item class
 local tradeCategoryTags = { }
-for type, bases in pairs(data.itemBaseLists) do
+for classList, bases in pairs(data.itemBaseLists) do
 	for _, base in ipairs(bases) do
 		if not base.hidden then
-			if not tradeCategoryTags[type] then
-				tradeCategoryTags[type] = { }
+			if not tradeCategoryTags[classList] then
+				tradeCategoryTags[classList] = { }
 			end
 			local baseTags = { }
 			for tag, _ in pairs(base.base.tags) do
@@ -67,13 +67,13 @@ for type, bases in pairs(data.itemBaseLists) do
 				end
 			end
 			local present = false
-			for i, tags in ipairs(tradeCategoryTags[type]) do
+			for i, tags in ipairs(tradeCategoryTags[classList]) do
 				if tableDeepEquals(baseTags, tags) then
 					present = true
 				end
 			end
 			if not present then
-				t_insert(tradeCategoryTags[type], baseTags)
+				t_insert(tradeCategoryTags[classList], baseTags)
 			end
 		end
 	end
@@ -115,7 +115,7 @@ local function fetchStats()
 end
 
 local function canModSpawnForItemCategory(mod, names)
-	for _, name in pairs(tradeCategoryNames[names]) do
+	for _, name in pairs(tradeClasses[names]) do
 		for _, tags in ipairs(tradeCategoryTags[name]) do
 			for i, key in ipairs(mod.weightKey) do
 				if tags[key] then
@@ -175,7 +175,7 @@ function TradeQueryGeneratorClass.WeightedRatioOutputs(baseOutput, newOutput, st
 	return meanStatDiff
 end
 
-function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCategoriesMask, itemCategoriesOverride)
+function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemClassesMask, itemClassesOverride)
 	if mod.statOrder == nil then mod.statOrder = { } end
 	if mod.group == nil then mod.group = "" end
 
@@ -302,8 +302,8 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 		end
 
 		-- Update the min and max values available for each item category
-		for category, _ in pairs(itemCategoriesOverride or itemCategoriesMask or tradeCategoryNames) do
-			if itemCategoriesOverride or canModSpawnForItemCategory(mod, category) then
+		for category, _ in pairs(itemClassesOverride or itemClassesMask or tradeClasses) do
+			if itemClassesOverride or canModSpawnForItemCategory(mod, category) then
 				if self.modData[modType][uniqueIndex][category] == nil then
 					self.modData[modType][uniqueIndex][category] = { min = 999999, max = -999999 }
 				end
@@ -326,9 +326,9 @@ function TradeQueryGeneratorClass:ProcessMod(mod, tradeQueryStatsParsed, itemCat
 	::continue::
 end
 
-function TradeQueryGeneratorClass:GenerateModData(mods, tradeQueryStatsParsed, itemCategoriesMask, itemCategoriesOverride)
+function TradeQueryGeneratorClass:GenerateModData(mods, tradeQueryStatsParsed, itemClassesMask, itemClassesOverride)
 	for _, mod in pairs(mods) do
-		self:ProcessMod( mod, tradeQueryStatsParsed, itemCategoriesMask, itemCategoriesOverride)
+		self:ProcessMod( mod, tradeQueryStatsParsed, itemClassesMask, itemClassesOverride)
 	end
 end
 
@@ -362,7 +362,7 @@ function TradeQueryGeneratorClass:InitMods()
 
 	-- create mask for regular mods
 	local regularItemMask = { }
-	for category, _ in pairs(tradeCategoryNames) do
+	for category, _ in pairs(tradeClasses) do
 		regularItemMask[category] = true
 	end
 
@@ -391,14 +391,10 @@ function TradeQueryGeneratorClass:InitMods()
 
 			-- create trade type mask for base type
 			local maskOverride = {}
-			for tradeName, typeNames in pairs(tradeCategoryNames) do
-				for _, typeName in ipairs(typeNames) do
-					local entryName = entry.type
-					if entry.subType then
-							entryName = entryName..": "..entry.subType
-					end
-					if typeName == entryName then
-						maskOverride[tradeName] = true;
+			for tradeClass, classes in pairs(tradeClasses) do
+				for _, class in ipairs(classes) do
+					if class == entry.class then
+						maskOverride[tradeClass] = true;
 						break
 					end
 				end
@@ -553,77 +549,77 @@ function TradeQueryGeneratorClass:StartQuery(slot, options)
 		end
 	elseif slot.slotName == "Weapon 2" or slot.slotName == "Weapon 1" then
 		if existingItem then
-			if existingItem.type == "Shield" then
+			if existingItem.class == "Shield" then
 				itemCategoryQueryStr = "armour.shield"
 				itemCategory = "Shield"
-			elseif existingItem.type == "Focus" then
+			elseif existingItem.class == "Focus" then
 				itemCategoryQueryStr = "armour.focus"
 				itemCategory = "Focus"
-			elseif existingItem.type == "Buckler" then -- not in game
+			elseif existingItem.class == "Buckler" then -- not in game
 				itemCategoryQueryStr = "armour.buckler"
 				itemCategory = "Buckler"
-			elseif existingItem.type == "Quiver" then
+			elseif existingItem.class == "Quiver" then
 				itemCategoryQueryStr = "armour.quiver"
 				itemCategory = "Quiver"
-			elseif existingItem.type == "Bow" then
+			elseif existingItem.class == "Bow" then
 				itemCategoryQueryStr = "weapon.bow"
 				itemCategory = "Bow"
-			elseif existingItem.type == "Crossbow" then
+			elseif existingItem.class == "Crossbow" then
 				itemCategoryQueryStr = "weapon.crossbow"
 				itemCategory = "Crossbow"
-			elseif existingItem.type == "Staff" and existingItem.base.subType == "Warstaff" then
+			elseif existingItem.class == "Warstaff" then
 				itemCategoryQueryStr = "weapon.warstaff"
 				itemCategory = "Quarterstaff"
-			elseif existingItem.type == "Staff" then
+			elseif existingItem.class == "Staff" then
 				itemCategoryQueryStr = "weapon.staff"
 				itemCategory = "Staff"
-			elseif existingItem.type == "Two Handed Sword" then
+			elseif existingItem.class == "Two Handed Sword" then
 				itemCategoryQueryStr = "weapon.twosword"
 				itemCategory = "2HSword"
-			elseif existingItem.type == "Two Handed Axe" then
+			elseif existingItem.class == "Two Handed Axe" then
 				itemCategoryQueryStr = "weapon.twoaxe"
 				itemCategory = "2HAxe"
-			elseif existingItem.type == "Two Handed Mace" then
+			elseif existingItem.class == "Two Handed Mace" then
 				itemCategoryQueryStr = "weapon.twomace"
 				itemCategory = "2HMace"
-			elseif existingItem.type == "Fishing Rod" then
+			elseif existingItem.class == "Fishing Rod" then
 				itemCategoryQueryStr = "weapon.rod"
 				itemCategory = "FishingRod"
-			elseif existingItem.type == "One Handed Sword" then
+			elseif existingItem.class == "One Handed Sword" then
 				itemCategoryQueryStr = "weapon.onesword"
 				itemCategory = "1HSword"
-			elseif existingItem.type == "Spear" then -- not in game
+			elseif existingItem.class == "Spear" then -- not in game
 				itemCategoryQueryStr = "weapon.spear"
 				itemCategory = "1HSword"
-			elseif existingItem.type == "Flail" then -- not in game
+			elseif existingItem.class == "Flail" then -- not in game
 				itemCategoryQueryStr = "weapon.flail"
 				itemCategory = "weapon.flail"
-			elseif existingItem.type == "One Handed Axe" then
+			elseif existingItem.class == "One Handed Axe" then
 				itemCategoryQueryStr = "weapon.oneaxe"
 				itemCategory = "1HAxe"
-			elseif existingItem.type == "One Handed Mace" then
+			elseif existingItem.class == "One Handed Mace" then
 				itemCategoryQueryStr = "weapon.onemace"
 				itemCategory = "1HMace"
-			elseif existingItem.type == "Sceptre" then
+			elseif existingItem.class == "Sceptre" then
 				itemCategoryQueryStr = "weapon.sceptre"
 				itemCategory = "Sceptre"
-			elseif existingItem.type == "Wand" then
+			elseif existingItem.class == "Wand" then
 				itemCategoryQueryStr = "weapon.wand"
 				itemCategory = "Wand"
-			elseif existingItem.type == "Dagger" then
+			elseif existingItem.class == "Dagger" then
 				itemCategoryQueryStr = "weapon.dagger"
 				itemCategory = "Dagger"
-			elseif existingItem.type == "Claw" then
+			elseif existingItem.class == "Claw" then
 				itemCategoryQueryStr = "weapon.claw"
 				itemCategory = "Claw"
-			elseif existingItem.type:find("Two Handed") ~= nil then
+			elseif existingItem.class:find("Two Handed") ~= nil then
 				itemCategoryQueryStr = "weapon.twomelee"
 				itemCategory = "2HWeapon"
-			elseif existingItem.type:find("One Handed") ~= nil then
+			elseif existingItem.class:find("One Handed") ~= nil then
 				itemCategoryQueryStr = "weapon.one"
 				itemCategory = "1HWeapon"
 			else
-				logToFile("'%s' is not supported for weighted trade query generation", existingItem.type)
+				logToFile("'%s' is not supported for weighted trade query generation", existingItem.class)
 				return
 			end
 		else
@@ -652,9 +648,6 @@ function TradeQueryGeneratorClass:StartQuery(slot, options)
 	elseif slot.slotName == "Belt" then
 		itemCategoryQueryStr = "accessory.belt"
 		itemCategory = "Belt"
-	elseif slot.slotName:find("Time-Lost") ~= nil then
-		itemCategoryQueryStr = "jewel"
-		itemCategory = "RadiusJewel"
 	elseif slot.slotName:find("Jewel") ~= nil then
 		itemCategoryQueryStr = "jewel"
 		itemCategory = options.jewelType .. "Jewel"
@@ -674,7 +667,7 @@ function TradeQueryGeneratorClass:StartQuery(slot, options)
 		itemCategoryQueryStr = "flask" -- these don't have a unique string so overlapping mods of the same benefit could interfere. 
 		itemCategory = "Charm"
 	else
-		logToFile("'%s' is not supported for weighted trade query generation", existingItem and existingItem.type or "n/a")
+		logToFile("'%s' is not supported for weighted trade query generation", existingItem and existingItem.class or "n/a")
 		return
 	end
 

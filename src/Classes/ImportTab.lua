@@ -807,7 +807,7 @@ function ImportTabClass:ImportItem(itemData, slotName)
 		end
 		item.base = self.build.data.itemBases[item.baseName]
 		if item.base then
-			item.type = item.base.type
+			item.category = item.base.category
 		else
 			ConPrintf("Unrecognised base in imported item: %s", item.baseName)
 		end
@@ -832,7 +832,7 @@ function ImportTabClass:ImportItem(itemData, slotName)
 				item.baseName = baseName
 				item.namePrefix = item.name:sub(1, s - 1)
 				item.nameSuffix = item.name:sub(e + 1)
-				item.type = baseData.type
+				item.category = baseData.category
 				break
 			end
 		end
@@ -843,7 +843,7 @@ function ImportTabClass:ImportItem(itemData, slotName)
 				item.baseName = "Two-Toned Boots (Armour/Energy Shield)"
 				item.namePrefix = item.name:sub(1, s - 1)
 				item.nameSuffix = item.name:sub(e + 1)
-				item.type = "Boots"
+				item.category = "Boots"
 			end
 		end
 		item.base = self.build.data.itemBases[item.baseName]
