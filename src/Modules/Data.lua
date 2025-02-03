@@ -849,11 +849,9 @@ end
 data.itemBaseLists = { }
 for name, base in pairs(data.itemBases) do
 	if not base.hidden then
-		local category = base.category
-		if base.category == base.class or base.label == base.category then
-			category = base.label or base.category
-		else
-			category = base.category..": "..(base.label or base.class)
+		local category = base.label or base.category
+		if base.category ~= base.class then
+			category = category..": "..base.class:gsub("([a-z])([A-Z])", "%1 %2")
 		end
 		if base.type then
 			category = category.." ("..base.type..")"
