@@ -67,7 +67,7 @@ function ItemDBClass:LoadLeaguesAndTypes()
 				leagueFlag[leagueName] = true
 			end
 		end
-		categoryFlag[item.class == item.category and (item.label or item.class) or (item.category..": "..(item.label or item.class))] = true
+		categoryFlag[(item.label or item.category)..(item.class ~= item.category and ": "..item.class:gsub("([a-z])([A-Z])", "%1 %2") or "")] = true
 	end
 	for leagueName in pairsSortByKey(leagueFlag) do
 		t_insert(self.leagueList, leagueName)
@@ -100,7 +100,7 @@ function ItemDBClass:DoesItemMatchFilters(item)
 			if not (weaponInfo and weaponInfo.melee and ((categorySel == 4 and weaponInfo.oneHand) or (categorySel == 5 and not weaponInfo.oneHand))) then 
 				return false
 			end
-		elseif (item.class == item.category and (item.label or item.class) or (item.category..": "..(item.label or item.class))) ~= self.categoryList[categorySel] then
+		elseif ((item.label or item.category)..(item.class ~= item.category and ": "..item.class:gsub("([a-z])([A-Z])", "%1 %2") or "")) ~= self.categoryList[categorySel] then
 			return false
 		end
 	end
