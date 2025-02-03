@@ -15327,9 +15327,9 @@ return {
 		[3]={
 			list=false,
 			name="",
-			refTo="",
+			refTo="clientStrings",
 			type="Key",
-			width=150
+			width=340
 		}
 	},
 	weapondamagescaling={
