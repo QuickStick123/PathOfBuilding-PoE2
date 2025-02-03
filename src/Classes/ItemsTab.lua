@@ -1914,21 +1914,21 @@ function ItemsTabClass:CraftItem()
 		item:BuildAndParseRaw()
 		return item
 	end
-	controls.rarityLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {50, 20, 0, 16}, "Rarity:")
-	controls.rarity = new("DropDownControl", nil, {-80, 20, 100, 18}, rarityDropList)
+	controls.rarityLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {70, 20, 0, 16}, "Rarity:")
+	controls.rarity = new("DropDownControl", {"TOPLEFT",controls.rarityLabel,"TOPRIGHT"}, {5, 0, 100, 18}, rarityDropList)
 	controls.rarity.selIndex = self.lastCraftRaritySel or 3
-	controls.title = new("EditControl", nil, {70, 20, 190, 18}, "", "Name")
+	controls.title = new("EditControl", {"TOPLEFT",controls.rarity,"TOPRIGHT"}, {5, 0, 190, 18}, "", "Name")
 	controls.title.shown = function()
 		return controls.rarity.selIndex >= 3
 	end
-	controls.categoryLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {50, 45, 0, 16}, "Category:")
-	controls.category = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {55, 45, 295, 18}, self.build.data.itemBaseCategoryList, function(index, value)
+	controls.categoryLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {70, 45, 0, 16}, "^7Category:")
+	controls.category = new("DropDownControl", {"TOPLEFT",controls.categoryLabel,"TOPRIGHT"}, {5, 0, 295, 18}, self.build.data.itemBaseCategoryList, function(index, value)
 		controls.base.list = self.build.data.itemBaseLists[self.build.data.itemBaseCategoryList[index]]
 		controls.base.selIndex = 1
 	end)
-	controls.type.selIndex = self.lastCraftTypeSel or 1
-	controls.baseLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {50, 70, 0, 16}, "Base:")
-	controls.base = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {55, 70, 200, 18}, self.build.data.itemBaseLists[self.build.data.itemBaseCategoryList[controls.type.selIndex]])
+	controls.category.selIndex = self.lastCraftTypeSel or 1
+	controls.baseLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {70, 70, 0, 16}, "Base:")
+	controls.base = new("DropDownControl", {"TOPLEFT",controls.baseLabel,"TOPRIGHT"}, {5, 0, 200, 18}, self.build.data.itemBaseLists[self.build.data.itemBaseCategoryList[controls.category.selIndex]])
 	controls.base.selIndex = self.lastCraftBaseSel or 1
 	controls.base.tooltipFunc = function(tooltip, mode, index, value)
 		tooltip:Clear()
@@ -1944,13 +1944,13 @@ function ItemsTabClass:CraftItem()
 			self:EditDisplayItemText()
 		end
 		self.lastCraftRaritySel = controls.rarity.selIndex
-		self.lastCraftTypeSel = controls.type.selIndex
+		self.lastCraftTypeSel = controls.category.selIndex
 		self.lastCraftBaseSel = controls.base.selIndex
 	end)
 	controls.cancel = new("ButtonControl", nil, {45, 100, 80, 20}, "Cancel", function()
 		main:ClosePopup()
 	end)
-	main:OpenPopup(370, 130, "Craft Item", controls)
+	main:OpenPopup(460, 130, "Craft Item", controls)
 end
 
 -- Opens the item text editor popup

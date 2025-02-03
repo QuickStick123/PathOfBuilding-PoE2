@@ -1307,6 +1307,7 @@ function ItemClass:BuildModListForSlotNum(baseList, slotNum)
 	if self.base.weapon then
 		local weaponData = { }
 		self.weaponData[slotNum] = weaponData
+		weaponData.class = self.base.class
 		weaponData.category = self.base.category
 		weaponData.name = self.name
 		weaponData.AttackSpeedInc = calcLocal(modList, "Speed", "INC", ModFlag.Attack) + m_floor(self.quality / 8 * calcLocal(modList, "AlternateQualityLocalAttackSpeedPer8Quality", "INC", 0))

@@ -96,7 +96,7 @@ function ItemDBClass:DoesItemMatchFilters(item)
 				return false
 			end
 		elseif categorySel == 4 or categorySel == 5 then
-			local weaponInfo = self.itemsTab.build.data.weaponTypeInfo[item.category]
+			local weaponInfo = self.itemsTab.build.data.weaponClassInfo[item.class]
 			if not (weaponInfo and weaponInfo.melee and ((categorySel == 4 and weaponInfo.oneHand) or (categorySel == 5 and not weaponInfo.oneHand))) then 
 				return false
 			end

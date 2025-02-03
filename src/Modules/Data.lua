@@ -422,32 +422,34 @@ data.highPrecisionMods = {
 	},
 }
 
-data.weaponTypeInfo = {
-	["None"] = { oneHand = true, melee = true, flag = "Unarmed" },
+data.weaponClassInfo = {
+	["Unarmed"] = { oneHand = true, melee = true, flag = "Unarmed" },
 	["Bow"] = { oneHand = false, melee = false, flag = "Bow" },
 	["Crossbow"] = { oneHand = false, melee = false, flag = "Crossbow" },
 	["Claw"] = { oneHand = true, melee = true, flag = "Claw" },
 	["Dagger"] = { oneHand = true, melee = true, flag = "Dagger" },
 	["Spear"] = { oneHand = true, melee = true, flag = "Spear" },
-	["Staff"] = { oneHand = false, melee = true, flag = "Staff", label = "Quarterstaff" },
-	["Wand"] = { oneHand = true, melee = false, flag = "Wand" },
+	["Warstaff"] = { oneHand = false, melee = true, flag = "Warstaff"},
 	["One Handed Axe"] = { oneHand = true, melee = true, flag = "Axe" },
 	["One Handed Mace"] = { oneHand = true, melee = true, flag = "Mace" },
 	["One Handed Sword"] = { oneHand = true, melee = true, flag = "Sword" },
-	["Thrusting One Handed Sword"] = { oneHand = true, melee = true, flag = "Sword", label = "One Handed Sword" },
+	["Thrusting One Handed Sword"] = { oneHand = true, melee = true, flag = "Sword" },
 	["Fishing Rod"] = { oneHand = false, melee = true, flag = "Fishing" },
 	["Two Handed Axe"] = { oneHand = false, melee = true, flag = "Axe" },
 	["Two Handed Mace"] = { oneHand = false, melee = true, flag = "Mace" },
 	["Two Handed Sword"] = { oneHand = false, melee = true, flag = "Sword" },
+	["Wand"] = { oneHand = true, melee = false, flag = "Wand" },
+	["Staff"] = { oneHand = false, melee = false, flag = "Staff" },
+	["Sceptre"] = { oneHand = true, melee = false, flag = "Sceptre" },
 }
-data.unarmedWeaponData = {
-	[0] = { type = "None", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 6 }, -- Scion
-	[1] = { type = "None", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 8 }, -- Marauder
-	[2] = { type = "None", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 5 }, -- Ranger
-	[3] = { type = "None", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 5 }, -- Witch
-	[4] = { type = "None", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 6 }, -- Duelist
-	[5] = { type = "None", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 6 }, -- Templar
-	[6] = { type = "None", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 5 }, -- Shadow
+data.unarmedWeaponData = {  -- are these values correct for poe 2?
+	[0] = { class = "Unarmed", category = "Unarmed", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 6 }, -- Scion
+	[1] = { class = "Unarmed", category = "Unarmed", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 8 }, -- Marauder
+	[2] = { class = "Unarmed", category = "Unarmed", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 5 }, -- Ranger
+	[3] = { class = "Unarmed", category = "Unarmed", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 5 }, -- Witch
+	[4] = { class = "Unarmed", category = "Unarmed", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 6 }, -- Duelist
+	[5] = { class = "Unarmed", category = "Unarmed", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 6 }, -- Templar
+	[6] = { class = "Unarmed", category = "Unarmed", AttackRate = 1.2, CritChance = 0, PhysicalMin = 2, PhysicalMax = 5 }, -- Shadow
 }
 
 data.setJewelRadiiGlobally = function(treeVersion)
@@ -844,22 +846,27 @@ for _, type in pairs(itemTypes) do
 	LoadModule("Data/Bases/"..type, data.itemBases)
 end
 
--- Build lists of item bases, separated by type
+-- Build lists of item bases, separated by category label
 data.itemBaseLists = { }
 for name, base in pairs(data.itemBases) do
 	if not base.hidden then
-		local type = base.type
-		if base.subType then
-			type = type .. ": " .. base.subType
+		local category = base.category
+		if base.category == base.class or base.label == base.category then
+			category = base.label or base.category
+		else
+			category = base.category..": "..(base.label or base.class)
 		end
-		data.itemBaseLists[type] = data.itemBaseLists[type] or { }
-		table.insert(data.itemBaseLists[type], { label = name:gsub(" %(.+%)",""), name = name, base = base })
+		if base.type then
+			category = category.." ("..base.type..")"
+		end
+		data.itemBaseLists[category] = data.itemBaseLists[category] or { }
+		table.insert(data.itemBaseLists[category], { label = name:gsub(" %(.+%)",""), name = name, base = base })
 	end
 end
-data.itemBaseTypeList = { }
-for type, list in pairs(data.itemBaseLists) do
-	table.insert(data.itemBaseTypeList, type)
-	table.sort(list, function(a, b)
+data.itemBaseCategoryList = { }
+for category, list in pairs(data.itemBaseLists) do
+	table.insert(data.itemBaseCategoryList, category)
+	table.sort(list, function(a, b) -- sort lists in itemBaseLists
 		if a.base.req and b.base.req then
 			if a.base.req.level == b.base.req.level then
 				return a.name < b.name
@@ -875,7 +882,7 @@ for type, list in pairs(data.itemBaseLists) do
 		end
 	end)
 end
-table.sort(data.itemBaseTypeList)
+table.sort(data.itemBaseCategoryList) -- sorted list of category names
 
 -- Rare templates
 --data.rares = LoadModule("Data/Rares")

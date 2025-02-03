@@ -211,13 +211,13 @@ function SkillListClass:GetRowIcon(column, index, socketGroup)
 		local slot = socketGroup.slot
 		local itemsTab = self.skillsTab.build.itemsTab
 		local weapon1Sel = itemsTab.activeItemSet["Weapon 1"].selItemId or 0
-		local weapon1Class = itemsTab.items[weapon1Sel] and itemsTab.items[weapon1Sel].base.class or "None"
+		local weapon1Class = itemsTab.items[weapon1Sel] and itemsTab.items[weapon1Sel].base.class or "Unarmed"
 		local weapon1SwapSel = itemsTab.activeItemSet["Weapon 1 Swap"].selItemId or 0
-		local weapon1SwapType = itemsTab.items[weapon1SwapSel] and itemsTab.items[weapon1SwapSel].base.class or "None"
+		local weapon1SwapType = itemsTab.items[weapon1SwapSel] and itemsTab.items[weapon1SwapSel].base.class or "Unarmed"
 		local weapon2Sel = itemsTab.activeItemSet["Weapon 2"].selItemId or 0
-		local weapon2Class = itemsTab.items[weapon2Sel] and itemsTab.items[weapon2Sel].base.class or "None"
+		local weapon2Class = itemsTab.items[weapon2Sel] and itemsTab.items[weapon2Sel].base.class or "Unarmed"
 		local weapon2SwapSel = itemsTab.activeItemSet["Weapon 2 Swap"].selItemId or 0
-		local weapon2SwapType = itemsTab.items[weapon2SwapSel] and itemsTab.items[weapon2SwapSel].base.class or "None"
+		local weapon2SwapType = itemsTab.items[weapon2SwapSel] and itemsTab.items[weapon2SwapSel].base.class or "Unarmed"
 		if slot == "Weapon 1" and weapon1Class == "Bow" then
 			slot = weapon1Class
 		end
