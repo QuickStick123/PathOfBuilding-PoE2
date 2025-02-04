@@ -22,11 +22,11 @@ local tradeClasses = {
 	["Quiver"] = { "Quiver" },
 	["Shield"] = { "Shield" },
 	["Focus"] = { "Focus" },
-	["1HWeapon"] = { "One Handed Mace", "Wand", "Sceptre" },
-	["2HWeapon"] = { "Staff", "Warstaff", "Two Handed Mace", "Crossbow", "Bow" },
-	-- ["1HAxe"] = { "One Handed Axe" },
-	-- ["1HSword"] = { "One Handed Sword" },
-	["1HMace"] = { "One Handed Mace" },
+	["1HWeapon"] = { "One Hand Mace", "Wand", "Sceptre" },
+	["2HWeapon"] = { "Staff", "Warstaff", "Two Hand Mace", "Crossbow", "Bow" },
+	-- ["1HAxe"] = { "One Hand Axe" },
+	-- ["1HSword"] = { "One Hand Sword" },
+	["1HMace"] = { "One Hand Mace" },
 	["Sceptre"] = { "Sceptre" },
 	-- ["Dagger"] = { "Dagger" },
 	["Wand"] = { "Wand" },
@@ -35,10 +35,10 @@ local tradeClasses = {
 	["Quarterstaff"] = { "Warstaff" },
 	["Bow"] = { "Bow" },
 	["Crossbow"] = { "Crossbow"},
-	-- ["2HAxe"] = { "Two Handed Axe" },
-	-- ["2HSword"] = { "Two Handed Sword" },
-	["2HMace"] = { "Two Handed Mace" },
-	-- ["FishingRod"] = { "Fishing Rod" },
+	-- ["2HAxe"] = { "Two Hand Axe" },
+	-- ["2HSword"] = { "Two Hand Sword" },
+	["2HMace"] = { "Two Hand Mace" },
+	-- ["FishingRod"] = { "FishingRod" },
 	["BaseJewel"] = { "Jewel" },
 	["AnyJewel"] = { "Jewel" },
 	["LifeFlask"] = { "LifeFlask" },
@@ -53,28 +53,26 @@ local tradeClasses = {
 }
 
 -- Build lists of tags present on a given item class
-local tradeCategoryTags = { }
-for classList, bases in pairs(data.itemBaseLists) do
-	for _, base in ipairs(bases) do
-		if not base.hidden then
-			if not tradeCategoryTags[classList] then
-				tradeCategoryTags[classList] = { }
+local tradeClassTags = { }
+for _, base in pairs(data.itemBases) do
+	if not base.hidden then
+		if not tradeClassTags[base.class] then
+			tradeClassTags[base.class] = { }
+		end
+		local baseTags = { }
+		for tag, _ in pairs(base.tags) do
+			if tag ~= "default" and tag ~= "demigods" and not tag:match("_basetype") and tag ~= "not_for_sale" then -- filter fluff tags not used on mods.
+				baseTags[tag] = true
 			end
-			local baseTags = { }
-			for tag, _ in pairs(base.base.tags) do
-				if tag ~= "default" and tag ~= "demigods" and not tag:match("_basetype") and tag ~= "not_for_sale" then -- filter fluff tags not used on mods.
-					baseTags[tag] = true
-				end
+		end
+		local present = false
+		for i, tags in ipairs(tradeClassTags[base.class]) do
+			if tableDeepEquals(baseTags, tags) then
+				present = true
 			end
-			local present = false
-			for i, tags in ipairs(tradeCategoryTags[classList]) do
-				if tableDeepEquals(baseTags, tags) then
-					present = true
-				end
-			end
-			if not present then
-				t_insert(tradeCategoryTags[classList], baseTags)
-			end
+		end
+		if not present then
+			t_insert(tradeClassTags[base.class], baseTags)
 		end
 	end
 end
@@ -116,7 +114,7 @@ end
 
 local function canModSpawnForItemCategory(mod, names)
 	for _, name in pairs(tradeClasses[names]) do
-		for _, tags in ipairs(tradeCategoryTags[name]) do
+		for _, tags in ipairs(tradeClassTags[name]) do
 			for i, key in ipairs(mod.weightKey) do
 				if tags[key] then
 					if mod.weightVal[i] > 0 then
@@ -573,19 +571,19 @@ function TradeQueryGeneratorClass:StartQuery(slot, options)
 			elseif existingItem.class == "Staff" then
 				itemCategoryQueryStr = "weapon.staff"
 				itemCategory = "Staff"
-			elseif existingItem.class == "Two Handed Sword" then
+			elseif existingItem.class == "Two Hand Sword" then
 				itemCategoryQueryStr = "weapon.twosword"
 				itemCategory = "2HSword"
-			elseif existingItem.class == "Two Handed Axe" then
+			elseif existingItem.class == "Two Hand Axe" then
 				itemCategoryQueryStr = "weapon.twoaxe"
 				itemCategory = "2HAxe"
-			elseif existingItem.class == "Two Handed Mace" then
+			elseif existingItem.class == "Two Hand Mace" then
 				itemCategoryQueryStr = "weapon.twomace"
 				itemCategory = "2HMace"
 			elseif existingItem.class == "Fishing Rod" then
 				itemCategoryQueryStr = "weapon.rod"
 				itemCategory = "FishingRod"
-			elseif existingItem.class == "One Handed Sword" then
+			elseif existingItem.class == "One Hand Sword" then
 				itemCategoryQueryStr = "weapon.onesword"
 				itemCategory = "1HSword"
 			elseif existingItem.class == "Spear" then -- not in game
@@ -594,10 +592,10 @@ function TradeQueryGeneratorClass:StartQuery(slot, options)
 			elseif existingItem.class == "Flail" then -- not in game
 				itemCategoryQueryStr = "weapon.flail"
 				itemCategory = "weapon.flail"
-			elseif existingItem.class == "One Handed Axe" then
+			elseif existingItem.class == "One Hand Axe" then
 				itemCategoryQueryStr = "weapon.oneaxe"
 				itemCategory = "1HAxe"
-			elseif existingItem.class == "One Handed Mace" then
+			elseif existingItem.class == "One Hand Mace" then
 				itemCategoryQueryStr = "weapon.onemace"
 				itemCategory = "1HMace"
 			elseif existingItem.class == "Sceptre" then
@@ -612,10 +610,10 @@ function TradeQueryGeneratorClass:StartQuery(slot, options)
 			elseif existingItem.class == "Claw" then
 				itemCategoryQueryStr = "weapon.claw"
 				itemCategory = "Claw"
-			elseif existingItem.class:find("Two Handed") ~= nil then
+			elseif existingItem.class:find("Two Hand") ~= nil then
 				itemCategoryQueryStr = "weapon.twomelee"
 				itemCategory = "2HWeapon"
-			elseif existingItem.class:find("One Handed") ~= nil then
+			elseif existingItem.class:find("One Hand") ~= nil then
 				itemCategoryQueryStr = "weapon.one"
 				itemCategory = "1HWeapon"
 			else
