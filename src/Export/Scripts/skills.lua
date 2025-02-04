@@ -475,11 +475,11 @@ directiveTable.skill = function(state, args, out)
 		end
 		local weaponClasses = { }
 		for _, class in ipairs(granted.WeaponRestrictions) do
-			weaponClasses[class.Id] = true
+			table.insert(weaponClasses, class.Id)
 		end
 		if next(weaponClasses) then
 			out:write('\tweaponClasses = {\n')
-			for type in pairs(weaponClasses) do
+			for _, type in ipairs(weaponClasses) do
 				out:write('\t\t["', type, '"] = true,\n')
 			end
 			out:write('\t},\n')
@@ -507,11 +507,11 @@ directiveTable.skill = function(state, args, out)
 		end
 		local weaponClasses = { }
 		for _, class in ipairs(granted.ActiveSkill.WeaponRestrictions) do
-			weaponClasses[class.Id] = true
+			table.insert(weaponClasses, class.Id)
 		end
 		if next(weaponClasses) then
 			out:write('\tweaponClasses = {\n')
-			for type in pairs(weaponClasses) do
+			for _, type in ipairs(weaponClasses) do
 				out:write('\t\t["', type, '"] = true,\n')
 			end
 			out:write('\t},\n')

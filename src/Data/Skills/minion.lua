@@ -829,13 +829,13 @@ skills["TCAncestralLeagueKaruiHulk"] = {
 	description = "Charges at an enemy, bashing it with the character's shield and striking it. This knocks it back and stuns it. Enemies in the way are pushed to the side. Damage and stun are proportional to distance travelled. Cannot be supported by Multistrike.",
 	skillTypes = { [SkillType.Attack] = true, [SkillType.Melee] = true, [SkillType.MeleeSingleTarget] = true, [SkillType.Movement] = true, [SkillType.Travel] = true, },
 	weaponClasses = {
-		["One Hand Mace"] = true,
-		["Unarmed"] = true,
-		["One Hand Axe"] = true,
-		["Sceptre"] = true,
 		["Claw"] = true,
 		["Dagger"] = true,
 		["One Hand Sword"] = true,
+		["One Hand Axe"] = true,
+		["One Hand Mace"] = true,
+		["Sceptre"] = true,
+		["Unarmed"] = true,
 	},
 	castTime = 1,
 	qualityStats = {
