@@ -719,7 +719,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 			if slotName == override.repSlotName then
 				item = override.repItem
 			elseif override.repItem and override.repSlotName:match("^Weapon 1") and slotName:match("^Weapon 2") and
-			(override.repItem.base.category == "Staff" or override.repItem.base.category == "Two Handed Sword" or override.repItem.base.category == "Two Handed Axe" or override.repItem.base.category == "Two Handed Mace"
+			(override.repItem.base.category == "Warstaff" or override.repItem.base.category == "Two Hand Sword" or override.repItem.base.category == "Two Hand Axe" or override.repItem.base.category == "Two Hand Mace"
 			or (override.repItem.base.category == "Bow" and item and item.base.category ~= "Quiver")) then
 				goto continue
 			elseif slot.nodeId and override.spec then
@@ -1119,7 +1119,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 						env.itemModDB.multipliers["NonCorruptedItem"] = (env.itemModDB.multipliers["NonCorruptedItem"] or 0) + 1
 					end
 
-					env.itemModDB.multipliers[item.class:gsub(" ", ""):gsub(".+Handed", "").."Item"] = (env.itemModDB.multipliers[item.class:gsub(" ", ""):gsub(".+Handed", "").."Item"] or 0) + 1
+					env.itemModDB.multipliers[item.class:gsub(" ", ""):gsub(".+Hand", "").."Item"] = (env.itemModDB.multipliers[item.class:gsub(" ", ""):gsub(".+Hand", "").."Item"] or 0) + 1
 				end
 			end
 		end

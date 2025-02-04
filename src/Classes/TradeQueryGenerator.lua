@@ -591,7 +591,7 @@ function TradeQueryGeneratorClass:StartQuery(slot, options)
 				itemCategory = "1HSword"
 			elseif existingItem.class == "Flail" then -- not in game
 				itemCategoryQueryStr = "weapon.flail"
-				itemCategory = "weapon.flail"
+				itemCategory = "Flail"
 			elseif existingItem.class == "One Hand Axe" then
 				itemCategoryQueryStr = "weapon.oneaxe"
 				itemCategory = "1HAxe"
