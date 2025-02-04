@@ -37,6 +37,11 @@ directiveTable.label = function(state, args, out)
 	state.label = args
 end
 
+directiveTable.displayName = function(state, args, out)
+	if not state.displayNameOverride then state.displayNameOverride = { } end
+	local baseTypeId, displayName = args:match("([%w/_]+) (.+)")
+	state.displayNameOverride[baseTypeId] = displayName
+end
 directiveTable.forceHide = function(state, args, out)
 	state.forceHide = (args == "true")
 end
@@ -108,6 +113,9 @@ directiveTable.base = function(state, args, out)
 	local maximumQuality = getMaximumQuality(baseItemType.BaseType)
 	if not displayName then
 		displayName = baseItemType.Name
+	end
+	if state.displayNameOverride and state.displayNameOverride[baseTypeId] then
+		displayName = state.displayNameOverride[baseTypeId]
 	end
 	displayName = displayName:gsub("\195\182","o")
 	displayName = displayName:gsub("^%s*(.-)%s*$", "%1") -- trim spaces GGG might leave in by accident

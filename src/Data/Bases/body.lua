@@ -1643,7 +1643,7 @@ itemBases["Expert Rogue Armour"] = {
 	type = "Armour/Evasion",
 	req = { level = 65, str = 86, dex = 86, },
 }
-itemBases["Expert Cloaked Mail"] = {
+itemBases["Expert Cloaked Mail (Fire Resistance)"] = {
 	class = "Body Armour",
 	category = "Body Armour",
 	label = "Body Armour",
@@ -1656,7 +1656,7 @@ itemBases["Expert Cloaked Mail"] = {
 	type = "Armour/Evasion",
 	req = { level = 70, str = 86, dex = 86, },
 }
-itemBases["Expert Cloaked Mail"] = {
+itemBases["Expert Cloaked Mail (Cold Resistance)"] = {
 	class = "Body Armour",
 	category = "Body Armour",
 	label = "Body Armour",
@@ -1669,7 +1669,7 @@ itemBases["Expert Cloaked Mail"] = {
 	type = "Armour/Evasion",
 	req = { level = 70, str = 86, dex = 86, },
 }
-itemBases["Expert Cloaked Mail"] = {
+itemBases["Expert Cloaked Mail (Lightning Resistance)"] = {
 	class = "Body Armour",
 	category = "Body Armour",
 	label = "Body Armour",
